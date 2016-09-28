@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  GuiYu
+//
+//  Created by yunPeng on 16/1/4.
+//  Copyright © 2016年 GuiYuKeJi. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+#define WIDTHSWIFT UIScreen.mainScreen().bounds.size.width
+#define X frame.origin.x
+#define Y frame.origin.y
+#define PART_W frame.size.width
+#define PART_H frame.size.height
+#define MAINCOLOR [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:1]
+#define GRAY121COLOR [UIColor colorWithRed:121/255.0 green:121/255.0 blue:121/255.0 alpha:1]
+#define PLACEHOLODERCOLOR [UIColor colorWithRed:199/255.0 green:199/255.0 blue:205/255.0 alpha:1]
+#define WORDFONT [UIFont systemFontOfSize:15.5]
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define ROWHEIGHT 93.4970703125
+#define CHECKPASSTIME @"2016-06-06"
+
+#define kNotificationCategoryIdentifile @"kNotificationCategoryIdentifile"
+#define kNotificationActionIdentifileStar @"kNotificationActionIdentifileStar"
+#define kNotificationActionIdentifileComment @"kNotificationActionIdentifileComment"
+
+#define CURRENTVERSION @"1.0"
+#define APPID @"qweqeqasdfsa1231qw231"
+#define HEADHOST @"http://192.168.199.198:8081"
+#define IPHOST @"http://123.59.129.126"
+#define TCPURL @"tcp://api.iguiyu.com:1883";
+#define PICSTR @"http://snb.tesufu.com"
+
+
+#import "NetHandler.h"
+#import "JSESSIONID.h"
+#import "AFNetworking.h"
+#import "HyLoglnButton.h"
+//#import "MJRefresh.h"
+//#import "UIImageView+WebCache.h"
+#import "LoginViewController.h"
+//#import "UIViewController+AddNavigationView.h"
+//#import "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h"
+#import "UIView+LineAround.h"
+//#import "MyCollect.h"
+//#import "MBProgressHUD.h"
+//#import "MSSBrowseActionSheet.h"
+#import "MMSheetView.h"
+#import "MMAlertView.h"
+#import "MMPinView.h"
+//#import "BaseViewController.h"
+#import "UIImage+ChangeImageColor.h"
+//#import "Lock.h"
+//#import "Plan.h"
+//#import "CutTime.h"
+//#import "StatusMap.h"
+//#import "BubbleView.h"
+//#import "DownEditView.h"
+#import "StateBarMsgView.h"
+#import "AccountInfo.h"
+
+
+
