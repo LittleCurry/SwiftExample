@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["zhangsan", "abc", "nihao", "yidadui", "aasd", "qwe", "asd", "eqw", "eeasqad", "zzz", "mdzz", "nczz", "n", "nss", "snzd"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "yidadui", "aasd", "qwe", "asd", "eqw", "eeasqad", "zzz", "mdzz", "nczz", "n", "nss", "snzd"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     
     override func viewDidLoad() {
@@ -23,6 +23,10 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
         myTableView.dataSource = self
         view.addSubview(myTableView);
         
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 50;
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,9 +45,21 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let firstInfoVC = FirstInfoViewController.init();
-        firstInfoVC.hidesBottomBarWhenPushed = true;
-        self.navigationController?.pushViewController(firstInfoVC, animated: true);
+        switch indexPath.row {
+        case 0:
+            let firstInfoVC = FirstInfoViewController.init();
+            firstInfoVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(firstInfoVC, animated: true);
+            break;
+        case 1:
+            let keyboardVC = FirstKeyboardViewController.init();
+            keyboardVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(keyboardVC, animated: true);
+            break;
+        default:
+            break;
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

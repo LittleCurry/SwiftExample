@@ -14,7 +14,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor();
-        self.navigationController!.navigationBar.barTintColor = RGBA(240, g: 166, b: 116, a: 1);
+        self.navigationController!.navigationBar.barTintColor = mainColor;
         self.automaticallyAdjustsScrollViewInsets = false;
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()];

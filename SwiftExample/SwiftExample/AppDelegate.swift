@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         thirdNVC.title = "third"
         
         let tab = UITabBarController.init();
-        tab.tabBar.tintColor = UIColor.cyanColor();
+        tab.tabBar.tintColor = mainColor;
         tab.viewControllers = [firstNVC, secondNVC, thirdNVC];
         window?.rootViewController = tab;
         

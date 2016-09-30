@@ -13,6 +13,8 @@ let HEIGHT = UIScreen.mainScreen().bounds.height
 let FIT_WIDTH = UIScreen.mainScreen().bounds.width/375
 let FIT_HEIGHT = UIScreen.mainScreen().bounds.height/667
 let STATUSBAR_HEIGHT = UIApplication.sharedApplication().statusBarFrame.size.height
+let mainColor = UIColor.init(red: 240/255.0, green: 166/255.0, blue: 116/255.0, alpha: 1)
+
 
 
 // 函数宏(实际是全局函数,不是宏)

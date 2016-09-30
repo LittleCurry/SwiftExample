@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
 		C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417B81D9BC86D00BD3841 /* AppDelegate.swift */; };
 		C16417BB1D9BC86D00BD3841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417BA1D9BC86D00BD3841 /* ViewController.swift */; };
 		C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16417BC1D9BC86D00BD3841 /* Main.storyboard */; };
@@ -199,6 +200,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
 		C16417B51D9BC86D00BD3841 /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16417B81D9BC86D00BD3841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C16417BA1D9BC86D00BD3841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -1117,6 +1119,7 @@
 			children = (
 				C16419BD1D9BCC0B00BD3841 /* FirstViewController.swift */,
 				C16419BE1D9BCC0B00BD3841 /* FirstInfoViewController.swift */,
+				C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1395,6 +1398,7 @@
 				C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */,
 				C16418681D9BCA8800BD3841 /* AFURLSessionManager.m in Sources */,
 				C16418AE1D9BCAB400BD3841 /* SDWebImagePrefetcher.m in Sources */,
+				C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */,
 				C16419141D9BCADE00BD3841 /* MJRefreshBackFooter.m in Sources */,
 				C16418B51D9BCAB400BD3841 /* UIView+WebCacheOperation.m in Sources */,
 				C16419451D9BCB1400BD3841 /* NSObject+Model.swift in Sources */,
