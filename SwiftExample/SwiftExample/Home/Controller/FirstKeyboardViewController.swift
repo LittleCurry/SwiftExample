@@ -26,16 +26,26 @@ class FirstKeyboardViewController: BaseViewController {
         self.messageInputView.backgroundColor = UIColor.groupTableViewBackgroundColor()
         self.view.addSubview(self.messageInputView)
         var voiceButton = UIButton.init(type: UIButtonType.Custom);
-        voiceButton.frame = CGRectMake(5, 5, 34, 34);
-        voiceButton.setBackgroundImage(UIImage.init(named: "jiezhi.jpg"), forState: UIControlState.Normal)
+        voiceButton.frame = CGRectMake(8, 8, 28, 28);
+        voiceButton.setBackgroundImage(UIImage.init(named: "voice.png"), forState: UIControlState.Normal)
         self.messageInputView.addSubview(voiceButton);
-        self.myTextField.frame = CGRectMake(44, 5, WIDTH-44-100, 34);
+        self.myTextField.frame = CGRectMake(44, 8, WIDTH-44-86, 28);
         self.myTextField.backgroundColor = UIColor.whiteColor()
         self.myTextField.layer.masksToBounds = true;
         self.myTextField.layer.cornerRadius = 3;
-        self.myTextField.layer.borderWidth = 1;//设置边界的宽度
+        self.myTextField.layer.borderWidth = 0.5;//设置边界的宽度
         self.myTextField.layer.borderColor = UIColor.lightGrayColor().CGColor;
         self.messageInputView.addSubview(self.myTextField)
+        var smileButton = UIButton.init(type: UIButtonType.Custom)
+        smileButton.frame = CGRectMake(WIDTH-76, 8, 28, 28)
+        smileButton.setBackgroundImage(UIImage.init(named: "smile.png"), forState: UIControlState.Normal)
+        self.messageInputView.addSubview(smileButton)
+        var addButton = UIButton.init(type: UIButtonType.Custom)
+        addButton.frame = CGRectMake(WIDTH-38, 8, 28, 28)
+        addButton.setBackgroundImage(UIImage.init(named: "circleAdd.png"), forState: UIControlState.Normal)
+        self.messageInputView.addSubview(addButton)
+        
+        
         
     }
     

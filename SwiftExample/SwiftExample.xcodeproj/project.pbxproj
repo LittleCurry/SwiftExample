@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12801761D9E65A900E79A07 /* voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801701D9E65A900E79A07 /* voice@3x.png */; };
+		C12801771D9E65A900E79A07 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801711D9E65A900E79A07 /* voice@2x.png */; };
+		C12801781D9E65A900E79A07 /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801721D9E65A900E79A07 /* smile@2x.png */; };
+		C12801791D9E65A900E79A07 /* smile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801731D9E65A900E79A07 /* smile@3x.png */; };
+		C128017A1D9E65A900E79A07 /* circleAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801741D9E65A900E79A07 /* circleAdd@3x.png */; };
+		C128017B1D9E65A900E79A07 /* circleAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801751D9E65A900E79A07 /* circleAdd@2x.png */; };
 		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
 		C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417B81D9BC86D00BD3841 /* AppDelegate.swift */; };
 		C16417BB1D9BC86D00BD3841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417BA1D9BC86D00BD3841 /* ViewController.swift */; };
@@ -200,6 +206,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C12801701D9E65A900E79A07 /* voice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@3x.png"; sourceTree = "<group>"; };
+		C12801711D9E65A900E79A07 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
+		C12801721D9E65A900E79A07 /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
+		C12801731D9E65A900E79A07 /* smile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@3x.png"; sourceTree = "<group>"; };
+		C12801741D9E65A900E79A07 /* circleAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@3x.png"; sourceTree = "<group>"; };
+		C12801751D9E65A900E79A07 /* circleAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@2x.png"; sourceTree = "<group>"; };
 		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
 		C16417B51D9BC86D00BD3841 /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16417B81D9BC86D00BD3841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -634,6 +646,12 @@
 				C164194B1D9BCB2F00BD3841 /* fengjing.jpg */,
 				C164194C1D9BCB2F00BD3841 /* back@2x.png */,
 				C164194D1D9BCB2F00BD3841 /* back@3x.png */,
+				C12801701D9E65A900E79A07 /* voice@3x.png */,
+				C12801711D9E65A900E79A07 /* voice@2x.png */,
+				C12801721D9E65A900E79A07 /* smile@2x.png */,
+				C12801731D9E65A900E79A07 /* smile@3x.png */,
+				C12801741D9E65A900E79A07 /* circleAdd@3x.png */,
+				C12801751D9E65A900E79A07 /* circleAdd@2x.png */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -1303,14 +1321,17 @@
 				C164198E1D9BCB4600BD3841 /* 18.tiff in Resources */,
 				C164198C1D9BCB4600BD3841 /* 16.tiff in Resources */,
 				C164199D1D9BCB4600BD3841 /* 31.tiff in Resources */,
+				C12801781D9E65A900E79A07 /* smile@2x.png in Resources */,
 				C16419A41D9BCB4600BD3841 /* 38.tiff in Resources */,
 				C164198A1D9BCB4600BD3841 /* 14.tiff in Resources */,
 				C16419911D9BCB4600BD3841 /* 20.tiff in Resources */,
 				C16417C61D9BC86D00BD3841 /* LaunchScreen.storyboard in Resources */,
+				C128017B1D9E65A900E79A07 /* circleAdd@2x.png in Resources */,
 				C16419AF1D9BCB4600BD3841 /* 5.tiff in Resources */,
 				C16419AC1D9BCB4600BD3841 /* 45.tiff in Resources */,
 				C164199A1D9BCB4600BD3841 /* 29.tiff in Resources */,
 				C16419521D9BCB2F00BD3841 /* fengjing.jpg in Resources */,
+				C12801791D9E65A900E79A07 /* smile@3x.png in Resources */,
 				C164184D1D9BCA3000BD3841 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
 				C16419B21D9BCB4600BD3841 /* 8.tiff in Resources */,
@@ -1318,6 +1339,7 @@
 				C16419211D9BCADE00BD3841 /* MJRefresh.bundle in Resources */,
 				C164199C1D9BCB4600BD3841 /* 30.tiff in Resources */,
 				C16419871D9BCB4600BD3841 /* 11.tiff in Resources */,
+				C12801761D9E65A900E79A07 /* voice@3x.png in Resources */,
 				C16419B01D9BCB4600BD3841 /* 6.tiff in Resources */,
 				C16419881D9BCB4600BD3841 /* 12.tiff in Resources */,
 				C16419A81D9BCB4600BD3841 /* 41.tiff in Resources */,
@@ -1346,6 +1368,7 @@
 				C16419AD1D9BCB4600BD3841 /* 46.tiff in Resources */,
 				C164198B1D9BCB4600BD3841 /* 15.tiff in Resources */,
 				C16419541D9BCB2F00BD3841 /* back@3x.png in Resources */,
+				C12801771D9E65A900E79A07 /* voice@2x.png in Resources */,
 				C16419A51D9BCB4600BD3841 /* 39.tiff in Resources */,
 				C16418411D9BCA3000BD3841 /* UMShareEditViewControlleriPad.xib in Resources */,
 				C16419981D9BCB4600BD3841 /* 27.tiff in Resources */,
@@ -1357,6 +1380,7 @@
 				C16419511D9BCB2F00BD3841 /* jiezhi.jpg in Resources */,
 				C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */,
 				C16418431D9BCA3000BD3841 /* UMSnsAccountViewController.xib in Resources */,
+				C128017A1D9E65A900E79A07 /* circleAdd@3x.png in Resources */,
 				C164184A1D9BCA3000BD3841 /* WeiboSDK.bundle in Resources */,
 				C16419B11D9BCB4600BD3841 /* 7.tiff in Resources */,
 				C16418441D9BCA3000BD3841 /* UMSShareListController.xib in Resources */,
