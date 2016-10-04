@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        // 出现一个问题, 在提交到github上时,SwiftTableView/SwiftTableView内容没提交上,,输入框随键盘一起动,,
+        // 出现一个问题, 在提交到github上时,SwiftTableView/SwiftTableView内容没提交上,,输入框随键盘一起动,
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
         window?.backgroundColor = UIColor.whiteColor();
         window?.makeKeyAndVisible();
