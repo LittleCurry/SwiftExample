@@ -44,9 +44,6 @@ class FirstKeyboardViewController: BaseViewController {
         addButton.frame = CGRectMake(WIDTH-38, 8, 28, 28)
         addButton.setBackgroundImage(UIImage.init(named: "circleAdd.png"), forState: UIControlState.Normal)
         self.messageInputView.addSubview(addButton)
-        
-        
-        
     }
     
     func addMonitor() -> Void {

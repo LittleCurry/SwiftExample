@@ -1,14 +1,14 @@
 //
-//  FirstViewController.swift
-//  SwiftTableView
+//  FouthViewController.swift
+//  SwiftExample
 //
-//  Created by 李云鹏 on 16/9/12.
+//  Created by 李云鹏 on 16/10/5.
 //  Copyright © 2016年 yunPeng. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
+class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
     var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "yidadui", "aasd", "qwe", "asd", "eqw", "eeasqad", "zzz", "mdzz", "nczz", "n", "nss", "snzd"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);

@@ -21,13 +21,11 @@ class FirstInfoViewController: BaseViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.setupNav();
         self.getView();
     }
-    func setupNav() -> Void {
-        self.navigationItem.title = "FirstInfo";
-    }
+
     func getView() -> Void {
+        self.navigationItem.title = "FirstInfo";
         // 在group形式下的tableView会在最上边默认35的groupTableViewBackgroundColor色的条,在最下边会有20的灰条
         yourTableView.contentInset = UIEdgeInsetsMake(-35, 0, -20, 0);
         yourTableView.tableFooterView = UIView.init();

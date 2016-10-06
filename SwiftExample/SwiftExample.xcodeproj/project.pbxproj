@@ -14,6 +14,21 @@
 		C128017A1D9E65A900E79A07 /* circleAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801741D9E65A900E79A07 /* circleAdd@3x.png */; };
 		C128017B1D9E65A900E79A07 /* circleAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801751D9E65A900E79A07 /* circleAdd@2x.png */; };
 		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
+		C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */; };
+		C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C151E3121DA53CC5004A41A3 /* meinv.jpg */; };
+		C151E32E1DA553D6004A41A3 /* SCBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3161DA553D6004A41A3 /* SCBar.m */; };
+		C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3181DA553D6004A41A3 /* SCBarChart.m */; };
+		C151E3301DA553D6004A41A3 /* SCChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E31A1DA553D6004A41A3 /* SCChart.m */; };
+		C151E3311DA553D6004A41A3 /* SCChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E31D1DA553D6004A41A3 /* SCChartLabel.m */; };
+		C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E31F1DA553D6004A41A3 /* SCCircleChart.m */; };
+		C151E3331DA553D6004A41A3 /* SCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3211DA553D6004A41A3 /* SCColor.m */; };
+		C151E3341DA553D6004A41A3 /* SCGenericChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3231DA553D6004A41A3 /* SCGenericChart.m */; };
+		C151E3351DA553D6004A41A3 /* SCLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3251DA553D6004A41A3 /* SCLineChart.m */; };
+		C151E3361DA553D6004A41A3 /* SCPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3271DA553D6004A41A3 /* SCPieChart.m */; };
+		C151E3371DA553D6004A41A3 /* SCPieChartDataItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E3291DA553D6004A41A3 /* SCPieChartDataItem.m */; };
+		C151E3381DA553D6004A41A3 /* SCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E32B1DA553D6004A41A3 /* SCTool.m */; };
+		C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E32D1DA553D6004A41A3 /* UICountingLabel.m */; };
+		C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3421DA55931004A41A3 /* FouthViewController.swift */; };
 		C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417B81D9BC86D00BD3841 /* AppDelegate.swift */; };
 		C16417BB1D9BC86D00BD3841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16417BA1D9BC86D00BD3841 /* ViewController.swift */; };
 		C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C16417BC1D9BC86D00BD3841 /* Main.storyboard */; };
@@ -213,6 +228,34 @@
 		C12801741D9E65A900E79A07 /* circleAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@3x.png"; sourceTree = "<group>"; };
 		C12801751D9E65A900E79A07 /* circleAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@2x.png"; sourceTree = "<group>"; };
 		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
+		C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstGaussViewController.swift; sourceTree = "<group>"; };
+		C151E3121DA53CC5004A41A3 /* meinv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meinv.jpg; sourceTree = "<group>"; };
+		C151E3151DA553D6004A41A3 /* SCBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBar.h; sourceTree = "<group>"; };
+		C151E3161DA553D6004A41A3 /* SCBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBar.m; sourceTree = "<group>"; };
+		C151E3171DA553D6004A41A3 /* SCBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBarChart.h; sourceTree = "<group>"; };
+		C151E3181DA553D6004A41A3 /* SCBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBarChart.m; sourceTree = "<group>"; };
+		C151E3191DA553D6004A41A3 /* SCChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChart.h; sourceTree = "<group>"; };
+		C151E31A1DA553D6004A41A3 /* SCChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChart.m; sourceTree = "<group>"; };
+		C151E31B1DA553D6004A41A3 /* SCChartDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartDelegate.h; sourceTree = "<group>"; };
+		C151E31C1DA553D6004A41A3 /* SCChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartLabel.h; sourceTree = "<group>"; };
+		C151E31D1DA553D6004A41A3 /* SCChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChartLabel.m; sourceTree = "<group>"; };
+		C151E31E1DA553D6004A41A3 /* SCCircleChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCircleChart.h; sourceTree = "<group>"; };
+		C151E31F1DA553D6004A41A3 /* SCCircleChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircleChart.m; sourceTree = "<group>"; };
+		C151E3201DA553D6004A41A3 /* SCColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCColor.h; sourceTree = "<group>"; };
+		C151E3211DA553D6004A41A3 /* SCColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCColor.m; sourceTree = "<group>"; };
+		C151E3221DA553D6004A41A3 /* SCGenericChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCGenericChart.h; sourceTree = "<group>"; };
+		C151E3231DA553D6004A41A3 /* SCGenericChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCGenericChart.m; sourceTree = "<group>"; };
+		C151E3241DA553D6004A41A3 /* SCLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLineChart.h; sourceTree = "<group>"; };
+		C151E3251DA553D6004A41A3 /* SCLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLineChart.m; sourceTree = "<group>"; };
+		C151E3261DA553D6004A41A3 /* SCPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPieChart.h; sourceTree = "<group>"; };
+		C151E3271DA553D6004A41A3 /* SCPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPieChart.m; sourceTree = "<group>"; };
+		C151E3281DA553D6004A41A3 /* SCPieChartDataItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPieChartDataItem.h; sourceTree = "<group>"; };
+		C151E3291DA553D6004A41A3 /* SCPieChartDataItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPieChartDataItem.m; sourceTree = "<group>"; };
+		C151E32A1DA553D6004A41A3 /* SCTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCTool.h; sourceTree = "<group>"; };
+		C151E32B1DA553D6004A41A3 /* SCTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCTool.m; sourceTree = "<group>"; };
+		C151E32C1DA553D6004A41A3 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		C151E32D1DA553D6004A41A3 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		C151E3421DA55931004A41A3 /* FouthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthViewController.swift; sourceTree = "<group>"; };
 		C16417B51D9BC86D00BD3841 /* SwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C16417B81D9BC86D00BD3841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C16417BA1D9BC86D00BD3841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -547,6 +590,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C151E3141DA553D6004A41A3 /* SCChart */ = {
+			isa = PBXGroup;
+			children = (
+				C151E3151DA553D6004A41A3 /* SCBar.h */,
+				C151E3161DA553D6004A41A3 /* SCBar.m */,
+				C151E3171DA553D6004A41A3 /* SCBarChart.h */,
+				C151E3181DA553D6004A41A3 /* SCBarChart.m */,
+				C151E3191DA553D6004A41A3 /* SCChart.h */,
+				C151E31A1DA553D6004A41A3 /* SCChart.m */,
+				C151E31B1DA553D6004A41A3 /* SCChartDelegate.h */,
+				C151E31C1DA553D6004A41A3 /* SCChartLabel.h */,
+				C151E31D1DA553D6004A41A3 /* SCChartLabel.m */,
+				C151E31E1DA553D6004A41A3 /* SCCircleChart.h */,
+				C151E31F1DA553D6004A41A3 /* SCCircleChart.m */,
+				C151E3201DA553D6004A41A3 /* SCColor.h */,
+				C151E3211DA553D6004A41A3 /* SCColor.m */,
+				C151E3221DA553D6004A41A3 /* SCGenericChart.h */,
+				C151E3231DA553D6004A41A3 /* SCGenericChart.m */,
+				C151E3241DA553D6004A41A3 /* SCLineChart.h */,
+				C151E3251DA553D6004A41A3 /* SCLineChart.m */,
+				C151E3261DA553D6004A41A3 /* SCPieChart.h */,
+				C151E3271DA553D6004A41A3 /* SCPieChart.m */,
+				C151E3281DA553D6004A41A3 /* SCPieChartDataItem.h */,
+				C151E3291DA553D6004A41A3 /* SCPieChartDataItem.m */,
+				C151E32A1DA553D6004A41A3 /* SCTool.h */,
+				C151E32B1DA553D6004A41A3 /* SCTool.m */,
+				C151E32C1DA553D6004A41A3 /* UICountingLabel.h */,
+				C151E32D1DA553D6004A41A3 /* UICountingLabel.m */,
+			);
+			path = SCChart;
+			sourceTree = "<group>";
+		};
+		C151E33E1DA55880004A41A3 /* Fouth */ = {
+			isa = PBXGroup;
+			children = (
+				C151E33F1DA55880004A41A3 /* Controller */,
+				C151E3401DA55880004A41A3 /* Model */,
+				C151E3411DA55880004A41A3 /* View */,
+			);
+			path = Fouth;
+			sourceTree = "<group>";
+		};
+		C151E33F1DA55880004A41A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C151E3421DA55931004A41A3 /* FouthViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C151E3401DA55880004A41A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C151E3411DA55880004A41A3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C16417AC1D9BC86D00BD3841 = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +684,7 @@
 				C16417EB1D9BC9A300BD3841 /* Home */,
 				C16417EA1D9BC99400BD3841 /* Manage */,
 				C16417E91D9BC98700BD3841 /* Me */,
+				C151E33E1DA55880004A41A3 /* Fouth */,
 				C16417B81D9BC86D00BD3841 /* AppDelegate.swift */,
 				C16417BA1D9BC86D00BD3841 /* ViewController.swift */,
 				C16417BC1D9BC86D00BD3841 /* Main.storyboard */,
@@ -652,6 +760,7 @@
 				C12801731D9E65A900E79A07 /* smile@3x.png */,
 				C12801741D9E65A900E79A07 /* circleAdd@3x.png */,
 				C12801751D9E65A900E79A07 /* circleAdd@2x.png */,
+				C151E3121DA53CC5004A41A3 /* meinv.jpg */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -688,6 +797,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C151E3141DA553D6004A41A3 /* SCChart */,
 				C16418E41D9BCADE00BD3841 /* MJRefresh */,
 				C16418DA1D9BCAD000BD3841 /* ThirdAnimation */,
 				C16418B61D9BCAC500BD3841 /* Masonry */,
@@ -1138,6 +1248,7 @@
 				C16419BD1D9BCC0B00BD3841 /* FirstViewController.swift */,
 				C16419BE1D9BCC0B00BD3841 /* FirstInfoViewController.swift */,
 				C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */,
+				C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1333,6 +1444,7 @@
 				C16419521D9BCB2F00BD3841 /* fengjing.jpg in Resources */,
 				C12801791D9E65A900E79A07 /* smile@3x.png in Resources */,
 				C164184D1D9BCA3000BD3841 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
+				C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
 				C16419B21D9BCB4600BD3841 /* 8.tiff in Resources */,
 				C16419971D9BCB4600BD3841 /* 26.tiff in Resources */,
@@ -1418,8 +1530,10 @@
 				C16418AB1D9BCAB400BD3841 /* SDWebImageDownloader.m in Sources */,
 				C16419431D9BCB1400BD3841 /* LoginViewController.m in Sources */,
 				C16419441D9BCB1400BD3841 /* BaseEngine.m in Sources */,
+				C151E3361DA553D6004A41A3 /* SCPieChart.m in Sources */,
 				C16418821D9BCAA800BD3841 /* MMPopupWindow.m in Sources */,
 				C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */,
+				C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */,
 				C16418681D9BCA8800BD3841 /* AFURLSessionManager.m in Sources */,
 				C16418AE1D9BCAB400BD3841 /* SDWebImagePrefetcher.m in Sources */,
 				C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */,
@@ -1430,9 +1544,12 @@
 				C16418D21D9BCAC500BD3841 /* MASConstraintMaker.m in Sources */,
 				C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */,
 				C16419241D9BCADE00BD3841 /* UIScrollView+MJExtension.m in Sources */,
+				C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */,
 				C164187D1D9BCAA800BD3841 /* MMAlertView.m in Sources */,
 				C16419221D9BCADE00BD3841 /* MJRefreshConst.m in Sources */,
+				C151E3341DA553D6004A41A3 /* SCGenericChart.m in Sources */,
 				C16417BB1D9BC86D00BD3841 /* ViewController.swift in Sources */,
+				C151E32E1DA553D6004A41A3 /* SCBar.m in Sources */,
 				C164191D1D9BCADE00BD3841 /* MJRefreshBackStateFooter.m in Sources */,
 				C16418B11D9BCAB400BD3841 /* UIImage+MultiFormat.m in Sources */,
 				C16418D41D9BCAC500BD3841 /* MASViewAttribute.m in Sources */,
@@ -1440,13 +1557,16 @@
 				C16419401D9BCB1400BD3841 /* AccountInfo.m in Sources */,
 				C16418D61D9BCAC500BD3841 /* NSArray+MASAdditions.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
+				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,
 				C16418811D9BCAA800BD3841 /* MMPopupView.m in Sources */,
 				C16418B41D9BCAB400BD3841 /* UIImageView+WebCache.m in Sources */,
 				C16417C11D9BC86D00BD3841 /* SwiftExample.xcdatamodeld in Sources */,
+				C151E3331DA553D6004A41A3 /* SCColor.m in Sources */,
 				C16418641D9BCA8800BD3841 /* AFNetworkReachabilityManager.m in Sources */,
 				C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
+				C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */,
 				C164187E1D9BCAA800BD3841 /* MMPinView.m in Sources */,
 				C16419201D9BCADE00BD3841 /* MJRefreshStateHeader.m in Sources */,
 				C16418651D9BCA8800BD3841 /* AFSecurityPolicy.m in Sources */,
@@ -1456,6 +1576,7 @@
 				C16419171D9BCADE00BD3841 /* MJRefreshHeader.m in Sources */,
 				C164191C1D9BCADE00BD3841 /* MJRefreshBackNormalFooter.m in Sources */,
 				C16418A71D9BCAB400BD3841 /* NSData+ImageContentType.m in Sources */,
+				C151E3381DA553D6004A41A3 /* SCTool.m in Sources */,
 				C164193C1D9BCB1400BD3841 /* BaseViewController.swift in Sources */,
 				C164186C1D9BCA9800BD3841 /* MBProgressHUD.m in Sources */,
 				C16418671D9BCA8800BD3841 /* AFURLResponseSerialization.m in Sources */,
@@ -1466,6 +1587,7 @@
 				C164193F1D9BCB1400BD3841 /* StateBarMsgView.m in Sources */,
 				C16418AA1D9BCAB400BD3841 /* SDWebImageDecoder.m in Sources */,
 				C16418AC1D9BCAB400BD3841 /* SDWebImageDownloaderOperation.m in Sources */,
+				C151E3301DA553D6004A41A3 /* SCChart.m in Sources */,
 				C16418631D9BCA8800BD3841 /* AFHTTPSessionManager.m in Sources */,
 				C164187F1D9BCAA800BD3841 /* MMPopupCategory.m in Sources */,
 				C16419CF1D9BCCC100BD3841 /* ThirdInfoViewController.swift in Sources */,
@@ -1474,6 +1596,7 @@
 				C16418A61D9BCAB400BD3841 /* MKAnnotationView+WebCache.m in Sources */,
 				C16419421D9BCB1400BD3841 /* JSESSIONID.m in Sources */,
 				C16418D31D9BCAC500BD3841 /* MASLayoutConstraint.m in Sources */,
+				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
 				C164193D1D9BCB1400BD3841 /* UIImage+ChangeImageColor.m in Sources */,
 				C16419C91D9BCC5400BD3841 /* PlayCollectionViewCell.swift in Sources */,
 				C16418D71D9BCAC500BD3841 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1498,6 +1621,9 @@
 				C16418E21D9BCAD000BD3841 /* HyTransitions.m in Sources */,
 				C16419161D9BCADE00BD3841 /* MJRefreshFooter.m in Sources */,
 				C16419BF1D9BCC0B00BD3841 /* FirstViewController.swift in Sources */,
+				C151E3351DA553D6004A41A3 /* SCLineChart.m in Sources */,
+				C151E3371DA553D6004A41A3 /* SCPieChartDataItem.m in Sources */,
+				C151E3311DA553D6004A41A3 /* SCChartLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
