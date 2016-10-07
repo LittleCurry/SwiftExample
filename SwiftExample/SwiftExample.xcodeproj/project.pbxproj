@@ -201,6 +201,17 @@
 		C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419CA1D9BCC8200BD3841 /* SecondViewController.swift */; };
 		C16419CE1D9BCCC100BD3841 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419CC1D9BCCC100BD3841 /* ThirdViewController.swift */; };
 		C16419CF1D9BCCC100BD3841 /* ThirdInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419CD1D9BCCC100BD3841 /* ThirdInfoViewController.swift */; };
+		C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */; };
+		C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55011DA6073E00C27FD2 /* SCBarCell.m */; };
+		C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55031DA6073E00C27FD2 /* SCCircleCell.m */; };
+		C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55051DA6073E00C27FD2 /* SCPieCell.m */; };
+		C17D550B1DA607A800C27FD2 /* FouthLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D550A1DA607A800C27FD2 /* FouthLineViewController.swift */; };
+		C17D550D1DA607E400C27FD2 /* FouthColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D550C1DA607E400C27FD2 /* FouthColumnViewController.swift */; };
+		C17D550F1DA607FB00C27FD2 /* FouthPieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D550E1DA607FB00C27FD2 /* FouthPieViewController.swift */; };
+		C17D55111DA6124B00C27FD2 /* FouthCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D55101DA6124B00C27FD2 /* FouthCircleViewController.swift */; };
+		C17D55131DA6208100C27FD2 /* FirstShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D55121DA6208100C27FD2 /* FirstShareViewController.swift */; };
+		C17D55161DA623C100C27FD2 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17D55141DA623C100C27FD2 /* share@2x.png */; };
+		C17D55171DA623C100C27FD2 /* share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17D55151DA623C100C27FD2 /* share@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -550,6 +561,21 @@
 		C16419CD1D9BCCC100BD3841 /* ThirdInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdInfoViewController.swift; sourceTree = "<group>"; };
 		C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		C16419D41D9BD1F500BD3841 /* SwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SwiftExample-Bridging-Header.h"; path = "../SwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C17D54FE1DA6073E00C27FD2 /* SCChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartCell.h; sourceTree = "<group>"; };
+		C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChartCell.m; sourceTree = "<group>"; };
+		C17D55001DA6073E00C27FD2 /* SCBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBarCell.h; sourceTree = "<group>"; };
+		C17D55011DA6073E00C27FD2 /* SCBarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCBarCell.m; sourceTree = "<group>"; };
+		C17D55021DA6073E00C27FD2 /* SCCircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCCircleCell.h; sourceTree = "<group>"; };
+		C17D55031DA6073E00C27FD2 /* SCCircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCCircleCell.m; sourceTree = "<group>"; };
+		C17D55041DA6073E00C27FD2 /* SCPieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCPieCell.h; sourceTree = "<group>"; };
+		C17D55051DA6073E00C27FD2 /* SCPieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCPieCell.m; sourceTree = "<group>"; };
+		C17D550A1DA607A800C27FD2 /* FouthLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthLineViewController.swift; sourceTree = "<group>"; };
+		C17D550C1DA607E400C27FD2 /* FouthColumnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthColumnViewController.swift; sourceTree = "<group>"; };
+		C17D550E1DA607FB00C27FD2 /* FouthPieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthPieViewController.swift; sourceTree = "<group>"; };
+		C17D55101DA6124B00C27FD2 /* FouthCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthCircleViewController.swift; sourceTree = "<group>"; };
+		C17D55121DA6208100C27FD2 /* FirstShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstShareViewController.swift; sourceTree = "<group>"; };
+		C17D55141DA623C100C27FD2 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		C17D55151DA623C100C27FD2 /* share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,6 +662,10 @@
 			isa = PBXGroup;
 			children = (
 				C151E3421DA55931004A41A3 /* FouthViewController.swift */,
+				C17D550A1DA607A800C27FD2 /* FouthLineViewController.swift */,
+				C17D550C1DA607E400C27FD2 /* FouthColumnViewController.swift */,
+				C17D55101DA6124B00C27FD2 /* FouthCircleViewController.swift */,
+				C17D550E1DA607FB00C27FD2 /* FouthPieViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +680,14 @@
 		C151E3411DA55880004A41A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C17D54FE1DA6073E00C27FD2 /* SCChartCell.h */,
+				C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */,
+				C17D55001DA6073E00C27FD2 /* SCBarCell.h */,
+				C17D55011DA6073E00C27FD2 /* SCBarCell.m */,
+				C17D55021DA6073E00C27FD2 /* SCCircleCell.h */,
+				C17D55031DA6073E00C27FD2 /* SCCircleCell.m */,
+				C17D55041DA6073E00C27FD2 /* SCPieCell.h */,
+				C17D55051DA6073E00C27FD2 /* SCPieCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +799,8 @@
 				C12801741D9E65A900E79A07 /* circleAdd@3x.png */,
 				C12801751D9E65A900E79A07 /* circleAdd@2x.png */,
 				C151E3121DA53CC5004A41A3 /* meinv.jpg */,
+				C17D55141DA623C100C27FD2 /* share@2x.png */,
+				C17D55151DA623C100C27FD2 /* share@3x.png */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -1249,6 +1289,7 @@
 				C16419BE1D9BCC0B00BD3841 /* FirstInfoViewController.swift */,
 				C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */,
 				C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */,
+				C17D55121DA6208100C27FD2 /* FirstShareViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1459,6 +1500,7 @@
 				C164198F1D9BCB4600BD3841 /* 19.tiff in Resources */,
 				C16419A21D9BCB4600BD3841 /* 36.tiff in Resources */,
 				C16419A31D9BCB4600BD3841 /* 37.tiff in Resources */,
+				C17D55161DA623C100C27FD2 /* share@2x.png in Resources */,
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
@@ -1477,6 +1519,7 @@
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
 				C16418501D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
 				C164198D1D9BCB4600BD3841 /* 17.tiff in Resources */,
+				C17D55171DA623C100C27FD2 /* share@3x.png in Resources */,
 				C16419AD1D9BCB4600BD3841 /* 46.tiff in Resources */,
 				C164198B1D9BCB4600BD3841 /* 15.tiff in Resources */,
 				C16419541D9BCB2F00BD3841 /* back@3x.png in Resources */,
@@ -1541,9 +1584,11 @@
 				C16418B51D9BCAB400BD3841 /* UIView+WebCacheOperation.m in Sources */,
 				C16419451D9BCB1400BD3841 /* NSObject+Model.swift in Sources */,
 				C16419C01D9BCC0B00BD3841 /* FirstInfoViewController.swift in Sources */,
+				C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */,
 				C16418D21D9BCAC500BD3841 /* MASConstraintMaker.m in Sources */,
 				C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */,
 				C16419241D9BCADE00BD3841 /* UIScrollView+MJExtension.m in Sources */,
+				C17D55111DA6124B00C27FD2 /* FouthCircleViewController.swift in Sources */,
 				C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */,
 				C164187D1D9BCAA800BD3841 /* MMAlertView.m in Sources */,
 				C16419221D9BCADE00BD3841 /* MJRefreshConst.m in Sources */,
@@ -1558,6 +1603,7 @@
 				C16418D61D9BCAC500BD3841 /* NSArray+MASAdditions.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
 				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
+				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,
 				C16418811D9BCAA800BD3841 /* MMPopupView.m in Sources */,
 				C16418B41D9BCAB400BD3841 /* UIImageView+WebCache.m in Sources */,
@@ -1585,6 +1631,7 @@
 				C16418E11D9BCAD000BD3841 /* HyLoglnButton.m in Sources */,
 				C16419CE1D9BCCC100BD3841 /* ThirdViewController.swift in Sources */,
 				C164193F1D9BCB1400BD3841 /* StateBarMsgView.m in Sources */,
+				C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */,
 				C16418AA1D9BCAB400BD3841 /* SDWebImageDecoder.m in Sources */,
 				C16418AC1D9BCAB400BD3841 /* SDWebImageDownloaderOperation.m in Sources */,
 				C151E3301DA553D6004A41A3 /* SCChart.m in Sources */,
@@ -1592,11 +1639,13 @@
 				C164187F1D9BCAA800BD3841 /* MMPopupCategory.m in Sources */,
 				C16419CF1D9BCCC100BD3841 /* ThirdInfoViewController.swift in Sources */,
 				C16419251D9BCADE00BD3841 /* UIScrollView+MJRefresh.m in Sources */,
+				C17D550F1DA607FB00C27FD2 /* FouthPieViewController.swift in Sources */,
 				C164191B1D9BCADE00BD3841 /* MJRefreshBackGifFooter.m in Sources */,
 				C16418A61D9BCAB400BD3841 /* MKAnnotationView+WebCache.m in Sources */,
 				C16419421D9BCB1400BD3841 /* JSESSIONID.m in Sources */,
 				C16418D31D9BCAC500BD3841 /* MASLayoutConstraint.m in Sources */,
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
+				C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */,
 				C164193D1D9BCB1400BD3841 /* UIImage+ChangeImageColor.m in Sources */,
 				C16419C91D9BCC5400BD3841 /* PlayCollectionViewCell.swift in Sources */,
 				C16418D71D9BCAC500BD3841 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
@@ -1606,6 +1655,7 @@
 				C16418E31D9BCAD000BD3841 /* SpinerLayer.m in Sources */,
 				C16419181D9BCADE00BD3841 /* MJRefreshAutoGifFooter.m in Sources */,
 				C164193E1D9BCB1400BD3841 /* UIView+LineAround.m in Sources */,
+				C17D550D1DA607E400C27FD2 /* FouthColumnViewController.swift in Sources */,
 				C164191A1D9BCADE00BD3841 /* MJRefreshAutoStateFooter.m in Sources */,
 				C16418AF1D9BCAB400BD3841 /* UIButton+WebCache.m in Sources */,
 				C16419461D9BCB1400BD3841 /* AlloverMacro.swift in Sources */,
@@ -1614,6 +1664,7 @@
 				C16418B01D9BCAB400BD3841 /* UIImage+GIF.m in Sources */,
 				C16419131D9BCADE00BD3841 /* MJRefreshAutoFooter.m in Sources */,
 				C16419191D9BCADE00BD3841 /* MJRefreshAutoNormalFooter.m in Sources */,
+				C17D550B1DA607A800C27FD2 /* FouthLineViewController.swift in Sources */,
 				C16419151D9BCADE00BD3841 /* MJRefreshComponent.m in Sources */,
 				C16419261D9BCADE00BD3841 /* UIView+MJExtension.m in Sources */,
 				C16418A81D9BCAB400BD3841 /* SDImageCache.m in Sources */,
@@ -1624,6 +1675,7 @@
 				C151E3351DA553D6004A41A3 /* SCLineChart.m in Sources */,
 				C151E3371DA553D6004A41A3 /* SCPieChartDataItem.m in Sources */,
 				C151E3311DA553D6004A41A3 /* SCChartLabel.m in Sources */,
+				C17D55131DA6208100C27FD2 /* FirstShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1792,7 +1844,7 @@
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/UMSocial_Shake_Sdk",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExample;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftExample.yunpeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExample/SwiftExample-Bridging-Header.h";
 			};
@@ -1820,7 +1872,7 @@
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/UMSocial_Shake_Sdk",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExample;
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftExample.yunpeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExample/SwiftExample-Bridging-Header.h";
 			};

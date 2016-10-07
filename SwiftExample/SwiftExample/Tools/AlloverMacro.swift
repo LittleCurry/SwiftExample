@@ -14,7 +14,7 @@ let FIT_WIDTH = UIScreen.mainScreen().bounds.width/375
 let FIT_HEIGHT = UIScreen.mainScreen().bounds.height/667
 let STATUSBAR_HEIGHT = UIApplication.sharedApplication().statusBarFrame.size.height
 let mainColor = UIColor.init(red: 240/255.0, green: 166/255.0, blue: 116/255.0, alpha: 1)
-
+let UmengAppkey = "5705cd51e0f55a586d000567"// 友盟
 
 
 // 函数宏(实际是全局函数,不是宏)

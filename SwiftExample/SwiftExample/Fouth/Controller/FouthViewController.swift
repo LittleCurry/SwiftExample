@@ -10,13 +10,13 @@ import UIKit
 
 class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "yidadui", "aasd", "qwe", "asd", "eqw", "eeasqad", "zzz", "mdzz", "nczz", "n", "nss", "snzd"];
+    var nameArr = ["📈折线图", "📊柱状图", "○圆形图", "⭕️圆饼图"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.title = "Home"
+        self.navigationItem.title = "图表"
         myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
         myTableView.delegate = self;
@@ -47,19 +47,24 @@ class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            let firstInfoVC = FirstInfoViewController.init();
-            firstInfoVC.hidesBottomBarWhenPushed = true;
-            self.navigationController?.pushViewController(firstInfoVC, animated: true);
+            let fouthLineVC = FouthLineViewController.init();
+            fouthLineVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(fouthLineVC, animated: true);
             break;
         case 1:
-            let keyboardVC = FirstKeyboardViewController.init();
-            keyboardVC.hidesBottomBarWhenPushed = true;
-            self.navigationController?.pushViewController(keyboardVC, animated: true);
+            let fouthColumnVC = FouthColumnViewController.init();
+            fouthColumnVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(fouthColumnVC, animated: true);
             break;
         case 2:
-            let gaussVC = FirstGaussViewController.init();
-            gaussVC.hidesBottomBarWhenPushed = true;
-            self.navigationController?.pushViewController(gaussVC, animated: true);
+            let fouthCircleVC = FouthCircleViewController.init();
+            fouthCircleVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(fouthCircleVC, animated: true);
+            break;
+        case 3:
+            let fouthPieVC = FouthPieViewController.init();
+            fouthPieVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(fouthPieVC, animated: true);
             break;
         default:
             break;

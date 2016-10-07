@@ -8,10 +8,8 @@
 
 import UIKit
 import CoreData
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -40,11 +38,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         thirdNVC.tabBarItem.selectedImage = UIImage.init(named: "thirding.png");
         thirdNVC.title = "third"
         
+        let fouthVC = FouthViewController.init();
+        let fouthNVC = UINavigationController.init(rootViewController: fouthVC);
+        fouthNVC.tabBarItem.image = UIImage.init(named: "fouth.png");
+        fouthNVC.tabBarItem.selectedImage = UIImage.init(named: "fouthing.png");
+        fouthNVC.title = "fouth"
+        
         let tab = UITabBarController.init();
         tab.tabBar.tintColor = mainColor;
-        tab.viewControllers = [firstNVC, secondNVC, thirdNVC];
+        tab.viewControllers = [firstNVC, secondNVC, thirdNVC, fouthNVC];
         window?.rootViewController = tab;
-        
+        //友盟
+        UMSocialData.setAppKey(UmengAppkey)
+//        UMSocialWechatHandler.setWXAppId("wx635dd5eee50cb305", appSecret: "ff931b6f29d2726a60e723ab8c12eb4e", url: "https://www.iguiyu.com")
+//        UMSocialQQHandler.setQQWithAppId("1105492186", appKey: "u1aiQcJbJhiEssP1", url: "https://www.iguiyu.com")
+//        UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey("2219048349", secret: "5576c211ddd3b84e353d7f8e22728378", redirectURL: "http://sns.whalecloud.com/sina2/callback");        
         return true
     }
     
@@ -64,6 +72,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        UIApplication.sharedApplication().applicationIconBadgeNumber = 0;
+        UMSocialSnsService.applicationDidBecomeActive();
     }
     
     func applicationWillTerminate(application: UIApplication) {

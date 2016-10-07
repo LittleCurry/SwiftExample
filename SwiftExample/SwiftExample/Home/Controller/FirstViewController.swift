@@ -10,7 +10,7 @@ import UIKit
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "yidadui", "aasd", "qwe", "asd", "eqw", "eeasqad", "zzz", "mdzz", "nczz", "n", "nss", "snzd"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     
     override func viewDidLoad() {
@@ -60,6 +60,11 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let gaussVC = FirstGaussViewController.init();
             gaussVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(gaussVC, animated: true);
+            break;
+        case 3:
+            let shareVC = FirstShareViewController.init();
+            shareVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(shareVC, animated: true);
             break;
         default:
             break;
