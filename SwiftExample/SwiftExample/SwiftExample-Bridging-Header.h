@@ -19,3 +19,10 @@
 #import "UMSocialAlipayShareHandler.h"
 #import "UMSocialControllerService.h"
 #import "UMSocialShakeService.h"
+#import <MAMapKit/MAMapKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+#import "DownEditView.h"
+#import "QRViewController.h"
+#import "MMSheetView.h"
+#import "MMAlertView.h"
+#import "MMPinView.h"

@@ -52,7 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UMSocialData.setAppKey(UmengAppkey)
 //        UMSocialWechatHandler.setWXAppId("wx635dd5eee50cb305", appSecret: "ff931b6f29d2726a60e723ab8c12eb4e", url: "https://www.iguiyu.com")
 //        UMSocialQQHandler.setQQWithAppId("1105492186", appKey: "u1aiQcJbJhiEssP1", url: "https://www.iguiyu.com")
-//        UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey("2219048349", secret: "5576c211ddd3b84e353d7f8e22728378", redirectURL: "http://sns.whalecloud.com/sina2/callback");        
+//        UMSocialSinaSSOHandler.openNewSinaSSOWithAppKey("2219048349", secret: "5576c211ddd3b84e353d7f8e22728378", redirectURL: "http://sns.whalecloud.com/sina2/callback");
+        //高德
+        MAMapServices.sharedServices().apiKey = "84a84deb380d2b0fd87f73e8261f4d8b"
+        AMapSearchServices.sharedServices().apiKey = "84a84deb380d2b0fd87f73e8261f4d8b"
         return true
     }
     

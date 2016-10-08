@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     
     override func viewDidLoad() {
@@ -41,7 +42,6 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
         }
         cell?.textLabel?.text = nameArr[indexPath.row];
         return cell!;
-        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -66,11 +66,98 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             shareVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(shareVC, animated: true);
             break;
+        case 4:
+            let mapVC = FirstMapViewController.init();
+            mapVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(mapVC, animated: true);
+            break;
+        case 5:
+//            let scanVC = FirstScanViewController.init();
+//            scanVC.hidesBottomBarWhenPushed = true;
+//            self.navigationController?.pushViewController(scanVC, animated: true);
+            self.scan()
+            break;
+        case 6:
+            let playerVC = FirstPlayerViewController.init();
+            playerVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(playerVC, animated: true);
+            break;
+        case 7:
+            let testBlockVC = FirstOriginBlockViewcontroller.init();
+            testBlockVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(testBlockVC, animated: true);
+            break;
         default:
             break;
         }
         
     }
+    
+    func scan() -> Void {
+        //
+        if (self.validateCamera() && self.canUseCamera()) {
+            var qrVC = QRViewController.init();
+//            typealias sendValueClosure=(string:String)->Void
+//            var block = (url:NSString)->Void{
+//                in
+//            }
+//            qrVC.qrUrlBlock = block;
+            qrVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(qrVC, animated: true)
+        }
+    }
+    
+//    - (void)scanAction:(UIBarButtonItem *)rightBar
+//    {
+//    if ([self validateCamera] && [self canUseCamera]) {
+//    QRViewController *qrVC = [[QRViewController alloc] init];
+//    void (^block)(NSString *url) = ^(NSString *url){
+//    // url
+//    
+//    };
+//    qrVC.qrUrlBlock = block;
+//    qrVC.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:qrVC animated:YES];
+//    }
+//    }
+    func validateCamera() -> Bool {
+        return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
+    }
+    
+    func canUseCamera() -> Bool {
+        let mediaType = AVMediaTypeVideo
+        var authStatus = AVCaptureDevice.authorizationStatusForMediaType(mediaType);
+        if (authStatus == AVAuthorizationStatus.Restricted || authStatus == AVAuthorizationStatus.Denied) {
+//            var block = MMPopupItemHandler(index: NSInteger) -> Void{
+//                
+//            }
+//            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.Normal, block), MMItemMake("取消", MMItemType.Highlight, block)]).showWithBlock(nil);
+            return false;
+        }
+        return true;
+    }
+    
+//    -(BOOL)canUseCamera
+//    {
+//    NSString *mediaType = AVMediaTypeVideo;
+//    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
+//    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
+//    MMPopupItemHandler block = ^(NSInteger index){
+//    switch (index) {
+//    case 0:
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+//    break;
+//    case 1:
+//    NSLog(@"取消");
+//    default:
+//    break;
+//    }
+//    };
+//    [[[MMAlertView alloc] initWithTitle:@"" detail:@"\n请在设备的设置-隐私-相机中允许访问相机" items:@[MMItemMake(@"设置", MMItemTypeNormal, block), MMItemMake(@"取消", MMItemTypeHighlight, block)]] showWithBlock:nil];
+//    return NO;
+//    }
+//    return YES;
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

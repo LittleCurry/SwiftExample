@@ -18,8 +18,8 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
     var tag2 = "性感";
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
-    
-    
+    var downView = DownEditView.init();
+    var listArr = [["img" : "circleGirl.png", "title" : "美女"], ["img" : "superStar.png", "title" : "明星"], ["img" : "car.png", "title" : "汽车"], ["img" : "pet.png", "title" : "宠物"], ["img" : "cartoon.png", "title" : "动漫"], ["img" : "design.png", "title" : "设计"], ["img" : "furniture.png", "title" : "家居"], ["img" : "marry.png", "title" : "婚嫁"], ["img" : "photograph.png", "title" : "摄影"], ["img" : "food.png", "title" : "美食"]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +28,8 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         self.getData();
     }
     func getView() -> Void {
+        self.navigationItem.title = "美女"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "pushEditView")
         let layout = HMWaterflowLayout.init();
         layout.HeightBlock = { (sender, index) -> (CGFloat) in
             let photo = self.playArr[index.item] as!Play;
@@ -70,7 +72,27 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         };
         self.collectionView.mj_footer = footer;
         self.view.addSubview(self.collectionView);
-        
+    }
+    
+    func pushEditView() -> Void {
+        self.downView = DownEditView.init(arr: self.listArr)
+        for view:UIView in self.downView.blackView.subviews {
+            if view.isKindOfClass(UIButton) {
+                var button = view as! UIButton
+                button.addTarget(self, action: "clickEditButton:", forControlEvents: UIControlEvents.TouchUpInside);
+            }
+        }
+        UIApplication.sharedApplication().keyWindow?.addSubview(self.downView)
+    }
+    
+    func clickEditButton(button:UIButton) -> Void {
+        let dic = self.listArr[button.tag-888] as NSDictionary
+        self.navigationItem.title = dic.valueForKey("title") as! String
+        self.tag1 = dic.valueForKey("title") as! String
+        self.tag2 = "全部"
+        self.pn = 0
+        self.getData()
+        self.downView.removeDownEditView()
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
