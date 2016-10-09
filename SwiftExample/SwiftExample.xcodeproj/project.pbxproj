@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C114CDC61DA90F9D00050911 /* smallPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC21DA90F9D00050911 /* smallPlay@2x.png */; };
+		C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC31DA90F9D00050911 /* smallPlay@3x.png */; };
+		C114CDC81DA90F9D00050911 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC41DA90F9D00050911 /* play@2x.png */; };
+		C114CDC91DA90F9D00050911 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC51DA90F9D00050911 /* play@3x.png */; };
 		C12801761D9E65A900E79A07 /* voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801701D9E65A900E79A07 /* voice@3x.png */; };
 		C12801771D9E65A900E79A07 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801711D9E65A900E79A07 /* voice@2x.png */; };
 		C12801781D9E65A900E79A07 /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801721D9E65A900E79A07 /* smile@2x.png */; };
@@ -259,6 +263,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C114CDC21DA90F9D00050911 /* smallPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@2x.png"; sourceTree = "<group>"; };
+		C114CDC31DA90F9D00050911 /* smallPlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@3x.png"; sourceTree = "<group>"; };
+		C114CDC41DA90F9D00050911 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
+		C114CDC51DA90F9D00050911 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
 		C12801701D9E65A900E79A07 /* voice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@3x.png"; sourceTree = "<group>"; };
 		C12801711D9E65A900E79A07 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
 		C12801721D9E65A900E79A07 /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
@@ -876,6 +884,10 @@
 				C1970D281DA8BC8300260A11 /* car.png */,
 				C1970D2A1DA8BC9500260A11 /* design.png */,
 				C1970D2C1DA8BCA300260A11 /* photograph.png */,
+				C114CDC21DA90F9D00050911 /* smallPlay@2x.png */,
+				C114CDC31DA90F9D00050911 /* smallPlay@3x.png */,
+				C114CDC41DA90F9D00050911 /* play@2x.png */,
+				C114CDC51DA90F9D00050911 /* play@3x.png */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -1619,6 +1631,7 @@
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
+				C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */,
 				C16419AE1D9BCB4600BD3841 /* 47.tiff in Resources */,
 				C164194F1D9BCB2F00BD3841 /* first@2x.png in Resources */,
 				C16419921D9BCB4600BD3841 /* 21.tiff in Resources */,
@@ -1629,7 +1642,9 @@
 				C16419941D9BCB4600BD3841 /* 23.tiff in Resources */,
 				C164184E1D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
 				C16419A91D9BCB4600BD3841 /* 42.tiff in Resources */,
+				C114CDC81DA90F9D00050911 /* play@2x.png in Resources */,
 				C16419A71D9BCB4600BD3841 /* 40.tiff in Resources */,
+				C114CDC61DA90F9D00050911 /* smallPlay@2x.png in Resources */,
 				C164199B1D9BCB4600BD3841 /* 3.tiff in Resources */,
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
 				C16418501D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
@@ -1658,6 +1673,7 @@
 				C1970D291DA8BC8300260A11 /* car.png in Resources */,
 				C16419501D9BCB2F00BD3841 /* firsting@2x.png in Resources */,
 				C16419891D9BCB4600BD3841 /* 13.tiff in Resources */,
+				C114CDC91DA90F9D00050911 /* play@3x.png in Resources */,
 				C16418451D9BCA3000BD3841 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				C16419901D9BCB4600BD3841 /* 2.tiff in Resources */,
 				C16419931D9BCB4600BD3841 /* 22.tiff in Resources */,
