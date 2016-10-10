@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
         window?.backgroundColor = UIColor.whiteColor();
         window?.makeKeyAndVisible();
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+//        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         let firstVC = FirstViewController.init();
         let firstNVC = UINavigationController.init(rootViewController: firstVC);

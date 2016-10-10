@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
@@ -16,13 +17,16 @@ class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.getView()
+    }
+    
+    func getView() -> Void {
         self.navigationItem.title = "图表"
         myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
         myTableView.delegate = self;
         myTableView.dataSource = self
         view.addSubview(myTableView);
-        
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

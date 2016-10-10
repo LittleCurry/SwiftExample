@@ -19,6 +19,31 @@ class MovieTableViewCell: UITableViewCell {
     var countLabel:UILabel?;
     var dateLabel:UILabel?;
     
+    var _video : Video?
+    var video : Video?{
+        set(newVideo){
+            if (_video != newVideo) {
+                _video = newVideo;
+            }
+            self.titleLabel?.text = newVideo?.title;
+            self.movieImage?.sd_setImageWithURL(newVideo!.cover, placeholderImage: nil, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
+                //
+            })
+            
+            self.timeLenLabel?.text = String(newVideo!.length/60) + ":" + String(format: "%02d", newVideo!.length%60);
+            self.countLabel?.text = String(newVideo!.playCount);
+            let index = newVideo!.ptime.startIndex.advancedBy(2)
+            let index2 = newVideo!.ptime.startIndex.advancedBy(8)
+            self.dateLabel?.text = newVideo!.ptime.substringFromIndex(index)
+            self.dateLabel?.text = self.dateLabel?.text!.substringToIndex(index2)
+            self.dateLabel?.text = self.dateLabel?.text!.stringByReplacingOccurrencesOfString("-", withString: "/", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            
+        }
+        get{
+            return self._video;
+        }
+    }
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = UIColor.clearColor()
@@ -34,14 +59,20 @@ class MovieTableViewCell: UITableViewCell {
         
         self.whiteView?.backgroundColor = UIColor.whiteColor()
         
-        self.titleLabel?.text = "biaoti"
+        self.titleLabel?.text = "标题"
         self.movieImage?.image = UIImage.init(named: "meinv.jpg")
         self.rightImage?.image = UIImage.init(named: "play.png")
         self.smallRightImage1?.image = UIImage.init(named: "smallPlay.png")
+        self.timeLenLabel?.font = UIFont.systemFontOfSize(13)
+        self.timeLenLabel?.textColor = UIColor.lightGrayColor()
         self.timeLenLabel?.text = "12:33"
         self.smallRightImage2?.image = UIImage.init(named: "smallPlay.png")
-        self.countLabel?.text = "18888"
+        self.countLabel?.font = UIFont.systemFontOfSize(13)
+        self.countLabel?.textColor = UIColor.lightGrayColor()
+        self.countLabel?.text = "538"
         self.dateLabel?.textAlignment = NSTextAlignment.Right
+        self.dateLabel?.font = UIFont.systemFontOfSize(13)
+        self.dateLabel?.textColor = UIColor.lightGrayColor()
         self.dateLabel?.text = "16/09/05"
         
         self.contentView.addSubview(self.whiteView!)
@@ -62,14 +93,14 @@ class MovieTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews();
         self.whiteView?.frame = CGRectMake(0, 0, WIDTH, 290)
-        self.titleLabel?.frame = CGRectMake(10, 0, WIDTH, 40)
-        self.movieImage?.frame = CGRectMake(0, 40, WIDTH, 200)
-        self.rightImage?.frame = CGRectMake(WIDTH/2-30, 100, 60, 60)
-        self.smallRightImage1?.frame = CGRectMake(10, 260, 20, 20)
-        self.timeLenLabel?.frame = CGRectMake(30, 260, 50, 20)
+        self.titleLabel?.frame = CGRectMake(5, 0, WIDTH-10, 40)
+        self.movieImage?.frame = CGRectMake(0, 40, WIDTH, 210)
+        self.rightImage?.frame = CGRectMake(WIDTH/2-30, 115, 60, 60)
+        self.smallRightImage1?.frame = CGRectMake(5, 260, 20, 20)
+        self.timeLenLabel?.frame = CGRectMake(25, 260, 50, 20)
         self.smallRightImage2?.frame = CGRectMake(90, 260, 20, 20)
         self.countLabel?.frame = CGRectMake(120, 260, 50, 20)
-        self.dateLabel?.frame = CGRectMake(WIDTH-100, 260, 80, 20)
+        self.dateLabel?.frame = CGRectMake(WIDTH-90, 260, 80, 20)
     }
 
     override func awakeFromNib() {

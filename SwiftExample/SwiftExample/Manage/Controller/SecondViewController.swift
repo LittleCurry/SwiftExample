@@ -14,8 +14,8 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
     var collectionView : UICollectionView!
     var playArr : NSMutableArray = [];
     var pn:NSInteger = 0;
-    var tag1 = "美女";
-    var tag2 = "性感";
+    var tag1 = "明星";
+    var tag2 = "全部";
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
     var downView = DownEditView.init();
@@ -28,7 +28,7 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         self.getData();
     }
     func getView() -> Void {
-        self.navigationItem.title = "美女"
+        self.navigationItem.title = "明星"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "pushEditView")
         let layout = HMWaterflowLayout.init();
         layout.HeightBlock = { (sender, index) -> (CGFloat) in

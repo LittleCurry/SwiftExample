@@ -11,19 +11,22 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.getView();
+    }
+    
+    func getView() -> Void {
         self.navigationItem.title = "Home"
         myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
         myTableView.delegate = self;
         myTableView.dataSource = self
-        view.addSubview(myTableView);
-        
+        self.view.addSubview(myTableView);
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -86,6 +89,11 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let testBlockVC = FirstOriginBlockViewcontroller.init();
             testBlockVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(testBlockVC, animated: true);
+            break;
+        case 8:
+            let weatherVC = FirstWeatherViewController.init();
+            weatherVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(weatherVC, animated: true);
             break;
         default:
             break;

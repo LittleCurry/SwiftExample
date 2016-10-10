@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class FirstPlayerViewController: BaseViewController {
+    
+    var mvPlay : MPMoviePlayerController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        getView()
+    }
+    
+    func getView() -> Void {
+        self.navigationItem.title = "视频播放"
+        self.mvPlay = MPMoviePlayerController.init()
+        self.mvPlay?.contentURL = NSURL.init(string: "http://flv2.bn.netease.com/videolib3/1610/09/PIlhF8201/SD/PIlhF8201-mobile.mp4")
+        self.mvPlay?.view.frame = CGRectMake(0, 64, WIDTH, 300)
+        self.view.addSubview((self.mvPlay?.view)!)
+        self.mvPlay?.play()
     }
 
     override func didReceiveMemoryWarning() {

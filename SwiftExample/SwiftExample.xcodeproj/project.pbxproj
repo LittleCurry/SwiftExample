@@ -17,6 +17,11 @@
 		C12801791D9E65A900E79A07 /* smile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801731D9E65A900E79A07 /* smile@3x.png */; };
 		C128017A1D9E65A900E79A07 /* circleAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801741D9E65A900E79A07 /* circleAdd@3x.png */; };
 		C128017B1D9E65A900E79A07 /* circleAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801751D9E65A900E79A07 /* circleAdd@2x.png */; };
+		C12BEC541DAA3350009F2EAA /* UIScrollView+AllCells.m in Sources */ = {isa = PBXBuildFile; fileRef = C12BEC531DAA3350009F2EAA /* UIScrollView+AllCells.m */; };
+		C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12BEC551DAA4177009F2EAA /* loading@2x.png */; };
+		C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12BEC561DAA4177009F2EAA /* loading@3x.png */; };
+		C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BEC591DAA4931009F2EAA /* ThirdOneTypeViewController.swift */; };
+		C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */; };
 		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
 		C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */; };
 		C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C151E3121DA53CC5004A41A3 /* meinv.jpg */; };
@@ -243,6 +248,9 @@
 		C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */; };
 		C1970D491DA8E96B00260A11 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D481DA8E96B00260A11 /* ThirdViewController.swift */; };
 		C1970D6F1DA8ECEA00260A11 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */; };
+		C1E218211DA9E3F9002748F6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E218201DA9E3F9002748F6 /* Video.swift */; };
+		C1E218241DAA0320002748F6 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218221DAA0320002748F6 /* add@3x.png */; };
+		C1E218251DAA0320002748F6 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218231DAA0320002748F6 /* add@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -273,6 +281,12 @@
 		C12801731D9E65A900E79A07 /* smile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@3x.png"; sourceTree = "<group>"; };
 		C12801741D9E65A900E79A07 /* circleAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@3x.png"; sourceTree = "<group>"; };
 		C12801751D9E65A900E79A07 /* circleAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circleAdd@2x.png"; sourceTree = "<group>"; };
+		C12BEC521DAA3350009F2EAA /* UIScrollView+AllCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+AllCells.h"; sourceTree = "<group>"; };
+		C12BEC531DAA3350009F2EAA /* UIScrollView+AllCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+AllCells.m"; sourceTree = "<group>"; };
+		C12BEC551DAA4177009F2EAA /* loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@2x.png"; sourceTree = "<group>"; };
+		C12BEC561DAA4177009F2EAA /* loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading@3x.png"; sourceTree = "<group>"; };
+		C12BEC591DAA4931009F2EAA /* ThirdOneTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdOneTypeViewController.swift; sourceTree = "<group>"; };
+		C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWeatherViewController.swift; sourceTree = "<group>"; };
 		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
 		C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstGaussViewController.swift; sourceTree = "<group>"; };
 		C151E3121DA53CC5004A41A3 /* meinv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = meinv.jpg; sourceTree = "<group>"; };
@@ -644,6 +658,10 @@
 		C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaterBlockViewController.swift; sourceTree = "<group>"; };
 		C1970D481DA8E96B00260A11 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		C1E218201DA9E3F9002748F6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		C1E218221DAA0320002748F6 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
+		C1E218231DAA0320002748F6 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
+		C1E218631DAA1B51002748F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -888,6 +906,10 @@
 				C114CDC31DA90F9D00050911 /* smallPlay@3x.png */,
 				C114CDC41DA90F9D00050911 /* play@2x.png */,
 				C114CDC51DA90F9D00050911 /* play@3x.png */,
+				C1E218221DAA0320002748F6 /* add@3x.png */,
+				C1E218231DAA0320002748F6 /* add@2x.png */,
+				C12BEC551DAA4177009F2EAA /* loading@2x.png */,
+				C12BEC561DAA4177009F2EAA /* loading@3x.png */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -915,6 +937,8 @@
 				C16419371D9BCB1400BD3841 /* BaseEngine.m */,
 				C1970D091DA895EE00260A11 /* DownEditView.h */,
 				C1970D0A1DA895EE00260A11 /* DownEditView.m */,
+				C12BEC521DAA3350009F2EAA /* UIScrollView+AllCells.h */,
+				C12BEC531DAA3350009F2EAA /* UIScrollView+AllCells.m */,
 				C16419381D9BCB1400BD3841 /* NSObject+Model.swift */,
 				C16419391D9BCB1400BD3841 /* AlloverMacro.swift */,
 				C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */,
@@ -942,6 +966,7 @@
 		C16417EF1D9BC9E200BD3841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1E218631DAA1B51002748F6 /* MediaPlayer.framework */,
 				C1970D181DA8A31000260A11 /* libz.tbd */,
 				C1970D161DA8A2F800260A11 /* libstdc++.6.0.9.tbd */,
 				C1970D141DA8A2DA00260A11 /* libc++.tbd */,
@@ -1391,6 +1416,7 @@
 				C1970D321DA8CE3700260A11 /* FirstPlayerViewController.swift */,
 				C1970D441DA8E8E200260A11 /* FirstOriginBlockViewcontroller.swift */,
 				C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */,
+				C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1439,6 +1465,7 @@
 			isa = PBXGroup;
 			children = (
 				C1970D481DA8E96B00260A11 /* ThirdViewController.swift */,
+				C12BEC591DAA4931009F2EAA /* ThirdOneTypeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1446,6 +1473,7 @@
 		C16419BB1D9BCBF300BD3841 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C1E218201DA9E3F9002748F6 /* Video.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1586,6 +1614,7 @@
 				C16419A01D9BCB4600BD3841 /* 34.tiff in Resources */,
 				C16419851D9BCB4600BD3841 /* 1.tiff in Resources */,
 				C1970D2D1DA8BCA300260A11 /* photograph.png in Resources */,
+				C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */,
 				C16419AA1D9BCB4600BD3841 /* 43.tiff in Resources */,
 				C16419A61D9BCB4600BD3841 /* 4.tiff in Resources */,
 				C16419A11D9BCB4600BD3841 /* 35.tiff in Resources */,
@@ -1609,6 +1638,7 @@
 				C12801791D9E65A900E79A07 /* smile@3x.png in Resources */,
 				C164184D1D9BCA3000BD3841 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C1970D231DA8BC5800260A11 /* furniture.png in Resources */,
+				C1E218241DAA0320002748F6 /* add@3x.png in Resources */,
 				C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
 				C16419B21D9BCB4600BD3841 /* 8.tiff in Resources */,
@@ -1632,6 +1662,7 @@
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
 				C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */,
+				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
 				C16419AE1D9BCB4600BD3841 /* 47.tiff in Resources */,
 				C164194F1D9BCB2F00BD3841 /* first@2x.png in Resources */,
 				C16419921D9BCB4600BD3841 /* 21.tiff in Resources */,
@@ -1644,6 +1675,7 @@
 				C16419A91D9BCB4600BD3841 /* 42.tiff in Resources */,
 				C114CDC81DA90F9D00050911 /* play@2x.png in Resources */,
 				C16419A71D9BCB4600BD3841 /* 40.tiff in Resources */,
+				C1E218251DAA0320002748F6 /* add@2x.png in Resources */,
 				C114CDC61DA90F9D00050911 /* smallPlay@2x.png in Resources */,
 				C164199B1D9BCB4600BD3841 /* 3.tiff in Resources */,
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
@@ -1701,6 +1733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */,
 				C16418D51D9BCAC500BD3841 /* MASViewConstraint.m in Sources */,
 				C16418D91D9BCAC500BD3841 /* ViewController+MASAdditions.m in Sources */,
 				C16418AB1D9BCAB400BD3841 /* SDWebImageDownloader.m in Sources */,
@@ -1740,8 +1773,10 @@
 				C16418D61D9BCAC500BD3841 /* NSArray+MASAdditions.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
 				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
+				C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */,
 				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,
+				C12BEC541DAA3350009F2EAA /* UIScrollView+AllCells.m in Sources */,
 				C1970D311DA8CE1F00260A11 /* FirstScanViewController.swift in Sources */,
 				C16418811D9BCAA800BD3841 /* MMPopupView.m in Sources */,
 				C16418B41D9BCAB400BD3841 /* UIImageView+WebCache.m in Sources */,
@@ -1810,6 +1845,7 @@
 				C17D550B1DA607A800C27FD2 /* FouthLineViewController.swift in Sources */,
 				C16419151D9BCADE00BD3841 /* MJRefreshComponent.m in Sources */,
 				C16419261D9BCADE00BD3841 /* UIView+MJExtension.m in Sources */,
+				C1E218211DA9E3F9002748F6 /* Video.swift in Sources */,
 				C16418A81D9BCAB400BD3841 /* SDImageCache.m in Sources */,
 				C16419411D9BCB1400BD3841 /* NetHandler.m in Sources */,
 				C16418E21D9BCAD000BD3841 /* HyTransitions.m in Sources */,
@@ -1970,6 +2006,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks",
@@ -1998,6 +2035,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks",

@@ -14,11 +14,11 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.whiteColor();
-        self.navigationController!.navigationBar.barTintColor = mainColor;
+//        self.navigationController!.navigationBar.barTintColor = mainColor;
         self.automaticallyAdjustsScrollViewInsets = false;
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()];
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage.init(named: "back.png")?.resizableImageWithCapInsets(UIEdgeInsetsMake(0, 20, 0, 0)), forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.tintColor = UIColor.blackColor();
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()];
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage.init(named: "back.png")!.changeImageWithColor(UIColor.blackColor()).resizableImageWithCapInsets(UIEdgeInsetsMake(0, 20, 0, 0)), forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
         
         /**
          *  ???
