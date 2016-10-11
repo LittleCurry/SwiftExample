@@ -208,6 +208,35 @@
 		C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C16419C61D9BCC5400BD3841 /* HMWaterflowLayout.m */; };
 		C16419C91D9BCC5400BD3841 /* PlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419C71D9BCC5400BD3841 /* PlayCollectionViewCell.swift */; };
 		C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419CA1D9BCC8200BD3841 /* SecondViewController.swift */; };
+		C16C87691DAB66F600314367 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87681DAB66F600314367 /* cloud@2x.png */; };
+		C16C876B1DAB670200314367 /* nosun_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876A1DAB670200314367 /* nosun_mini.png */; };
+		C16C876D1DAB670B00314367 /* rain_little0011@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876C1DAB670B00314367 /* rain_little0011@2x.png */; };
+		C16C876F1DAB671400314367 /* rain_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876E1DAB671400314367 /* rain_mini@2x.png */; };
+		C16C87711DAB671D00314367 /* rain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87701DAB671D00314367 /* rain@2x.png */; };
+		C16C87731DAB672700314367 /* rainandsnow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87721DAB672700314367 /* rainandsnow@2x.png */; };
+		C16C87751DAB673000314367 /* rainheavy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87741DAB673000314367 /* rainheavy@2x.png */; };
+		C16C87771DAB673900314367 /* sand_float_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87761DAB673900314367 /* sand_float_mini@2x.png */; };
+		C16C87791DAB674200314367 /* sand0048@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87781DAB674200314367 /* sand0048@2x.png */; };
+		C16C877B1DAB674C00314367 /* sandfloat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C877A1DAB674C00314367 /* sandfloat@2x.png */; };
+		C16C877D1DAB675500314367 /* snow_heavyx_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C877C1DAB675500314367 /* snow_heavyx_mini@2x.png */; };
+		C16C877F1DAB675E00314367 /* snow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C877E1DAB675E00314367 /* snow@2x.png */; };
+		C16C87811DAB676800314367 /* snowheavy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87801DAB676800314367 /* snowheavy@2x.png */; };
+		C16C87831DAB677100314367 /* snowlittle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87821DAB677100314367 /* snowlittle@2x.png */; };
+		C16C87851DAB677A00314367 /* sun_and_cloud_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87841DAB677A00314367 /* sun_and_cloud_mini@2x.png */; };
+		C16C87871DAB678200314367 /* sun_and_rain_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87861DAB678200314367 /* sun_and_rain_mini@2x.png */; };
+		C16C87891DAB679300314367 /* sun_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87881DAB679300314367 /* sun_mini@2x.png */; };
+		C16C878B1DAB679C00314367 /* sun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C878A1DAB679C00314367 /* sun@2x.png */; };
+		C16C878D1DAB67A600314367 /* sunandcloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C878C1DAB67A600314367 /* sunandcloud@2x.png */; };
+		C16C878F1DAB67C500314367 /* sunandrain@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C878E1DAB67C500314367 /* sunandrain@2x.png */; };
+		C16C87911DAB67D200314367 /* sunandsnow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87901DAB67D200314367 /* sunandsnow@2x.png */; };
+		C16C87931DAB67DB00314367 /* thunder_mini@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87921DAB67DB00314367 /* thunder_mini@2x.png */; };
+		C16C87951DAB67E600314367 /* thunder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87941DAB67E600314367 /* thunder@2x.png */; };
+		C16C87971DAB67EE00314367 /* thunderhailstone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87961DAB67EE00314367 /* thunderhailstone@2x.png */; };
+		C16C87991DAB7A4F00314367 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16C87981DAB7A4F00314367 /* city.plist */; };
+		C16C879B1DAB7B3600314367 /* FirstProvinceCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C879A1DAB7B3600314367 /* FirstProvinceCityViewController.swift */; };
+		C16C879E1DAB7F5400314367 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C879C1DAB7F5400314367 /* location@2x.png */; };
+		C16C879F1DAB7F5400314367 /* location@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C879D1DAB7F5400314367 /* location@3x.png */; };
+		C16C87A11DAB838F00314367 /* ProvinceCities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16C87A01DAB838F00314367 /* ProvinceCities.swift */; };
 		C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */; };
 		C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55011DA6073E00C27FD2 /* SCBarCell.m */; };
 		C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55031DA6073E00C27FD2 /* SCCircleCell.m */; };
@@ -219,6 +248,8 @@
 		C17D55131DA6208100C27FD2 /* FirstShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17D55121DA6208100C27FD2 /* FirstShareViewController.swift */; };
 		C17D55161DA623C100C27FD2 /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17D55141DA623C100C27FD2 /* share@2x.png */; };
 		C17D55171DA623C100C27FD2 /* share@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17D55151DA623C100C27FD2 /* share@3x.png */; };
+		C18AE8861DAB3C0900275A90 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AE8851DAB3C0900275A90 /* Weather.swift */; };
+		C18AE8881DAB460000275A90 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18AE8871DAB460000275A90 /* WeatherView.swift */; };
 		C1970D0B1DA895EE00260A11 /* DownEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1970D0A1DA895EE00260A11 /* DownEditView.m */; };
 		C1970D0F1DA8A15B00260A11 /* AMap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1970D0E1DA8A15B00260A11 /* AMap.bundle */; };
 		C1970D111DA8A16500260A11 /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1970D101DA8A16500260A11 /* AMapSearchKit.framework */; };
@@ -608,6 +639,35 @@
 		C16419CA1D9BCC8200BD3841 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		C16419D41D9BD1F500BD3841 /* SwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SwiftExample-Bridging-Header.h"; path = "../SwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C16C87681DAB66F600314367 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
+		C16C876A1DAB670200314367 /* nosun_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosun_mini.png; sourceTree = "<group>"; };
+		C16C876C1DAB670B00314367 /* rain_little0011@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain_little0011@2x.png"; sourceTree = "<group>"; };
+		C16C876E1DAB671400314367 /* rain_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain_mini@2x.png"; sourceTree = "<group>"; };
+		C16C87701DAB671D00314367 /* rain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain@2x.png"; sourceTree = "<group>"; };
+		C16C87721DAB672700314367 /* rainandsnow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rainandsnow@2x.png"; sourceTree = "<group>"; };
+		C16C87741DAB673000314367 /* rainheavy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rainheavy@2x.png"; sourceTree = "<group>"; };
+		C16C87761DAB673900314367 /* sand_float_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sand_float_mini@2x.png"; sourceTree = "<group>"; };
+		C16C87781DAB674200314367 /* sand0048@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sand0048@2x.png"; sourceTree = "<group>"; };
+		C16C877A1DAB674C00314367 /* sandfloat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sandfloat@2x.png"; sourceTree = "<group>"; };
+		C16C877C1DAB675500314367 /* snow_heavyx_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow_heavyx_mini@2x.png"; sourceTree = "<group>"; };
+		C16C877E1DAB675E00314367 /* snow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snow@2x.png"; sourceTree = "<group>"; };
+		C16C87801DAB676800314367 /* snowheavy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snowheavy@2x.png"; sourceTree = "<group>"; };
+		C16C87821DAB677100314367 /* snowlittle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snowlittle@2x.png"; sourceTree = "<group>"; };
+		C16C87841DAB677A00314367 /* sun_and_cloud_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun_and_cloud_mini@2x.png"; sourceTree = "<group>"; };
+		C16C87861DAB678200314367 /* sun_and_rain_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun_and_rain_mini@2x.png"; sourceTree = "<group>"; };
+		C16C87881DAB679300314367 /* sun_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun_mini@2x.png"; sourceTree = "<group>"; };
+		C16C878A1DAB679C00314367 /* sun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sun@2x.png"; sourceTree = "<group>"; };
+		C16C878C1DAB67A600314367 /* sunandcloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunandcloud@2x.png"; sourceTree = "<group>"; };
+		C16C878E1DAB67C500314367 /* sunandrain@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunandrain@2x.png"; sourceTree = "<group>"; };
+		C16C87901DAB67D200314367 /* sunandsnow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sunandsnow@2x.png"; sourceTree = "<group>"; };
+		C16C87921DAB67DB00314367 /* thunder_mini@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thunder_mini@2x.png"; sourceTree = "<group>"; };
+		C16C87941DAB67E600314367 /* thunder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thunder@2x.png"; sourceTree = "<group>"; };
+		C16C87961DAB67EE00314367 /* thunderhailstone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thunderhailstone@2x.png"; sourceTree = "<group>"; };
+		C16C87981DAB7A4F00314367 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		C16C879A1DAB7B3600314367 /* FirstProvinceCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstProvinceCityViewController.swift; sourceTree = "<group>"; };
+		C16C879C1DAB7F5400314367 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@2x.png"; sourceTree = "<group>"; };
+		C16C879D1DAB7F5400314367 /* location@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location@3x.png"; sourceTree = "<group>"; };
+		C16C87A01DAB838F00314367 /* ProvinceCities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceCities.swift; sourceTree = "<group>"; };
 		C17D54FE1DA6073E00C27FD2 /* SCChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartCell.h; sourceTree = "<group>"; };
 		C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCChartCell.m; sourceTree = "<group>"; };
 		C17D55001DA6073E00C27FD2 /* SCBarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCBarCell.h; sourceTree = "<group>"; };
@@ -623,6 +683,8 @@
 		C17D55121DA6208100C27FD2 /* FirstShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstShareViewController.swift; sourceTree = "<group>"; };
 		C17D55141DA623C100C27FD2 /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
 		C17D55151DA623C100C27FD2 /* share@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@3x.png"; sourceTree = "<group>"; };
+		C18AE8851DAB3C0900275A90 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		C18AE8871DAB460000275A90 /* WeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		C1970D091DA895EE00260A11 /* DownEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownEditView.h; sourceTree = "<group>"; };
 		C1970D0A1DA895EE00260A11 /* DownEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownEditView.m; sourceTree = "<group>"; };
 		C1970D0E1DA8A15B00260A11 /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
@@ -910,6 +972,9 @@
 				C1E218231DAA0320002748F6 /* add@2x.png */,
 				C12BEC551DAA4177009F2EAA /* loading@2x.png */,
 				C12BEC561DAA4177009F2EAA /* loading@3x.png */,
+				C16C879C1DAB7F5400314367 /* location@2x.png */,
+				C16C879D1DAB7F5400314367 /* location@3x.png */,
+				C16C87671DAB667B00314367 /* weather */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
 			path = Picture;
@@ -1417,6 +1482,7 @@
 				C1970D441DA8E8E200260A11 /* FirstOriginBlockViewcontroller.swift */,
 				C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */,
 				C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */,
+				C16C879A1DAB7B3600314367 /* FirstProvinceCityViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1424,6 +1490,9 @@
 		C16419B51D9BCBD700BD3841 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C16C87981DAB7A4F00314367 /* city.plist */,
+				C18AE8851DAB3C0900275A90 /* Weather.swift */,
+				C16C87A01DAB838F00314367 /* ProvinceCities.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1431,6 +1500,7 @@
 		C16419B61D9BCBD700BD3841 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C18AE8871DAB460000275A90 /* WeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1484,6 +1554,37 @@
 				C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C16C87671DAB667B00314367 /* weather */ = {
+			isa = PBXGroup;
+			children = (
+				C16C87961DAB67EE00314367 /* thunderhailstone@2x.png */,
+				C16C87941DAB67E600314367 /* thunder@2x.png */,
+				C16C87921DAB67DB00314367 /* thunder_mini@2x.png */,
+				C16C87901DAB67D200314367 /* sunandsnow@2x.png */,
+				C16C878C1DAB67A600314367 /* sunandcloud@2x.png */,
+				C16C878E1DAB67C500314367 /* sunandrain@2x.png */,
+				C16C878A1DAB679C00314367 /* sun@2x.png */,
+				C16C87881DAB679300314367 /* sun_mini@2x.png */,
+				C16C87861DAB678200314367 /* sun_and_rain_mini@2x.png */,
+				C16C87841DAB677A00314367 /* sun_and_cloud_mini@2x.png */,
+				C16C87821DAB677100314367 /* snowlittle@2x.png */,
+				C16C87801DAB676800314367 /* snowheavy@2x.png */,
+				C16C877E1DAB675E00314367 /* snow@2x.png */,
+				C16C877C1DAB675500314367 /* snow_heavyx_mini@2x.png */,
+				C16C877A1DAB674C00314367 /* sandfloat@2x.png */,
+				C16C87781DAB674200314367 /* sand0048@2x.png */,
+				C16C87761DAB673900314367 /* sand_float_mini@2x.png */,
+				C16C87741DAB673000314367 /* rainheavy@2x.png */,
+				C16C87721DAB672700314367 /* rainandsnow@2x.png */,
+				C16C87701DAB671D00314367 /* rain@2x.png */,
+				C16C876E1DAB671400314367 /* rain_mini@2x.png */,
+				C16C876C1DAB670B00314367 /* rain_little0011@2x.png */,
+				C16C876A1DAB670200314367 /* nosun_mini.png */,
+				C16C87681DAB66F600314367 /* cloud@2x.png */,
+			);
+			path = weather;
 			sourceTree = "<group>";
 		};
 		C1970D341DA8CEFC00260A11 /* QRView */ = {
@@ -1608,18 +1709,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16C879E1DAB7F5400314367 /* location@2x.png in Resources */,
 				C16419951D9BCB4600BD3841 /* 24.tiff in Resources */,
 				C16418401D9BCA3000BD3841 /* UMShareEditViewController.xib in Resources */,
 				C164183E1D9BCA3000BD3841 /* UMSCommentInputController.xib in Resources */,
 				C16419A01D9BCB4600BD3841 /* 34.tiff in Resources */,
+				C16C876D1DAB670B00314367 /* rain_little0011@2x.png in Resources */,
 				C16419851D9BCB4600BD3841 /* 1.tiff in Resources */,
 				C1970D2D1DA8BCA300260A11 /* photograph.png in Resources */,
 				C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */,
 				C16419AA1D9BCB4600BD3841 /* 43.tiff in Resources */,
 				C16419A61D9BCB4600BD3841 /* 4.tiff in Resources */,
+				C16C87771DAB673900314367 /* sand_float_mini@2x.png in Resources */,
+				C16C877D1DAB675500314367 /* snow_heavyx_mini@2x.png in Resources */,
 				C16419A11D9BCB4600BD3841 /* 35.tiff in Resources */,
 				C164198E1D9BCB4600BD3841 /* 18.tiff in Resources */,
 				C164198C1D9BCB4600BD3841 /* 16.tiff in Resources */,
+				C16C878D1DAB67A600314367 /* sunandcloud@2x.png in Resources */,
 				C164199D1D9BCB4600BD3841 /* 31.tiff in Resources */,
 				C12801781D9E65A900E79A07 /* smile@2x.png in Resources */,
 				C16419A41D9BCB4600BD3841 /* 38.tiff in Resources */,
@@ -1634,20 +1740,25 @@
 				C16419AC1D9BCB4600BD3841 /* 45.tiff in Resources */,
 				C1970D251DA8BC6E00260A11 /* food.png in Resources */,
 				C164199A1D9BCB4600BD3841 /* 29.tiff in Resources */,
+				C16C878B1DAB679C00314367 /* sun@2x.png in Resources */,
 				C16419521D9BCB2F00BD3841 /* fengjing.jpg in Resources */,
 				C12801791D9E65A900E79A07 /* smile@3x.png in Resources */,
 				C164184D1D9BCA3000BD3841 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				C1970D231DA8BC5800260A11 /* furniture.png in Resources */,
 				C1E218241DAA0320002748F6 /* add@3x.png in Resources */,
+				C16C87751DAB673000314367 /* rainheavy@2x.png in Resources */,
 				C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
+				C16C877F1DAB675E00314367 /* snow@2x.png in Resources */,
 				C16419B21D9BCB4600BD3841 /* 8.tiff in Resources */,
+				C16C87731DAB672700314367 /* rainandsnow@2x.png in Resources */,
 				C16419971D9BCB4600BD3841 /* 26.tiff in Resources */,
 				C16419211D9BCADE00BD3841 /* MJRefresh.bundle in Resources */,
 				C164199C1D9BCB4600BD3841 /* 30.tiff in Resources */,
 				C1970D211DA8BC4D00260A11 /* marry.png in Resources */,
 				C1970D2F1DA8BE1E00260A11 /* circleGirl.png in Resources */,
 				C16419871D9BCB4600BD3841 /* 11.tiff in Resources */,
+				C16C87831DAB677100314367 /* snowlittle@2x.png in Resources */,
 				C12801761D9E65A900E79A07 /* voice@3x.png in Resources */,
 				C16419B01D9BCB4600BD3841 /* 6.tiff in Resources */,
 				C16419881D9BCB4600BD3841 /* 12.tiff in Resources */,
@@ -1658,6 +1769,7 @@
 				C16419A21D9BCB4600BD3841 /* 36.tiff in Resources */,
 				C16419A31D9BCB4600BD3841 /* 37.tiff in Resources */,
 				C17D55161DA623C100C27FD2 /* share@2x.png in Resources */,
+				C16C87691DAB66F600314367 /* cloud@2x.png in Resources */,
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
@@ -1665,39 +1777,55 @@
 				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
 				C16419AE1D9BCB4600BD3841 /* 47.tiff in Resources */,
 				C164194F1D9BCB2F00BD3841 /* first@2x.png in Resources */,
+				C16C876B1DAB670200314367 /* nosun_mini.png in Resources */,
 				C16419921D9BCB4600BD3841 /* 21.tiff in Resources */,
+				C16C879F1DAB7F5400314367 /* location@3x.png in Resources */,
 				C164183D1D9BCA3000BD3841 /* UMSCommentDetailController.xib in Resources */,
 				C16418421D9BCA3000BD3841 /* UMSLoginViewController.xib in Resources */,
 				C164199F1D9BCB4600BD3841 /* 33.tiff in Resources */,
 				C164183F1D9BCA3000BD3841 /* UMSCommentInputControlleriPad.xib in Resources */,
 				C16419941D9BCB4600BD3841 /* 23.tiff in Resources */,
 				C164184E1D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
+				C16C878F1DAB67C500314367 /* sunandrain@2x.png in Resources */,
 				C16419A91D9BCB4600BD3841 /* 42.tiff in Resources */,
 				C114CDC81DA90F9D00050911 /* play@2x.png in Resources */,
+				C16C87791DAB674200314367 /* sand0048@2x.png in Resources */,
 				C16419A71D9BCB4600BD3841 /* 40.tiff in Resources */,
+				C16C87711DAB671D00314367 /* rain@2x.png in Resources */,
 				C1E218251DAA0320002748F6 /* add@2x.png in Resources */,
+				C16C87911DAB67D200314367 /* sunandsnow@2x.png in Resources */,
 				C114CDC61DA90F9D00050911 /* smallPlay@2x.png in Resources */,
 				C164199B1D9BCB4600BD3841 /* 3.tiff in Resources */,
+				C16C87971DAB67EE00314367 /* thunderhailstone@2x.png in Resources */,
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
 				C16418501D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
+				C16C877B1DAB674C00314367 /* sandfloat@2x.png in Resources */,
 				C164198D1D9BCB4600BD3841 /* 17.tiff in Resources */,
 				C17D55171DA623C100C27FD2 /* share@3x.png in Resources */,
+				C16C87811DAB676800314367 /* snowheavy@2x.png in Resources */,
 				C16419AD1D9BCB4600BD3841 /* 46.tiff in Resources */,
+				C16C87991DAB7A4F00314367 /* city.plist in Resources */,
 				C164198B1D9BCB4600BD3841 /* 15.tiff in Resources */,
+				C16C87931DAB67DB00314367 /* thunder_mini@2x.png in Resources */,
 				C1970D1D1DA8BC3500260A11 /* pet.png in Resources */,
 				C16419541D9BCB2F00BD3841 /* back@3x.png in Resources */,
 				C12801771D9E65A900E79A07 /* voice@2x.png in Resources */,
+				C16C87951DAB67E600314367 /* thunder@2x.png in Resources */,
 				C16419A51D9BCB4600BD3841 /* 39.tiff in Resources */,
 				C16418411D9BCA3000BD3841 /* UMShareEditViewControlleriPad.xib in Resources */,
+				C16C87871DAB678200314367 /* sun_and_rain_mini@2x.png in Resources */,
 				C16419981D9BCB4600BD3841 /* 27.tiff in Resources */,
 				C16418541D9BCA3000BD3841 /* README.txt in Resources */,
+				C16C87851DAB677A00314367 /* sun_and_cloud_mini@2x.png in Resources */,
 				C16417C31D9BC86D00BD3841 /* Assets.xcassets in Resources */,
 				C16419861D9BCB4600BD3841 /* 10.tiff in Resources */,
 				C16419AB1D9BCB4600BD3841 /* 44.tiff in Resources */,
 				C164183A1D9BCA3000BD3841 /* UMSocialLocalizable.strings in Resources */,
 				C16419511D9BCB2F00BD3841 /* jiezhi.jpg in Resources */,
+				C16C876F1DAB671400314367 /* rain_mini@2x.png in Resources */,
 				C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */,
 				C16418431D9BCA3000BD3841 /* UMSnsAccountViewController.xib in Resources */,
+				C16C87891DAB679300314367 /* sun_mini@2x.png in Resources */,
 				C128017A1D9E65A900E79A07 /* circleAdd@3x.png in Resources */,
 				C164184A1D9BCA3000BD3841 /* WeiboSDK.bundle in Resources */,
 				C16419B11D9BCB4600BD3841 /* 7.tiff in Resources */,
@@ -1745,6 +1873,8 @@
 				C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */,
 				C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */,
 				C16418681D9BCA8800BD3841 /* AFURLSessionManager.m in Sources */,
+				C16C879B1DAB7B3600314367 /* FirstProvinceCityViewController.swift in Sources */,
+				C16C87A11DAB838F00314367 /* ProvinceCities.swift in Sources */,
 				C16418AE1D9BCAB400BD3841 /* SDWebImagePrefetcher.m in Sources */,
 				C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */,
 				C16419141D9BCADE00BD3841 /* MJRefreshBackFooter.m in Sources */,
@@ -1768,11 +1898,13 @@
 				C16418B11D9BCAB400BD3841 /* UIImage+MultiFormat.m in Sources */,
 				C16418D41D9BCAC500BD3841 /* MASViewAttribute.m in Sources */,
 				C16418B21D9BCAB400BD3841 /* UIImage+WebP.m in Sources */,
+				C18AE8881DAB460000275A90 /* WeatherView.swift in Sources */,
 				C1970D421DA8CEFC00260A11 /* QRView.m in Sources */,
 				C16419401D9BCB1400BD3841 /* AccountInfo.m in Sources */,
 				C16418D61D9BCAC500BD3841 /* NSArray+MASAdditions.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
 				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
+				C18AE8861DAB3C0900275A90 /* Weather.swift in Sources */,
 				C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */,
 				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,

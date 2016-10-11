@@ -11,8 +11,9 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
+    var clearLabel:UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,17 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
         }
         cell?.textLabel?.text = nameArr[indexPath.row];
+        if indexPath.row == 9 {
+            if (self.clearLabel == nil) {
+                self.clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 0, 100, 50))
+                self.clearLabel?.textAlignment = NSTextAlignment.Right
+                self.clearLabel?.textColor = UIColor.redColor()
+                self.clearLabel?.font = UIFont.systemFontOfSize(14)
+                self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+                cell?.addSubview(self.clearLabel!)
+            }
+        }
+        
         return cell!;
     }
     
@@ -94,6 +106,11 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let weatherVC = FirstWeatherViewController.init();
             weatherVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(weatherVC, animated: true);
+            break;
+        case 9:
+            SDImageCache.sharedImageCache().clearDiskOnCompletion({
+                self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+            })
             break;
         default:
             break;

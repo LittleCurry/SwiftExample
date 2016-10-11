@@ -159,7 +159,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         }
     }
     func startLoading() -> Void {
-        //
+        // 手动添加动画
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.toValue = M_PI * 2.0
         rotationAnimation.duration = 1

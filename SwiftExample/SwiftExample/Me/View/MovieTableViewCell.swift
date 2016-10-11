@@ -36,6 +36,7 @@ class MovieTableViewCell: UITableViewCell {
             let index2 = newVideo!.ptime.startIndex.advancedBy(8)
             self.dateLabel?.text = newVideo!.ptime.substringFromIndex(index)
             self.dateLabel?.text = self.dateLabel?.text!.substringToIndex(index2)
+            // 替换字符串
             self.dateLabel?.text = self.dateLabel?.text!.stringByReplacingOccurrencesOfString("-", withString: "/", options: NSStringCompareOptions.LiteralSearch, range: nil)
             
         }
