@@ -19,14 +19,7 @@ class WeatherView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.weekLabel = UILabel.init(frame: CGRectMake(0, 0, frame.size.width, frame.size.height/8));
-        self.weatherImage = UIImageView.init();
-        if (frame.size.width > frame.size.height/2) {
-            self.weatherImage?.frame = CGRectMake(frame.size.width/2-frame.size.height/4, frame.size.height/8, frame.size.height/2, frame.size.height/2)
-        }
-        if (frame.size.width <= frame.size.height/2) {
-            self.weatherImage?.frame = CGRectMake(frame.size.width/2 - frame.size.width/2, frame.size.height/8, frame.size.width, frame.size.width)
-        }
-        
+        self.weatherImage = UIImageView.init(frame: CGRectMake(frame.size.width/2-30, frame.size.height/8, 60, 81))
         self.temperatureLabel = UILabel.init(frame: CGRectMake(0, Y(self.weatherImage!)+PART_H(self.weatherImage!), frame.size.width, 30));
         self.cloudLabel = UILabel.init(frame: CGRectMake(0, Y(self.temperatureLabel!)+PART_H(self.temperatureLabel!), frame.size.width, 14));
         self.windLabel = UILabel.init(frame: CGRectMake(0, Y(self.cloudLabel!)+PART_H(self.cloudLabel!), frame.size.width, 14));

@@ -67,6 +67,7 @@
 //#import "DownEditView.h"
 #import "StateBarMsgView.h"
 #import "AccountInfo.h"
+#import "UIImageView+WebCache.h"
 
 
 

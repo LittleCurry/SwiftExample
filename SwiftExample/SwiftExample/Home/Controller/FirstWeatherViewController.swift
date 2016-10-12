@@ -46,30 +46,30 @@ class FirstWeatherViewController: BaseViewController {
         self.bigImageView.frame = UIScreen.mainScreen().bounds
         self.bigImageView.sd_setImageWithURL("http://img1.cache.netease.com/m/newsapp/weather/TianQi1008/DuoYun.jpg")
         self.view.addSubview(self.bigImageView)
-        self.middleImageView.frame = CGRectMake(WIDTH/4, HEIGHT/2.5-WIDTH/8, WIDTH/4, WIDTH/4)
+        self.middleImageView.frame = CGRectMake(WIDTH/2-100, HEIGHT/2-135, 100, 135)
         print(self.middleImageView.center)
         self.middleImageView.image = UIImage.init(named: "sunandcloud")
         self.view.addSubview(self.middleImageView)
         
-        self.temperatureLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2.5-45, 160, 30)
+        self.temperatureLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2-135, 160, 30)
         self.temperatureLabel.textColor = UIColor.whiteColor()
         self.temperatureLabel.font = UIFont.systemFontOfSize(25)
         self.temperatureLabel.text = "20℃/10℃"
         self.view.addSubview(self.temperatureLabel)
         
-        self.cloudLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2.5-15, 100, 20)
+        self.cloudLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2-105, 100, 20)
         self.cloudLabel.textColor = UIColor.whiteColor()
         self.cloudLabel.font = UIFont.systemFontOfSize(12)
         self.cloudLabel.text = "多云"
         self.view.addSubview(self.cloudLabel)
         
-        self.windLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2.5+5, 100, 20)
+        self.windLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2-85, 100, 20)
         self.windLabel.textColor = UIColor.whiteColor()
         self.windLabel.font = UIFont.systemFontOfSize(12)
         self.windLabel.text = "微风"
         self.view.addSubview(self.windLabel)
         
-        self.PMLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2.5+25, 100, 20)
+        self.PMLabel.frame = CGRectMake(WIDTH/2, HEIGHT/2-65, 100, 20)
         self.PMLabel.textColor = UIColor.whiteColor()
         self.PMLabel.font = UIFont.systemFontOfSize(12)
         self.PMLabel.text = "PM2.5 0"
@@ -77,8 +77,8 @@ class FirstWeatherViewController: BaseViewController {
         
         let blur = UIBlurEffect.init(style: UIBlurEffectStyle.Dark)
         let effectview = UIVisualEffectView.init(effect: blur)
-        effectview.frame = CGRectMake(0, HEIGHT - 240, WIDTH, 240);
-        effectview.alpha = 0.8;
+        effectview.frame = CGRectMake(0, HEIGHT - 230, WIDTH, 230);
+        effectview.alpha = 0.3;
         self.view.addSubview(effectview)
         self.view.addSubview(self.weatherView1)
         self.view.addSubview(self.weatherView2)

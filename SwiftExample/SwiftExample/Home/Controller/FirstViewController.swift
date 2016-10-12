@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     var clearLabel:UILabel?
     
@@ -28,6 +28,12 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
         myTableView.delegate = self;
         myTableView.dataSource = self
         self.view.addSubview(myTableView);
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if (self.clearLabel != nil) {
+            self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+        }
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -108,9 +114,41 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             self.navigationController?.pushViewController(weatherVC, animated: true);
             break;
         case 9:
+            let hud = MBProgressHUD.init(view: self.view)
+            UIApplication.sharedApplication().keyWindow!.addSubview(hud)
+            hud.labelFont = UIFont.systemFontOfSize(15);
+            hud.labelText = "清理中...";
+            hud.show(true)
             SDImageCache.sharedImageCache().clearDiskOnCompletion({
                 self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+                sleep(1)
+                hud.removeFromSuperview()
             })
+            break;
+        case 10:
+            let dateVC = FirstDateChoseViewController.init();
+            dateVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(dateVC, animated: true);
+            break;
+        case 11:
+            let bankVC = FirstBankCardViewController.init();
+            bankVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(bankVC, animated: true);
+            break;
+        case 12:
+            let photoVC = FirstPhotoChoseViewController.init();
+            photoVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(photoVC, animated: true);
+            break;
+        case 13:
+            let cycleVC = FirstCycleScrollViewController.init();
+            cycleVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(cycleVC, animated: true);
+            break;
+        case 14:
+            let hotVC = FirstHotRenewViewController.init();
+            hotVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(hotVC, animated: true);
             break;
         default:
             break;
