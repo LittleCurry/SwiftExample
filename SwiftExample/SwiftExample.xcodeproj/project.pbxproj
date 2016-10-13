@@ -331,9 +331,12 @@
 		C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */; };
 		C1970D491DA8E96B00260A11 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D481DA8E96B00260A11 /* ThirdViewController.swift */; };
 		C1970D6F1DA8ECEA00260A11 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */; };
+		C1BC1D3F1DADDC3B00AD5862 /* squareAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */; };
+		C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */; };
 		C1E218211DA9E3F9002748F6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E218201DA9E3F9002748F6 /* Video.swift */; };
 		C1E218241DAA0320002748F6 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218221DAA0320002748F6 /* add@3x.png */; };
 		C1E218251DAA0320002748F6 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218231DAA0320002748F6 /* add@2x.png */; };
+		C1E916341DAE4F76001E4BA1 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1E916331DAE4F76001E4BA1 /* JSPatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -850,10 +853,13 @@
 		C1970D451DA8E8E200260A11 /* FirstLaterBlockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstLaterBlockViewController.swift; sourceTree = "<group>"; };
 		C1970D481DA8E96B00260A11 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@2x.png"; sourceTree = "<group>"; };
+		C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@3x.png"; sourceTree = "<group>"; };
 		C1E218201DA9E3F9002748F6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C1E218221DAA0320002748F6 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
 		C1E218231DAA0320002748F6 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
 		C1E218631DAA1B51002748F6 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		C1E916331DAE4F76001E4BA1 /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -863,6 +869,7 @@
 			files = (
 				C1970D191DA8A31000260A11 /* libz.tbd in Frameworks */,
 				C1970D171DA8A2F800260A11 /* libstdc++.6.0.9.tbd in Frameworks */,
+				C1E916341DAE4F76001E4BA1 /* JSPatch.framework in Frameworks */,
 				C1970D151DA8A2DA00260A11 /* libc++.tbd in Frameworks */,
 				C164184B1D9BCA3000BD3841 /* libSocialQQ.a in Frameworks */,
 				C16418511D9BCA3000BD3841 /* libUMSocial_Sdk_Shake_1.0.a in Frameworks */,
@@ -1237,6 +1244,8 @@
 				C114CDC51DA90F9D00050911 /* play@3x.png */,
 				C1E218221DAA0320002748F6 /* add@3x.png */,
 				C1E218231DAA0320002748F6 /* add@2x.png */,
+				C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */,
+				C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */,
 				C12BEC551DAA4177009F2EAA /* loading@2x.png */,
 				C12BEC561DAA4177009F2EAA /* loading@3x.png */,
 				C16C879C1DAB7F5400314367 /* location@2x.png */,
@@ -1282,6 +1291,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1E916331DAE4F76001E4BA1 /* JSPatch.framework */,
 				C158F30A1DACE4B8000CAE40 /* YLGIFImage */,
 				C158F2F51DACE45A000CAE40 /* MJPhotoBrowser */,
 				C158F2B21DACE40B000CAE40 /* TZImagePickerController */,
@@ -2026,6 +2036,7 @@
 				C16419AC1D9BCB4600BD3841 /* 45.tiff in Resources */,
 				C158F2E81DACE40B000CAE40 /* TableViewArrow@2x.png in Resources */,
 				C1970D251DA8BC6E00260A11 /* food.png in Resources */,
+				C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */,
 				C164199A1D9BCB4600BD3841 /* 29.tiff in Resources */,
 				C16C878B1DAB679C00314367 /* sun@2x.png in Resources */,
 				C158F2DD1DACE40B000CAE40 /* MMVideoPreviewPlayHL@2x.png in Resources */,
@@ -2035,6 +2046,7 @@
 				C1970D231DA8BC5800260A11 /* furniture.png in Resources */,
 				C1E218241DAA0320002748F6 /* add@3x.png in Resources */,
 				C16C87751DAB673000314367 /* rainheavy@2x.png in Resources */,
+				C1BC1D3F1DADDC3B00AD5862 /* squareAdd@2x.png in Resources */,
 				C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
 				C158F2E41DACE40B000CAE40 /* photo_sel_photoPickerVc@2x.png in Resources */,
@@ -2477,6 +2489,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/SwiftExample/Third",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftExample/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftExample/Info.plist;
@@ -2507,6 +2520,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks",
 					"$(PROJECT_DIR)/SwiftExample/Frameworks/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
+					"$(PROJECT_DIR)/SwiftExample/Third",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SwiftExample/PrefixHeader.pch";
 				INFOPLIST_FILE = SwiftExample/Info.plist;
