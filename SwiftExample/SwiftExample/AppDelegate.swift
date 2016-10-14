@@ -18,9 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //热更新加载
         JSPatch.startWithAppKey("a75345057bbd6e47")
         JSPatch.sync()
-        sleep(5)
-
+//        sleep(5)
+        /*
+         设置在线参数请求完成的回调
+         */
+//        JSPatch.setupUpdatedConfigCallback { (<#[NSObject : AnyObject]!#>, <#NSError!#>) in
+        
+//        }
         // 出现一个问题, 在提交到github上时,SwiftTableView/SwiftTableView内容没提交上
+        
         window = UIWindow.init(frame: UIScreen.mainScreen().bounds);
         window?.backgroundColor = UIColor.whiteColor();
         window?.makeKeyAndVisible();

@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     var clearLabel:UILabel?
     
@@ -149,6 +149,11 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let hotVC = FirstHotRenewViewController.init();
             hotVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(hotVC, animated: true);
+            break;
+        case 15:
+            let barrageVC = FirstBarrageViewController.init();
+            barrageVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(barrageVC, animated: true);
             break;
         default:
             break;

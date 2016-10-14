@@ -11,6 +11,7 @@
 		C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC31DA90F9D00050911 /* smallPlay@3x.png */; };
 		C114CDC81DA90F9D00050911 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC41DA90F9D00050911 /* play@2x.png */; };
 		C114CDC91DA90F9D00050911 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC51DA90F9D00050911 /* play@3x.png */; };
+		C119E3031DAF9D71008AF0F5 /* FirstBarrageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */; };
 		C12801761D9E65A900E79A07 /* voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801701D9E65A900E79A07 /* voice@3x.png */; };
 		C12801771D9E65A900E79A07 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801711D9E65A900E79A07 /* voice@2x.png */; };
 		C12801781D9E65A900E79A07 /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801721D9E65A900E79A07 /* smile@2x.png */; };
@@ -361,6 +362,7 @@
 		C114CDC31DA90F9D00050911 /* smallPlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@3x.png"; sourceTree = "<group>"; };
 		C114CDC41DA90F9D00050911 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		C114CDC51DA90F9D00050911 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstBarrageViewController.swift; sourceTree = "<group>"; };
 		C12801701D9E65A900E79A07 /* voice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@3x.png"; sourceTree = "<group>"; };
 		C12801711D9E65A900E79A07 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
 		C12801721D9E65A900E79A07 /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
@@ -1769,6 +1771,7 @@
 				C158F28D1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift */,
 				C158F2931DACC8E9000CAE40 /* FirstCycleScrollViewController.swift */,
 				C158F2B01DACE250000CAE40 /* FirstHotRenewViewController.swift */,
+				C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2322,6 +2325,7 @@
 				C158F2F01DACE40B000CAE40 /* TZPhotoPickerController.m in Sources */,
 				C16418A81D9BCAB400BD3841 /* SDImageCache.m in Sources */,
 				C16419411D9BCB1400BD3841 /* NetHandler.m in Sources */,
+				C119E3031DAF9D71008AF0F5 /* FirstBarrageViewController.swift in Sources */,
 				C158F2921DACBB91000CAE40 /* BankCard.swift in Sources */,
 				C16418E21D9BCAD000BD3841 /* HyTransitions.m in Sources */,
 				C158F2EE1DACE40B000CAE40 /* TZImageManager.m in Sources */,

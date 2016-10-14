@@ -1,16 +1,14 @@
 //
-//  FirstHotRenewViewController.swift
+//  FirstBarrageViewController.swift
 //  SwiftExample
 //
-//  Created by 李云鹏 on 16/10/11.
+//  Created by 李云鹏 on 16/10/13.
 //  Copyright © 2016年 yunPeng. All rights reserved.
 //
 
 import UIKit
 
-class FirstHotRenewViewController: BaseViewController {
-    let nameLabel = UILabel.init()
-    
+class FirstBarrageViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,21 +17,8 @@ class FirstHotRenewViewController: BaseViewController {
     }
     
     func getView() -> Void {
-        self.navigationItem.title = "JSPatch"
-        self.nameLabel.frame = CGRectMake(30, 200, WIDTH-60, 40)
-        self.nameLabel.backgroundColor = UIColor.cyanColor()
-        self.nameLabel.textAlignment = NSTextAlignment.Center
-        self.nameLabel.font = UIFont.init(name: "Font: Courier-Bold", size: 20)
-        self.nameLabel.text = "我是原来的内容"
-        self.view.addSubview(self.nameLabel)
-        /**
-         计划使用JSPatch改变下面这个函数
-         */
-        self.myChangeFunc()
-    }
-    
-    func myChangeFunc() -> Void {
-        //
+        self.navigationItem.title = "弹幕"
+        
     }
 
     override func didReceiveMemoryWarning() {
