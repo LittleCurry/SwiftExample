@@ -31,9 +31,10 @@ class FirstHotRenewViewController: BaseViewController {
          */
         self.myChangeFunc()
     }
-    
-    func myChangeFunc() -> Void {
+    // 加dynamic关键字是为了让自定义的方法myChangeFunc()具有动态性. 继承自NSObject的Swift类，其继承自父类的方法具有动态性，其他自定义方法、属性需要加dynamic修饰才可以获得动态性
+    dynamic func myChangeFunc() -> Void {
         //
+        print("原来的代码")
     }
 
     override func didReceiveMemoryWarning() {
