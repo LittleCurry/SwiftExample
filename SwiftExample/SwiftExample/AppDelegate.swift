@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        //热更新加载
+        
+        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的
         JSPatch.startWithAppKey("a75345057bbd6e47")
         JSPatch.sync()
 //        sleep(5)
