@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的
+        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的,
         JSPatch.startWithAppKey("a75345057bbd6e47")
         JSPatch.sync()
 //        sleep(5)
