@@ -334,6 +334,23 @@
 		C1970D6F1DA8ECEA00260A11 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */; };
 		C1BC1D3F1DADDC3B00AD5862 /* squareAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */; };
 		C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */; };
+		C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */; };
+		C1C53D681DB49F7A003DC3F0 /* LDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D631DB49F7A003DC3F0 /* LDCalendarView.m */; };
+		C1C53D691DB49F7A003DC3F0 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D651DB49F7A003DC3F0 /* NSDate+Extend.m */; };
+		C1C53D6A1DB49F7A003DC3F0 /* UIColor+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D671DB49F7A003DC3F0 /* UIColor+Extend.m */; };
+		C1C53D6D1DB4A77D003DC3F0 /* b_com_bt_blue_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D6B1DB4A77D003DC3F0 /* b_com_bt_blue_normal@2x.png */; };
+		C1C53D6E1DB4A77D003DC3F0 /* b_com_bt_blue_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D6C1DB4A77D003DC3F0 /* b_com_bt_blue_normal@3x.png */; };
+		C1C53D711DB4A78A003DC3F0 /* com_arrows_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D6F1DB4A78A003DC3F0 /* com_arrows_right@2x.png */; };
+		C1C53D721DB4A78A003DC3F0 /* com_arrows_right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D701DB4A78A003DC3F0 /* com_arrows_right@3x.png */; };
+		C1C53D751DB4A7A3003DC3F0 /* com_bt_gray_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D731DB4A7A3003DC3F0 /* com_bt_gray_normal@2x.png */; };
+		C1C53D761DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D741DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png */; };
+		C1C53D791DB4A7B1003DC3F0 /* com_ic_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D771DB4A7B1003DC3F0 /* com_ic_select@2x.png */; };
+		C1C53D7A1DB4A7B1003DC3F0 /* com_ic_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C53D781DB4A7B1003DC3F0 /* com_ic_select@3x.png */; };
+		C1C53D7C1DB4D65F003DC3F0 /* FirstStoreHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D7B1DB4D65F003DC3F0 /* FirstStoreHomeViewController.swift */; };
+		C1C53DBB1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53DBA1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift */; };
+		C1C53DBD1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53DBC1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift */; };
+		C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53DBE1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift */; };
+		C1C53DC11DB4ED28003DC3F0 /* FirstStoreMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53DC01DB4ED28003DC3F0 /* FirstStoreMeViewController.swift */; };
 		C1E218211DA9E3F9002748F6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E218201DA9E3F9002748F6 /* Video.swift */; };
 		C1E218241DAA0320002748F6 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218221DAA0320002748F6 /* add@3x.png */; };
 		C1E218251DAA0320002748F6 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218231DAA0320002748F6 /* add@2x.png */; };
@@ -857,6 +874,27 @@
 		C1970D6E1DA8ECEA00260A11 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@2x.png"; sourceTree = "<group>"; };
 		C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@3x.png"; sourceTree = "<group>"; };
+		C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCalendarViewController.swift; sourceTree = "<group>"; };
+		C1C53D611DB49F7A003DC3F0 /* LDCalendarConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarConst.h; sourceTree = "<group>"; };
+		C1C53D621DB49F7A003DC3F0 /* LDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarView.h; sourceTree = "<group>"; };
+		C1C53D631DB49F7A003DC3F0 /* LDCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDCalendarView.m; sourceTree = "<group>"; };
+		C1C53D641DB49F7A003DC3F0 /* NSDate+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extend.h"; sourceTree = "<group>"; };
+		C1C53D651DB49F7A003DC3F0 /* NSDate+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extend.m"; sourceTree = "<group>"; };
+		C1C53D661DB49F7A003DC3F0 /* UIColor+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extend.h"; sourceTree = "<group>"; };
+		C1C53D671DB49F7A003DC3F0 /* UIColor+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extend.m"; sourceTree = "<group>"; };
+		C1C53D6B1DB4A77D003DC3F0 /* b_com_bt_blue_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b_com_bt_blue_normal@2x.png"; sourceTree = "<group>"; };
+		C1C53D6C1DB4A77D003DC3F0 /* b_com_bt_blue_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b_com_bt_blue_normal@3x.png"; sourceTree = "<group>"; };
+		C1C53D6F1DB4A78A003DC3F0 /* com_arrows_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_arrows_right@2x.png"; sourceTree = "<group>"; };
+		C1C53D701DB4A78A003DC3F0 /* com_arrows_right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_arrows_right@3x.png"; sourceTree = "<group>"; };
+		C1C53D731DB4A7A3003DC3F0 /* com_bt_gray_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_bt_gray_normal@2x.png"; sourceTree = "<group>"; };
+		C1C53D741DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_bt_gray_normal@3x.png"; sourceTree = "<group>"; };
+		C1C53D771DB4A7B1003DC3F0 /* com_ic_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_ic_select@2x.png"; sourceTree = "<group>"; };
+		C1C53D781DB4A7B1003DC3F0 /* com_ic_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "com_ic_select@3x.png"; sourceTree = "<group>"; };
+		C1C53D7B1DB4D65F003DC3F0 /* FirstStoreHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStoreHomeViewController.swift; sourceTree = "<group>"; };
+		C1C53DBA1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStoreDifferentClassViewController.swift; sourceTree = "<group>"; };
+		C1C53DBC1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStoreFoundViewController.swift; sourceTree = "<group>"; };
+		C1C53DBE1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStoreCarViewController.swift; sourceTree = "<group>"; };
+		C1C53DC01DB4ED28003DC3F0 /* FirstStoreMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstStoreMeViewController.swift; sourceTree = "<group>"; };
 		C1E218201DA9E3F9002748F6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C1E218221DAA0320002748F6 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
 		C1E218231DAA0320002748F6 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -1252,6 +1290,14 @@
 				C12BEC561DAA4177009F2EAA /* loading@3x.png */,
 				C16C879C1DAB7F5400314367 /* location@2x.png */,
 				C16C879D1DAB7F5400314367 /* location@3x.png */,
+				C1C53D6B1DB4A77D003DC3F0 /* b_com_bt_blue_normal@2x.png */,
+				C1C53D6C1DB4A77D003DC3F0 /* b_com_bt_blue_normal@3x.png */,
+				C1C53D6F1DB4A78A003DC3F0 /* com_arrows_right@2x.png */,
+				C1C53D701DB4A78A003DC3F0 /* com_arrows_right@3x.png */,
+				C1C53D731DB4A7A3003DC3F0 /* com_bt_gray_normal@2x.png */,
+				C1C53D741DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png */,
+				C1C53D771DB4A7B1003DC3F0 /* com_ic_select@2x.png */,
+				C1C53D781DB4A7B1003DC3F0 /* com_ic_select@3x.png */,
 				C16C87671DAB667B00314367 /* weather */,
 				C16419551D9BCB4600BD3841 /* ALi */,
 			);
@@ -1293,6 +1339,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1C53D601DB49F7A003DC3F0 /* LDCalenderView */,
 				C1E916331DAE4F76001E4BA1 /* JSPatch.framework */,
 				C158F30A1DACE4B8000CAE40 /* YLGIFImage */,
 				C158F2F51DACE45A000CAE40 /* MJPhotoBrowser */,
@@ -1772,6 +1819,12 @@
 				C158F2931DACC8E9000CAE40 /* FirstCycleScrollViewController.swift */,
 				C158F2B01DACE250000CAE40 /* FirstHotRenewViewController.swift */,
 				C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */,
+				C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */,
+				C1C53D7B1DB4D65F003DC3F0 /* FirstStoreHomeViewController.swift */,
+				C1C53DBA1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift */,
+				C1C53DBC1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift */,
+				C1C53DBE1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift */,
+				C1C53DC01DB4ED28003DC3F0 /* FirstStoreMeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1897,6 +1950,20 @@
 			path = QRView;
 			sourceTree = "<group>";
 		};
+		C1C53D601DB49F7A003DC3F0 /* LDCalenderView */ = {
+			isa = PBXGroup;
+			children = (
+				C1C53D611DB49F7A003DC3F0 /* LDCalendarConst.h */,
+				C1C53D621DB49F7A003DC3F0 /* LDCalendarView.h */,
+				C1C53D631DB49F7A003DC3F0 /* LDCalendarView.m */,
+				C1C53D641DB49F7A003DC3F0 /* NSDate+Extend.h */,
+				C1C53D651DB49F7A003DC3F0 /* NSDate+Extend.m */,
+				C1C53D661DB49F7A003DC3F0 /* UIColor+Extend.h */,
+				C1C53D671DB49F7A003DC3F0 /* UIColor+Extend.m */,
+			);
+			path = LDCalenderView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2006,12 +2073,15 @@
 				C158F3041DACE45A000CAE40 /* MJPhotoBrowser.bundle in Resources */,
 				C158F2DA1DACE40B000CAE40 /* LICENSE in Resources */,
 				C16C879E1DAB7F5400314367 /* location@2x.png in Resources */,
+				C1C53D6E1DB4A77D003DC3F0 /* b_com_bt_blue_normal@3x.png in Resources */,
 				C16419951D9BCB4600BD3841 /* 24.tiff in Resources */,
 				C16418401D9BCA3000BD3841 /* UMShareEditViewController.xib in Resources */,
 				C164183E1D9BCA3000BD3841 /* UMSCommentInputController.xib in Resources */,
 				C16419A01D9BCB4600BD3841 /* 34.tiff in Resources */,
+				C1C53D711DB4A78A003DC3F0 /* com_arrows_right@2x.png in Resources */,
 				C16C876D1DAB670B00314367 /* rain_little0011@2x.png in Resources */,
 				C16419851D9BCB4600BD3841 /* 1.tiff in Resources */,
+				C1C53D7A1DB4A7B1003DC3F0 /* com_ic_select@3x.png in Resources */,
 				C1970D2D1DA8BCA300260A11 /* photograph.png in Resources */,
 				C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */,
 				C16419AA1D9BCB4600BD3841 /* 43.tiff in Resources */,
@@ -2023,6 +2093,7 @@
 				C158F2DF1DACE40B000CAE40 /* photo_def_photoPickerVc@2x.png in Resources */,
 				C158F2DE1DACE40B000CAE40 /* navi_back@2x.png in Resources */,
 				C164198E1D9BCB4600BD3841 /* 18.tiff in Resources */,
+				C1C53D721DB4A78A003DC3F0 /* com_arrows_right@3x.png in Resources */,
 				C164198C1D9BCB4600BD3841 /* 16.tiff in Resources */,
 				C16C878D1DAB67A600314367 /* sunandcloud@2x.png in Resources */,
 				C164199D1D9BCB4600BD3841 /* 31.tiff in Resources */,
@@ -2053,6 +2124,7 @@
 				C151E3131DA53CC5004A41A3 /* meinv.jpg in Resources */,
 				C164194E1D9BCB2F00BD3841 /* bigShadow.png in Resources */,
 				C158F2E41DACE40B000CAE40 /* photo_sel_photoPickerVc@2x.png in Resources */,
+				C1C53D751DB4A7A3003DC3F0 /* com_bt_gray_normal@2x.png in Resources */,
 				C16C877F1DAB675E00314367 /* snow@2x.png in Resources */,
 				C16419B21D9BCB4600BD3841 /* 8.tiff in Resources */,
 				C16C87731DAB672700314367 /* rainandsnow@2x.png in Resources */,
@@ -2068,6 +2140,7 @@
 				C12801761D9E65A900E79A07 /* voice@3x.png in Resources */,
 				C16419B01D9BCB4600BD3841 /* 6.tiff in Resources */,
 				C16419881D9BCB4600BD3841 /* 12.tiff in Resources */,
+				C1C53D6D1DB4A77D003DC3F0 /* b_com_bt_blue_normal@2x.png in Resources */,
 				C16419A81D9BCB4600BD3841 /* 41.tiff in Resources */,
 				C16419531D9BCB2F00BD3841 /* back@2x.png in Resources */,
 				C1970D0F1DA8A15B00260A11 /* AMap.bundle in Resources */,
@@ -2089,6 +2162,7 @@
 				C16419921D9BCB4600BD3841 /* 21.tiff in Resources */,
 				C16C879F1DAB7F5400314367 /* location@3x.png in Resources */,
 				C158F2E51DACE40B000CAE40 /* photo_sel_previewVc@2x.png in Resources */,
+				C1C53D761DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png in Resources */,
 				C164183D1D9BCA3000BD3841 /* UMSCommentDetailController.xib in Resources */,
 				C16418421D9BCA3000BD3841 /* UMSLoginViewController.xib in Resources */,
 				C158F2E71DACE40B000CAE40 /* preview_original_def@2x.png in Resources */,
@@ -2134,6 +2208,7 @@
 				C16419AB1D9BCB4600BD3841 /* 44.tiff in Resources */,
 				C164183A1D9BCA3000BD3841 /* UMSocialLocalizable.strings in Resources */,
 				C16419511D9BCB2F00BD3841 /* jiezhi.jpg in Resources */,
+				C1C53D791DB4A7B1003DC3F0 /* com_ic_select@2x.png in Resources */,
 				C16C876F1DAB671400314367 /* rain_mini@2x.png in Resources */,
 				C158F2E61DACE40B000CAE40 /* preview_number_icon@2x.png in Resources */,
 				C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */,
@@ -2175,11 +2250,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */,
 				C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */,
+				C1C53DC11DB4ED28003DC3F0 /* FirstStoreMeViewController.swift in Sources */,
 				C16418D51D9BCAC500BD3841 /* MASViewConstraint.m in Sources */,
 				C16418D91D9BCAC500BD3841 /* ViewController+MASAdditions.m in Sources */,
 				C16418AB1D9BCAB400BD3841 /* SDWebImageDownloader.m in Sources */,
 				C16419431D9BCB1400BD3841 /* LoginViewController.m in Sources */,
+				C1C53D691DB49F7A003DC3F0 /* NSDate+Extend.m in Sources */,
 				C16419441D9BCB1400BD3841 /* BaseEngine.m in Sources */,
 				C1970D411DA8CEFC00260A11 /* QRUtil.m in Sources */,
 				C151E3361DA553D6004A41A3 /* SCPieChart.m in Sources */,
@@ -2208,6 +2286,7 @@
 				C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */,
 				C164187D1D9BCAA800BD3841 /* MMAlertView.m in Sources */,
 				C16419221D9BCADE00BD3841 /* MJRefreshConst.m in Sources */,
+				C1C53D7C1DB4D65F003DC3F0 /* FirstStoreHomeViewController.swift in Sources */,
 				C151E3341DA553D6004A41A3 /* SCGenericChart.m in Sources */,
 				C16417BB1D9BC86D00BD3841 /* ViewController.swift in Sources */,
 				C151E32E1DA553D6004A41A3 /* SCBar.m in Sources */,
@@ -2238,6 +2317,7 @@
 				C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */,
 				C158F2AA1DACC982000CAE40 /* TAAnimatedDotView.m in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
+				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
 				C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */,
 				C164187E1D9BCAA800BD3841 /* MMPinView.m in Sources */,
 				C1970D6F1DA8ECEA00260A11 /* MovieTableViewCell.swift in Sources */,
@@ -2254,6 +2334,7 @@
 				C151E3381DA553D6004A41A3 /* SCTool.m in Sources */,
 				C158F3131DACFFD8000CAE40 /* MSSCollectionViewCell.m in Sources */,
 				C164193C1D9BCB1400BD3841 /* BaseViewController.swift in Sources */,
+				C1C53D681DB49F7A003DC3F0 /* LDCalendarView.m in Sources */,
 				C164186C1D9BCA9800BD3841 /* MBProgressHUD.m in Sources */,
 				C16418671D9BCA8800BD3841 /* AFURLResponseSerialization.m in Sources */,
 				C16418AD1D9BCAB400BD3841 /* SDWebImageManager.m in Sources */,
@@ -2270,6 +2351,7 @@
 				C158F2EC1DACE40B000CAE40 /* TZAssetCell.m in Sources */,
 				C16418631D9BCA8800BD3841 /* AFHTTPSessionManager.m in Sources */,
 				C158F3071DACE45A000CAE40 /* MJPhotoProgressView.m in Sources */,
+				C1C53DBD1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift in Sources */,
 				C158F2901DACB96B000CAE40 /* BankCardTableViewCell.swift in Sources */,
 				C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */,
 				C158F2B11DACE250000CAE40 /* FirstHotRenewViewController.swift in Sources */,
@@ -2323,8 +2405,10 @@
 				C158F2F11DACE40B000CAE40 /* TZPhotoPreviewCell.m in Sources */,
 				C1E218211DA9E3F9002748F6 /* Video.swift in Sources */,
 				C158F2F01DACE40B000CAE40 /* TZPhotoPickerController.m in Sources */,
+				C1C53DBB1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift in Sources */,
 				C16418A81D9BCAB400BD3841 /* SDImageCache.m in Sources */,
 				C16419411D9BCB1400BD3841 /* NetHandler.m in Sources */,
+				C1C53D6A1DB49F7A003DC3F0 /* UIColor+Extend.m in Sources */,
 				C119E3031DAF9D71008AF0F5 /* FirstBarrageViewController.swift in Sources */,
 				C158F2921DACBB91000CAE40 /* BankCard.swift in Sources */,
 				C16418E21D9BCAD000BD3841 /* HyTransitions.m in Sources */,

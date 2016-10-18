@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     var clearLabel:UILabel?
     
@@ -155,6 +155,36 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             barrageVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(barrageVC, animated: true);
             break;
+        case 16:
+            let calendarVC = FirstCalendarViewController.init();
+            calendarVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(calendarVC, animated: true);
+            break;
+        case 17:
+            let storeHomeVC = FirstStoreHomeViewController.init();
+            storeHomeVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(storeHomeVC, animated: true);
+            break;
+        case 18:
+            let storeDifferentVC = FirstStoreDifferentClassViewController.init();
+            storeDifferentVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(storeDifferentVC, animated: true);
+            break;
+        case 19:
+            let storeFoundVC = FirstStoreFoundViewController.init();
+            storeFoundVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(storeFoundVC, animated: true);
+            break;
+        case 20:
+            let storeCarVC = FirstStoreCarViewController.init();
+            storeCarVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(storeCarVC, animated: true);
+            break;
+        case 21:
+            let storeMeVC = FirstStoreMeViewController.init();
+            storeMeVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(storeMeVC, animated: true);
+            break;
         default:
             break;
         }
@@ -162,7 +192,6 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func scan() -> Void {
-        //
         if (self.validateCamera() && self.canUseCamera()) {
             var qrVC = QRViewController.init();
 //            typealias sendValueClosure=(string:String)->Void
