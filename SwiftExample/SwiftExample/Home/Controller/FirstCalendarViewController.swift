@@ -68,7 +68,7 @@ class FirstCalendarViewController: BaseViewController, UITableViewDelegate, UITa
             self.calendarView = LDCalendarView.init(frame: UIScreen.mainScreen().bounds)
             self.view.addSubview(self.calendarView!)
             
-            // swift中调用oc的block属性
+            // swift中调用oc的block属性, 使用闭包替换
             self.calendarView?.complete = { (result)  in
                 self.seletedArr = NSMutableArray(array: result)
                 print(self.seletedArr)

@@ -17,12 +17,12 @@ class FouthColumnViewController: BaseViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "柱状图"
-        myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+        self.myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
-        myTableView.delegate = self;
-        myTableView.dataSource = self
-        myTableView.registerClass(SCBarCell.self, forCellReuseIdentifier: cellName)
-        view.addSubview(myTableView);
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.myTableView.registerClass(SCBarCell.self, forCellReuseIdentifier: cellName)
+        view.addSubview(self.myTableView);
         
     }
     

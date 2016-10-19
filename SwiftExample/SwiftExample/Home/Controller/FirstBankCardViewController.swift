@@ -24,13 +24,13 @@ class FirstBankCardViewController: BaseViewController, UITableViewDelegate, UITa
     func getView() -> Void {
         self.navigationItem.title = "我的银行卡"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addCard")
-        myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+        self.myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
         self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
-        myTableView.delegate = self;
-        myTableView.dataSource = self
-        myTableView.registerClass(BankCardTableViewCell.self, forCellReuseIdentifier: self.cellName)
-        self.view.addSubview(myTableView);
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.myTableView.registerClass(BankCardTableViewCell.self, forCellReuseIdentifier: self.cellName)
+        self.view.addSubview(self.myTableView);
     }
     
     func addCard() -> Void {

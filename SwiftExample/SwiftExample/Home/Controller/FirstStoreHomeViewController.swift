@@ -8,8 +8,18 @@
 
 import UIKit
 
-class FirstStoreHomeViewController: BaseViewController {
-
+class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate {
+    var normalImages:NSMutableArray = [];// gif图片
+    var refreshImages:NSMutableArray = [];// gif图片
+    var loadImage = UIImageView.init()
+    var searchBar = UISearchBar.init(frame: CGRectMake(0, 307, 240, 30))
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动"];
+    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
+    let cellName = "qweqwqwe3cd23ssasdsassasqwe";
+    var adUrlArr:NSMutableArray = []
+    var wordArr:NSMutableArray = []
+    var cycleScrollView: SDCycleScrollView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,8 +27,148 @@ class FirstStoreHomeViewController: BaseViewController {
     }
     
     func getView() -> Void {
-        self.navigationItem.title = "商城首页"
+        self.navigationItem.title = ""
+        
+        // 修复侧滑回退功能消失的问题
+        // self.navigationController!.interactivePopGestureRecognizer!.enabled = true
+        self.navigationController!.interactivePopGestureRecognizer!.delegate = self
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "navigationBar_bg"), forBarMetrics: UIBarMetrics.Compact)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "scan.png"), style: UIBarButtonItemStyle.Done, target: self, action: "scanAction")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message.png"), style: UIBarButtonItemStyle.Done, target: self, action: "messageAction")
+        self.searchBar.placeholder = "搜索商铺/店铺"
+        for subView:UIView in self.searchBar.subviews {
+            for grandSonView:UIView in subView.subviews {
+                if grandSonView.isKindOfClass(NSClassFromString("UISearchBarBackground")!) {
+                    grandSonView.alpha = 0
+                }
+            }
+        }
+        self.navigationItem.titleView = self.searchBar
+        
+        for i in 1...6 {
+            // normalhImages
+            let image = UIImage.init(named: String.init(format:"%ld.tiff", i));
+            self.normalImages.addObject(image!);
+        }
+        for i in 7...47 {
+            // refreshImages
+            let image = UIImage.init(named: String(i)+".tiff");
+            self.refreshImages.addObject(image!);
+        }
+        self.myTableView.contentInset = UIEdgeInsetsMake(-35, 0, 49-20-20, 0);
+        self.myTableView.tableFooterView = UIView.init();
+        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.myTableView.registerClass(StoreHomeTableViewCell.self, forCellReuseIdentifier: self.cellName)
+        let header = MJRefreshGifHeader.init(refreshingBlock: {
+//            self.count = 0;
+//            self.getData();
+        });
+        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Refreshing);
+        header.setImages(self.refreshImages as [AnyObject], forState: MJRefreshState.Idle);
+        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
+        header.lastUpdatedTimeLabel.hidden = true;
+        header.stateLabel.hidden = true;
+        self.myTableView.mj_header = header;
+        
+        let footer = MJRefreshAutoNormalFooter.init {
+//            self.count += 10;
+//            self.getData();
+        };
+        self.myTableView.mj_footer = footer;
+        self.view.addSubview(self.myTableView);
+        self.loadImage.image = UIImage.init(named: "loading.png")
+        self.myTableView.addSubview(self.loadImage)
+        
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1402/221/421883372/88115/8cc2231a/55815835N35a44559.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t976/208/1221678737/91179/5d7143d5/5588e849Na2c20c1a.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t805/241/1199341035/289354/8648fe55/5581211eN7a2ebb8a.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1606/199/444346922/48930/355f9ef/55841cd0N92d9fa7c.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1609/58/409100493/49144/7055bec5/557e76bfNc065aeaf.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t895/234/1192509025/111466/512174ab/557fed56N3e023b70.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t835/313/1196724882/359493/b53c7b70/5581392cNa08ff0a9.jpg")!)
+        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t898/15/1262262696/95281/57d1f12f/558baeb4Nbfd44d3a.jpg")!)
+        self.cycleScrollView = SDCycleScrollView.init(frame: CGRectMake(0, 64, WIDTH, 180), imageURLsGroup: self.adUrlArr as [AnyObject])
+        self.cycleScrollView!.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+        self.cycleScrollView!.delegate = self;
+        self.cycleScrollView!.autoScrollTimeInterval = 3.5;
+        self.cycleScrollView!.dotColor = UIColor.whiteColor();
+        self.cycleScrollView!.pageControlDotSize = CGSizeMake(4, 4);
+        self.cycleScrollView!.titleLabelBackgroundColor = RGBA(121, g: 121, b: 121, a: 0.2);
+        self.cycleScrollView!.titleLabelTextColor = UIColor.yellowColor();
     }
+    
+    func cycleScrollView(cycleScrollView: SDCycleScrollView!, didSelectItemAtIndex index: Int) {
+        NSLog("---点击了第%ld张图片", index);
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:"bigShadow.png"), forBarMetrics: UIBarMetrics.Compact);
+        self.navigationController!.navigationBar.layer.masksToBounds = true;
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: ""), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:""), forBarMetrics: UIBarMetrics.Compact)
+        self.navigationController!.navigationBar.layer.masksToBounds = false;
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return 180
+        }
+        return 0.1
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            return self.cycleScrollView
+        }
+        return UIView.init()
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 200;
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return nameArr.count;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell:StoreHomeTableViewCell = tableView.dequeueReusableCellWithIdentifier(self.cellName, forIndexPath: indexPath) as! StoreHomeTableViewCell
+        if (cell.isEqual(nil)) {
+            cell = StoreHomeTableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName)
+        }
+//        cell.video = self.videoArr[indexPath.item] as?Video;
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+    }
+    
+    func scanAction() -> Void {
+        //
+    }
+    
+    func messageAction() -> Void {
+        //
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        super.touchesBegan(touches, withEvent: event);
+        self.searchBar.resignFirstResponder()
+        
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

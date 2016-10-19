@@ -43,12 +43,12 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let image = UIImage.init(named: String(i)+".tiff");
             self.refreshImages.addObject(image!);
         }
-        myTableView.contentInset = UIEdgeInsetsMake(64-35, 0, 49-20-20, 0);
+        self.myTableView.contentInset = UIEdgeInsetsMake(64-35, 0, 49-20-20, 0);
         self.myTableView.tableFooterView = UIView.init();
         self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
-        myTableView.delegate = self;
-        myTableView.dataSource = self
-        myTableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: self.cellName)
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.myTableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: self.cellName)
         let header = MJRefreshGifHeader.init(refreshingBlock: {
             self.count = 0;
             self.getData();
@@ -65,7 +65,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
             self.getData();
         };
         self.myTableView.mj_footer = footer;
-        self.view.addSubview(myTableView);
+        self.view.addSubview(self.myTableView);
         self.loadImage.image = UIImage.init(named: "loading.png")
         self.myTableView.addSubview(self.loadImage)
     }

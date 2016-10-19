@@ -13,7 +13,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     // 这是写属性的地方
     var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
-    var clearLabel:UILabel?
+    var clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 450, 100, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +23,21 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     
     func getView() -> Void {
         self.navigationItem.title = "Home"
-        myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+        
+        self.myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
-        myTableView.delegate = self;
-        myTableView.dataSource = self
-        self.view.addSubview(myTableView);
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.view.addSubview(self.myTableView);
+        self.clearLabel.textAlignment = NSTextAlignment.Right
+        self.clearLabel.textColor = UIColor.redColor()
+        self.clearLabel.font = UIFont.systemFontOfSize(14)
+        self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+        self.myTableView.addSubview(self.clearLabel)
     }
     
     override func viewWillAppear(animated: Bool) {
-        if (self.clearLabel != nil) {
-            self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
-        }
+        self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -45,26 +49,15 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellName = "qweqweqwe";
+        let cellName = "qweeqwqghghggnklhlhwdaeqwe";
         var cell = tableView.dequeueReusableCellWithIdentifier(cellName);
         if cell == nil {
             cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
         }
-        cell?.textLabel?.text = nameArr[indexPath.row];
-        if indexPath.row == 9 {
-            if (self.clearLabel == nil) {
-                self.clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 0, 100, 50))
-                self.clearLabel?.textAlignment = NSTextAlignment.Right
-                self.clearLabel?.textColor = UIColor.redColor()
-                self.clearLabel?.font = UIFont.systemFontOfSize(14)
-                self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
-                cell?.addSubview(self.clearLabel!)
-            }
-        }
-        
+        cell!.textLabel?.text = self.nameArr[indexPath.row];
         return cell!;
     }
-    
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
@@ -93,10 +86,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             self.navigationController?.pushViewController(mapVC, animated: true);
             break;
         case 5:
-//            let scanVC = FirstScanViewController.init();
-//            scanVC.hidesBottomBarWhenPushed = true;
-//            self.navigationController?.pushViewController(scanVC, animated: true);
-            self.scan()
+            self.scanAction()
             break;
         case 6:
             let playerVC = FirstPlayerViewController.init();
@@ -120,7 +110,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             hud.labelText = "清理中...";
             hud.show(true)
             SDImageCache.sharedImageCache().clearDiskOnCompletion({
-                self.clearLabel?.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+                self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
                 sleep(1)
                 hud.removeFromSuperview()
             })
@@ -188,74 +178,47 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
         default:
             break;
         }
-        
     }
     
-    func scan() -> Void {
+    func scanAction() -> Void {
         if (self.validateCamera() && self.canUseCamera()) {
-            var qrVC = QRViewController.init();
-//            typealias sendValueClosure=(string:String)->Void
-//            var block = (url:NSString)->Void{
-//                in
-//            }
-//            qrVC.qrUrlBlock = block;
+            let qrVC = QRViewController.init();
+            let block = { (resultUrl)  in
+                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).showWithBlock(nil);
+            }
+            qrVC.qrUrlBlock = block
             qrVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(qrVC, animated: true)
         }
     }
     
-//    - (void)scanAction:(UIBarButtonItem *)rightBar
-//    {
-//    if ([self validateCamera] && [self canUseCamera]) {
-//    QRViewController *qrVC = [[QRViewController alloc] init];
-//    void (^block)(NSString *url) = ^(NSString *url){
-//    // url
-//    
-//    };
-//    qrVC.qrUrlBlock = block;
-//    qrVC.hidesBottomBarWhenPushed = YES;
-//    [self.navigationController pushViewController:qrVC animated:YES];
-//    }
-//    }
     func validateCamera() -> Bool {
         return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
     }
     
     func canUseCamera() -> Bool {
-        let mediaType = AVMediaTypeVideo
-        var authStatus = AVCaptureDevice.authorizationStatusForMediaType(mediaType);
+        let authStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo);
         if (authStatus == AVAuthorizationStatus.Restricted || authStatus == AVAuthorizationStatus.Denied) {
-//            var block = MMPopupItemHandler(index: NSInteger) -> Void{
-//                
-//            }
-//            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.Normal, block), MMItemMake("取消", MMItemType.Highlight, block)]).showWithBlock(nil);
+            
+            let block = { (index:Int)  in
+                switch index {
+                case 0:
+                    UIApplication.sharedApplication().openURL(NSURL.init(string: UIApplicationOpenSettingsURLString)!)
+                    break;
+                case 1:
+                    NSLog("取消")
+                    break;
+                default:
+                    break;
+                }
+            }
+            
+            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.Normal, block), MMItemMake("取消", MMItemType.Highlight, block)]).showWithBlock(nil)
             return false;
         }
         return true;
     }
-    
-//    -(BOOL)canUseCamera
-//    {
-//    NSString *mediaType = AVMediaTypeVideo;
-//    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];
-//    if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
-//    MMPopupItemHandler block = ^(NSInteger index){
-//    switch (index) {
-//    case 0:
-//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
-//    break;
-//    case 1:
-//    NSLog(@"取消");
-//    default:
-//    break;
-//    }
-//    };
-//    [[[MMAlertView alloc] initWithTitle:@"" detail:@"\n请在设备的设置-隐私-相机中允许访问相机" items:@[MMItemMake(@"设置", MMItemTypeNormal, block), MMItemMake(@"取消", MMItemTypeHighlight, block)]] showWithBlock:nil];
-//    return NO;
-//    }
-//    return YES;
-//    }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

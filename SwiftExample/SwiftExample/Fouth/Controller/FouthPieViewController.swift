@@ -17,12 +17,12 @@ class FouthPieViewController: BaseViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.title = "圆饼图"
-        myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
+        self.myTableView.contentInset = UIEdgeInsetsMake(64, 0, 49, 0);
         self.myTableView.tableFooterView = UIView.init();
-        myTableView.delegate = self;
-        myTableView.dataSource = self
-        myTableView.registerClass(SCPieCell.self, forCellReuseIdentifier: cellName)
-        view.addSubview(myTableView);
+        self.myTableView.delegate = self;
+        self.myTableView.dataSource = self
+        self.myTableView.registerClass(SCPieCell.self, forCellReuseIdentifier: cellName)
+        view.addSubview(self.myTableView);
         
     }
     
