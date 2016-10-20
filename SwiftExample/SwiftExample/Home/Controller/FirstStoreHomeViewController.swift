@@ -15,7 +15,12 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     var searchBar = UISearchBar.init(frame: CGRectMake(0, 307, 240, 30))
     var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
-    let cellName = "qweqwqwe3cd23ssasdsassasqwe";
+    let cellName1 = "asdaserad324";
+    let cellName2 = "r90asdferwuuf";
+    let cellName3 = "aschasdfd78ads";
+    let cellName4 = "asdfhasfda98";
+    let cellName5 = "adf8ahasdf9waafe";
+    let cellName6 = "qwe3cd23ssasdsassasqwe";
     var adUrlArr:NSMutableArray = []
     var wordArr:NSMutableArray = []
     var cycleScrollView: SDCycleScrollView?
@@ -60,7 +65,12 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
-        self.myTableView.registerClass(StoreHomeTableViewCell.self, forCellReuseIdentifier: self.cellName)
+        self.myTableView.registerClass(StoreHomeTableViewCell1.self, forCellReuseIdentifier: self.cellName1)
+        self.myTableView.registerClass(StoreHomeTableViewCell2.self, forCellReuseIdentifier: self.cellName2)
+        self.myTableView.registerClass(StoreHomeTableViewCell3.self, forCellReuseIdentifier: self.cellName3)
+        self.myTableView.registerClass(StoreHomeTableViewCell4.self, forCellReuseIdentifier: self.cellName4)
+        self.myTableView.registerClass(StoreHomeTableViewCell5.self, forCellReuseIdentifier: self.cellName5)
+        self.myTableView.registerClass(StoreHomeTableViewCell6.self, forCellReuseIdentifier: self.cellName6)
         let header = MJRefreshGifHeader.init(refreshingBlock: {
 //            self.count = 0;
 //            self.getData();
@@ -70,13 +80,13 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
         header.lastUpdatedTimeLabel.hidden = true;
         header.stateLabel.hidden = true;
-        self.myTableView.mj_header = header;
+//        self.myTableView.mj_header = header;
         
         let footer = MJRefreshAutoNormalFooter.init {
 //            self.count += 10;
 //            self.getData();
         };
-        self.myTableView.mj_footer = footer;
+//        self.myTableView.mj_footer = footer;
         self.view.addSubview(self.myTableView);
         self.loadImage.image = UIImage.init(named: "loading.png")
         self.myTableView.addSubview(self.loadImage)
@@ -123,6 +133,9 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         }
         return 0.1
     }
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
@@ -132,21 +145,81 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 200;
+        if indexPath.section == 0 && indexPath.row == 0 {
+            return 220
+        }
+        if indexPath.section == 1 && indexPath.row == 0 {
+            return 180
+        }
+        return 150*3+60;
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 6
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nameArr.count;
+        return 1;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:StoreHomeTableViewCell = tableView.dequeueReusableCellWithIdentifier(self.cellName, forIndexPath: indexPath) as! StoreHomeTableViewCell
-        if (cell.isEqual(nil)) {
-            cell = StoreHomeTableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName)
+        switch indexPath.section {
+        case 0:
+            var cell:StoreHomeTableViewCell1 = tableView.dequeueReusableCellWithIdentifier(self.cellName1, forIndexPath: indexPath) as! StoreHomeTableViewCell1
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell1.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName1)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        case 1:
+            var cell:StoreHomeTableViewCell2 = tableView.dequeueReusableCellWithIdentifier(self.cellName2, forIndexPath: indexPath) as! StoreHomeTableViewCell2
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell2.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName2)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        case 2:
+            //
+            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        case 3:
+            //
+            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        case 4:
+            //
+            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        case 5:
+            //
+            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            if (cell.isEqual(nil)) {
+                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+            }
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            return cell
+            break
+        default:
+            break
         }
-//        cell.video = self.videoArr[indexPath.item] as?Video;
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
-        return cell
+        return UITableViewCell.init()
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

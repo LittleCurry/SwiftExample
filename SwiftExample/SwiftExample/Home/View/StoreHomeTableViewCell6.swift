@@ -1,14 +1,14 @@
 //
-//  StoreHomeTableViewCell.swift
+//  StoreHomeTableViewCell6.swift
 //  SwiftExample
 //
-//  Created by 李云鹏 on 16/10/18.
+//  Created by 李云鹏 on 16/10/19.
 //  Copyright © 2016年 yunPeng. All rights reserved.
 //
 
 import UIKit
 
-class StoreHomeTableViewCell: UITableViewCell {
+class StoreHomeTableViewCell6: UITableViewCell {
     
     var bigImage:UIImageView?;
     
