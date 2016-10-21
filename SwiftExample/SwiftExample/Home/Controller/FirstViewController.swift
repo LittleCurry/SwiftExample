@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的"];
+    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "渐隐文字", "打印文字", "拼图", "浏览卡片"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     var clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 450, 100, 50))
     
@@ -174,6 +174,41 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let storeMeVC = FirstStoreMeViewController.init();
             storeMeVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(storeMeVC, animated: true);
+            break;
+        case 22:
+            let secretVC = FirstSecretcodeViewController.init();
+            secretVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(secretVC, animated: true);
+            break;
+        case 23:
+            let menuVC = FirstCircleMenuViewController.init();
+            menuVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(menuVC, animated: true);
+            break;
+        case 24:
+            let ballVC = FirstBallTagViewController.init();
+            ballVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(ballVC, animated: true);
+            break;
+        case 25:
+            let hiddenVC = FirstHiddenWordViewController.init();
+            hiddenVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(hiddenVC, animated: true);
+            break;
+        case 26:
+            let printVC = FirstPrintWordViewController.init();
+            printVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(printVC, animated: true);
+            break;
+        case 27:
+            let jigsawVC = FirstJigsawViewController.init();
+            jigsawVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(jigsawVC, animated: true);
+            break;
+        case 28:
+            let observeVC = FirstObserveCardViewController.init();
+            observeVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(observeVC, animated: true);
             break;
         default:
             break;

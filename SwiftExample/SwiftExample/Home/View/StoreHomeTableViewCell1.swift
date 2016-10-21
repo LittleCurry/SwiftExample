@@ -26,7 +26,10 @@ class StoreHomeTableViewCell1: UITableViewCell {
     var label7:UILabel?;
     var button8:UIButton?;
     var label8:UILabel?;
-    
+    var whiteView:UIView?;
+    var newsArr = ["国行版iPhone7现货发行", "多种品牌正品球鞋满足的需求", "秋冬新款羽绒夹克火热来袭", "进口零食让你爱不释手"]
+    var countInt = 0
+    var newsView:NewsView?;
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,6 +50,8 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.label7 = UILabel.init()
         self.button8 = UIButton.init(type: UIButtonType.Custom)
         self.label8 = UILabel.init()
+        self.whiteView = UIView.init()
+        self.newsView = NewsView.init(frame: CGRectMake(10, PART_H(self.contentView) - 40, WIDTH - 20, 30))
         
         self.button1?.clipsToBounds = true
         self.button1?.layer.cornerRadius = 20;
@@ -54,7 +59,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button1?.imageEdgeInsets = UIEdgeInsetsMake(6, 6, 6, 6);
         self.button1?.setImage(UIImage.init(named: "love.png"), forState: UIControlState.Normal)
         self.label1?.font = UIFont.systemFontOfSize(12)
-        self.label1?.textColor = PLACEHOLODERCOLOR
         self.label1?.textAlignment = NSTextAlignment.Center
         self.label1?.text = "我的关注"
         self.button2?.clipsToBounds = true
@@ -63,7 +67,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button2?.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.button2?.setImage(UIImage.init(named: "logistics.png"), forState: UIControlState.Normal)
         self.label2?.font = UIFont.systemFontOfSize(12)
-        self.label2?.textColor = PLACEHOLODERCOLOR
         self.label2?.textAlignment = NSTextAlignment.Center
         self.label2?.text = "物流查询"
         self.button3?.clipsToBounds = true
@@ -72,7 +75,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button3?.imageEdgeInsets = UIEdgeInsetsMake(5, 9, 5, 9);
         self.button3?.setImage(UIImage.init(named: "bill.png"), forState: UIControlState.Normal)
         self.label3?.font = UIFont.systemFontOfSize(12)
-        self.label3?.textColor = PLACEHOLODERCOLOR
         self.label3?.textAlignment = NSTextAlignment.Center
         self.label3?.text = "充值"
         self.button4?.clipsToBounds = true
@@ -81,7 +83,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button4?.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.button4?.setImage(UIImage.init(named: "tuan.png"), forState: UIControlState.Normal)
         self.label4?.font = UIFont.systemFontOfSize(12)
-        self.label4?.textColor = PLACEHOLODERCOLOR
         self.label4?.textAlignment = NSTextAlignment.Center
         self.label4?.text = "生活团购"
         self.button5?.clipsToBounds = true
@@ -90,7 +91,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button5?.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.button5?.setImage(UIImage.init(named: "start.png"), forState: UIControlState.Normal)
         self.label5?.font = UIFont.systemFontOfSize(12)
-        self.label5?.textColor = PLACEHOLODERCOLOR
         self.label5?.textAlignment = NSTextAlignment.Center
         self.label5?.text = "电影票"
         self.button6?.clipsToBounds = true
@@ -99,7 +99,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button6?.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.button6?.setImage(UIImage.init(named: "savings.png"), forState: UIControlState.Normal)
         self.label6?.font = UIFont.systemFontOfSize(12)
-        self.label6?.textColor = PLACEHOLODERCOLOR
         self.label6?.textAlignment = NSTextAlignment.Center
         self.label6?.text = "惠赚钱"
         self.button7?.clipsToBounds = true
@@ -108,7 +107,6 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button7?.imageEdgeInsets = UIEdgeInsetsMake(5, 5, 5, 5);
         self.button7?.setImage(UIImage.init(named: "dou.png"), forState: UIControlState.Normal)
         self.label7?.font = UIFont.systemFontOfSize(12)
-        self.label7?.textColor = PLACEHOLODERCOLOR
         self.label7?.textAlignment = NSTextAlignment.Center
         self.label7?.text = "签到领京豆"
         self.button8?.clipsToBounds = true
@@ -117,9 +115,18 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.button8?.imageEdgeInsets = UIEdgeInsetsMake(7, 7, 7, 7);
         self.button8?.setImage(UIImage.init(named: "allGoods.png"), forState: UIControlState.Normal)
         self.label8?.font = UIFont.systemFontOfSize(12)
-        self.label8?.textColor = PLACEHOLODERCOLOR
         self.label8?.textAlignment = NSTextAlignment.Center
         self.label8?.text = "全部"
+        self.whiteView?.backgroundColor = UIColor.whiteColor()
+        self.newsView?.titleLabel.textAlignment = NSTextAlignment.Center
+        self.newsView?.titleLabel.text = self.newsArr[0]
+        UIView.animateWithDuration(0.7, delay: 0, options: UIViewAnimationOptions.LayoutSubviews, animations: { 
+            self.newsView?.alpha = 0.2
+            self.newsView?.exchangeSubviewAtIndex(1, withSubviewAtIndex: 0)
+            self.newsView?.alpha = 1
+            }) { (finished) in
+                NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "displayNews", userInfo: nil, repeats: true)
+        }
         
         self.contentView.addSubview(self.button1!)
         self.contentView.addSubview(self.label1!)
@@ -137,6 +144,8 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.contentView.addSubview(self.label7!)
         self.contentView.addSubview(self.button8!)
         self.contentView.addSubview(self.label8!)
+        self.contentView.addSubview(self.whiteView!)
+        self.contentView.addSubview(self.newsView!)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -162,6 +171,26 @@ class StoreHomeTableViewCell1: UITableViewCell {
         self.label7?.frame = CGRectMake(WIDTH/2, Y(self.button7!)+PART_H(self.button7!), WIDTH/4, 20)
         self.button8?.frame = CGRectMake(WIDTH/8-25+WIDTH*3/4, PART_H(self.contentView)*3/4-65, 50, 50)
         self.label8?.frame = CGRectMake(WIDTH*3/4, Y(self.button8!)+PART_H(self.button8!), WIDTH/4, 20)
+        self.whiteView?.frame = CGRectMake(10, PART_H(self.contentView) - 45, WIDTH - 20, 35)
+        self.newsView?.frame = CGRectMake(10, PART_H(self.contentView) - 40, WIDTH - 20, 30)
+    }
+    
+    func displayNews() -> Void {
+        //
+        self.countInt++
+        if self.countInt >= self.newsArr.count {
+            self.countInt = 0
+        }
+        var animation = CATransition.init()
+        animation.delegate = self
+        animation.duration = 0.5
+        animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut) // UIViewAnimationCurve.EaseInOut;
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = true;
+        animation.type = "cube";
+        newsView?.layer.addAnimation(animation, forKey: "animationID")
+        newsView?.setViewWithTitle(self.newsArr[self.countInt], description: "test")
+        
     }
     
     override func awakeFromNib() {

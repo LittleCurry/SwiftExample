@@ -24,11 +24,13 @@ class StoreHomeTableViewCell3: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        self.backgroundColor = UIColor.groupTableViewBackgroundColor()
         self.bigImage = UIImageView.init()
         self.scrollView = UIScrollView.init();
         for i in 0...29 {
             let button = UIButton.init(type: UIButtonType.Custom)
             button.frame = CGRectMake(CGFloat(i%10)*WIDTH/3, CGFloat(i/10)*150, WIDTH/3, 150)
+            button.backgroundColor = UIColor.whiteColor()
             button.layer.masksToBounds = true;
             button.layer.borderWidth = 0.5;
             button.layer.borderColor = UIColor.lightGrayColor().CGColor;
@@ -39,7 +41,8 @@ class StoreHomeTableViewCell3: UITableViewCell {
             label1.textColor = UIColor.whiteColor()
             label1.font = WORDFONT
             label1.textAlignment = NSTextAlignment.Center
-            label1.text = "热门"
+            let tagArr = ["热门", "首发", "特卖", "大牌", "满减", "低价"]
+            label1.text = tagArr[Int(arc4random()%6)];
             if arc4random()%10 >= 5 {
                 button.addSubview(label1)
             }
@@ -50,16 +53,16 @@ class StoreHomeTableViewCell3: UITableViewCell {
             button.addSubview(label2)
             let label3 = UILabel.init(frame: CGRectMake(0, 40, WIDTH/3, 20))
             label3.textColor = PLACEHOLODERCOLOR
-            label3.font = WORDFONT
+            label3.font = UIFont.systemFontOfSize(13)
             label3.textAlignment = NSTextAlignment.Center
             label3.text = "欧米茄直降千元"
             button.addSubview(label3)
             let aImage = UIImageView.init(frame: CGRectMake(15, 60, WIDTH/3-30, 150-60))
-            aImage.image = UIImage.init(named: String.init(format: "goods%ld.jpg", i+11))
+            aImage.image = UIImage.init(named: String.init(format: "goods%ld.jpg", arc4random()%30+1))
             button.addSubview(aImage)
         }
         
-        self.bigImage?.image = UIImage.init(named: "meinv.jpg")
+        self.bigImage?.image = UIImage.init(named: "storeHeader1.jpg")
         self.scrollView?.showsHorizontalScrollIndicator = false
         self.scrollView?.contentSize = CGSizeMake(WIDTH/3*10+1, 0)
         
@@ -73,8 +76,8 @@ class StoreHomeTableViewCell3: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.bigImage?.frame = CGRectMake(5, 5, WIDTH-10, 50)
-        self.scrollView?.frame = CGRectMake(0, 60, WIDTH, PART_H(self.contentView)-60)
+        self.bigImage?.frame = CGRectMake(5, 5, WIDTH-10, 100)
+        self.scrollView?.frame = CGRectMake(0, 110, WIDTH, PART_H(self.contentView)-110)
     }
     
     override func awakeFromNib() {

@@ -40,6 +40,10 @@
 #define TCPURL @"tcp://api.iguiyu.com:1883";
 #define PICSTR @"http://snb.tesufu.com"
 
+#define YFScreen [UIScreen mainScreen].bounds.size
+#define YFColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+#define iOS7 [[[UIDevice currentDevice]systemVersion] floatValue] >= 7.0
+
 
 #import "NetHandler.h"
 #import "JSESSIONID.h"

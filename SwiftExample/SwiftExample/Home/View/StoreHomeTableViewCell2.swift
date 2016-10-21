@@ -33,7 +33,7 @@ class StoreHomeTableViewCell2: UITableViewCell {
         self.scrollView = UIScrollView.init();
         for i in 0...9 {
             let aImage = UIImageView.init(frame: CGRectMake(10+CGFloat(i)*130, 0, 100, 100))
-            aImage.image = UIImage.init(named: String.init(format: "goods%ld.jpg", i+1))
+            aImage.image = UIImage.init(named: String.init(format: "goods%ld.jpg", arc4random()%120+1))
             self.scrollView?.addSubview(aImage)
             let aLabel = UILabel.init(frame: CGRectMake(80+CGFloat(i)*130, 90, 40, 20))
             aLabel.clipsToBounds = true
@@ -60,7 +60,7 @@ class StoreHomeTableViewCell2: UITableViewCell {
         self.label1!.text = "秒杀"
         self.label2?.font = UIFont.systemFontOfSize(14)
         self.label2?.textAlignment = NSTextAlignment.Center
-        self.label2!.text = "·8点场"
+        self.label2!.text = "·18点场"
         self.label3?.font = UIFont.systemFontOfSize(14)
         self.label3!.layer.masksToBounds = true;
         self.label3!.layer.borderWidth = 1;
@@ -110,8 +110,8 @@ class StoreHomeTableViewCell2: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.label1?.frame = CGRectMake(20, 10, 40, 20)
-        self.label2?.frame = CGRectMake(60, 10, 45, 20)
+        self.label1?.frame = CGRectMake(10, 10, 40, 20)
+        self.label2?.frame = CGRectMake(50, 10, 55, 20)
         self.label3?.frame = CGRectMake(110, 8.5, 23, 23)
         self.label4?.frame = CGRectMake(133, 10, 10, 20)
         self.label5?.frame = CGRectMake(143, 8.5, 23, 23)

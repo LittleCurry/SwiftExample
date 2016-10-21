@@ -10,29 +10,64 @@ import UIKit
 
 class StoreHomeTableViewCell5: UITableViewCell {
     
-    var bigImage:UIImageView?;
-    
-    var _video : Video?
-    var video : Video?{
-        set(newVideo){
-            if (_video != newVideo) {
-                _video = newVideo;
-            }
-            self.bigImage?.sd_setImageWithURL(newVideo!.cover, placeholderImage: nil, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
-                //
-            })
-        }
-        get{
-            return self._video;
-        }
-    }
+    var scrollView : UIScrollView?;
+    var bigImage : UIImageView?;
+    var label1 : UILabel?
+    var label2 : UILabel?
+    var label3 : UILabel?
+    var label4 : UILabel?
+    var label5 : UILabel?
+    var label6 : UILabel?
+    var label7 : UILabel?
+    var label8 : UILabel?
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.backgroundColor = UIColor.clearColor()
-        self.bigImage = UIImageView.init();
-        self.bigImage?.image = UIImage.init(named: "meinv.jpg")
+        
+        self.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        self.bigImage = UIImageView.init()
+        self.scrollView = UIScrollView.init();
+        for i in 0...29 {
+            let button = UIButton.init(type: UIButtonType.Custom)
+            button.frame = CGRectMake(CGFloat(i%10)*WIDTH/3, CGFloat(i/10)*150, WIDTH/3, 150)
+            button.backgroundColor = UIColor.whiteColor()
+            button.layer.masksToBounds = true;
+            button.layer.borderWidth = 0.5;
+            button.layer.borderColor = UIColor.lightGrayColor().CGColor;
+            self.scrollView?.addSubview(button)
+            
+            let label1 = UILabel.init(frame: CGRectMake(0, 0, 40, 20))
+            label1.backgroundColor = UIColor.redColor()
+            label1.textColor = UIColor.whiteColor()
+            label1.font = WORDFONT
+            label1.textAlignment = NSTextAlignment.Center
+            let tagArr = ["热门", "首发", "特卖", "大牌", "满减", "低价"]
+            label1.text = tagArr[Int(arc4random()%6)];
+            if arc4random()%10 >= 5 {
+                button.addSubview(label1)
+            }
+            let label2 = UILabel.init(frame: CGRectMake(0, 20, WIDTH/3, 20))
+            label2.font = WORDFONT
+            label2.textAlignment = NSTextAlignment.Center
+            label2.text = "潮流服装"
+            button.addSubview(label2)
+            let label3 = UILabel.init(frame: CGRectMake(0, 40, WIDTH/3, 20))
+            label3.textColor = PLACEHOLODERCOLOR
+            label3.font = UIFont.systemFontOfSize(13)
+            label3.textAlignment = NSTextAlignment.Center
+            label3.text = "秋冬新款不再寒冷"
+            button.addSubview(label3)
+            let aImage = UIImageView.init(frame: CGRectMake(15, 60, WIDTH/3-30, 150-60))
+            aImage.image = UIImage.init(named: String.init(format: "goods%ld.jpg", arc4random()%30+61))
+            button.addSubview(aImage)
+        }
+        
+        self.bigImage?.image = UIImage.init(named: "storeHeader3.jpg")
+        self.scrollView?.showsHorizontalScrollIndicator = false
+        self.scrollView?.contentSize = CGSizeMake(WIDTH/3*10+1, 0)
+        
         self.contentView.addSubview(self.bigImage!)
+        self.contentView.addSubview(self.scrollView!)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +76,8 @@ class StoreHomeTableViewCell5: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.bigImage?.frame = CGRectMake(0, 0, WIDTH, PART_H(self.contentView))
+        self.bigImage?.frame = CGRectMake(5, 5, WIDTH-10, 100)
+        self.scrollView?.frame = CGRectMake(0, 110, WIDTH, PART_H(self.contentView)-110)
     }
     
     override func awakeFromNib() {

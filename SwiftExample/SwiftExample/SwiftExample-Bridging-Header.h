@@ -37,6 +37,9 @@
 #import "LDCalendarView.h"
 #import "NSDate+extend.h"
 #import "MLSearchBar.h"
+#import "NewsView.h"
+#import "PasswordView.h"
+#import "YFChessBoardView.h"
 
 
 

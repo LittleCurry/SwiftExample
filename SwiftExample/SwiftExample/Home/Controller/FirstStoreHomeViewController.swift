@@ -151,7 +151,7 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         if indexPath.section == 1 && indexPath.row == 0 {
             return 180
         }
-        return 150*3+60;
+        return 150*3+110;
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -191,27 +191,27 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
             break
         case 3:
             //
-            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            var cell:StoreHomeTableViewCell4 = tableView.dequeueReusableCellWithIdentifier(self.cellName4, forIndexPath: indexPath) as! StoreHomeTableViewCell4
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+                cell = StoreHomeTableViewCell4.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName4)
             }
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
             break
         case 4:
             //
-            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            var cell:StoreHomeTableViewCell5 = tableView.dequeueReusableCellWithIdentifier(self.cellName5, forIndexPath: indexPath) as! StoreHomeTableViewCell5
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+                cell = StoreHomeTableViewCell5.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName5)
             }
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
             break
         case 5:
             //
-            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            var cell:StoreHomeTableViewCell6 = tableView.dequeueReusableCellWithIdentifier(self.cellName6, forIndexPath: indexPath) as! StoreHomeTableViewCell6
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+                cell = StoreHomeTableViewCell6.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName6)
             }
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
