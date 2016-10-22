@@ -19,21 +19,27 @@ class FirstJigsawViewController: BaseViewController {
     }
     
     func getView() -> Void {
-        let boardView = YFChessBoardView.init(frame: CGRectMake(0, 0, 280, 280))
-        boardView.center = self.view.center;
-        boardView.backgroundImage = UIImage.init(named: "img1.jpg")
+        
+        self.navigationItem.title = "拼图"
+        let originView = UIImageView.init(frame: CGRectMake(WIDTH/2-160, 74, 100, 100))
+        originView.image = UIImage.init(named: "jigsaw.jpg")
+        self.view.addSubview(originView)
+        let boardView = YFChessBoardView.init(frame: CGRectMake(WIDTH/2-160, 184, 320, 320))
+        boardView.backgroundImage = UIImage.init(named: "jigsaw.jpg")?.scaleToSize(CGSizeMake(PART_W(boardView), PART_H(boardView)));
         self.view.addSubview(boardView)
         self.boardView = boardView;
         
-        let breakBtn = UIButton.init(type: UIButtonType.System)
-        breakBtn.frame = CGRectMake(30, CGRectGetMaxY(boardView.frame) + 20, 100, 44);
+        let breakBtn = UIButton.init(type: UIButtonType.Custom)
+        breakBtn.frame = CGRectMake(WIDTH/2-160, Y(boardView)+PART_H(boardView)+10, 100, 44);
+        breakBtn.backgroundColor = DARKRED
+        breakBtn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         breakBtn.setTitle("打 乱", forState: UIControlState.Normal)
-        breakBtn.addTarget(self, action: "breakBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        breakBtn.addTarget(self, action: "breakBtnClick", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(breakBtn)
-        self.breakBtnClick(breakBtn)
+        self.breakBtnClick()
     }
     
-    func breakBtnClick(button:UIButton) -> Void {
+    func breakBtnClick() -> Void {
         self.boardView!.randomBreak()
     }
     

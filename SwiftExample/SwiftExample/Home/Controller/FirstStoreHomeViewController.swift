@@ -9,9 +9,9 @@
 import UIKit
 
 class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDelegate, UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate {
+    
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
-    var loadImage = UIImageView.init()
     var searchBar = UISearchBar.init(frame: CGRectMake(0, 307, 240, 30))
     var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
@@ -24,6 +24,10 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     var adUrlArr:NSMutableArray = []
     var wordArr:NSMutableArray = []
     var cycleScrollView: SDCycleScrollView?
+    
+    var loadAvataView:RCDraggableButton?;// 拖动按钮
+    var topBtn:UIButton?;// 回到顶部
+    var lastContentOffset:CGFloat = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,17 +92,25 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         };
 //        self.myTableView.mj_footer = footer;
         self.view.addSubview(self.myTableView);
-        self.loadImage.image = UIImage.init(named: "loading.png")
-        self.myTableView.addSubview(self.loadImage)
         
+        self.topBtn = UIButton.init(type: .Custom)
+        self.topBtn?.frame = CGRectMake(WIDTH-60, HEIGHT-60, 40, 40)
+        self.topBtn?.setBackgroundImage(UIImage.init(named: "goTop.png"), forState: UIControlState.Normal)
+        self.topBtn?.addTarget(self, action: "goTop", forControlEvents: UIControlEvents.TouchUpInside)
+        self.topBtn?.hidden = true
+        self.view.addSubview(self.topBtn!)
+        self.loadAvataView = RCDraggableButton.init(inKeyWindowWithFrame: CGRectMake(0, 333.5, 60, 60))
+        self.loadAvataView!.setBackgroundImage(UIImage.init(named: "stopAir.png"), forState: UIControlState.Normal)
+        self.loadAvataView?.longPressBlock = { (avatar) in
+            print("longPressBlock")
+        }
+//        self.loadAvataView!.adjustsImageWhenHighlighted = false // 高亮图变色
+     
         self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1402/221/421883372/88115/8cc2231a/55815835N35a44559.jpg")!)
         self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t976/208/1221678737/91179/5d7143d5/5588e849Na2c20c1a.jpg")!)
         self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t805/241/1199341035/289354/8648fe55/5581211eN7a2ebb8a.jpg")!)
         self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1606/199/444346922/48930/355f9ef/55841cd0N92d9fa7c.jpg")!)
         self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1609/58/409100493/49144/7055bec5/557e76bfNc065aeaf.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t895/234/1192509025/111466/512174ab/557fed56N3e023b70.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t835/313/1196724882/359493/b53c7b70/5581392cNa08ff0a9.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t898/15/1262262696/95281/57d1f12f/558baeb4Nbfd44d3a.jpg")!)
         self.cycleScrollView = SDCycleScrollView.init(frame: CGRectMake(0, 64, WIDTH, 180), imageURLsGroup: self.adUrlArr as [AnyObject])
         self.cycleScrollView!.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
         self.cycleScrollView!.delegate = self;
@@ -118,6 +130,8 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
         self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:"bigShadow.png"), forBarMetrics: UIBarMetrics.Compact);
         self.navigationController!.navigationBar.layer.masksToBounds = true;
+        
+        self.loadAvataView!.hidden = false;
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -125,6 +139,8 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: ""), forBarMetrics: UIBarMetrics.Default)
         self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:""), forBarMetrics: UIBarMetrics.Compact)
         self.navigationController!.navigationBar.layer.masksToBounds = false;
+        
+        self.loadAvataView!.hidden = true;
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -181,7 +197,6 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
             return cell
             break
         case 2:
-            //
             var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
             if (cell.isEqual(nil)) {
                 cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
@@ -190,7 +205,6 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
             return cell
             break
         case 3:
-            //
             var cell:StoreHomeTableViewCell4 = tableView.dequeueReusableCellWithIdentifier(self.cellName4, forIndexPath: indexPath) as! StoreHomeTableViewCell4
             if (cell.isEqual(nil)) {
                 cell = StoreHomeTableViewCell4.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName4)
@@ -199,7 +213,6 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
             return cell
             break
         case 4:
-            //
             var cell:StoreHomeTableViewCell5 = tableView.dequeueReusableCellWithIdentifier(self.cellName5, forIndexPath: indexPath) as! StoreHomeTableViewCell5
             if (cell.isEqual(nil)) {
                 cell = StoreHomeTableViewCell5.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName5)
@@ -208,7 +221,6 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
             return cell
             break
         case 5:
-            //
             var cell:StoreHomeTableViewCell6 = tableView.dequeueReusableCellWithIdentifier(self.cellName6, forIndexPath: indexPath) as! StoreHomeTableViewCell6
             if (cell.isEqual(nil)) {
                 cell = StoreHomeTableViewCell6.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName6)
@@ -238,11 +250,26 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event);
         self.searchBar.resignFirstResponder()
-        
     }
     
+    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
     
-
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y < lastContentOffset ){
+            //向上
+            self.topBtn!.hidden = true;
+        }else if(scrollView.contentOffset.y > lastContentOffset){
+            //向下
+            self.topBtn!.hidden = false;
+        }
+    }
+    
+    func goTop() -> Void {
+        self.myTableView.setContentOffset(CGPointMake(0, 35), animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

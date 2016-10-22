@@ -17,10 +17,22 @@ class FirstSecretcodeViewController: BaseViewController {
     }
     
     func getView() -> Void {
-        var passwordView = PasswordView.init(title: "输入支付密码", detail: "删除该提现方式")
+        let button = UIButton.init(type: UIButtonType.Custom)
+        button.frame = CGRectMake(30, 300, WIDTH-60, 44)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 5
+        button.backgroundColor = RGBA(27, g: 163, b: 233, a: 1)
+        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        button.setTitle("确认付款", forState: UIControlState.Normal)
+        button.addTarget(self, action: "surePay", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(button)
+    }
+    
+    func surePay() -> Void {
+        let passwordView = PasswordView.init(title: "输入支付密码", detail: "删除该提现方式")
         passwordView.show()
         passwordView.completeHandle = { (inputPwd) in
-            var hud = MBProgressHUD.init(view: self.view)
+            let hud = MBProgressHUD.init(view: self.view)
             UIApplication.sharedApplication().keyWindow?.addSubview(hud)
             hud.labelFont = WORDFONT
             hud.labelText = "验证中"
@@ -38,13 +50,6 @@ class FirstSecretcodeViewController: BaseViewController {
             })
         }
     }
-    
-    
-    
-    
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

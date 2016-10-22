@@ -27,7 +27,7 @@ class StoreHomeTableViewCell1: UITableViewCell {
     var button8:UIButton?;
     var label8:UILabel?;
     var whiteView:UIView?;
-    var newsArr = ["国行版iPhone7现货发行", "多种品牌正品球鞋满足的需求", "秋冬新款羽绒夹克火热来袭", "进口零食让你爱不释手"]
+    var newsArr = ["国行版iPhone7现货发行", "多种品牌正品球鞋满足你的需求", "秋冬新款羽绒夹克火热来袭", "进口零食让你爱不释手"]
     var countInt = 0
     var newsView:NewsView?;
     
@@ -181,7 +181,7 @@ class StoreHomeTableViewCell1: UITableViewCell {
         if self.countInt >= self.newsArr.count {
             self.countInt = 0
         }
-        var animation = CATransition.init()
+        let animation = CATransition.init()
         animation.delegate = self
         animation.duration = 0.5
         animation.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseInEaseOut) // UIViewAnimationCurve.EaseInOut;
