@@ -36,7 +36,6 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
     }
     
     func getView() -> Void {
-        //
         var radius:CGFloat = CGFloat(self.radiusSlider!.value * 1000);
         var angularSpacing:CGFloat = CGFloat(self.angularSpacingSlider!.value * 90);
         var xOffset = self.xOffsetSlider!.value * 320;
