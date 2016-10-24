@@ -29,7 +29,7 @@ class FirstSecretcodeViewController: BaseViewController {
     }
     
     func surePay() -> Void {
-        let passwordView = PasswordView.init(title: "输入支付密码", detail: "删除该提现方式")
+        let passwordView = PasswordView.init(title: "输入支付密码", detail: "转账200.00元到小李账号")
         passwordView.show()
         passwordView.completeHandle = { (inputPwd) in
             let hud = MBProgressHUD.init(view: self.view)

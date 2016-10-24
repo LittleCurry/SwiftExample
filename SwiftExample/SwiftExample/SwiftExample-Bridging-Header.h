@@ -46,6 +46,9 @@
 #import "CloudView.h"
 #import "RQShineLabel.h"
 #import "AWCollectionViewDialLayout.h"
+#import "ZTypewriteEffectLabel.h"
+#import "SSStackedPageView.h"
+#import "UIColor+CatColors.h"
 
 
 

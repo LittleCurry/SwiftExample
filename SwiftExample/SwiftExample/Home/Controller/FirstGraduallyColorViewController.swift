@@ -1,14 +1,14 @@
 //
-//  FirstObserveCardViewController.swift
+//  FirstGraduallyColorViewController.swift
 //  SwiftExample
 //
-//  Created by 李云鹏 on 16/10/20.
+//  Created by 李云鹏 on 16/10/24.
 //  Copyright © 2016年 yunPeng. All rights reserved.
 //
 
 import UIKit
 
-class FirstObserveCardViewController: BaseViewController {
+class FirstGraduallyColorViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class FirstObserveCardViewController: BaseViewController {
     
     func getView() -> Void {
         //
-        self.navigationItem.title = "浏览卡片"
+        self.navigationItem.title = "渐变色"
     }
     
     override func didReceiveMemoryWarning() {
