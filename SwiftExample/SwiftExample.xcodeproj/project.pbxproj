@@ -304,6 +304,15 @@
 		C17A13A91DBE07F50016E69B /* bankcard3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C17A13A41DBE07F50016E69B /* bankcard3.jpg */; };
 		C17A13AA1DBE07F50016E69B /* bankcard4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C17A13A51DBE07F50016E69B /* bankcard4.jpg */; };
 		C17A13AB1DBE07F50016E69B /* bankcard5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C17A13A61DBE07F50016E69B /* bankcard5.jpg */; };
+		C17A13AE1DBE0F950016E69B /* XRPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C17A13AD1DBE0F950016E69B /* XRPopMenuView.m */; };
+		C17A13B31DBE13570016E69B /* editButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13AF1DBE13570016E69B /* editButton@2x.png */; };
+		C17A13B41DBE13570016E69B /* editButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13B01DBE13570016E69B /* editButton@3x.png */; };
+		C17A13B51DBE13570016E69B /* markButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13B11DBE13570016E69B /* markButton@2x.png */; };
+		C17A13B61DBE13570016E69B /* markButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13B21DBE13570016E69B /* markButton@3x.png */; };
+		C17A13C31DBE1B9F0016E69B /* zhihu.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13BF1DBE1B9F0016E69B /* zhihu.png */; };
+		C17A13C41DBE1B9F0016E69B /* tuite.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13C01DBE1B9F0016E69B /* tuite.png */; };
+		C17A13C51DBE1B9F0016E69B /* wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13C11DBE1B9F0016E69B /* wechat.png */; };
+		C17A13C61DBE1B9F0016E69B /* jianshu.png in Resources */ = {isa = PBXBuildFile; fileRef = C17A13C21DBE1B9F0016E69B /* jianshu.png */; };
 		C17C3C3D1DB61D4F009737CD /* MLSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C17C3C3C1DB61D4F009737CD /* MLSearchBar.m */; };
 		C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D54FF1DA6073E00C27FD2 /* SCChartCell.m */; };
 		C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C17D55011DA6073E00C27FD2 /* SCBarCell.m */; };
@@ -1029,6 +1038,16 @@
 		C17A13A41DBE07F50016E69B /* bankcard3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bankcard3.jpg; sourceTree = "<group>"; };
 		C17A13A51DBE07F50016E69B /* bankcard4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bankcard4.jpg; sourceTree = "<group>"; };
 		C17A13A61DBE07F50016E69B /* bankcard5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bankcard5.jpg; sourceTree = "<group>"; };
+		C17A13AC1DBE0F950016E69B /* XRPopMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRPopMenuView.h; sourceTree = "<group>"; };
+		C17A13AD1DBE0F950016E69B /* XRPopMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRPopMenuView.m; sourceTree = "<group>"; };
+		C17A13AF1DBE13570016E69B /* editButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@2x.png"; sourceTree = "<group>"; };
+		C17A13B01DBE13570016E69B /* editButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "editButton@3x.png"; sourceTree = "<group>"; };
+		C17A13B11DBE13570016E69B /* markButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "markButton@2x.png"; sourceTree = "<group>"; };
+		C17A13B21DBE13570016E69B /* markButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "markButton@3x.png"; sourceTree = "<group>"; };
+		C17A13BF1DBE1B9F0016E69B /* zhihu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zhihu.png; sourceTree = "<group>"; };
+		C17A13C01DBE1B9F0016E69B /* tuite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tuite.png; sourceTree = "<group>"; };
+		C17A13C11DBE1B9F0016E69B /* wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wechat.png; sourceTree = "<group>"; };
+		C17A13C21DBE1B9F0016E69B /* jianshu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jianshu.png; sourceTree = "<group>"; };
 		C17C3C3B1DB61D4F009737CD /* MLSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSearchBar.h; sourceTree = "<group>"; };
 		C17C3C3C1DB61D4F009737CD /* MLSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSearchBar.m; sourceTree = "<group>"; };
 		C17D54FE1DA6073E00C27FD2 /* SCChartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCChartCell.h; sourceTree = "<group>"; };
@@ -1726,6 +1745,14 @@
 				C1CBF7001DB9C06D009E3A61 /* stopAir@2x.png */,
 				C1A7CCDB1DBA00AC001C5A6B /* autumn1.jpg */,
 				C1A7CCDC1DBA00AC001C5A6B /* autumn2.jpg */,
+				C17A13AF1DBE13570016E69B /* editButton@2x.png */,
+				C17A13B01DBE13570016E69B /* editButton@3x.png */,
+				C17A13B11DBE13570016E69B /* markButton@2x.png */,
+				C17A13B21DBE13570016E69B /* markButton@3x.png */,
+				C17A13BF1DBE1B9F0016E69B /* zhihu.png */,
+				C17A13C01DBE1B9F0016E69B /* tuite.png */,
+				C17A13C11DBE1B9F0016E69B /* wechat.png */,
+				C17A13C21DBE1B9F0016E69B /* jianshu.png */,
 				C17A13A11DBE07F50016E69B /* bankcard */,
 				C17FC3FA1DB870CC004028CA /* goods */,
 				C16C87671DAB667B00314367 /* weather */,
@@ -1766,6 +1793,8 @@
 				C17FC5061DB8D621004028CA /* PasswordView.m */,
 				C1CBF6FB1DB9BBA7009E3A61 /* RCDraggableButton.h */,
 				C1CBF6FC1DB9BBA7009E3A61 /* RCDraggableButton.m */,
+				C17A13AC1DBE0F950016E69B /* XRPopMenuView.h */,
+				C17A13AD1DBE0F950016E69B /* XRPopMenuView.m */,
 				C16419381D9BCB1400BD3841 /* NSObject+Model.swift */,
 				C16419391D9BCB1400BD3841 /* AlloverMacro.swift */,
 				C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */,
@@ -2770,6 +2799,7 @@
 				C16418401D9BCA3000BD3841 /* UMShareEditViewController.xib in Resources */,
 				C1C6D9BA1DB619CE00B4EAFF /* scan@3x.png in Resources */,
 				C17FC4E71DB870CC004028CA /* goods96.jpg in Resources */,
+				C17A13C51DBE1B9F0016E69B /* wechat.png in Resources */,
 				C164183E1D9BCA3000BD3841 /* UMSCommentInputController.xib in Resources */,
 				C17FC48A1DB870CC004028CA /* goods12.jpg in Resources */,
 				C16419A01D9BCB4600BD3841 /* 34.tiff in Resources */,
@@ -2789,6 +2819,7 @@
 				C16419A61D9BCB4600BD3841 /* 4.tiff in Resources */,
 				C17FC4801DB870CC004028CA /* goods110.jpg in Resources */,
 				C16C87771DAB673900314367 /* sand_float_mini@2x.png in Resources */,
+				C17A13B31DBE13570016E69B /* editButton@2x.png in Resources */,
 				C17FC4D11DB870CC004028CA /* goods76.jpg in Resources */,
 				C16C877D1DAB675500314367 /* snow_heavyx_mini@2x.png in Resources */,
 				C158F2EA1DACE40B000CAE40 /* TZAssetCell.xib in Resources */,
@@ -2816,6 +2847,7 @@
 				C17FC4BA1DB870CC004028CA /* goods55.jpg in Resources */,
 				C12801781D9E65A900E79A07 /* smile@2x.png in Resources */,
 				C16419A41D9BCB4600BD3841 /* 38.tiff in Resources */,
+				C17A13B61DBE13570016E69B /* markButton@3x.png in Resources */,
 				C19EA58B1DB73EE300984138 /* dou@2x.png in Resources */,
 				C17FC4DB1DB870CC004028CA /* goods85.jpg in Resources */,
 				C1C6D9BD1DB61B3D00B4EAFF /* message@2x.png in Resources */,
@@ -2839,6 +2871,7 @@
 				C16419AF1D9BCB4600BD3841 /* 5.tiff in Resources */,
 				C17FC4B61DB870CC004028CA /* goods51.jpg in Resources */,
 				C17FC4D51DB870CC004028CA /* goods8.jpg in Resources */,
+				C17A13C31DBE1B9F0016E69B /* zhihu.png in Resources */,
 				C16419AC1D9BCB4600BD3841 /* 45.tiff in Resources */,
 				C158F2E81DACE40B000CAE40 /* TableViewArrow@2x.png in Resources */,
 				C1970D251DA8BC6E00260A11 /* food.png in Resources */,
@@ -2883,6 +2916,7 @@
 				C1970D2F1DA8BE1E00260A11 /* circleGirl.png in Resources */,
 				C158F2DC1DACE40B000CAE40 /* MMVideoPreviewPlay@2x.png in Resources */,
 				C16419871D9BCB4600BD3841 /* 11.tiff in Resources */,
+				C17A13C41DBE1B9F0016E69B /* tuite.png in Resources */,
 				C158F2E31DACE40B000CAE40 /* photo_original_sel@2x.png in Resources */,
 				C19EA5831DB73EC900984138 /* start@2x.png in Resources */,
 				C1A7CCE11DBA015C001C5A6B /* storeHeader3.jpg in Resources */,
@@ -2917,6 +2951,7 @@
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
 				C17FC4D81DB870CC004028CA /* goods82.jpg in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
+				C17A13B51DBE13570016E69B /* markButton@2x.png in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
 				C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */,
 				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
@@ -3034,6 +3069,7 @@
 				C17FC4991DB870CC004028CA /* goods25.jpg in Resources */,
 				C16C876F1DAB671400314367 /* rain_mini@2x.png in Resources */,
 				C17FC4BC1DB870CC004028CA /* goods57.jpg in Resources */,
+				C17A13B41DBE13570016E69B /* editButton@3x.png in Resources */,
 				C158F2E61DACE40B000CAE40 /* preview_number_icon@2x.png in Resources */,
 				C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */,
 				C16418431D9BCA3000BD3841 /* UMSnsAccountViewController.xib in Resources */,
@@ -3051,6 +3087,7 @@
 				C16418441D9BCA3000BD3841 /* UMSShareListController.xib in Resources */,
 				C17FC4C81DB870CC004028CA /* goods68.jpg in Resources */,
 				C1970D291DA8BC8300260A11 /* car.png in Resources */,
+				C17A13C61DBE1B9F0016E69B /* jianshu.png in Resources */,
 				C16419501D9BCB2F00BD3841 /* firsting@2x.png in Resources */,
 				C16419891D9BCB4600BD3841 /* 13.tiff in Resources */,
 				C17FC4C61DB870CC004028CA /* goods66.jpg in Resources */,
@@ -3223,6 +3260,7 @@
 				C158F30F1DACE4B8000CAE40 /* YLGIFImage.m in Sources */,
 				C164187F1D9BCAA800BD3841 /* MMPopupCategory.m in Sources */,
 				C17FC53B1DB8DB41004028CA /* YFLabel.m in Sources */,
+				C17A13AE1DBE0F950016E69B /* XRPopMenuView.m in Sources */,
 				C16419251D9BCADE00BD3841 /* UIScrollView+MJRefresh.m in Sources */,
 				C17D550F1DA607FB00C27FD2 /* FouthPieViewController.swift in Sources */,
 				C19EA5661DB7212200984138 /* StoreHomeTableViewCell2.swift in Sources */,

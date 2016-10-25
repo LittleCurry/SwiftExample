@@ -49,6 +49,7 @@
 #import "ZTypewriteEffectLabel.h"
 #import "SSStackedPageView.h"
 #import "UIColor+CatColors.h"
+#import "XRPopMenuView.h"
 
 
 
