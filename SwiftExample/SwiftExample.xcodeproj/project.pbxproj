@@ -522,6 +522,26 @@
 		C1A7CCE51DBA106C001C5A6B /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A7CCE41DBA106C001C5A6B /* AWCollectionViewDialLayout.m */; };
 		C1BC1D3F1DADDC3B00AD5862 /* squareAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */; };
 		C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */; };
+		C1BC63541DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63471DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift */; };
+		C1BC63551DBEF7D9006EBCFC /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63481DBEF7D9006EBCFC /* Emoticons.bundle */; };
+		C1BC63561DBEF7D9006EBCFC /* LMJEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC634A1DBEF7D9006EBCFC /* LMJEmoticon.swift */; };
+		C1BC63571DBEF7D9006EBCFC /* LMJEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC634B1DBEF7D9006EBCFC /* LMJEmoticonPackage.swift */; };
+		C1BC63581DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC634C1DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift */; };
+		C1BC63591DBEF7D9006EBCFC /* LMJEmoticonTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC634D1DBEF7D9006EBCFC /* LMJEmoticonTool.swift */; };
+		C1BC635A1DBEF7D9006EBCFC /* LMJPackageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC634E1DBEF7D9006EBCFC /* LMJPackageManager.swift */; };
+		C1BC635B1DBEF7D9006EBCFC /* LMJEmoticonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63501DBEF7D9006EBCFC /* LMJEmoticonCell.swift */; };
+		C1BC635C1DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63511DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift */; };
+		C1BC635D1DBEF7D9006EBCFC /* LMJTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63521DBEF7D9006EBCFC /* LMJTextView.swift */; };
+		C1BC635E1DBEF7D9006EBCFC /* UITextView+LMJExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63531DBEF7D9006EBCFC /* UITextView+LMJExtension.swift */; };
+		C1BC63611DBF0A15006EBCFC /* keyBoard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC635F1DBF0A15006EBCFC /* keyBoard@3x.png */; };
+		C1BC63621DBF0A15006EBCFC /* keyBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63601DBF0A15006EBCFC /* keyBoard@2x.png */; };
+		C1BC636D1DBF4120006EBCFC /* langxiaohua@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63691DBF4120006EBCFC /* langxiaohua@2x.png */; };
+		C1BC636E1DBF4120006EBCFC /* langxiaohua@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC636A1DBF4120006EBCFC /* langxiaohua@3x.png */; };
+		C1BC636F1DBF4120006EBCFC /* defaultSmile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC636B1DBF4120006EBCFC /* defaultSmile@2x.png */; };
+		C1BC63701DBF4120006EBCFC /* defaultSmile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC636C1DBF4120006EBCFC /* defaultSmile@3x.png */; };
+		C1BC63731DBF4347006EBCFC /* emoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63711DBF4347006EBCFC /* emoji@2x.png */; };
+		C1BC63741DBF4347006EBCFC /* emoji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63721DBF4347006EBCFC /* emoji@3x.png */; };
+		C1BC63761DBF662C006EBCFC /* WeChatChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */; };
 		C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */; };
 		C1C53D681DB49F7A003DC3F0 /* LDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D631DB49F7A003DC3F0 /* LDCalendarView.m */; };
 		C1C53D691DB49F7A003DC3F0 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D651DB49F7A003DC3F0 /* NSDate+Extend.m */; };
@@ -1278,6 +1298,26 @@
 		C1A7CCE41DBA106C001C5A6B /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
 		C1BC1D3D1DADDC3B00AD5862 /* squareAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@2x.png"; sourceTree = "<group>"; };
 		C1BC1D3E1DADDC3B00AD5862 /* squareAdd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squareAdd@3x.png"; sourceTree = "<group>"; };
+		C1BC63471DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonKeyboard.swift; sourceTree = "<group>"; };
+		C1BC63481DBEF7D9006EBCFC /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		C1BC634A1DBEF7D9006EBCFC /* LMJEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticon.swift; sourceTree = "<group>"; };
+		C1BC634B1DBEF7D9006EBCFC /* LMJEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonPackage.swift; sourceTree = "<group>"; };
+		C1BC634C1DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonTextAttachment.swift; sourceTree = "<group>"; };
+		C1BC634D1DBEF7D9006EBCFC /* LMJEmoticonTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonTool.swift; sourceTree = "<group>"; };
+		C1BC634E1DBEF7D9006EBCFC /* LMJPackageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJPackageManager.swift; sourceTree = "<group>"; };
+		C1BC63501DBEF7D9006EBCFC /* LMJEmoticonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonCell.swift; sourceTree = "<group>"; };
+		C1BC63511DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJEmoticonToolBar.swift; sourceTree = "<group>"; };
+		C1BC63521DBEF7D9006EBCFC /* LMJTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMJTextView.swift; sourceTree = "<group>"; };
+		C1BC63531DBEF7D9006EBCFC /* UITextView+LMJExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+LMJExtension.swift"; sourceTree = "<group>"; };
+		C1BC635F1DBF0A15006EBCFC /* keyBoard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyBoard@3x.png"; sourceTree = "<group>"; };
+		C1BC63601DBF0A15006EBCFC /* keyBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyBoard@2x.png"; sourceTree = "<group>"; };
+		C1BC63691DBF4120006EBCFC /* langxiaohua@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "langxiaohua@2x.png"; sourceTree = "<group>"; };
+		C1BC636A1DBF4120006EBCFC /* langxiaohua@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "langxiaohua@3x.png"; sourceTree = "<group>"; };
+		C1BC636B1DBF4120006EBCFC /* defaultSmile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultSmile@2x.png"; sourceTree = "<group>"; };
+		C1BC636C1DBF4120006EBCFC /* defaultSmile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "defaultSmile@3x.png"; sourceTree = "<group>"; };
+		C1BC63711DBF4347006EBCFC /* emoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji@2x.png"; sourceTree = "<group>"; };
+		C1BC63721DBF4347006EBCFC /* emoji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji@3x.png"; sourceTree = "<group>"; };
+		C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatChatTableViewCell.swift; sourceTree = "<group>"; };
 		C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCalendarViewController.swift; sourceTree = "<group>"; };
 		C1C53D611DB49F7A003DC3F0 /* LDCalendarConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarConst.h; sourceTree = "<group>"; };
 		C1C53D621DB49F7A003DC3F0 /* LDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarView.h; sourceTree = "<group>"; };
@@ -1686,6 +1726,8 @@
 				C12801711D9E65A900E79A07 /* voice@2x.png */,
 				C12801721D9E65A900E79A07 /* smile@2x.png */,
 				C12801731D9E65A900E79A07 /* smile@3x.png */,
+				C1BC63601DBF0A15006EBCFC /* keyBoard@2x.png */,
+				C1BC635F1DBF0A15006EBCFC /* keyBoard@3x.png */,
 				C12801741D9E65A900E79A07 /* circleAdd@3x.png */,
 				C12801751D9E65A900E79A07 /* circleAdd@2x.png */,
 				C151E3121DA53CC5004A41A3 /* meinv.jpg */,
@@ -1753,6 +1795,12 @@
 				C17A13C01DBE1B9F0016E69B /* tuite.png */,
 				C17A13C11DBE1B9F0016E69B /* wechat.png */,
 				C17A13C21DBE1B9F0016E69B /* jianshu.png */,
+				C1BC636B1DBF4120006EBCFC /* defaultSmile@2x.png */,
+				C1BC636C1DBF4120006EBCFC /* defaultSmile@3x.png */,
+				C1BC63711DBF4347006EBCFC /* emoji@2x.png */,
+				C1BC63721DBF4347006EBCFC /* emoji@3x.png */,
+				C1BC63691DBF4120006EBCFC /* langxiaohua@2x.png */,
+				C1BC636A1DBF4120006EBCFC /* langxiaohua@3x.png */,
 				C17A13A11DBE07F50016E69B /* bankcard */,
 				C17FC3FA1DB870CC004028CA /* goods */,
 				C16C87671DAB667B00314367 /* weather */,
@@ -1806,6 +1854,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1BC63451DBEF7D9006EBCFC /* LMJEmoticonKeyboard */,
 				C17A13891DBDF28A0016E69B /* StackedPageVC */,
 				C17A13801DBDBF640016E69B /* PrinterEffect */,
 				C1A7CCD41DB9F8C5001C5A6B /* ShineLabel */,
@@ -2340,6 +2389,7 @@
 				C19EA56D1DB7215300984138 /* StoreHomeTableViewCell6.swift */,
 				C1A7CCE31DBA106C001C5A6B /* AWCollectionViewDialLayout.h */,
 				C1A7CCE41DBA106C001C5A6B /* AWCollectionViewDialLayout.m */,
+				C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2644,6 +2694,48 @@
 			path = ShineLabel;
 			sourceTree = "<group>";
 		};
+		C1BC63451DBEF7D9006EBCFC /* LMJEmoticonKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC63461DBEF7D9006EBCFC /* EmoticonKeyboard */,
+				C1BC63481DBEF7D9006EBCFC /* Emoticons.bundle */,
+				C1BC63491DBEF7D9006EBCFC /* Model */,
+				C1BC634F1DBEF7D9006EBCFC /* View */,
+			);
+			path = LMJEmoticonKeyboard;
+			sourceTree = "<group>";
+		};
+		C1BC63461DBEF7D9006EBCFC /* EmoticonKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC63471DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift */,
+			);
+			path = EmoticonKeyboard;
+			sourceTree = "<group>";
+		};
+		C1BC63491DBEF7D9006EBCFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC634A1DBEF7D9006EBCFC /* LMJEmoticon.swift */,
+				C1BC634B1DBEF7D9006EBCFC /* LMJEmoticonPackage.swift */,
+				C1BC634C1DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift */,
+				C1BC634D1DBEF7D9006EBCFC /* LMJEmoticonTool.swift */,
+				C1BC634E1DBEF7D9006EBCFC /* LMJPackageManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1BC634F1DBEF7D9006EBCFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1BC63501DBEF7D9006EBCFC /* LMJEmoticonCell.swift */,
+				C1BC63511DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift */,
+				C1BC63521DBEF7D9006EBCFC /* LMJTextView.swift */,
+				C1BC63531DBEF7D9006EBCFC /* UITextView+LMJExtension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C1C53D601DB49F7A003DC3F0 /* LDCalenderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2815,6 +2907,7 @@
 				C17FC4881DB870CC004028CA /* goods118.jpg in Resources */,
 				C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */,
 				C17FC4C11DB870CC004028CA /* goods61.jpg in Resources */,
+				C1BC63731DBF4347006EBCFC /* emoji@2x.png in Resources */,
 				C16419AA1D9BCB4600BD3841 /* 43.tiff in Resources */,
 				C16419A61D9BCB4600BD3841 /* 4.tiff in Resources */,
 				C17FC4801DB870CC004028CA /* goods110.jpg in Resources */,
@@ -2906,6 +2999,7 @@
 				C19EA58E1DB73EE300984138 /* allGoods@3x.png in Resources */,
 				C17FC48B1DB870CC004028CA /* goods120.jpg in Resources */,
 				C16C87731DAB672700314367 /* rainandsnow@2x.png in Resources */,
+				C1BC63611DBF0A15006EBCFC /* keyBoard@3x.png in Resources */,
 				C16419971D9BCB4600BD3841 /* 26.tiff in Resources */,
 				C17FC49F1DB870CC004028CA /* goods30.jpg in Resources */,
 				C16419211D9BCADE00BD3841 /* MJRefresh.bundle in Resources */,
@@ -2946,6 +3040,7 @@
 				C17FC4B11DB870CC004028CA /* goods47.jpg in Resources */,
 				C158F2E91DACE40B000CAE40 /* TZAlbumCell.xib in Resources */,
 				C17FC47D1DB870CC004028CA /* goods108.jpg in Resources */,
+				C1BC636E1DBF4120006EBCFC /* langxiaohua@3x.png in Resources */,
 				C16C87691DAB66F600314367 /* cloud@2x.png in Resources */,
 				C19EA5841DB73EC900984138 /* start@3x.png in Resources */,
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
@@ -2955,6 +3050,7 @@
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
 				C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */,
 				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
+				C1BC63551DBEF7D9006EBCFC /* Emoticons.bundle in Resources */,
 				C16419AE1D9BCB4600BD3841 /* 47.tiff in Resources */,
 				C19EA5791DB73E9200984138 /* bill@2x.png in Resources */,
 				C17FC4CF1DB870CC004028CA /* goods74.jpg in Resources */,
@@ -2985,6 +3081,7 @@
 				C17A13A91DBE07F50016E69B /* bankcard3.jpg in Resources */,
 				C17FC4AB1DB870CC004028CA /* goods41.jpg in Resources */,
 				C17FC4951DB870CC004028CA /* goods21.jpg in Resources */,
+				C1BC63701DBF4120006EBCFC /* defaultSmile@3x.png in Resources */,
 				C17FC4911DB870CC004028CA /* goods18.jpg in Resources */,
 				C17FC49D1DB870CC004028CA /* goods29.jpg in Resources */,
 				C17FC4E31DB870CC004028CA /* goods92.jpg in Resources */,
@@ -3009,6 +3106,7 @@
 				C19EA57E1DB73EB100984138 /* tuan@3x.png in Resources */,
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
 				C17FC47C1DB870CC004028CA /* goods107.jpg in Resources */,
+				C1BC63621DBF0A15006EBCFC /* keyBoard@2x.png in Resources */,
 				C19EA5711DB7366300984138 /* love@2x.png in Resources */,
 				C16418501D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
 				C17FC4E91DB870CC004028CA /* goods98.jpg in Resources */,
@@ -3024,6 +3122,7 @@
 				C16C87811DAB676800314367 /* snowheavy@2x.png in Resources */,
 				C158F2E11DACE40B000CAE40 /* photo_number_icon@2x.png in Resources */,
 				C16419AD1D9BCB4600BD3841 /* 46.tiff in Resources */,
+				C1BC636F1DBF4120006EBCFC /* defaultSmile@2x.png in Resources */,
 				C17FC47B1DB870CC004028CA /* goods106.jpg in Resources */,
 				C16C87991DAB7A4F00314367 /* city.plist in Resources */,
 				C17FC4B01DB870CC004028CA /* goods46.jpg in Resources */,
@@ -3081,9 +3180,11 @@
 				C17FC4C71DB870CC004028CA /* goods67.jpg in Resources */,
 				C19EA5721DB7366300984138 /* love@3x.png in Resources */,
 				C17FC4A41DB870CC004028CA /* goods35.jpg in Resources */,
+				C1BC63741DBF4347006EBCFC /* emoji@3x.png in Resources */,
 				C16419B11D9BCB4600BD3841 /* 7.tiff in Resources */,
 				C17FC4B71DB870CC004028CA /* goods52.jpg in Resources */,
 				C17FC49E1DB870CC004028CA /* goods3.jpg in Resources */,
+				C1BC636D1DBF4120006EBCFC /* langxiaohua@2x.png in Resources */,
 				C16418441D9BCA3000BD3841 /* UMSShareListController.xib in Resources */,
 				C17FC4C81DB870CC004028CA /* goods68.jpg in Resources */,
 				C1970D291DA8BC8300260A11 /* car.png in Resources */,
@@ -3132,6 +3233,7 @@
 				C17FC3F91DB85D16004028CA /* FirstSecretcodeViewController.swift in Sources */,
 				C17FC4FE1DB8B189004028CA /* FirstObserveCardViewController.swift in Sources */,
 				C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */,
+				C1BC635D1DBEF7D9006EBCFC /* LMJTextView.swift in Sources */,
 				C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */,
 				C1C53DC11DB4ED28003DC3F0 /* FirstStoreMeViewController.swift in Sources */,
 				C16418D51D9BCAC500BD3841 /* MASViewConstraint.m in Sources */,
@@ -3143,6 +3245,7 @@
 				C17A13881DBDBF640016E69B /* ZTypewriteEffectLabel.m in Sources */,
 				C17FC4FA1DB8B0A2004028CA /* FirstPrintWordViewController.swift in Sources */,
 				C17A13931DBDF3CD0016E69B /* FirstShakeMenuViewController.swift in Sources */,
+				C1BC635A1DBEF7D9006EBCFC /* LMJPackageManager.swift in Sources */,
 				C16419441D9BCB1400BD3841 /* BaseEngine.m in Sources */,
 				C1970D411DA8CEFC00260A11 /* QRUtil.m in Sources */,
 				C1401A2A1DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift in Sources */,
@@ -3166,6 +3269,7 @@
 				C16419141D9BCADE00BD3841 /* MJRefreshBackFooter.m in Sources */,
 				C16418B51D9BCAB400BD3841 /* UIView+WebCacheOperation.m in Sources */,
 				C1970D431DA8CEFC00260A11 /* QRViewController.m in Sources */,
+				C1BC63561DBEF7D9006EBCFC /* LMJEmoticon.swift in Sources */,
 				C1970D331DA8CE3700260A11 /* FirstPlayerViewController.swift in Sources */,
 				C16419451D9BCB1400BD3841 /* NSObject+Model.swift in Sources */,
 				C16419C01D9BCC0B00BD3841 /* FirstInfoViewController.swift in Sources */,
@@ -3195,10 +3299,12 @@
 				C1970D421DA8CEFC00260A11 /* QRView.m in Sources */,
 				C16419401D9BCB1400BD3841 /* AccountInfo.m in Sources */,
 				C16418D61D9BCAC500BD3841 /* NSArray+MASAdditions.m in Sources */,
+				C1BC63591DBEF7D9006EBCFC /* LMJEmoticonTool.swift in Sources */,
 				C158F2F41DACE40B000CAE40 /* UIView+Layout.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
 				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
 				C18AE8861DAB3C0900275A90 /* Weather.swift in Sources */,
+				C1BC635B1DBEF7D9006EBCFC /* LMJEmoticonCell.swift in Sources */,
 				C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */,
 				C17FC5431DB8DCE2004028CA /* UIColor+Extension.m in Sources */,
 				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
@@ -3207,11 +3313,13 @@
 				C12BEC541DAA3350009F2EAA /* UIScrollView+AllCells.m in Sources */,
 				C1970D311DA8CE1F00260A11 /* FirstScanViewController.swift in Sources */,
 				C16418811D9BCAA800BD3841 /* MMPopupView.m in Sources */,
+				C1BC63571DBEF7D9006EBCFC /* LMJEmoticonPackage.swift in Sources */,
 				C16418B41D9BCAB400BD3841 /* UIImageView+WebCache.m in Sources */,
 				C16417C11D9BC86D00BD3841 /* SwiftExample.xcdatamodeld in Sources */,
 				C151E3331DA553D6004A41A3 /* SCColor.m in Sources */,
 				C158F2AD1DACC982000CAE40 /* SDCollectionViewCell.m in Sources */,
 				C16418641D9BCA8800BD3841 /* AFNetworkReachabilityManager.m in Sources */,
+				C1BC63541DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift in Sources */,
 				C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */,
 				C158F2AA1DACC982000CAE40 /* TAAnimatedDotView.m in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
@@ -3226,6 +3334,7 @@
 				C16418D11D9BCAC500BD3841 /* MASConstraint.m in Sources */,
 				C158F3031DACE45A000CAE40 /* MJPhoto.m in Sources */,
 				C16418831D9BCAA800BD3841 /* MMSheetView.m in Sources */,
+				C1BC63761DBF662C006EBCFC /* WeChatChatTableViewCell.swift in Sources */,
 				C1CBF70C1DB9EDCF009E3A61 /* NSObject+KVC.m in Sources */,
 				C16419171D9BCADE00BD3841 /* MJRefreshHeader.m in Sources */,
 				C164191C1D9BCADE00BD3841 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -3243,6 +3352,7 @@
 				C16419231D9BCADE00BD3841 /* NSBundle+MJRefresh.m in Sources */,
 				C16418E11D9BCAD000BD3841 /* HyLoglnButton.m in Sources */,
 				C158F3051DACE45A000CAE40 /* MJPhotoBrowser.m in Sources */,
+				C1BC63581DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift in Sources */,
 				C164193F1D9BCB1400BD3841 /* StateBarMsgView.m in Sources */,
 				C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */,
 				C16418AA1D9BCAB400BD3841 /* SDWebImageDecoder.m in Sources */,
@@ -3273,6 +3383,7 @@
 				C158F3101DACE4B8000CAE40 /* YLImageView.m in Sources */,
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
 				C158F2F31DACE40B000CAE40 /* TZVideoPlayerController.m in Sources */,
+				C1BC635C1DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift in Sources */,
 				C17A138F1DBDF29A0016E69B /* UIColor+CatColors.m in Sources */,
 				C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */,
 				C158F2AE1DACC982000CAE40 /* SDCycleScrollView.m in Sources */,
@@ -3309,6 +3420,7 @@
 				C16419261D9BCADE00BD3841 /* UIView+MJExtension.m in Sources */,
 				C158F28E1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift in Sources */,
 				C158F2A91DACC982000CAE40 /* TAAbstractDotView.m in Sources */,
+				C1BC635E1DBEF7D9006EBCFC /* UITextView+LMJExtension.swift in Sources */,
 				C158F28C1DAC95C2000CAE40 /* FirstBankCardViewController.swift in Sources */,
 				C158F2F21DACE40B000CAE40 /* TZPhotoPreviewController.m in Sources */,
 				C158F2F11DACE40B000CAE40 /* TZPhotoPreviewCell.m in Sources */,

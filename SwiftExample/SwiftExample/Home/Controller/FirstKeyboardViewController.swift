@@ -8,11 +8,16 @@
 
 import UIKit
 
-class FirstKeyboardViewController: BaseViewController {
+class FirstKeyboardViewController: BaseViewController, UITextViewDelegate {
     
+    var myTextLabel = UILabel.init(frame: CGRectMake(20, 100, WIDTH-40, 60))
+    // 承载输入框的背景view
     var messageInputView = UIView.init();
-    var myTextField = UITextField.init();
-    
+    var myTextView = UITextView.init(frame: CGRectMake(44, 8, WIDTH-44-86, 28));
+    // 表情板
+    private lazy var keyboard: LMJEmoticonKeyboard = LMJEmoticonKeyboard(targetTextView: self.myTextView)
+    // 表情or文字
+    var smileBoardType = false    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,30 +27,74 @@ class FirstKeyboardViewController: BaseViewController {
     }
     
     func getView() -> Void {
+        self.navigationItem.title = "狂奔的蜗牛"
+        self.myTextLabel.backgroundColor = RGBA(0, g: 207, b: 13, a: 1)
+        self.myTextLabel.clipsToBounds = true
+        self.myTextLabel.layer.cornerRadius = 5
+        self.myTextLabel.font = WORDFONT
+        self.myTextLabel.numberOfLines = 0
+        self.view.addSubview(self.myTextLabel)
+        
         self.messageInputView.frame = CGRectMake(0, HEIGHT - 44, WIDTH, 44);
         self.messageInputView.backgroundColor = UIColor.groupTableViewBackgroundColor()
         self.view.addSubview(self.messageInputView)
-        var voiceButton = UIButton.init(type: UIButtonType.Custom);
+        let voiceButton = UIButton.init(type: UIButtonType.Custom);
         voiceButton.frame = CGRectMake(8, 8, 28, 28);
         voiceButton.setBackgroundImage(UIImage.init(named: "voice.png"), forState: UIControlState.Normal)
         self.messageInputView.addSubview(voiceButton);
-        self.myTextField.frame = CGRectMake(44, 8, WIDTH-44-86, 28);
-        self.myTextField.backgroundColor = UIColor.whiteColor()
-        self.myTextField.layer.masksToBounds = true;
-        self.myTextField.layer.cornerRadius = 3;
-        self.myTextField.layer.borderWidth = 0.5;//设置边界的宽度
-        self.myTextField.layer.borderColor = UIColor.lightGrayColor().CGColor;
-        self.messageInputView.addSubview(self.myTextField)
-        var smileButton = UIButton.init(type: UIButtonType.Custom)
+        
+        self.myTextView.frame = CGRectMake(44, 8, WIDTH-44-86, 28);
+        self.myTextView.backgroundColor = UIColor.whiteColor()
+        self.myTextView.layer.masksToBounds = true;
+        self.myTextView.layer.cornerRadius = 3;
+        self.myTextView.layer.borderWidth = 0.5;//设置边界的宽度
+        self.myTextView.layer.borderColor = UIColor.lightGrayColor().CGColor;
+        self.myTextView.returnKeyType = UIReturnKeyType.Send
+        self.myTextView.delegate = self
+        self.messageInputView.addSubview(self.myTextView)
+        let smileButton = UIButton.init(type: UIButtonType.Custom)
         smileButton.frame = CGRectMake(WIDTH-76, 8, 28, 28)
         smileButton.setBackgroundImage(UIImage.init(named: "smile.png"), forState: UIControlState.Normal)
+        smileButton.addTarget(self, action: "changeBoardType:", forControlEvents: UIControlEvents.TouchUpInside)
         self.messageInputView.addSubview(smileButton)
-        var addButton = UIButton.init(type: UIButtonType.Custom)
+        let addButton = UIButton.init(type: UIButtonType.Custom)
         addButton.frame = CGRectMake(WIDTH-38, 8, 28, 28)
         addButton.setBackgroundImage(UIImage.init(named: "circleAdd.png"), forState: UIControlState.Normal)
         self.messageInputView.addSubview(addButton)
     }
     
+    // 点击切换表情或键盘模式
+    func changeBoardType(button:UIButton) -> Void {
+        self.myTextView.becomeFirstResponder()
+        if self.smileBoardType {
+            button.setBackgroundImage(UIImage.init(named: "smile.png"), forState: UIControlState.Normal)
+            self.myTextView.inputView = nil
+        }else{
+            button.setBackgroundImage(UIImage.init(named: "keyBoard.png"), forState: UIControlState.Normal)
+            self.myTextView.inputView = self.keyboard
+            self.keyboard.backgroundColor = UIColor.groupTableViewBackgroundColor()
+            self.keyboard.toolBar.sentButton.addTarget(self, action: "sendAction", forControlEvents: UIControlEvents.TouchUpInside)
+        }
+        self.myTextView.reloadInputViews()
+        self.smileBoardType = !self.smileBoardType
+    }
+    
+    // 点击return
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            self.sendAction()
+            return false
+        }
+        return true
+    }
+    
+    // 发送消息
+    func sendAction() -> Void {
+        self.myTextLabel.attributedText = self.myTextView.attributedText
+        self.myTextView.attributedText = NSAttributedString.init()
+    }
+    
+    // 注册监听
     func addMonitor() -> Void {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil);
@@ -68,8 +117,8 @@ class FirstKeyboardViewController: BaseViewController {
     }
     
     func keyboardWillHide(aNotification: NSNotification) -> Void {
-        var info:NSDictionary = aNotification.userInfo!;
-        var kbSize:CGSize = (info.objectForKey(UIKeyboardFrameEndUserInfoKey)?.CGRectValue().size)!;
+        let info:NSDictionary = aNotification.userInfo!;
+        let kbSize:CGSize = (info.objectForKey(UIKeyboardFrameEndUserInfoKey)?.CGRectValue().size)!;
         self.messageInputView.frame = CGRectMake(X(self.messageInputView), HEIGHT-44, PART_W(self.messageInputView), PART_H(self.messageInputView));
     }
 
@@ -80,8 +129,7 @@ class FirstKeyboardViewController: BaseViewController {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         super.touchesBegan(touches, withEvent: event);
-        self.myTextField.resignFirstResponder()
-        
+        self.myTextView.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
