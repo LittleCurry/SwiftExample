@@ -78,8 +78,6 @@ extension LMJEmoticonToolBar
         if imageName != nil {
             btn.setImage(UIImage.init(named: imageName!), forState: .Normal)
         }
-        //        btn.setBackgroundImage(UIImage(named: imageName + "_normal"), forState: .Normal)
-        //        btn.setBackgroundImage(UIImage(named: imageName + "_selected"), forState: .Selected)
         btn.titleLabel?.font = UIFont.systemFontOfSize(15)
         //        btn.adjustsImageWhenHighlighted = false
         

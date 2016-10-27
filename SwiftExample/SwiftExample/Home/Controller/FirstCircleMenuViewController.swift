@@ -32,7 +32,7 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.getView()
+//        self.getView()
     }
     
     func getView() -> Void {

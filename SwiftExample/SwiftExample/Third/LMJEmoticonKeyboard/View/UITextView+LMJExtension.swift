@@ -90,4 +90,12 @@ extension UITextView
             self.selectedRange = NSMakeRange(range.location + 1, 0)
         }
     }
+    
+    func _firstBaselineOffsetFromTop() -> Void {
+        
+    }
+    
+    func _baselineOffsetFromBottom() -> Void {
+        
+    }
 }

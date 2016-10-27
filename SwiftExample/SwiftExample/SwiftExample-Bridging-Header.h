@@ -50,6 +50,12 @@
 #import "SSStackedPageView.h"
 #import "UIColor+CatColors.h"
 #import "XRPopMenuView.h"
+#import "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h"
+#import "ThreepinView.h"
+#import "RGCardLayoutViewController.h"
+#import "JCFlipPageView.h"
+#import "JCFlipPage.h"
+
 
 
 

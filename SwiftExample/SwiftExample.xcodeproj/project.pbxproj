@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C10F3AA81DC05C7800C27AE4 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AA71DC05C7800C27AE4 /* Chat.swift */; };
+		C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */; };
+		C10F3AAE1DC088DF00C27AE4 /* ThreepinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAD1DC088DF00C27AE4 /* ThreepinView.m */; };
 		C114CDC61DA90F9D00050911 /* smallPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC21DA90F9D00050911 /* smallPlay@2x.png */; };
 		C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC31DA90F9D00050911 /* smallPlay@3x.png */; };
 		C114CDC81DA90F9D00050911 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC41DA90F9D00050911 /* play@2x.png */; };
@@ -542,6 +545,25 @@
 		C1BC63731DBF4347006EBCFC /* emoji@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63711DBF4347006EBCFC /* emoji@2x.png */; };
 		C1BC63741DBF4347006EBCFC /* emoji@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC63721DBF4347006EBCFC /* emoji@3x.png */; };
 		C1BC63761DBF662C006EBCFC /* WeChatChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */; };
+		C1BFB4F51DC0C284001B4E05 /* coffee_to_go-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E41DC0C284001B4E05 /* coffee_to_go-50.png */; };
+		C1BFB4F61DC0C284001B4E05 /* documentary-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E51DC0C284001B4E05 /* documentary-50.png */; };
+		C1BFB4F71DC0C284001B4E05 /* headphones-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E61DC0C284001B4E05 /* headphones-50.png */; };
+		C1BFB4F81DC0C284001B4E05 /* i1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E71DC0C284001B4E05 /* i1.jpg */; };
+		C1BFB4F91DC0C284001B4E05 /* i2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E81DC0C284001B4E05 /* i2.jpg */; };
+		C1BFB4FA1DC0C284001B4E05 /* i3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4E91DC0C284001B4E05 /* i3.jpg */; };
+		C1BFB4FB1DC0C284001B4E05 /* i4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4EA1DC0C284001B4E05 /* i4.jpg */; };
+		C1BFB4FC1DC0C284001B4E05 /* i5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4EB1DC0C284001B4E05 /* i5.jpg */; };
+		C1BFB4FD1DC0C284001B4E05 /* regular_biking-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4EC1DC0C284001B4E05 /* regular_biking-50.png */; };
+		C1BFB4FE1DC0C284001B4E05 /* trophy-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4ED1DC0C284001B4E05 /* trophy-50.png */; };
+		C1BFB4FF1DC0C284001B4E05 /* RGCardLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB4EF1DC0C284001B4E05 /* RGCardLayoutViewController.m */; };
+		C1BFB5001DC0C284001B4E05 /* RGCardLayoutViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1BFB4F01DC0C284001B4E05 /* RGCardLayoutViewController.storyboard */; };
+		C1BFB5011DC0C284001B4E05 /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB4F21DC0C284001B4E05 /* RGCardViewLayout.m */; };
+		C1BFB5021DC0C284001B4E05 /* RGCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB4F41DC0C284001B4E05 /* RGCollectionViewCell.m */; };
+		C1BFB50D1DC0CAD3001B4E05 /* JCFlipPage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB5051DC0CAD3001B4E05 /* JCFlipPage.m */; };
+		C1BFB50E1DC0CAD3001B4E05 /* JCFlipPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB5071DC0CAD3001B4E05 /* JCFlipPageView.m */; };
+		C1BFB50F1DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB5091DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m */; };
+		C1BFB5101DC0CAD3001B4E05 /* SBGradientOverlayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB50C1DC0CAD3001B4E05 /* SBGradientOverlayLayer.m */; };
+		C1BFB5121DC0CB59001B4E05 /* FirstFoldCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BFB5111DC0CB59001B4E05 /* FirstFoldCardViewController.swift */; };
 		C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */; };
 		C1C53D681DB49F7A003DC3F0 /* LDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D631DB49F7A003DC3F0 /* LDCalendarView.m */; };
 		C1C53D691DB49F7A003DC3F0 /* NSDate+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = C1C53D651DB49F7A003DC3F0 /* NSDate+Extend.m */; };
@@ -595,6 +617,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C10F3AA71DC05C7800C27AE4 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		C10F3AA91DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h"; sourceTree = "<group>"; };
+		C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m"; sourceTree = "<group>"; };
+		C10F3AAC1DC088DF00C27AE4 /* ThreepinView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreepinView.h; sourceTree = "<group>"; };
+		C10F3AAD1DC088DF00C27AE4 /* ThreepinView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreepinView.m; sourceTree = "<group>"; };
 		C114CDC21DA90F9D00050911 /* smallPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@2x.png"; sourceTree = "<group>"; };
 		C114CDC31DA90F9D00050911 /* smallPlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@3x.png"; sourceTree = "<group>"; };
 		C114CDC41DA90F9D00050911 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
@@ -1318,6 +1345,32 @@
 		C1BC63711DBF4347006EBCFC /* emoji@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji@2x.png"; sourceTree = "<group>"; };
 		C1BC63721DBF4347006EBCFC /* emoji@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji@3x.png"; sourceTree = "<group>"; };
 		C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeChatChatTableViewCell.swift; sourceTree = "<group>"; };
+		C1BFB4E41DC0C284001B4E05 /* coffee_to_go-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coffee_to_go-50.png"; sourceTree = "<group>"; };
+		C1BFB4E51DC0C284001B4E05 /* documentary-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "documentary-50.png"; sourceTree = "<group>"; };
+		C1BFB4E61DC0C284001B4E05 /* headphones-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headphones-50.png"; sourceTree = "<group>"; };
+		C1BFB4E71DC0C284001B4E05 /* i1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i1.jpg; sourceTree = "<group>"; };
+		C1BFB4E81DC0C284001B4E05 /* i2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i2.jpg; sourceTree = "<group>"; };
+		C1BFB4E91DC0C284001B4E05 /* i3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i3.jpg; sourceTree = "<group>"; };
+		C1BFB4EA1DC0C284001B4E05 /* i4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i4.jpg; sourceTree = "<group>"; };
+		C1BFB4EB1DC0C284001B4E05 /* i5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = i5.jpg; sourceTree = "<group>"; };
+		C1BFB4EC1DC0C284001B4E05 /* regular_biking-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "regular_biking-50.png"; sourceTree = "<group>"; };
+		C1BFB4ED1DC0C284001B4E05 /* trophy-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trophy-50.png"; sourceTree = "<group>"; };
+		C1BFB4EE1DC0C284001B4E05 /* RGCardLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardLayoutViewController.h; sourceTree = "<group>"; };
+		C1BFB4EF1DC0C284001B4E05 /* RGCardLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardLayoutViewController.m; sourceTree = "<group>"; };
+		C1BFB4F01DC0C284001B4E05 /* RGCardLayoutViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RGCardLayoutViewController.storyboard; sourceTree = "<group>"; };
+		C1BFB4F11DC0C284001B4E05 /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
+		C1BFB4F21DC0C284001B4E05 /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
+		C1BFB4F31DC0C284001B4E05 /* RGCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCollectionViewCell.h; sourceTree = "<group>"; };
+		C1BFB4F41DC0C284001B4E05 /* RGCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCollectionViewCell.m; sourceTree = "<group>"; };
+		C1BFB5041DC0CAD3001B4E05 /* JCFlipPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFlipPage.h; sourceTree = "<group>"; };
+		C1BFB5051DC0CAD3001B4E05 /* JCFlipPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFlipPage.m; sourceTree = "<group>"; };
+		C1BFB5061DC0CAD3001B4E05 /* JCFlipPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFlipPageView.h; sourceTree = "<group>"; };
+		C1BFB5071DC0CAD3001B4E05 /* JCFlipPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFlipPageView.m; sourceTree = "<group>"; };
+		C1BFB5081DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCFlipViewAnimationHelper.h; sourceTree = "<group>"; };
+		C1BFB5091DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCFlipViewAnimationHelper.m; sourceTree = "<group>"; };
+		C1BFB50B1DC0CAD3001B4E05 /* SBGradientOverlayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGradientOverlayLayer.h; sourceTree = "<group>"; };
+		C1BFB50C1DC0CAD3001B4E05 /* SBGradientOverlayLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGradientOverlayLayer.m; sourceTree = "<group>"; };
+		C1BFB5111DC0CB59001B4E05 /* FirstFoldCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstFoldCardViewController.swift; sourceTree = "<group>"; };
 		C1C53D461DB4717B003DC3F0 /* FirstCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCalendarViewController.swift; sourceTree = "<group>"; };
 		C1C53D611DB49F7A003DC3F0 /* LDCalendarConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarConst.h; sourceTree = "<group>"; };
 		C1C53D621DB49F7A003DC3F0 /* LDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDCalendarView.h; sourceTree = "<group>"; };
@@ -1843,6 +1896,10 @@
 				C1CBF6FC1DB9BBA7009E3A61 /* RCDraggableButton.m */,
 				C17A13AC1DBE0F950016E69B /* XRPopMenuView.h */,
 				C17A13AD1DBE0F950016E69B /* XRPopMenuView.m */,
+				C10F3AA91DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h */,
+				C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */,
+				C10F3AAC1DC088DF00C27AE4 /* ThreepinView.h */,
+				C10F3AAD1DC088DF00C27AE4 /* ThreepinView.m */,
 				C16419381D9BCB1400BD3841 /* NSObject+Model.swift */,
 				C16419391D9BCB1400BD3841 /* AlloverMacro.swift */,
 				C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */,
@@ -1854,6 +1911,8 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1BFB5031DC0CAD3001B4E05 /* JCFlipPageViewClass */,
+				C1BFB4E21DC0C284001B4E05 /* RGCardViewLayout */,
 				C1BC63451DBEF7D9006EBCFC /* LMJEmoticonKeyboard */,
 				C17A13891DBDF28A0016E69B /* StackedPageVC */,
 				C17A13801DBDBF640016E69B /* PrinterEffect */,
@@ -2359,6 +2418,7 @@
 				C17A13901DBDF3A00016E69B /* FirstHurlCardViewController.swift */,
 				C17A13921DBDF3CD0016E69B /* FirstShakeMenuViewController.swift */,
 				C17A13941DBDF3FB0016E69B /* FirstGraduallyColorViewController.swift */,
+				C1BFB5111DC0CB59001B4E05 /* FirstFoldCardViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2370,6 +2430,7 @@
 				C18AE8851DAB3C0900275A90 /* Weather.swift */,
 				C16C87A01DAB838F00314367 /* ProvinceCities.swift */,
 				C158F2911DACBB91000CAE40 /* BankCard.swift */,
+				C10F3AA71DC05C7800C27AE4 /* Chat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2736,6 +2797,61 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C1BFB4E21DC0C284001B4E05 /* RGCardViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				C1BFB4E31DC0C284001B4E05 /* RGCard_pic */,
+				C1BFB4EE1DC0C284001B4E05 /* RGCardLayoutViewController.h */,
+				C1BFB4EF1DC0C284001B4E05 /* RGCardLayoutViewController.m */,
+				C1BFB4F01DC0C284001B4E05 /* RGCardLayoutViewController.storyboard */,
+				C1BFB4F11DC0C284001B4E05 /* RGCardViewLayout.h */,
+				C1BFB4F21DC0C284001B4E05 /* RGCardViewLayout.m */,
+				C1BFB4F31DC0C284001B4E05 /* RGCollectionViewCell.h */,
+				C1BFB4F41DC0C284001B4E05 /* RGCollectionViewCell.m */,
+			);
+			path = RGCardViewLayout;
+			sourceTree = "<group>";
+		};
+		C1BFB4E31DC0C284001B4E05 /* RGCard_pic */ = {
+			isa = PBXGroup;
+			children = (
+				C1BFB4E41DC0C284001B4E05 /* coffee_to_go-50.png */,
+				C1BFB4E51DC0C284001B4E05 /* documentary-50.png */,
+				C1BFB4E61DC0C284001B4E05 /* headphones-50.png */,
+				C1BFB4E71DC0C284001B4E05 /* i1.jpg */,
+				C1BFB4E81DC0C284001B4E05 /* i2.jpg */,
+				C1BFB4E91DC0C284001B4E05 /* i3.jpg */,
+				C1BFB4EA1DC0C284001B4E05 /* i4.jpg */,
+				C1BFB4EB1DC0C284001B4E05 /* i5.jpg */,
+				C1BFB4EC1DC0C284001B4E05 /* regular_biking-50.png */,
+				C1BFB4ED1DC0C284001B4E05 /* trophy-50.png */,
+			);
+			path = RGCard_pic;
+			sourceTree = "<group>";
+		};
+		C1BFB5031DC0CAD3001B4E05 /* JCFlipPageViewClass */ = {
+			isa = PBXGroup;
+			children = (
+				C1BFB5041DC0CAD3001B4E05 /* JCFlipPage.h */,
+				C1BFB5051DC0CAD3001B4E05 /* JCFlipPage.m */,
+				C1BFB5061DC0CAD3001B4E05 /* JCFlipPageView.h */,
+				C1BFB5071DC0CAD3001B4E05 /* JCFlipPageView.m */,
+				C1BFB5081DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.h */,
+				C1BFB5091DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m */,
+				C1BFB50A1DC0CAD3001B4E05 /* SBGradientOverlayLayer */,
+			);
+			path = JCFlipPageViewClass;
+			sourceTree = "<group>";
+		};
+		C1BFB50A1DC0CAD3001B4E05 /* SBGradientOverlayLayer */ = {
+			isa = PBXGroup;
+			children = (
+				C1BFB50B1DC0CAD3001B4E05 /* SBGradientOverlayLayer.h */,
+				C1BFB50C1DC0CAD3001B4E05 /* SBGradientOverlayLayer.m */,
+			);
+			path = SBGradientOverlayLayer;
+			sourceTree = "<group>";
+		};
 		C1C53D601DB49F7A003DC3F0 /* LDCalenderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2913,6 +3029,7 @@
 				C17FC4801DB870CC004028CA /* goods110.jpg in Resources */,
 				C16C87771DAB673900314367 /* sand_float_mini@2x.png in Resources */,
 				C17A13B31DBE13570016E69B /* editButton@2x.png in Resources */,
+				C1BFB4FB1DC0C284001B4E05 /* i4.jpg in Resources */,
 				C17FC4D11DB870CC004028CA /* goods76.jpg in Resources */,
 				C16C877D1DAB675500314367 /* snow_heavyx_mini@2x.png in Resources */,
 				C158F2EA1DACE40B000CAE40 /* TZAssetCell.xib in Resources */,
@@ -2941,6 +3058,7 @@
 				C12801781D9E65A900E79A07 /* smile@2x.png in Resources */,
 				C16419A41D9BCB4600BD3841 /* 38.tiff in Resources */,
 				C17A13B61DBE13570016E69B /* markButton@3x.png in Resources */,
+				C1BFB4FA1DC0C284001B4E05 /* i3.jpg in Resources */,
 				C19EA58B1DB73EE300984138 /* dou@2x.png in Resources */,
 				C17FC4DB1DB870CC004028CA /* goods85.jpg in Resources */,
 				C1C6D9BD1DB61B3D00B4EAFF /* message@2x.png in Resources */,
@@ -2951,6 +3069,7 @@
 				C16419911D9BCB4600BD3841 /* 20.tiff in Resources */,
 				C17FC4A01DB870CC004028CA /* goods31.jpg in Resources */,
 				C16417C61D9BC86D00BD3841 /* LaunchScreen.storyboard in Resources */,
+				C1BFB4F91DC0C284001B4E05 /* i2.jpg in Resources */,
 				C17FC4821DB870CC004028CA /* goods112.jpg in Resources */,
 				C1970D2B1DA8BC9500260A11 /* design.png in Resources */,
 				C17FC4BF1DB870CC004028CA /* goods6.jpg in Resources */,
@@ -2962,6 +3081,7 @@
 				C1970D1F1DA8BC4100260A11 /* cartoon.png in Resources */,
 				C19EA5771DB73E9200984138 /* logistics@2x.png in Resources */,
 				C16419AF1D9BCB4600BD3841 /* 5.tiff in Resources */,
+				C1BFB4FD1DC0C284001B4E05 /* regular_biking-50.png in Resources */,
 				C17FC4B61DB870CC004028CA /* goods51.jpg in Resources */,
 				C17FC4D51DB870CC004028CA /* goods8.jpg in Resources */,
 				C17A13C31DBE1B9F0016E69B /* zhihu.png in Resources */,
@@ -3052,6 +3172,7 @@
 				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
 				C1BC63551DBEF7D9006EBCFC /* Emoticons.bundle in Resources */,
 				C16419AE1D9BCB4600BD3841 /* 47.tiff in Resources */,
+				C1BFB4F71DC0C284001B4E05 /* headphones-50.png in Resources */,
 				C19EA5791DB73E9200984138 /* bill@2x.png in Resources */,
 				C17FC4CF1DB870CC004028CA /* goods74.jpg in Resources */,
 				C164194F1D9BCB2F00BD3841 /* first@2x.png in Resources */,
@@ -3105,6 +3226,7 @@
 				C16C87971DAB67EE00314367 /* thunderhailstone@2x.png in Resources */,
 				C19EA57E1DB73EB100984138 /* tuan@3x.png in Resources */,
 				C16419B31D9BCB4600BD3841 /* 9.tiff in Resources */,
+				C1BFB4FE1DC0C284001B4E05 /* trophy-50.png in Resources */,
 				C17FC47C1DB870CC004028CA /* goods107.jpg in Resources */,
 				C1BC63621DBF0A15006EBCFC /* keyBoard@2x.png in Resources */,
 				C19EA5711DB7366300984138 /* love@2x.png in Resources */,
@@ -3125,6 +3247,7 @@
 				C1BC636F1DBF4120006EBCFC /* defaultSmile@2x.png in Resources */,
 				C17FC47B1DB870CC004028CA /* goods106.jpg in Resources */,
 				C16C87991DAB7A4F00314367 /* city.plist in Resources */,
+				C1BFB4F51DC0C284001B4E05 /* coffee_to_go-50.png in Resources */,
 				C17FC4B01DB870CC004028CA /* goods46.jpg in Resources */,
 				C19EA5861DB73EC900984138 /* savings@3x.png in Resources */,
 				C17FC4BE1DB870CC004028CA /* goods59.jpg in Resources */,
@@ -3132,10 +3255,12 @@
 				C164198B1D9BCB4600BD3841 /* 15.tiff in Resources */,
 				C16C87931DAB67DB00314367 /* thunder_mini@2x.png in Resources */,
 				C17FC4E01DB870CC004028CA /* goods9.jpg in Resources */,
+				C1BFB4FC1DC0C284001B4E05 /* i5.jpg in Resources */,
 				C17FC4B81DB870CC004028CA /* goods53.jpg in Resources */,
 				C1970D1D1DA8BC3500260A11 /* pet.png in Resources */,
 				C17FC48D1DB870CC004028CA /* goods14.jpg in Resources */,
 				C1CBF7031DB9E2EC009E3A61 /* jigsaw.jpg in Resources */,
+				C1BFB5001DC0C284001B4E05 /* RGCardLayoutViewController.storyboard in Resources */,
 				C17FC4931DB870CC004028CA /* goods2.jpg in Resources */,
 				C16419541D9BCB2F00BD3841 /* back@3x.png in Resources */,
 				C17FC4D01DB870CC004028CA /* goods75.jpg in Resources */,
@@ -3183,6 +3308,7 @@
 				C1BC63741DBF4347006EBCFC /* emoji@3x.png in Resources */,
 				C16419B11D9BCB4600BD3841 /* 7.tiff in Resources */,
 				C17FC4B71DB870CC004028CA /* goods52.jpg in Resources */,
+				C1BFB4F81DC0C284001B4E05 /* i1.jpg in Resources */,
 				C17FC49E1DB870CC004028CA /* goods3.jpg in Resources */,
 				C1BC636D1DBF4120006EBCFC /* langxiaohua@2x.png in Resources */,
 				C16418441D9BCA3000BD3841 /* UMSShareListController.xib in Resources */,
@@ -3199,6 +3325,7 @@
 				C17FC4781DB870CC004028CA /* goods103.jpg in Resources */,
 				C17FC4E41DB870CC004028CA /* goods93.jpg in Resources */,
 				C17FC4E51DB870CC004028CA /* goods94.jpg in Resources */,
+				C1BFB4F61DC0C284001B4E05 /* documentary-50.png in Resources */,
 				C16418451D9BCA3000BD3841 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				C16419901D9BCB4600BD3841 /* 2.tiff in Resources */,
 				C17FC4AD1DB870CC004028CA /* goods43.jpg in Resources */,
@@ -3234,6 +3361,7 @@
 				C17FC4FE1DB8B189004028CA /* FirstObserveCardViewController.swift in Sources */,
 				C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */,
 				C1BC635D1DBEF7D9006EBCFC /* LMJTextView.swift in Sources */,
+				C1BFB5121DC0CB59001B4E05 /* FirstFoldCardViewController.swift in Sources */,
 				C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */,
 				C1C53DC11DB4ED28003DC3F0 /* FirstStoreMeViewController.swift in Sources */,
 				C16418D51D9BCAC500BD3841 /* MASViewConstraint.m in Sources */,
@@ -3263,6 +3391,7 @@
 				C16C879B1DAB7B3600314367 /* FirstProvinceCityViewController.swift in Sources */,
 				C16C87A11DAB838F00314367 /* ProvinceCities.swift in Sources */,
 				C16418AE1D9BCAB400BD3841 /* SDWebImagePrefetcher.m in Sources */,
+				C1BFB4FF1DC0C284001B4E05 /* RGCardLayoutViewController.m in Sources */,
 				C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */,
 				C17A138E1DBDF29A0016E69B /* SSStackedPageView.m in Sources */,
 				C158F2A81DACC982000CAE40 /* NSData+SDDataCache.m in Sources */,
@@ -3306,6 +3435,7 @@
 				C18AE8861DAB3C0900275A90 /* Weather.swift in Sources */,
 				C1BC635B1DBEF7D9006EBCFC /* LMJEmoticonCell.swift in Sources */,
 				C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */,
+				C1BFB50F1DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m in Sources */,
 				C17FC5431DB8DCE2004028CA /* UIColor+Extension.m in Sources */,
 				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,
@@ -3321,6 +3451,7 @@
 				C16418641D9BCA8800BD3841 /* AFNetworkReachabilityManager.m in Sources */,
 				C1BC63541DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift in Sources */,
 				C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */,
+				C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */,
 				C158F2AA1DACC982000CAE40 /* TAAnimatedDotView.m in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
 				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
@@ -3368,6 +3499,7 @@
 				C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */,
 				C158F2B11DACE250000CAE40 /* FirstHotRenewViewController.swift in Sources */,
 				C158F30F1DACE4B8000CAE40 /* YLGIFImage.m in Sources */,
+				C1BFB50D1DC0CAD3001B4E05 /* JCFlipPage.m in Sources */,
 				C164187F1D9BCAA800BD3841 /* MMPopupCategory.m in Sources */,
 				C17FC53B1DB8DB41004028CA /* YFLabel.m in Sources */,
 				C17A13AE1DBE0F950016E69B /* XRPopMenuView.m in Sources */,
@@ -3378,12 +3510,15 @@
 				C16418A61D9BCAB400BD3841 /* MKAnnotationView+WebCache.m in Sources */,
 				C1970D491DA8E96B00260A11 /* ThirdViewController.swift in Sources */,
 				C1970D1B1DA8A39900260A11 /* FirstMapViewController.swift in Sources */,
+				C1BFB5021DC0C284001B4E05 /* RGCollectionViewCell.m in Sources */,
 				C16419421D9BCB1400BD3841 /* JSESSIONID.m in Sources */,
 				C16418D31D9BCAC500BD3841 /* MASLayoutConstraint.m in Sources */,
 				C158F3101DACE4B8000CAE40 /* YLImageView.m in Sources */,
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
 				C158F2F31DACE40B000CAE40 /* TZVideoPlayerController.m in Sources */,
 				C1BC635C1DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift in Sources */,
+				C10F3AAE1DC088DF00C27AE4 /* ThreepinView.m in Sources */,
+				C1BFB5101DC0CAD3001B4E05 /* SBGradientOverlayLayer.m in Sources */,
 				C17A138F1DBDF29A0016E69B /* UIColor+CatColors.m in Sources */,
 				C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */,
 				C158F2AE1DACC982000CAE40 /* SDCycleScrollView.m in Sources */,
@@ -3412,6 +3547,7 @@
 				C16418B01D9BCAB400BD3841 /* UIImage+GIF.m in Sources */,
 				C158F2ED1DACE40B000CAE40 /* TZAssetModel.m in Sources */,
 				C16419131D9BCADE00BD3841 /* MJRefreshAutoFooter.m in Sources */,
+				C1BFB5011DC0C284001B4E05 /* RGCardViewLayout.m in Sources */,
 				C158F3081DACE45A000CAE40 /* MJPhotoToolbar.m in Sources */,
 				C158F28A1DAC9588000CAE40 /* FirstDateChoseViewController.swift in Sources */,
 				C16419191D9BCADE00BD3841 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -3420,9 +3556,11 @@
 				C16419261D9BCADE00BD3841 /* UIView+MJExtension.m in Sources */,
 				C158F28E1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift in Sources */,
 				C158F2A91DACC982000CAE40 /* TAAbstractDotView.m in Sources */,
+				C1BFB50E1DC0CAD3001B4E05 /* JCFlipPageView.m in Sources */,
 				C1BC635E1DBEF7D9006EBCFC /* UITextView+LMJExtension.swift in Sources */,
 				C158F28C1DAC95C2000CAE40 /* FirstBankCardViewController.swift in Sources */,
 				C158F2F21DACE40B000CAE40 /* TZPhotoPreviewController.m in Sources */,
+				C10F3AA81DC05C7800C27AE4 /* Chat.swift in Sources */,
 				C158F2F11DACE40B000CAE40 /* TZPhotoPreviewCell.m in Sources */,
 				C1CBF70B1DB9EDCF009E3A61 /* CloudView.m in Sources */,
 				C1E218211DA9E3F9002748F6 /* Video.swift in Sources */,

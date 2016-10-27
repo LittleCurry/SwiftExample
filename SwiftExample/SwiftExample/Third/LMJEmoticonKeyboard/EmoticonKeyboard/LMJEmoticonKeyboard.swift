@@ -80,9 +80,7 @@ extension LMJEmoticonKeyboard
         cons.append(NSLayoutConstraint(item: toolBar, attribute: NSLayoutAttribute.Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: 38))
         
         addConstraints(cons)
-        
-        
-        
+                
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.registerClass(LMJEmoticonCell.self, forCellWithReuseIdentifier: LMJEmoticonCellID)
@@ -167,67 +165,5 @@ extension LMJEmoticonKeyboard: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
