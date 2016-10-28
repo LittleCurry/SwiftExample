@@ -131,7 +131,8 @@ class FirstInfoViewController: BaseViewController, UITableViewDelegate, UITableV
                 self.navigationController!.navigationBar.layer.masksToBounds = false;
             }
         }else{
-            let a = Int(10*(self.yourTableView.contentOffset.y-35)/(230.0+35-64));
+            let offset = 10*(self.yourTableView.contentOffset.y-35)/(230.0+35-64)
+            let a = Int(offset)
             print(a)
             if (a>=0 && a <= 8) {
                 if (self.headImageArr.count>a) {

@@ -1,6 +1,6 @@
 //
 //  AWCollectionViewDialLayout.h
-//  
+//
 //
 //  Created by Antoine Wette on 30.10.13.
 //  Copyright (c) 2013 Antoine Wette. All rights reserved.
@@ -13,11 +13,18 @@
 
 @interface AWCollectionViewDialLayout : UICollectionViewLayout
 
-typedef enum WheelAlignmentType : NSInteger WheelAlignmentType;
-enum WheelAlignment : NSInteger {
-    WHEELALIGNMENTLEFT,
-    WHEELALIGNMENTCENTER
+
+
+typedef NS_ENUM(NSUInteger, WheelAlignmentType) {
+    WHEELALIGNMENTLEFT = 0,
+    WHEELALIGNMENTCENTER,
 };
+
+//typedef enum WheelAlignmentType : NSInteger WheelAlignmentType;
+//enum WheelAlignment : NSInteger {
+//    WHEELALIGNMENTLEFT,
+//    WHEELALIGNMENTCENTER
+//};
 
 @property (readwrite, nonatomic, assign) int cellCount;
 @property (readwrite, nonatomic, assign) int wheelType;
