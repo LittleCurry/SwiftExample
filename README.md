@@ -43,41 +43,84 @@
 *  水波.
 
 ## 部分截图
-*  Home.\n
-![image](./screenShot/screenShot1.png) 
-*  Second.\n
+*  Home.
+
+![image](./screenShot/screenShot1.png)
+
+*  Second.
+
 ![image](./screenShot/screenShot2.png) 
-*  Third.\n
+
+*  Third.
+
 ![image](./screenShot/screenShot3.png) 
-*  Fouth.\n
+
+*  Fouth.
+
 ![image](./screenShot/screenShot4.png) 
-*  navigationBar渐变背景图.\n
+
+*  navigationBar渐变背景图.
+
 ![image](./screenShot/screenShot5.png)  
-*  聊天界面.\n
+
+*  聊天界面.
+
 ![image](./screenShot/screenShot6.png)
-*  gauss模糊.\n
+
+*  gauss模糊.
+
 ![image](./screenShot/screenShot7.png)
-*  天气.\n
+
+*  天气.
+
 ![image](./screenShot/screenShot8.png)
-*  我的银行卡.\n
+
+*  我的银行卡.
+
 ![image](./screenShot/screenShot9.png)
-*  本地相册选取.\n
+
+*  本地相册选取.
+
 ![image](./screenShot/screenShot10.png)
-*  热更新.\n
+
+*  热更新.
+
 ![image](./screenShot/screenShot11.png)
-*  日历.\n
+
+*  日历.
+
 ![image](./screenShot/screenShot12.png)
-*  商城.\n
+
+*  商城.
+
 ![image](./screenShot/screenShot13.png)
-*  请输入密码.\n
+
+*  请输入密码.
+
 ![image](./screenShot/screenShot14.png)
-*  渐变色.\n
+
+*  渐变色.
+
 ![image](./screenShot/screenShot15.png)
-*  余额跳动.\n
+
+*  余额跳动.
+
 ![image](./screenShot/screenShot16.png)
-*  漂浮的雪花.\n
+
+*  漂浮的雪花.
+
 ![image](./screenShot/screenShot17.png)
-*  水波.\n
+
+*  水波.
+
 ![image](./screenShot/screenShot18.png)
+
+
+
+
+
+
+
+
 
 
