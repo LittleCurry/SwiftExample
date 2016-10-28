@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar渐变", "聊天界面", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "推荐影片", "渐隐文字", "打印文字", "拼图", "2048", "浏览卡片", "抽卡效果", "抖动菜单", "渐变色", "折卡效果", "卡牌拖动", "摇一摇", "ape展开", "余额跳动", "水平滚动布局", "放射性菜单", "漂浮的雪花", "两条波浪", "水波"];
+    var nameArr = ["navigationBar渐变", "聊天界面", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "推荐影片", "渐隐文字", "打印文字", "拼图", "2048", "浏览卡片", "抽卡效果", "抖动菜单", "渐变色", "折卡效果", "卡牌拖动", "摇一摇", "ape展开", "余额跳动", "水平滚动布局", "发散菜单", "漂浮的雪花", "水波"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
     var clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 450, 100, 50))
     
@@ -184,14 +184,14 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
 //            let menuVC = YFHalfCircleLayoutViewController.init();
 //            menuVC.hidesBottomBarWhenPushed = true;
 //            self.navigationController?.pushViewController(menuVC, animated: true);
-            let storyBoard = UIStoryboard.init(name: "YFHalfCircleLayoutViewController", bundle: nil)
-            var rgCardVC  = storyBoard.instantiateInitialViewController()
-            if rgCardVC == nil {
-                rgCardVC = storyBoard.instantiateViewControllerWithIdentifier("YFHalfCircleLayoutViewController")
+            let halfCircleStoryBoard = UIStoryboard.init(name: "YFHalfCircleLayoutViewController", bundle: nil)
+            var halfCircleVC  = halfCircleStoryBoard.instantiateInitialViewController()
+            if halfCircleVC == nil {
+                halfCircleVC = halfCircleStoryBoard.instantiateViewControllerWithIdentifier("YFHalfCircleLayoutViewController")
             }
-            rgCardVC!.title = "圆形菜单"
-            rgCardVC!.hidesBottomBarWhenPushed = true;
-            self.navigationController?.pushViewController(rgCardVC!, animated: true);
+            halfCircleVC!.navigationItem.title = "圆形菜单"
+            halfCircleVC!.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(halfCircleVC!, animated: true);
             break;
         case 24:
             let ballVC = FirstBallTagViewController.init();
@@ -226,10 +226,10 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             break;
         case 30:
             
-            let storyBoard = UIStoryboard.init(name: "RGCardLayoutViewController", bundle: nil)
-            var rgCardVC  = storyBoard.instantiateInitialViewController()
+            let rgCardStoryBoard = UIStoryboard.init(name: "RGCardLayoutViewController", bundle: nil)
+            var rgCardVC  = rgCardStoryBoard.instantiateInitialViewController()
             if rgCardVC == nil {
-                rgCardVC = storyBoard.instantiateViewControllerWithIdentifier("RGCardLayoutViewController")
+                rgCardVC = rgCardStoryBoard.instantiateViewControllerWithIdentifier("RGCardLayoutViewController")
             }
             rgCardVC!.title = "浏览卡片"
             rgCardVC!.hidesBottomBarWhenPushed = true;
@@ -282,23 +282,21 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             horizontalVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(horizontalVC, animated: true);
             break;
+        case 40:
+            let radiateVC = FirstRadiateMenuViewController.init();
+            radiateVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(radiateVC, animated: true);
+            break;
         case 41:
             let snowVC = FirstSnowViewController.init();
             snowVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(snowVC, animated: true);
             break;
         case 42:
-//            let circleWaveVC = FirstCircleWaveViewController.init();
-//            circleWaveVC.hidesBottomBarWhenPushed = true;
-//            self.navigationController?.pushViewController(circleWaveVC, animated: true);
-            break;
-        case 43:
             let circleWaveVC = FirstCircleWaveViewController.init();
             circleWaveVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(circleWaveVC, animated: true);
-            break;
-            
-            
+            break;            
             
         default:
             break;

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstRadiateMenuViewController: BaseViewController {
+class FirstRadiateMenuViewController: BaseViewController, YFRadialMenuDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,20 @@ class FirstRadiateMenuViewController: BaseViewController {
     }
     
     func getView() {
-        //
+        self.navigationItem.title = "发散菜单"
+        let radialView = YFRadialMenu.init(frame: CGRectMake(WIDTH/2-25, HEIGHT-120, 50, 50))
+        radialView.delegate = self;
+        radialView.centerView.backgroundColor = UIColor.grayColor();
+        radialView.addPopoutView(nil, withIndentifier: "ONE")
+        radialView.addPopoutView(nil, withIndentifier: "TWO")
+        radialView.addPopoutView(nil, withIndentifier: "THREE")
+        radialView.addPopoutView(nil, withIndentifier: "FOUR")
+        self.view.addSubview(radialView)
+        radialView.enableDevelopmentMode(self)
+    }
+    
+    func radialMenu(radialMenu: YFRadialMenu!, didSelectPopoutWithIndentifier identifier: String!) {
+        NSLog("%@",identifier);
     }
     
     override func didReceiveMemoryWarning() {

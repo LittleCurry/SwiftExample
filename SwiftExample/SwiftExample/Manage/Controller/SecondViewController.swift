@@ -111,7 +111,7 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         NetHandler.getDataWithUrl(urlstr, parameters: dic, tokenKey: "", tokenValue: "", ifCaches: false, cachesData: { (cacheData) in
             //
             }, success: { (successData) in
-                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers);
+                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary;
                 print(dict)
                 let imgArr = dict["imgs"] as! NSMutableArray;
                 if(self.pn == 0){

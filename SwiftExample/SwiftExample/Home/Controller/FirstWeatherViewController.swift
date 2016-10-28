@@ -124,7 +124,7 @@ class FirstWeatherViewController: BaseViewController {
         NetHandler.getDataWithUrl(urlStr, parameters: nil, tokenKey: "", tokenValue: "", ifCaches: false, cachesData: { (cacheData) in
             //
             }, success: { (successData) in
-                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers);
+                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 print(dict)
                 let today = dict["pm2d5"] as! NSDictionary;
                 self.bigImageView.sd_setImageWithURL(today["nbg2"] as! String)

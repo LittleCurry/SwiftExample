@@ -62,7 +62,7 @@ class MovieTableViewCell: UITableViewCell {
         
         self.titleLabel?.text = "标题"
         self.movieImage?.image = UIImage.init(named: "meinv.jpg")
-        self.rightImage?.image = UIImage.init(named: "play.png")
+        self.rightImage?.image = UIImage.init(named: "play.png")?.changeImageWithColor(UIColor.whiteColor())
         self.smallRightImage1?.image = UIImage.init(named: "smallPlay.png")
         self.timeLenLabel?.font = UIFont.systemFontOfSize(13)
         self.timeLenLabel?.textColor = UIColor.lightGrayColor()

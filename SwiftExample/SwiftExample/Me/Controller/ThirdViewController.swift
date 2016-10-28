@@ -179,7 +179,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         NetHandler.getDataWithUrl(urlstr, parameters: nil, tokenKey: "", tokenValue: "", ifCaches: false, cachesData: { (cacheData) in
             //
             }, success: { (successData) in
-                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers);
+                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
                 let dataArr = dict["videoList"] as! NSMutableArray;
                 print(dataArr)
                 if(self.count == 0){

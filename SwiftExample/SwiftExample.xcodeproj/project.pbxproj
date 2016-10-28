@@ -527,6 +527,7 @@
 		C19EA58C1DB73EE300984138 /* dou@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19EA5881DB73EE300984138 /* dou@3x.png */; };
 		C19EA58D1DB73EE300984138 /* allGoods@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19EA5891DB73EE300984138 /* allGoods@2x.png */; };
 		C19EA58E1DB73EE300984138 /* allGoods@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C19EA58A1DB73EE300984138 /* allGoods@3x.png */; };
+		C1A600EC1DC31361004A2B36 /* YFRadialMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A600EA1DC31361004A2B36 /* YFRadialMenu.m */; };
 		C1A7CCD91DB9F8C5001C5A6B /* RQShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A7CCD61DB9F8C5001C5A6B /* RQShineLabel.m */; };
 		C1A7CCDD1DBA00AC001C5A6B /* autumn1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1A7CCDB1DBA00AC001C5A6B /* autumn1.jpg */; };
 		C1A7CCDE1DBA00AC001C5A6B /* autumn2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1A7CCDC1DBA00AC001C5A6B /* autumn2.jpg */; };
@@ -616,7 +617,6 @@
 		C1C8FA131DC1BE9900C0589D /* FirstHorizontalRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8FA121DC1BE9900C0589D /* FirstHorizontalRollViewController.swift */; };
 		C1C8FA151DC1BEC900C0589D /* FirstRadiateMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8FA141DC1BEC900C0589D /* FirstRadiateMenuViewController.swift */; };
 		C1C8FA171DC1BEF500C0589D /* FirstSnowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8FA161DC1BEF500C0589D /* FirstSnowViewController.swift */; };
-		C1C8FA191DC1BF2A00C0589D /* FirstTwoWaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8FA181DC1BF2A00C0589D /* FirstTwoWaveViewController.swift */; };
 		C1C8FA1B1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C8FA1A1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift */; };
 		C1C8FA281DC1C01F00C0589D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C1C8FA1D1DC1C01F00C0589D /* background.jpg */; };
 		C1C8FA291DC1C01F00C0589D /* home_top_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1C8FA1E1DC1C01F00C0589D /* home_top_bg@2x.png */; };
@@ -1396,6 +1396,8 @@
 		C19EA5881DB73EE300984138 /* dou@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dou@3x.png"; sourceTree = "<group>"; };
 		C19EA5891DB73EE300984138 /* allGoods@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allGoods@2x.png"; sourceTree = "<group>"; };
 		C19EA58A1DB73EE300984138 /* allGoods@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "allGoods@3x.png"; sourceTree = "<group>"; };
+		C1A600E91DC31361004A2B36 /* YFRadialMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFRadialMenu.h; sourceTree = "<group>"; };
+		C1A600EA1DC31361004A2B36 /* YFRadialMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFRadialMenu.m; sourceTree = "<group>"; };
 		C1A7CCD51DB9F8C5001C5A6B /* RQShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RQShineLabel.h; sourceTree = "<group>"; };
 		C1A7CCD61DB9F8C5001C5A6B /* RQShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RQShineLabel.m; sourceTree = "<group>"; };
 		C1A7CCDB1DBA00AC001C5A6B /* autumn1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = autumn1.jpg; sourceTree = "<group>"; };
@@ -1502,7 +1504,6 @@
 		C1C8FA121DC1BE9900C0589D /* FirstHorizontalRollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstHorizontalRollViewController.swift; sourceTree = "<group>"; };
 		C1C8FA141DC1BEC900C0589D /* FirstRadiateMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRadiateMenuViewController.swift; sourceTree = "<group>"; };
 		C1C8FA161DC1BEF500C0589D /* FirstSnowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstSnowViewController.swift; sourceTree = "<group>"; };
-		C1C8FA181DC1BF2A00C0589D /* FirstTwoWaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTwoWaveViewController.swift; sourceTree = "<group>"; };
 		C1C8FA1A1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCircleWaveViewController.swift; sourceTree = "<group>"; };
 		C1C8FA1D1DC1C01F00C0589D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		C1C8FA1E1DC1C01F00C0589D /* home_top_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_top_bg@2x.png"; sourceTree = "<group>"; };
@@ -2153,6 +2154,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1A600E61DC31361004A2B36 /* 04 - RadialMenu */,
 				C1CAB1241DC2104600D4B409 /* HalfCircleViewLayout */,
 				C1CAB1151DC2018A00D4B409 /* HorizontalScroll */,
 				C1CAB10E1DC1E6B000D4B409 /* BubbleMenuButton */,
@@ -2676,7 +2678,6 @@
 				C1C8FA121DC1BE9900C0589D /* FirstHorizontalRollViewController.swift */,
 				C1C8FA141DC1BEC900C0589D /* FirstRadiateMenuViewController.swift */,
 				C1C8FA161DC1BEF500C0589D /* FirstSnowViewController.swift */,
-				C1C8FA181DC1BF2A00C0589D /* FirstTwoWaveViewController.swift */,
 				C1C8FA1A1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift */,
 			);
 			path = Controller;
@@ -3001,6 +3002,15 @@
 				C1970D3E1DA8CEFC00260A11 /* QRViewController.m */,
 			);
 			path = QRView;
+			sourceTree = "<group>";
+		};
+		C1A600E61DC31361004A2B36 /* 04 - RadialMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C1A600E91DC31361004A2B36 /* YFRadialMenu.h */,
+				C1A600EA1DC31361004A2B36 /* YFRadialMenu.m */,
+			);
+			path = "04 - RadialMenu";
 			sourceTree = "<group>";
 		};
 		C1A7CCD41DB9F8C5001C5A6B /* ShineLabel */ = {
@@ -3794,6 +3804,7 @@
 				C16418D51D9BCAC500BD3841 /* MASViewConstraint.m in Sources */,
 				C16418D91D9BCAC500BD3841 /* ViewController+MASAdditions.m in Sources */,
 				C17FC5041DB8BBDA004028CA /* NewsView.m in Sources */,
+				C1A600EC1DC31361004A2B36 /* YFRadialMenu.m in Sources */,
 				C16418AB1D9BCAB400BD3841 /* SDWebImageDownloader.m in Sources */,
 				C1C8F9F11DC1ADEE00C0589D /* FirstShakeAndShakeViewController.swift in Sources */,
 				C16419431D9BCB1400BD3841 /* LoginViewController.m in Sources */,
@@ -3979,7 +3990,6 @@
 				C164191F1D9BCADE00BD3841 /* MJRefreshNormalHeader.m in Sources */,
 				C16419C41D9BCC3B00BD3841 /* Play.swift in Sources */,
 				C17FC4FC1DB8B0F0004028CA /* FirstJigsawViewController.swift in Sources */,
-				C1C8FA191DC1BF2A00C0589D /* FirstTwoWaveViewController.swift in Sources */,
 				C16418A91D9BCAB400BD3841 /* SDWebImageCompat.m in Sources */,
 				C158F2DB1DACE40B000CAE40 /* README.md in Sources */,
 				C158F2941DACC8E9000CAE40 /* FirstCycleScrollViewController.swift in Sources */,
