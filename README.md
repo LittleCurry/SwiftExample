@@ -44,41 +44,41 @@
 
 ## 部分截图
 *  Home.
-![image](./screenShot1.png) 
+![image](./screenShot/screenShot1.png) 
 *  Second.
-![image](./screenShot2.png) 
+![image](./screenShot/screenShot2.png) 
 *  Third.
-![image](./screenShot3.png) 
+![image](./screenShot/screenShot3.png) 
 *  Fouth.
-![image](./screenShot4.png) 
+![image](./screenShot/screenShot4.png) 
 *  navigationBar渐变背景图.
-![image](./screenShot5.png)  
+![image](./screenShot/screenShot5.png)  
 *  聊天界面.
-![image](./screenShot6.png)
+![image](./screenShot/screenShot6.png)
 *  gauss模糊.
-![image](./screenShot7.png)
+![image](./screenShot/screenShot7.png)
 *  天气.
-![image](./screenShot8.png)
+![image](./screenShot/screenShot8.png)
 *  我的银行卡.
-![image](./screenShot9.png)
+![image](./screenShot/screenShot9.png)
 *  本地相册选取.
-![image](./screenShot10.png)
+![image](./screenShot/screenShot10.png)
 *  热更新.
-![image](./screenShot11.png)
+![image](./screenShot/screenShot11.png)
 *  日历.
-![image](./screenShot12.png)
+![image](./screenShot/screenShot12.png)
 *  商城.
-![image](./screenShot13.png)
+![image](./screenShot/screenShot13.png)
 *  请输入密码.
-![image](./screenShot14.png)
+![image](./screenShot/screenShot14.png)
 *  渐变色.
-![image](./screenShot15.png)
+![image](./screenShot/screenShot15.png)
 *  余额跳动.
-![image](./screenShot16.png)
+![image](./screenShot/screenShot16.png)
 *  漂浮的雪花.
-![image](./screenShot17.png)
+![image](./screenShot/screenShot17.png)
 *  水波.
-![image](./screenShot18.png)
+![image](./screenShot/screenShot18.png)
 
 
 
