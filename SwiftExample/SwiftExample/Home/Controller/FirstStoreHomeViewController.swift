@@ -13,7 +13,6 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
     var searchBar = UISearchBar.init(frame: CGRectMake(0, 307, 240, 30))
-    var nameArr = ["navigationBar使用背景图片", "输入框随键盘一起动"];
     var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
     let cellName1 = "asdaserad324";
     let cellName2 = "r90asdferwuuf";

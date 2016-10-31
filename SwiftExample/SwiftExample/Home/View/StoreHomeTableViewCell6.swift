@@ -27,9 +27,9 @@ class StoreHomeTableViewCell6: UITableViewCell {
         self.backgroundColor = UIColor.groupTableViewBackgroundColor()
         self.bigImage = UIImageView.init()
         self.scrollView = UIScrollView.init();
-        for i in 0...29 {
+        for i in 0...13 {
             let button = UIButton.init(type: UIButtonType.Custom)
-            button.frame = CGRectMake(CGFloat(i%10)*WIDTH/3, CGFloat(i/10)*150, WIDTH/3, 150)
+            button.frame = CGRectMake(CGFloat(i%5)*WIDTH/3, CGFloat(i/5)*150, WIDTH/3, 150)
             button.backgroundColor = UIColor.whiteColor()
             button.layer.masksToBounds = true;
             button.layer.borderWidth = 0.5;
@@ -64,7 +64,7 @@ class StoreHomeTableViewCell6: UITableViewCell {
         
         self.bigImage?.image = UIImage.init(named: "storeHeader4.jpg")
         self.scrollView?.showsHorizontalScrollIndicator = false
-        self.scrollView?.contentSize = CGSizeMake(WIDTH/3*10+1, 0)
+        self.scrollView?.contentSize = CGSizeMake(WIDTH/3*5+1, 0)
         
         self.contentView.addSubview(self.bigImage!)
         self.contentView.addSubview(self.scrollView!)
