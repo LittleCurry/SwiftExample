@@ -37,6 +37,7 @@
 		C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BEC591DAA4931009F2EAA /* ThirdOneTypeViewController.swift */; };
 		C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */; };
 		C1401A2A1DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1401A291DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift */; };
+		C1412AEA1DC873220058186D /* OneGoodsClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */; };
 		C14CE7C81DB8DFF900462ECB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE7C71DB8DFF900462ECB /* UIView+Extension.m */; };
 		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
 		C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */; };
@@ -721,6 +722,7 @@
 		C12BEC591DAA4931009F2EAA /* ThirdOneTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdOneTypeViewController.swift; sourceTree = "<group>"; };
 		C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWeatherViewController.swift; sourceTree = "<group>"; };
 		C1401A291DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewCell1.swift; sourceTree = "<group>"; };
+		C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneGoodsClassCollectionViewCell.swift; sourceTree = "<group>"; };
 		C14CE7C61DB8DFF900462ECB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C14CE7C71DB8DFF900462ECB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -2709,6 +2711,7 @@
 				C19EA56B1DB7214900984138 /* StoreHomeTableViewCell5.swift */,
 				C19EA56D1DB7215300984138 /* StoreHomeTableViewCell6.swift */,
 				C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */,
+				C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4055,6 +4058,7 @@
 				C1970D3F1DA8CEFC00260A11 /* QRItem.m in Sources */,
 				C151E3311DA553D6004A41A3 /* SCChartLabel.m in Sources */,
 				C17D55131DA6208100C27FD2 /* FirstShareViewController.swift in Sources */,
+				C1412AEA1DC873220058186D /* OneGoodsClassCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
