@@ -16,8 +16,8 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     var selectRow = 0
     var goodsClassArr = ["推荐分类", "潮流女装","品牌男装" ,"个护化妆" ,"家用电器" ,"电脑办公" ,"手机数码" ,"母婴童装" ,"图书音像" ,"家居家纺" ,"居家生活" ,"家具建材" ,"食品生鲜" ,"酒水饮料" ,"运动户外" ,"鞋靴箱包" ,"奢品礼品" ,"钟表珠宝" ,"玩具乐器" ,"内衣配饰" ,"汽车用品" ,"医药保健" ,"计生情趣" ,"京东金融" ,"生活旅行" ,"宠物农资"]
     var oneGoodsClassArr : NSMutableArray = []
-    var playArr : NSMutableArray = [];
-    var oneGoodsReuseIdentifier = "OneGoodsCell";
+    var oneGoodsReuseId = "OneGoodsCell";
+    var collectionHeaderId = "collectionHeaderId";
     var collectionView : UICollectionView!
     
     override func viewDidLoad() {
@@ -61,18 +61,19 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
 //        }
 //        layout.columnsCount = 3;
         let flow = UICollectionViewFlowLayout.init()
-        flow.itemSize = CGSizeMake((WIDTH-110)/3, 200)
-        
+        flow.itemSize = CGSizeMake((WIDTH-120)/3, (WIDTH-120)/3+20)
+        flow.headerReferenceSize = CGSizeMake(WIDTH, 30);
 //        flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         
         
         
-        self.collectionView = UICollectionView.init(frame: CGRectMake(100, 0, WIDTH-100, HEIGHT), collectionViewLayout: flow);
+        self.collectionView = UICollectionView.init(frame: CGRectMake(110, 0, WIDTH-120, HEIGHT), collectionViewLayout: flow);
         self.collectionView.backgroundColor = RGBA(239, g: 239, b: 244, a: 1);
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
         self.collectionView.contentInset = UIEdgeInsetsMake(navigationBar_H(self.navigationController!), 0, tabBar_H(self.tabBarController!), 0);
-        self.collectionView.registerClass(OneGoodsClassCollectionViewCell.self, forCellWithReuseIdentifier: self.oneGoodsReuseIdentifier);
+        self.collectionView.registerClass(OneGoodsClassCollectionViewCell.self, forCellWithReuseIdentifier: self.oneGoodsReuseId);
+        self.collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.collectionHeaderId)
         
 //        let header = MJRefreshGifHeader.init(refreshingBlock: {
 //            self.pn = 0;
@@ -154,17 +155,38 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
         self.myTableView.reloadData()
     }
     
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        <#code#>
-//    }
-    viewForHeader
-    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        <#code#>
+        if section == 0 {
+            return CGSizeMake(WIDTH, 125)
+        }
+        return CGSizeMake(WIDTH, 25)
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind("UICollectionElementKindSectionHeader", withReuseIdentifier: self.collectionHeaderId, forIndexPath: indexPath)
+        let headImageView = UIImageView.init(frame: CGRectZero)
+        var aImage = UIImage.init(named: "")
+        
+        if indexPath.section == 0 {
+            headImageView.frame = CGRectMake(0, 10, PART_W(self.collectionView), 90)
+            aImage = UIImage.init(named: "storeHeader3.jpg")
+//            headImageView.image = UIImage.init(named: "storeHeader3.jpg")
+            header.addSubview(headImageView)
+        }
+        
+        headImageView.image = aImage
+        let dict = self.oneGoodsClassArr[indexPath.section] as! NSDictionary
+        let title =  dict["headerTitle"] as! String
+        let headLabel = UILabel.init(frame: CGRectMake(10,Y(headImageView) + PART_H(headImageView), 200, 25))
+        headLabel.font = UIFont.systemFontOfSize(13)
+        headLabel.text = title
+        header.addSubview(headLabel)
+        return header
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        return self.oneGoodsClassArr.count
+        return self.oneGoodsClassArr.count 
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -174,7 +196,7 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.oneGoodsReuseIdentifier, forIndexPath: indexPath) as! OneGoodsClassCollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.oneGoodsReuseId, forIndexPath: indexPath) as! OneGoodsClassCollectionViewCell
         let dict = self.oneGoodsClassArr[indexPath.section] as! NSDictionary
         let arr =  dict["arr"] as! NSArray
         let dic = arr[indexPath.item] as! NSDictionary
@@ -193,17 +215,17 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         //
-        return 2
+        return 0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         //
-        return 2
+        return 0.1
     }
  
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         //
-        return UIEdgeInsetsMake(2.0, 0.0, 2.0, 0.0);
+        return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     }
     
     
@@ -234,18 +256,15 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
 //    }
     
     func getData() -> Void {
-        
-        self.oneGoodsClassArr = [
-            ["headerTitle":"数码电器", "arr":[["img":"goods1.jpg", "name":"U盘"], ["img":"goods2.jpg", "name":"虚拟现实"], ["img":"goods3.jpg", "name":"掌上电脑"], ["img":"goods4.jpg", "name":"智能手表"], ["img":"goods5.jpg", "name":"单反"], ["img":"goods6.jpg", "name":"耳机耳麦"], ["img":"goods7.jpg", "name":"摄像头"], ["img":"goods8.jpg", "name":"读卡器"]]],
-            ["headerTitle":"鞋子", "arr":[["img":"goods31.jpg", "name":"透气网鞋"], ["img":"goods32.jpg", "name":"旅游鞋"], ["img":"goods33.jpg", "name":"运动鞋"], ["img":"goods34.jpg", "name":"超轻跑鞋"], ["img":"goods35.jpg", "name":"黑曼巴"], ["img":"goods36.jpg", "name":"内置增高"], ["img":"goods37.jpg", "name":"篮球鞋"], ["img":"goods1.jpg", "name":"经典战靴"], ["img":"goods39.jpg", "name":"安踏"], ["img":"goods40.jpg", "name":"耐克"], ["img":"goods41.jpg", "name":"皮鞋"]]],
-            ["headerTitle":"服装", "arr":[["img":"goods61.jpg", "name":"李宁"], ["img":"goods62.jpg", "name":"Kappa"], ["img":"goods63.jpg", "name":"361°"], ["img":"goods64.jpg", "name":"连衣裙"], ["img":"goods65.jpg", "name":"运动服"], ["img":"goods66.jpg", "name":"短袖"], ["img":"goods67.jpg", "name":"美国队长"], ["img":"goods68.jpg", "name":"秋冬新款"], ["img":"goods69.jpg", "name":"Adidas"], ["img":"goods70.jpg", "name":"Polo衫"]]],
-            ["headerTitle":"零食", "arr":[["img":"goods91.jpg", "name":"大枣"], ["img":"goods92.jpg", "name":"饼干"], ["img":"goods93.jpg", "name":"薯片"], ["img":"goods94.jpg", "name":"糖果"], ["img":"goods95.jpg", "name":"cookie"], ["img":"goods96.jpg", "name":"爆米花"], ["img":"goods97.jpg", "name":"田园薯片"], ["img":"goods98.jpg", "name":"乡巴佬"], ["img":"goods99.jpg", "name":"酥卷"]]],
-            ["headerTitle":"生活日用", "arr":[["img":"goods86.jpg", "name":"休闲服装"], ["img":"goods56.jpg", "name":"品牌鞋子"], ["img":"goods23.jpg", "name":"厨房电器"], ["img":"goods113.jpg", "name":"特色零食"], ["img":"goods27.jpg", "name":"家居水暖"], ["img":"goods21.jpg", "name":"按摩仪"]]],["headerTitle":"家装软饰", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods27.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]],
-            ["headerTitle":"水具酒具", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]],
-            ["headerTitle":"生活日用", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]],
-            ["headerTitle":"厨房配件", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]]
-        ]
-        
+        self.oneGoodsClassArr.addObject(["headerTitle":"数码电器", "arr":[["img":"goods1.jpg", "name":"U盘"], ["img":"goods2.jpg", "name":"虚拟现实"], ["img":"goods3.jpg", "name":"掌上电脑"], ["img":"goods4.jpg", "name":"智能手表"], ["img":"goods5.jpg", "name":"单反"], ["img":"goods6.jpg", "name":"耳机耳麦"], ["img":"goods7.jpg", "name":"摄像头"], ["img":"goods8.jpg", "name":"读卡器"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"鞋子", "arr":[["img":"goods31.jpg", "name":"透气网鞋"], ["img":"goods32.jpg", "name":"旅游鞋"], ["img":"goods33.jpg", "name":"运动鞋"], ["img":"goods34.jpg", "name":"超轻跑鞋"], ["img":"goods35.jpg", "name":"黑曼巴"], ["img":"goods36.jpg", "name":"内置增高"], ["img":"goods37.jpg", "name":"篮球鞋"], ["img":"goods1.jpg", "name":"经典战靴"], ["img":"goods39.jpg", "name":"安踏"], ["img":"goods40.jpg", "name":"耐克"], ["img":"goods41.jpg", "name":"皮鞋"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"服装", "arr":[["img":"goods61.jpg", "name":"李宁"], ["img":"goods62.jpg", "name":"Kappa"], ["img":"goods63.jpg", "name":"361°"], ["img":"goods64.jpg", "name":"连衣裙"], ["img":"goods65.jpg", "name":"运动服"], ["img":"goods66.jpg", "name":"短袖"], ["img":"goods67.jpg", "name":"美国队长"], ["img":"goods68.jpg", "name":"秋冬新款"], ["img":"goods69.jpg", "name":"Adidas"], ["img":"goods70.jpg", "name":"Polo衫"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"零食", "arr":[["img":"goods91.jpg", "name":"大枣"], ["img":"goods92.jpg", "name":"饼干"], ["img":"goods93.jpg", "name":"薯片"], ["img":"goods94.jpg", "name":"糖果"], ["img":"goods95.jpg", "name":"cookie"], ["img":"goods96.jpg", "name":"爆米花"], ["img":"goods97.jpg", "name":"田园薯片"], ["img":"goods98.jpg", "name":"乡巴佬"], ["img":"goods99.jpg", "name":"酥卷"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"生活日用", "arr":[["img":"goods86.jpg", "name":"休闲服装"], ["img":"goods56.jpg", "name":"品牌鞋子"], ["img":"goods23.jpg", "name":"厨房电器"], ["img":"goods113.jpg", "name":"特色零食"], ["img":"goods27.jpg", "name":"家居水暖"], ["img":"goods21.jpg", "name":"按摩仪"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"家装软饰", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods27.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"水具酒具", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"生活日用", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"厨房配件", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
     }
     
     

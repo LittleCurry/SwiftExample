@@ -31,10 +31,12 @@ class OneGoodsClassCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.whiteColor()
         self.photoImage = UIImageView.init();
         self.titleLabel = UILabel.init();
         self.titleLabel?.textAlignment = NSTextAlignment.Center;
         self.titleLabel?.font = UIFont.systemFontOfSize(13)
+        self.titleLabel?.textColor = PLACEHOLODERCOLOR
         self.contentView.addSubview(self.photoImage!);
         self.contentView.addSubview(self.titleLabel!);
     }
