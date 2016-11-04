@@ -14,6 +14,8 @@
 		C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC31DA90F9D00050911 /* smallPlay@3x.png */; };
 		C114CDC81DA90F9D00050911 /* play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC41DA90F9D00050911 /* play@2x.png */; };
 		C114CDC91DA90F9D00050911 /* play@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C114CDC51DA90F9D00050911 /* play@3x.png */; };
+		C11618C81DCAE039005A7C0B /* JSWave.m in Sources */ = {isa = PBXBuildFile; fileRef = C11618C71DCAE039005A7C0B /* JSWave.m */; };
+		C11618CA1DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */; };
 		C1198AF41DC1D16700838A8A /* beach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1198AF31DC1D16700838A8A /* beach@2x.png */; };
 		C1198B371DC1D44F00838A8A /* YFAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C1198B201DC1D44F00838A8A /* YFAnimationManager.m */; };
 		C1198B381DC1D44F00838A8A /* YFEmitterCustomLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1198B251DC1D44F00838A8A /* YFEmitterCustomLayer.m */; };
@@ -692,6 +694,9 @@
 		C114CDC31DA90F9D00050911 /* smallPlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smallPlay@3x.png"; sourceTree = "<group>"; };
 		C114CDC41DA90F9D00050911 /* play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@2x.png"; sourceTree = "<group>"; };
 		C114CDC51DA90F9D00050911 /* play@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play@3x.png"; sourceTree = "<group>"; };
+		C11618C61DCAE039005A7C0B /* JSWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSWave.h; sourceTree = "<group>"; };
+		C11618C71DCAE039005A7C0B /* JSWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSWave.m; sourceTree = "<group>"; };
+		C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneGoodsClassCollectionReusableView.swift; sourceTree = "<group>"; };
 		C1198AF31DC1D16700838A8A /* beach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beach@2x.png"; sourceTree = "<group>"; };
 		C1198B1F1DC1D44F00838A8A /* YFAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFAnimationManager.h; sourceTree = "<group>"; };
 		C1198B201DC1D44F00838A8A /* YFAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFAnimationManager.m; sourceTree = "<group>"; };
@@ -1617,6 +1622,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C11618C51DCAE039005A7C0B /* JSWave */ = {
+			isa = PBXGroup;
+			children = (
+				C11618C61DCAE039005A7C0B /* JSWave.h */,
+				C11618C71DCAE039005A7C0B /* JSWave.m */,
+			);
+			path = JSWave;
+			sourceTree = "<group>";
+		};
 		C1198B1D1DC1D44F00838A8A /* 01 - Snow */ = {
 			isa = PBXGroup;
 			children = (
@@ -2156,6 +2170,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C11618C51DCAE039005A7C0B /* JSWave */,
 				C1A600E61DC31361004A2B36 /* 04 - RadialMenu */,
 				C1CAB1241DC2104600D4B409 /* HalfCircleViewLayout */,
 				C1CAB1151DC2018A00D4B409 /* HorizontalScroll */,
@@ -2712,6 +2727,7 @@
 				C19EA56D1DB7215300984138 /* StoreHomeTableViewCell6.swift */,
 				C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */,
 				C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */,
+				C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3954,6 +3970,7 @@
 				C158F3071DACE45A000CAE40 /* MJPhotoProgressView.m in Sources */,
 				C1C8FA2A1DC1C01F00C0589D /* RippleModel.m in Sources */,
 				C1C53DBD1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift in Sources */,
+				C11618C81DCAE039005A7C0B /* JSWave.m in Sources */,
 				C158F2901DACB96B000CAE40 /* BankCardTableViewCell.swift in Sources */,
 				C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */,
 				C158F2B11DACE250000CAE40 /* FirstHotRenewViewController.swift in Sources */,
@@ -4030,6 +4047,7 @@
 				C1BFB50E1DC0CAD3001B4E05 /* JCFlipPageView.m in Sources */,
 				C1BC635E1DBEF7D9006EBCFC /* UITextView+LMJExtension.swift in Sources */,
 				C158F28C1DAC95C2000CAE40 /* FirstBankCardViewController.swift in Sources */,
+				C11618CA1DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift in Sources */,
 				C158F2F21DACE40B000CAE40 /* TZPhotoPreviewController.m in Sources */,
 				C10F3AA81DC05C7800C27AE4 /* Chat.swift in Sources */,
 				C158F2F11DACE40B000CAE40 /* TZPhotoPreviewCell.m in Sources */,

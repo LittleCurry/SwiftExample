@@ -17,25 +17,33 @@ class FirstBalanceJumpViewController: BaseViewController {
     }
     
     func getView() {
-        
         self.navigationItem.title = "余额"
         self.view.backgroundColor = UIColor.orangeColor()
-        
-        let waterView = LXHTwoWaterWaveView.init(frame: self.view.bounds)
-        self.view.addSubview(waterView)
-        
-        let tomorrowLabel = UILabel.init(frame: CGRectMake(0, 180, WIDTH, 20))
+//        let waterView = LXHTwoWaterWaveView.init(frame: self.view.bounds)
+//        self.view.addSubview(waterView)
+        let tomorrowLabel = UILabel.init(frame: CGRectMake(0, 140, WIDTH, 20))
         tomorrowLabel.textColor = UIColor.whiteColor()
         tomorrowLabel.textAlignment = .Center
         tomorrowLabel.font = UIFont.systemFontOfSize(15)
         tomorrowLabel.text = "昨日收益(元)"
         self.view.addSubview(tomorrowLabel)
-        let balanceLabel = UILabel.init(frame: CGRectMake(0, 200, WIDTH, 60))
+        let balanceLabel = UILabel.init(frame: CGRectMake(0, 160, WIDTH, 60))
         balanceLabel.textColor = UIColor.whiteColor()
         balanceLabel.textAlignment = .Center
         balanceLabel.font = UIFont.systemFontOfSize(40)
         balanceLabel.animationFromnum(0, toNum: 8668, duration: 2)
         self.view.addSubview(balanceLabel)
+        
+        let waveView = JSWave.init(frame: CGRectMake(0, 260, WIDTH, 20))
+        self.view.addSubview(waveView)
+        waveView.waveBlock = { (currentY) in
+            // print(currentY)
+        }
+        waveView.startWaveAnimation()
+        
+        let subView = UIView.init(frame: CGRectMake(0, 280, WIDTH, HEIGHT-280))
+        subView.backgroundColor = RGBA(29, g: 173, b: 238, a: 1)
+        self.view.addSubview(subView)
     }
     
     override func didReceiveMemoryWarning() {

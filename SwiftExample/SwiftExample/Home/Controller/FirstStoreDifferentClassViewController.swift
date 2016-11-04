@@ -46,6 +46,7 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
         self.navigationItem.titleView = self.searchBar
         self.myTableView.contentInset = UIEdgeInsetsMake(64-35, 0, -20, 0);
 //        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.SingleLine
+        // 分割线位置
 //        self.myTableView.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         self.myTableView.tableFooterView = UIView.init();
         self.myTableView.delegate = self;
@@ -53,49 +54,16 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
         self.myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellName)
         self.view.addSubview(self.myTableView);
         
-        //???????
-//        let layout = HMWaterflowLayout.init();
-//        layout.HeightBlock = { (sender, index) -> (CGFloat) in
-//            let photo = self.playArr[index.item] as!Play;
-//            return photo.small_height / photo.small_width * sender;
-//        }
-//        layout.columnsCount = 3;
         let flow = UICollectionViewFlowLayout.init()
         flow.itemSize = CGSizeMake((WIDTH-120)/3, (WIDTH-120)/3+20)
         flow.headerReferenceSize = CGSizeMake(WIDTH, 30);
-//        flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        
-        
-        
-        self.collectionView = UICollectionView.init(frame: CGRectMake(110, 0, WIDTH-120, HEIGHT), collectionViewLayout: flow);
+        self.collectionView = UICollectionView.init(frame: CGRectMake(110, navigationBar_H(self.navigationController!), WIDTH-120, HEIGHT-navigationBar_H(self.navigationController!)), collectionViewLayout: flow);
         self.collectionView.backgroundColor = RGBA(239, g: 239, b: 244, a: 1);
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
-        self.collectionView.contentInset = UIEdgeInsetsMake(navigationBar_H(self.navigationController!), 0, tabBar_H(self.tabBarController!), 0);
         self.collectionView.registerClass(OneGoodsClassCollectionViewCell.self, forCellWithReuseIdentifier: self.oneGoodsReuseId);
-        self.collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.collectionHeaderId)
-        
-//        let header = MJRefreshGifHeader.init(refreshingBlock: {
-//            self.pn = 0;
-//            self.getData();
-//        });
-//        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Refreshing);
-//        header.setImages(self.refreshImages as [AnyObject], forState: MJRefreshState.Idle);
-//        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
-//        header.lastUpdatedTimeLabel.hidden = true;
-//        header.stateLabel.hidden = true;
-//        self.collectionView.mj_header = header;
-        
-//        let footer = MJRefreshAutoNormalFooter.init {
-//            self.pn += 60;
-//            self.getData();
-//        };
-//        self.collectionView.mj_footer = footer;
+        self.collectionView.registerClass(OneGoodsClassCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: self.collectionHeaderId)
         self.view.addSubview(self.collectionView);
-        
-        
-        
-        
     }
     
     func scanAction() -> Void {
@@ -106,19 +74,9 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
         //
     }
     
-//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 0.1
-//    }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
-    
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        if section == 0 {
-//            return self.cycleScrollView
-//        }
-//        return UIView.init()
-//    }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 44;
@@ -153,35 +111,19 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
         cell?.backgroundColor = UIColor.groupTableViewBackgroundColor()
         cell?.textLabel?.textColor = UIColor.redColor()
         self.myTableView.reloadData()
+        self.refreshData()
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        if section == 0 {
-            return CGSizeMake(WIDTH, 125)
-        }
         return CGSizeMake(WIDTH, 25)
     }
     
-    
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        let header = collectionView.dequeueReusableSupplementaryViewOfKind("UICollectionElementKindSectionHeader", withReuseIdentifier: self.collectionHeaderId, forIndexPath: indexPath)
-        let headImageView = UIImageView.init(frame: CGRectZero)
-        var aImage = UIImage.init(named: "")
         
-        if indexPath.section == 0 {
-            headImageView.frame = CGRectMake(0, 10, PART_W(self.collectionView), 90)
-            aImage = UIImage.init(named: "storeHeader3.jpg")
-//            headImageView.image = UIImage.init(named: "storeHeader3.jpg")
-            header.addSubview(headImageView)
-        }
-        
-        headImageView.image = aImage
+        let header:OneGoodsClassCollectionReusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: self.collectionHeaderId, forIndexPath: indexPath) as! OneGoodsClassCollectionReusableView
         let dict = self.oneGoodsClassArr[indexPath.section] as! NSDictionary
         let title =  dict["headerTitle"] as! String
-        let headLabel = UILabel.init(frame: CGRectMake(10,Y(headImageView) + PART_H(headImageView), 200, 25))
-        headLabel.font = UIFont.systemFontOfSize(13)
-        headLabel.text = title
-        header.addSubview(headLabel)
+        header.headLabel!.text = title
         return header
     }
     
@@ -196,16 +138,14 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.oneGoodsReuseId, forIndexPath: indexPath) as! OneGoodsClassCollectionViewCell
         let dict = self.oneGoodsClassArr[indexPath.section] as! NSDictionary
         let arr =  dict["arr"] as! NSArray
         let dic = arr[indexPath.item] as! NSDictionary
         let imageName = dic["img"] as! String
-        
         cell.titleLabel?.text = dic["name"] as? String
-        
         cell.photoImage?.image = UIImage.init(named: imageName)
-        
         return cell
     }
     
@@ -214,57 +154,36 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
 //    }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
-        //
         return 0
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        //
         return 0.1
     }
  
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
-        //
         return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0);
     }
     
-    
-    
-//    - (CGSize) collectionView:(UICollectionView *)collectionView
-//    　　layout:(UICollectionViewLayout *)collectionViewLayout
-//    　　sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-//    {
-//    　　return CGSizeMake(104.0f, 104.0f);
-//    }
-//    - (CGFloat) collectionView:(UICollectionView *)collectionView
-//    layout:(UICollectionViewLayout *)collectionViewLayout
-//    minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-//    {
-//    return 2.0f;
-//    }
-//    - (CGFloat) collectionView:(UICollectionView *)collectionView
-//    layout:(UICollectionViewLayout *)collectionViewLayout
-//    minimumLineSpacingForSectionAtIndex:(NSInteger)section
-//    {
-//    return 2.0f;
-//    }
-//    - (UIEdgeInsets) collectionView:(UICollectionView *)collectionView
-//    layout:(UICollectionViewLayout *)collectionViewLayout
-//    insetForSectionAtIndex:(NSInteger)section
-//    {
-//    return UIEdgeInsetsMake(2.0f, 0.0f, 2.0f, 0.0f);
-//    }
-    
     func getData() -> Void {
         self.oneGoodsClassArr.addObject(["headerTitle":"数码电器", "arr":[["img":"goods1.jpg", "name":"U盘"], ["img":"goods2.jpg", "name":"虚拟现实"], ["img":"goods3.jpg", "name":"掌上电脑"], ["img":"goods4.jpg", "name":"智能手表"], ["img":"goods5.jpg", "name":"单反"], ["img":"goods6.jpg", "name":"耳机耳麦"], ["img":"goods7.jpg", "name":"摄像头"], ["img":"goods8.jpg", "name":"读卡器"]]])
-        self.oneGoodsClassArr.addObject(["headerTitle":"鞋子", "arr":[["img":"goods31.jpg", "name":"透气网鞋"], ["img":"goods32.jpg", "name":"旅游鞋"], ["img":"goods33.jpg", "name":"运动鞋"], ["img":"goods34.jpg", "name":"超轻跑鞋"], ["img":"goods35.jpg", "name":"黑曼巴"], ["img":"goods36.jpg", "name":"内置增高"], ["img":"goods37.jpg", "name":"篮球鞋"], ["img":"goods1.jpg", "name":"经典战靴"], ["img":"goods39.jpg", "name":"安踏"], ["img":"goods40.jpg", "name":"耐克"], ["img":"goods41.jpg", "name":"皮鞋"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"鞋子", "arr":[["img":"goods31.jpg", "name":"透气网鞋"], ["img":"goods32.jpg", "name":"旅游鞋"], ["img":"goods33.jpg", "name":"运动鞋"], ["img":"goods34.jpg", "name":"超轻跑鞋"], ["img":"goods35.jpg", "name":"黑曼巴"], ["img":"goods36.jpg", "name":"内置增高"], ["img":"goods37.jpg", "name":"篮球鞋"], ["img":"goods38.jpg", "name":"经典战靴"], ["img":"goods39.jpg", "name":"安踏"], ["img":"goods40.jpg", "name":"耐克"], ["img":"goods41.jpg", "name":"皮鞋"]]])
         self.oneGoodsClassArr.addObject(["headerTitle":"服装", "arr":[["img":"goods61.jpg", "name":"李宁"], ["img":"goods62.jpg", "name":"Kappa"], ["img":"goods63.jpg", "name":"361°"], ["img":"goods64.jpg", "name":"连衣裙"], ["img":"goods65.jpg", "name":"运动服"], ["img":"goods66.jpg", "name":"短袖"], ["img":"goods67.jpg", "name":"美国队长"], ["img":"goods68.jpg", "name":"秋冬新款"], ["img":"goods69.jpg", "name":"Adidas"], ["img":"goods70.jpg", "name":"Polo衫"]]])
         self.oneGoodsClassArr.addObject(["headerTitle":"零食", "arr":[["img":"goods91.jpg", "name":"大枣"], ["img":"goods92.jpg", "name":"饼干"], ["img":"goods93.jpg", "name":"薯片"], ["img":"goods94.jpg", "name":"糖果"], ["img":"goods95.jpg", "name":"cookie"], ["img":"goods96.jpg", "name":"爆米花"], ["img":"goods97.jpg", "name":"田园薯片"], ["img":"goods98.jpg", "name":"乡巴佬"], ["img":"goods99.jpg", "name":"酥卷"]]])
         self.oneGoodsClassArr.addObject(["headerTitle":"生活日用", "arr":[["img":"goods86.jpg", "name":"休闲服装"], ["img":"goods56.jpg", "name":"品牌鞋子"], ["img":"goods23.jpg", "name":"厨房电器"], ["img":"goods113.jpg", "name":"特色零食"], ["img":"goods27.jpg", "name":"家居水暖"], ["img":"goods21.jpg", "name":"按摩仪"]]])
-        self.oneGoodsClassArr.addObject(["headerTitle":"家装软饰", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods27.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
-        self.oneGoodsClassArr.addObject(["headerTitle":"水具酒具", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
-        self.oneGoodsClassArr.addObject(["headerTitle":"生活日用", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
-        self.oneGoodsClassArr.addObject(["headerTitle":"厨房配件", "arr":[["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"], ["img":"goods1.jpg", "name":"净化除味"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"家装软饰", "arr":[["img":"goods20.jpg", "name":"iPhone"], ["img":"goods22.jpg", "name":"遥控飞机"], ["img":"goods23.jpg", "name":"空气净化器"], ["img":"goods24.jpg", "name":"路由器"], ["img":"goods26.jpg", "name":"智能家居"], ["img":"goods27.jpg", "name":"加湿器"], ["img":"goods29.jpg", "name":"手环"], ["img":"goods10.jpg", "name":"剃须刀"]]])
+        self.oneGoodsClassArr.addObject(["headerTitle":"厨房配件", "arr":[["img":"goods11.jpg", "name":"风筒"], ["img":"goods12.jpg", "name":"血糖仪"], ["img":"goods14.jpg", "name":"橱柜"], ["img":"goods15.jpg", "name":"清洁器"], ["img":"goods18.jpg", "name":"微波炉"]]])
+    }
+    
+    func refreshData() {
+        for i in 0...5 {
+            let randomNum = Int(arc4random()) % self.oneGoodsClassArr.count
+            let randomNum2 = Int(arc4random()) % self.oneGoodsClassArr.count
+            let obj = self.oneGoodsClassArr[randomNum] as! NSDictionary
+            self.oneGoodsClassArr[randomNum] = self.oneGoodsClassArr[randomNum2]
+            self.oneGoodsClassArr[randomNum2] = obj
+        }
+        self.collectionView.reloadData()
     }
     
     

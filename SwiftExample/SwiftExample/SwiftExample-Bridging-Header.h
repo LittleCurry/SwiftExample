@@ -66,6 +66,7 @@
 #import "YFHorizontalScrollViewController.h"
 #import "YFHalfCircleLayoutViewController.h"
 #import "YFRadialMenu.h"
+#import "JSWave.h"
 
 
 
