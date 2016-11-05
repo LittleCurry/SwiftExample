@@ -10,7 +10,7 @@ import UIKit
 
 class FouthCircleViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.plain);
     let cellName = "qweqweasdasassasdsassasqwe";
     
     override func viewDidLoad() {
@@ -21,23 +21,23 @@ class FouthCircleViewController: BaseViewController, UITableViewDelegate, UITabl
         self.myTableView.tableFooterView = UIView.init();
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
-        self.myTableView.registerClass(SCCircleCell.self, forCellReuseIdentifier: cellName)
+        self.myTableView.register(SCCircleCell.self, forCellReuseIdentifier: cellName)
         view.addSubview(self.myTableView);
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:SCCircleCell = tableView.dequeueReusableCellWithIdentifier(cellName, forIndexPath: indexPath) as! SCCircleCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:SCCircleCell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! SCCircleCell
         if cell.isEqual(nil) {
-            cell = SCCircleCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
+            cell = SCCircleCell(style: UITableViewCellStyle.default, reuseIdentifier: cellName)
         }
         cell.configUI(indexPath)
         return cell;

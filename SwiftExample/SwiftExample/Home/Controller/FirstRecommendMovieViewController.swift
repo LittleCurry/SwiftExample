@@ -20,8 +20,8 @@ class FirstRecommendMovieViewController: BaseViewController {
     
     func getView() -> Void {
         self.navigationItem.title = "推荐影片"
-        self.view.backgroundColor = UIColor.darkTextColor()
-        let cv=CloudView.init(frame: CGRectMake(20, 80, WIDTH-40, WIDTH-40))
+        self.view.backgroundColor = UIColor.darkText
+        let cv=CloudView.init(frame: CGRect(x: 20, y: 80, width: WIDTH-40, height: WIDTH-40))
         cv.reloadData(self.labelArr)
 //        cv.layer.borderColor = UIColor.yellowColor().CGColor;
 //        cv.layer.borderWidth = 2;

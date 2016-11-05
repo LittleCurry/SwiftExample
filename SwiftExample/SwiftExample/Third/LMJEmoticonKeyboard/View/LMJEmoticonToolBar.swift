@@ -10,20 +10,20 @@ import UIKit
 
 enum LMJEmoticonToolBarItemType: Int
 {
-    case Recent = 0
-    case Default = 1
-    case Emoji = 2
-    case LXH = 3
+    case recent = 0
+    case `default` = 1
+    case emoji = 2
+    case lxh = 3
 }
 
 
 class LMJEmoticonToolBar: UIStackView {
     
-    var sentButton = UIButton.init(type: UIButtonType.Custom)
+    var sentButton = UIButton.init(type: UIButtonType.custom)
     
-    private var lastSelectedBtn: UIButton?
+    fileprivate var lastSelectedBtn: UIButton?
     
-    var selectTypeCallBack: ((type: LMJEmoticonToolBarItemType) -> ())?
+    var selectTypeCallBack: ((_ type: LMJEmoticonToolBarItemType) -> ())?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,10 +31,16 @@ class LMJEmoticonToolBar: UIStackView {
         //        print(self.subviews)
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    required init(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
         setupUI()
     }
+    
+//    required init?(coder aDecoder: NSCoder) {
+//        super.init(coder: aDecoder)
+//        setupUI()
+//    }
     
     deinit
     {
@@ -44,65 +50,65 @@ class LMJEmoticonToolBar: UIStackView {
 
 extension LMJEmoticonToolBar
 {
-    private func setupUI()
+    fileprivate func setupUI()
     {
-        axis = .Horizontal
-        distribution = .FillEqually
+        axis = .horizontal
+        distribution = .fillEqually
         
-        addChildBtn("最近", imageName: nil, type: .Recent)
-        addChildBtn("", imageName: "defaultSmile.png", type: .Default)
-        addChildBtn("", imageName: "emoji.png", type: .Emoji)
-        addChildBtn("", imageName: "langxiaohua.png", type: .LXH)
+        addChildBtn("最近", imageName: nil, type: .recent)
+        addChildBtn("", imageName: "defaultSmile.png", type: .default)
+        addChildBtn("", imageName: "emoji.png", type: .emoji)
+        addChildBtn("", imageName: "langxiaohua.png", type: .lxh)
         
-        self.sentButton.frame = CGRectMake(self.frame.size.width-44, 0, 44, self.frame.size.height)
+        self.sentButton.frame = CGRect(x: self.frame.size.width-44, y: 0, width: 44, height: self.frame.size.height)
         self.sentButton.backgroundColor = RGBA(0, g: 121, b: 253, a: 1)
-        self.sentButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        self.sentButton.titleLabel?.font = UIFont.systemFontOfSize(14)
-        self.sentButton.setTitle("发送", forState: UIControlState.Normal)
+        self.sentButton.setTitleColor(UIColor.white, for: UIControlState())
+        self.sentButton.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        self.sentButton.setTitle("发送", for: UIControlState())
         self.addArrangedSubview(self.sentButton)
     }
     
-    private func addChildBtn(title: String, imageName: String?, type: LMJEmoticonToolBarItemType)
+    fileprivate func addChildBtn(_ title: String, imageName: String?, type: LMJEmoticonToolBarItemType)
     {
         let btn = UIButton()
         self.addArrangedSubview(btn)
         
         btn.tag = type.rawValue
-        btn.setTitle(title, forState: .Normal)
+        btn.setTitle(title, for: UIControlState())
         
-        btn.setTitleColor(UIColor.darkGrayColor(), forState: .Normal)
+        btn.setTitleColor(UIColor.darkGray, for: UIControlState())
         
-        btn.setTitleColor(UIColor.grayColor(), forState: .Disabled)
+        btn.setTitleColor(UIColor.gray, for: .disabled)
         
         btn.backgroundColor = UIColor(white: 0.93, alpha: 1)
         if imageName != nil {
-            btn.setImage(UIImage.init(named: imageName!), forState: .Normal)
+            btn.setImage(UIImage.init(named: imageName!), for: UIControlState())
         }
-        btn.titleLabel?.font = UIFont.systemFontOfSize(15)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
         //        btn.adjustsImageWhenHighlighted = false
         
-        if type == .Recent
+        if type == .recent
         {
-            btn.enabled = false
+            btn.isEnabled = false
             self.lastSelectedBtn = btn
         }
         
-        btn.addTarget(self, action: "selectBtn:isNotCallBack:", forControlEvents: .TouchUpInside)
+        btn.addTarget(self, action: #selector(LMJEmoticonToolBar.selectBtn(_:isNotCallBack:)), for: .touchUpInside)
     }
     
 }
 
 extension LMJEmoticonToolBar
 {
-    func selectBtn(selectBtn: UIButton, isNotCallBack: Bool = true)
+    func selectBtn(_ selectBtn: UIButton, isNotCallBack: Bool = true)
     {
-        self.lastSelectedBtn?.enabled = true
-        selectBtn.enabled = false
+        self.lastSelectedBtn?.isEnabled = true
+        selectBtn.isEnabled = false
         self.lastSelectedBtn = selectBtn
         
         if !isNotCallBack
         {
-            selectTypeCallBack?(type: LMJEmoticonToolBarItemType(rawValue: selectBtn.tag)!)
+            selectTypeCallBack?(LMJEmoticonToolBarItemType(rawValue: selectBtn.tag)!)
         }
         
     }

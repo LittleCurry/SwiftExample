@@ -17,35 +17,35 @@ class FirstSecretcodeViewController: BaseViewController {
     }
     
     func getView() -> Void {
-        let button = UIButton.init(type: UIButtonType.Custom)
-        button.frame = CGRectMake(30, 300, WIDTH-60, 44)
+        let button = UIButton.init(type: UIButtonType.custom)
+        button.frame = CGRect(x: 30, y: 300, width: WIDTH-60, height: 44)
         button.clipsToBounds = true
         button.layer.cornerRadius = 5
         button.backgroundColor = RGBA(27, g: 163, b: 233, a: 1)
-        button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-        button.setTitle("确认付款", forState: UIControlState.Normal)
-        button.addTarget(self, action: "surePay", forControlEvents: UIControlEvents.TouchUpInside)
+        button.setTitleColor(UIColor.white, for: UIControlState())
+        button.setTitle("确认付款", for: UIControlState())
+        button.addTarget(self, action: #selector(FirstSecretcodeViewController.surePay), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
     }
     
     func surePay() -> Void {
         let passwordView = PasswordView.init(title: "输入支付密码", detail: "转账200.00元到小李账号")
-        passwordView.show()
-        passwordView.completeHandle = { (inputPwd) in
+        passwordView?.show()
+        passwordView?.completeHandle = { (inputPwd) in
             let hud = MBProgressHUD.init(view: self.view)
-            UIApplication.sharedApplication().keyWindow?.addSubview(hud)
-            hud.labelFont = WORDFONT
-            hud.labelText = "验证中"
-            hud.show(true)
+            UIApplication.shared.keyWindow?.addSubview(hud!)
+            hud?.labelFont = WORDFONT
+            hud?.labelText = "验证中"
+            hud?.show(true)
             // 此处验证密码
-            passwordView.checkPassword({ (isRight) in
+            passwordView?.checkPassword({ (isRight) in
                 if(isRight){
                     // 正确
-                    passwordView.dismiss()
-                    hud.removeFromSuperview()
+                    passwordView?.dismiss()
+                    hud?.removeFromSuperview()
                 }else{
                     // 密码错误
-                    hud.removeFromSuperview()
+                    hud?.removeFromSuperview()
                 }
             })
         }

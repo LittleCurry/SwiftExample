@@ -10,7 +10,7 @@ import UIKit
 
 class FirstGaussViewController: BaseViewController {
     
-    var myImageView = UIImageView.init(frame: UIScreen.mainScreen().bounds)
+    var myImageView = UIImageView.init(frame: UIScreen.main.bounds)
     var effectview = UIVisualEffectView.init();
     
     override func viewDidLoad() {
@@ -21,34 +21,34 @@ class FirstGaussViewController: BaseViewController {
     }
     func getView() -> Void {
         self.navigationItem.title = "gauss";
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "出现", style: UIBarButtonItemStyle.Done, target: self, action: "hideOnecut")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "出现", style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstGaussViewController.hideOnecut))
         self.myImageView.image = UIImage.init(named: "meinv.jpg")
         self.view.addSubview(self.myImageView);
-        let slider = UISlider.init(frame: CGRectMake(20, HEIGHT-60, WIDTH-40, 10))
-        slider.addTarget(self, action: "sliderAction:", forControlEvents: UIControlEvents.ValueChanged)
+        let slider = UISlider.init(frame: CGRect(x: 20, y: HEIGHT-60, width: WIDTH-40, height: 10))
+        slider.addTarget(self, action: "sliderAction:", for: UIControlEvents.valueChanged)
         self.view.addSubview(slider)
-        var blur = UIBlurEffect.init(style: UIBlurEffectStyle.Dark)
+        var blur = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
         self.effectview = UIVisualEffectView.init(effect: blur)
-        self.effectview.frame = CGRectMake(50, 80, WIDTH-100, WIDTH-100);
+        self.effectview.frame = CGRect(x: 50, y: 80, width: WIDTH-100, height: WIDTH-100);
         self.effectview.alpha = 0.8;
         self.view.addSubview(self.effectview)
-        self.view.sendSubviewToBack(self.effectview)
+        self.view.sendSubview(toBack: self.effectview)
     }
     
     func hideOnecut() -> Void {
         if self.navigationItem.rightBarButtonItem?.title == "出现" {
-            self.view.bringSubviewToFront(self.effectview)
+            self.view.bringSubview(toFront: self.effectview)
         }
         if self.navigationItem.rightBarButtonItem?.title == "隐藏" {
-            self.view.sendSubviewToBack(self.effectview);
+            self.view.sendSubview(toBack: self.effectview);
         }
         self.navigationItem.rightBarButtonItem?.title = self.navigationItem.rightBarButtonItem?.title == "出现" ? "隐藏": "出现";
     }
     
-    func sliderAction(aSlider:UISlider) -> Void {
+    func sliderAction(_ aSlider:UISlider) -> Void {
         let aImage = UIImage.init(named: "meinv.jpg")
         let aColor = UIColor.init(white: 1.3-CGFloat(aSlider.value), alpha: CGFloat(aSlider.value)/1.2)
-        self.myImageView.image = aImage?.applyBlurWithRadius(CGFloat(aSlider.value)*30, tintColor: aColor, saturationDeltaFactor: 1.8, maskImage: nil)        
+        self.myImageView.image = aImage?.applyBlur(withRadius: CGFloat(aSlider.value)*30, tintColor: aColor, saturationDeltaFactor: 1.8, maskImage: nil)        
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,7 +12,7 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
     
     var editBtnItem = UIBarButtonItem.init()
     var collectionView:UICollectionView!
-    var items = []
+    var items = [] as! NSArray
     var cellId = "cellId";
     var cellId2 = "cellId2";
     var thumbnailCache:NSMutableDictionary?;
@@ -40,11 +40,11 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
         self.type = 0;
         self.showingSettings = false;
         var error : NSError?
-        let jsonPath = NSBundle.mainBundle().pathForResource("players", ofType: "json")
-        let jsonString = try! NSString.init(contentsOfFile: jsonPath!, encoding: NSUTF8StringEncoding)
-        self.items = try! NSJSONSerialization.JSONObjectWithData(jsonString.dataUsingEncoding(NSUTF8StringEncoding)!, options: NSJSONReadingOptions.MutableContainers) as! NSArray
-        self.settingsView = UIView.init(frame: CGRectMake(0, HEIGHT, WIDTH, HEIGHT-44))
-        self.settingsView?.backgroundColor = UIColor.lightGrayColor()
+        let jsonPath = Bundle.main.path(forResource: "players", ofType: "json")
+        let jsonString = try! NSString.init(contentsOfFile: jsonPath!, encoding: String.Encoding.utf8.rawValue)
+        self.items = try! JSONSerialization.jsonObject(with: jsonString.data(using: String.Encoding.utf8.rawValue)!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSArray as! [Any] as NSArray
+        self.settingsView = UIView.init(frame: CGRect(x: 0, y: HEIGHT, width: WIDTH, height: HEIGHT-44))
+        self.settingsView?.backgroundColor = UIColor.lightGray
         self.view.addSubview(self.settingsView!)
         self.buildSettings()
         
@@ -62,40 +62,40 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
         self.xOffsetLabel?.text = String.init(format: "X offset: %i", Int(xOffset))
         
         
-        self.dialLayout = AWCollectionViewDialLayout.init(radius: radius, andAngularSpacing: angularSpacing, andCellSize: CGSizeMake(240, 100), andAlignment:.WHEELALIGNMENTCENTER, andItemHeight: 100, andXOffset: CGFloat(xOffset))
-        self.collectionView = UICollectionView.init(frame: CGRectMake(0, 100, WIDTH, WIDTH), collectionViewLayout: self.dialLayout!);
+        self.dialLayout = AWCollectionViewDialLayout.init(radius: radius, andAngularSpacing: angularSpacing, andCellSize: CGSize(width: 240, height: 100), andAlignment:.WHEELALIGNMENTCENTER, andItemHeight: 100, andXOffset: CGFloat(xOffset))
+        self.collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 100, width: WIDTH, height: WIDTH), collectionViewLayout: self.dialLayout!);
         self.collectionView.backgroundColor = RGBA(239, g: 239, b: 244, a: 1);
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
 
-        self.collectionView.registerNib(UINib.init(nibName: "dialCell", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: cellId)
-        self.collectionView.registerNib(UINib.init(nibName: "dialCell2", bundle: NSBundle.mainBundle()), forCellWithReuseIdentifier: cellId2)
+        self.collectionView.register(UINib.init(nibName: "dialCell", bundle: Bundle.main), forCellWithReuseIdentifier: cellId)
+        self.collectionView.register(UINib.init(nibName: "dialCell2", bundle: Bundle.main), forCellWithReuseIdentifier: cellId2)
         self.view.addSubview(self.collectionView)
         
-        let editBtnItem = UIBarButtonItem.init(title: "edit", style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSettingsView")
+        let editBtnItem = UIBarButtonItem.init(title: "edit", style: UIBarButtonItemStyle.plain, target: self, action: "toggleSettingsView")
         self.navigationItem.rightBarButtonItem = editBtnItem;
         self.editBtnItem = editBtnItem;
         self.switchExample()
     }
     
     func buildSettings() {
-        let viewArr = NSBundle.mainBundle().loadNibNamed("iphone_settings_view", owner: self, options: nil)
-        var innerView = viewArr[0] as! UIView
+        let viewArr = Bundle.main.loadNibNamed("iphone_settings_view", owner: self, options: nil)
+        var innerView = viewArr?[0] as! UIView
         var frame = innerView.frame
         frame.origin.y = (HEIGHT/2 - frame.size.height/2)/2;
         innerView.frame = frame;
         self.settingsView!.addSubview(innerView)
         self.radiusLabel = innerView.viewWithTag(100) as? UILabel
         self.radiusSlider = innerView.viewWithTag(200) as? UISlider
-        self.radiusSlider?.addTarget(self, action: "updateDialSettings", forControlEvents: UIControlEvents.ValueChanged)
+        self.radiusSlider?.addTarget(self, action: "updateDialSettings", for: UIControlEvents.valueChanged)
         self.angularSpacingLabel = innerView.viewWithTag(101) as? UILabel
         self.angularSpacingSlider = innerView.viewWithTag(201) as? UISlider
-        self.angularSpacingSlider?.addTarget(self, action: "updateDialSettings", forControlEvents: UIControlEvents.ValueChanged)
+        self.angularSpacingSlider?.addTarget(self, action: "updateDialSettings", for: UIControlEvents.valueChanged)
         self.xOffsetLabel = innerView.viewWithTag(102) as? UILabel
         self.xOffsetSlider = innerView.viewWithTag(202) as? UISlider
-        self.xOffsetSlider?.addTarget(self, action: "updateDialSettings", forControlEvents: .ValueChanged)
+        self.xOffsetSlider?.addTarget(self, action: "updateDialSettings", for: .valueChanged)
         self.exampleSwitch = innerView.viewWithTag(203) as? UISegmentedControl
-        self.exampleSwitch?.addTarget(self, action: "switchExample", forControlEvents: .ValueChanged)
+        self.exampleSwitch?.addTarget(self, action: #selector(FirstCircleMenuViewController.switchExample), for: .valueChanged)
     }
     
     func switchExample() {
@@ -104,13 +104,13 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
         var angularSpacing = 0.0
         var xOffset = 0.0
         if(type == 0){
-            self.dialLayout?.cellSize = CGSizeMake(240, 100)
+            self.dialLayout?.cellSize = CGSize(width: 240, height: 100)
 //            self.dialLayout?.wheelType = .WHEELALIGNMENTLEFT
             radius = 300;
             angularSpacing = 18;
             xOffset = 70;
         }else if(type == 1){
-            self.dialLayout?.cellSize = CGSizeMake(260, 50)
+            self.dialLayout?.cellSize = CGSize(width: 260, height: 50)
             // self.dialLayout?.wheelType = .WHEELALIGNMENTCENTER
             radius = 320;
             angularSpacing = 5;
@@ -122,7 +122,7 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
         self.dialLayout?.dialRadius = CGFloat(radius)
         self.angularSpacingLabel?.text = String.init(format: "Angular spacing: %i", Int(angularSpacing))
         self.angularSpacingSlider!.value = Float(angularSpacing / 90)
-        self.dialLayout?.AngularSpacing = CGFloat(angularSpacing)
+        self.dialLayout?.angularSpacing = CGFloat(angularSpacing)
         self.xOffsetLabel?.text = String.init(format: "X offset: %i", Int(xOffset))
         self.xOffsetSlider!.value = Float(xOffset/320)
         self.dialLayout?.offset = CGFloat(xOffset)
@@ -210,32 +210,32 @@ class FirstCircleMenuViewController: BaseViewController, UICollectionViewDataSou
 //    
 //    }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         var cell : UICollectionViewCell?
         if(self.type == 0){
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.cellId, forIndexPath: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellId, for: indexPath)
         }else{
-            cell = collectionView.dequeueReusableCellWithReuseIdentifier(self.cellId2, forIndexPath: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.cellId2, for: indexPath)
         }
-        var aItem : NSDictionary = self.items[indexPath.item] as! NSDictionary
+        let aItem : NSDictionary = self.items[indexPath.item] as! NSDictionary
         print(aItem)
-        var playerName = aItem["name"] as! String
-        var nameLabel = cell?.viewWithTag(101) as! UILabel
+        let playerName = aItem["name"] as! String
+        let nameLabel = cell?.viewWithTag(101) as! UILabel
         nameLabel.text = playerName
         var hexColor = aItem["team-color"] as! String
         
         if(self.type == 0){
-            var borderView = cell?.viewWithTag(102)
+            let borderView = cell?.viewWithTag(102)
             borderView!.layer.borderWidth = 1;
-            borderView!.layer.borderColor = UIColor.redColor().CGColor
-            var imgURL = aItem["picture"] as! String
+            borderView!.layer.borderColor = UIColor.red.cgColor
+            let imgURL = aItem["picture"] as! String
             print(imgURL)
-            var imgView = cell?.viewWithTag(100) as! UIImageView
+            let imgView = cell?.viewWithTag(100) as! UIImageView
             imgView.image = UIImage.init(named: imgURL)
         }
         return cell!

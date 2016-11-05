@@ -23,8 +23,8 @@ class FirstPlayerViewController: BaseViewController {
     func getView() -> Void {
         self.navigationItem.title = "视频播放"
         self.mvPlay = MPMoviePlayerController.init()
-        self.mvPlay?.contentURL = NSURL.init(string: "http://flv2.bn.netease.com/videolib3/1610/09/PIlhF8201/SD/PIlhF8201-mobile.mp4")
-        self.mvPlay?.view.frame = CGRectMake(0, 64, WIDTH, 300)
+        self.mvPlay?.contentURL = URL.init(string: "http://flv2.bn.netease.com/videolib3/1610/09/PIlhF8201/SD/PIlhF8201-mobile.mp4")
+        self.mvPlay?.view.frame = CGRect(x: 0, y: 64, width: WIDTH, height: 300)
         self.view.addSubview((self.mvPlay?.view)!)
         self.mvPlay?.play()
     }

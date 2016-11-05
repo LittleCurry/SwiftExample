@@ -19,7 +19,7 @@ class LMJPackageManager {
     {
         let ids = ["", "default", "emoji", "lxh"]
         
-        for var i = 0; i < ids.count; i++
+        for i in 0 ..< ids.count
         {
             let package = LMJEmoticonPackage(id: ids[i])
 

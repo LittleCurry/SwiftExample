@@ -18,8 +18,8 @@ class FirstMapViewController: BaseViewController {
     
     func getView() -> Void {
         self.navigationItem.title = "Map"
-        let mapView = MAMapView.init(frame: UIScreen.mainScreen().bounds)
-        mapView.showsUserLocation = true
+        let mapView = MAMapView.init(frame: UIScreen.main.bounds)
+        mapView.isShowsUserLocation = true
         self.view.addSubview(mapView)
     }
 

@@ -20,9 +20,9 @@ class FirstHotRenewViewController: BaseViewController {
     
     func getView() -> Void {
         self.navigationItem.title = "JSPatch"
-        self.nameLabel.frame = CGRectMake(30, 200, WIDTH-60, 40)
-        self.nameLabel.backgroundColor = UIColor.cyanColor()
-        self.nameLabel.textAlignment = NSTextAlignment.Center
+        self.nameLabel.frame = CGRect(x: 30, y: 200, width: WIDTH-60, height: 40)
+        self.nameLabel.backgroundColor = UIColor.cyan
+        self.nameLabel.textAlignment = NSTextAlignment.center
         self.nameLabel.font = UIFont.init(name: "Font: Courier-Bold", size: 20)
         self.nameLabel.text = "我是原来的内容"
         self.view.addSubview(self.nameLabel)

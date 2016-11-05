@@ -29,10 +29,10 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
     }
     func getView() -> Void {
         self.navigationItem.title = "明星"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "pushEditView")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(SecondViewController.pushEditView))
         let layout = HMWaterflowLayout.init();
-        layout.HeightBlock = { (sender, index) -> (CGFloat) in
-            let photo = self.playArr[index.item] as!Play;
+        layout.heightBlock = { (sender, index) -> (CGFloat) in
+            let photo = self.playArr[(index?.item)!] as!Play;
             return photo.small_height / photo.small_width * sender;
         }
         layout.columnsCount = 2;
@@ -40,12 +40,12 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         for i in 1...6 {
             // normalhImages
             let image = UIImage.init(named: String.init(format:"%ld.tiff", i));
-            self.normalImages.addObject(image!);
+            self.normalImages.add(image!);
         }
         for i in 7...47 {
             // refreshImages
             let image = UIImage.init(named: String(i)+".tiff");
-            self.refreshImages.addObject(image!);
+            self.refreshImages.add(image!);
         }
         
         self.collectionView = UICollectionView.init(frame: self.view.bounds, collectionViewLayout: layout);
@@ -53,17 +53,17 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
         self.collectionView.contentInset = UIEdgeInsetsMake(navigationBar_H(self.navigationController!), 0, tabBar_H(self.tabBarController!), 0);
-        self.collectionView.registerClass(PlayCollectionViewCell.self, forCellWithReuseIdentifier: playReuseIdentifier);
+        self.collectionView.register(PlayCollectionViewCell.self, forCellWithReuseIdentifier: playReuseIdentifier);
         
         let header = MJRefreshGifHeader.init(refreshingBlock: {
             self.pn = 0;
             self.getData();
         });
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Refreshing);
-        header.setImages(self.refreshImages as [AnyObject], forState: MJRefreshState.Idle);
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
-        header.lastUpdatedTimeLabel.hidden = true;
-        header.stateLabel.hidden = true;
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.refreshing);
+        header?.setImages(self.refreshImages as [AnyObject], for: MJRefreshState.idle);
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.pulling);
+        header?.lastUpdatedTimeLabel.isHidden = true;
+        header?.stateLabel.isHidden = true;
         self.collectionView.mj_header = header;
         
         let footer = MJRefreshAutoNormalFooter.init {
@@ -77,30 +77,30 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
     func pushEditView() -> Void {
         self.downView = DownEditView.init(arr: self.listArr)
         for view:UIView in self.downView.blackView.subviews {
-            if view.isKindOfClass(UIButton) {
-                var button = view as! UIButton
-                button.addTarget(self, action: "clickEditButton:", forControlEvents: UIControlEvents.TouchUpInside);
+            if view.isKind(of: UIButton.self) {
+                let button = view as! UIButton
+                button.addTarget(self, action: #selector(SecondViewController.clickEditButton(_:)), for: UIControlEvents.touchUpInside);
             }
         }
-        UIApplication.sharedApplication().keyWindow?.addSubview(self.downView)
+        UIApplication.shared.keyWindow?.addSubview(self.downView)
     }
     
-    func clickEditButton(button:UIButton) -> Void {
+    func clickEditButton(_ button:UIButton) -> Void {
         let dic = self.listArr[button.tag-888] as NSDictionary
-        self.navigationItem.title = dic.valueForKey("title") as! String
-        self.tag1 = dic.valueForKey("title") as! String
+        self.navigationItem.title = dic.value(forKey: "title") as! String
+        self.tag1 = dic.value(forKey: "title") as! String
         self.tag2 = "全部"
         self.pn = 0
         self.getData()
-        self.downView.removeDownEditView()
+        self.downView.remove()
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.playArr.count;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(playReuseIdentifier, forIndexPath: indexPath) as! PlayCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: playReuseIdentifier, for: indexPath) as! PlayCollectionViewCell
         cell.play = self.playArr[indexPath.item] as?Play;
         return cell
     }
@@ -111,7 +111,7 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
         NetHandler.getDataWithUrl(urlstr, parameters: dic, tokenKey: "", tokenValue: "", ifCaches: false, cachesData: { (cacheData) in
             //
             }, success: { (successData) in
-                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary;
+                let dict = try! JSONSerialization.jsonObject(with: successData!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary;
                 print(dict)
                 let imgArr = dict["imgs"] as! NSMutableArray;
                 if(self.pn == 0){
@@ -119,7 +119,7 @@ class SecondViewController: BaseViewController, UICollectionViewDelegate, UIColl
                 }
                 for oneDic in imgArr {
                     let play = Play.objectWithDictionary(oneDic as! [String : AnyObject]) as? Play
-                    self.playArr.addObject(play!);
+                    self.playArr.add(play!);
                 }
                 self.collectionView.reloadData();
                 

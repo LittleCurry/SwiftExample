@@ -9,8 +9,8 @@
 import UIKit
 
 class FirstOriginBlockViewcontroller: BaseViewController {
-    var myButton = UIButton.init(type: UIButtonType.System);
-    var myLabel = UILabel.init(frame: CGRectMake(50, 300, 200, 30));
+    var myButton = UIButton.init(type: UIButtonType.system);
+    var myLabel = UILabel.init(frame: CGRect(x: 50, y: 300, width: 200, height: 30));
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,9 @@ class FirstOriginBlockViewcontroller: BaseViewController {
     }
     
     func getView() -> Void {
-        myButton.frame = CGRectMake(50, 150, 200, 30);
-        myButton.setTitle("123", forState: UIControlState.Normal)
-        myButton.addTarget(self, action: "nextAction", forControlEvents: UIControlEvents.TouchUpInside);
+        myButton.frame = CGRect(x: 50, y: 150, width: 200, height: 30);
+        myButton.setTitle("123", for: UIControlState())
+        myButton.addTarget(self, action: #selector(FirstOriginBlockViewcontroller.nextAction), for: UIControlEvents.touchUpInside);
         self.view.addSubview(self.myButton)
         self.myLabel.text = "原来的";
         self.view.addSubview(self.myLabel)
@@ -34,7 +34,7 @@ class FirstOriginBlockViewcontroller: BaseViewController {
         self.navigationController!.pushViewController(blockInfo,animated:true)
     }
     
-    func someFunctionThatTakesAClosure(string:String) -> Void {
+    func someFunctionThatTakesAClosure(_ string:String) -> Void {
         // function body goes here
        self.myLabel.text = string
     }

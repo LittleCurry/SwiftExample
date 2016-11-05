@@ -12,8 +12,8 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
-    var searchBar = UISearchBar.init(frame: CGRectMake(0, 307, 240, 30))
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
+    var searchBar = UISearchBar.init(frame: CGRect(x: 0, y: 307, width: 240, height: 30))
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.grouped);
     let cellName1 = "asdaserad324";
     let cellName2 = "r90asdferwuuf";
     let cellName3 = "aschasdfd78ads";
@@ -40,13 +40,13 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         // 修复侧滑回退功能消失的问题
         // self.navigationController!.interactivePopGestureRecognizer!.enabled = true
         self.navigationController!.interactivePopGestureRecognizer!.delegate = self
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "navigationBar_bg"), forBarMetrics: UIBarMetrics.Compact)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "scan.png"), style: UIBarButtonItemStyle.Done, target: self, action: "scanAction")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message.png"), style: UIBarButtonItemStyle.Done, target: self, action: "messageAction")
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: "navigationBar_bg"), for: UIBarMetrics.compact)
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "scan.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstStoreHomeViewController.scanAction))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstStoreHomeViewController.messageAction))
         self.searchBar.placeholder = "搜索商铺/店铺"
         for subView:UIView in self.searchBar.subviews {
             for grandSonView:UIView in subView.subviews {
-                if grandSonView.isKindOfClass(NSClassFromString("UISearchBarBackground")!) {
+                if grandSonView.isKind(of: NSClassFromString("UISearchBarBackground")!) {
                     grandSonView.alpha = 0
                 }
             }
@@ -56,33 +56,33 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         for i in 1...6 {
             // normalhImages
             let image = UIImage.init(named: String.init(format:"%ld.tiff", i));
-            self.normalImages.addObject(image!);
+            self.normalImages.add(image!);
         }
         for i in 7...47 {
             // refreshImages
             let image = UIImage.init(named: String(i)+".tiff");
-            self.refreshImages.addObject(image!);
+            self.refreshImages.add(image!);
         }
         self.myTableView.contentInset = UIEdgeInsetsMake(-35, 0, 49-20-20, 0);
         self.myTableView.tableFooterView = UIView.init();
-        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
-        self.myTableView.registerClass(StoreHomeTableViewCell1.self, forCellReuseIdentifier: self.cellName1)
-        self.myTableView.registerClass(StoreHomeTableViewCell2.self, forCellReuseIdentifier: self.cellName2)
-        self.myTableView.registerClass(StoreHomeTableViewCell3.self, forCellReuseIdentifier: self.cellName3)
-        self.myTableView.registerClass(StoreHomeTableViewCell4.self, forCellReuseIdentifier: self.cellName4)
-        self.myTableView.registerClass(StoreHomeTableViewCell5.self, forCellReuseIdentifier: self.cellName5)
-        self.myTableView.registerClass(StoreHomeTableViewCell6.self, forCellReuseIdentifier: self.cellName6)
+        self.myTableView.register(StoreHomeTableViewCell1.self, forCellReuseIdentifier: self.cellName1)
+        self.myTableView.register(StoreHomeTableViewCell2.self, forCellReuseIdentifier: self.cellName2)
+        self.myTableView.register(StoreHomeTableViewCell3.self, forCellReuseIdentifier: self.cellName3)
+        self.myTableView.register(StoreHomeTableViewCell4.self, forCellReuseIdentifier: self.cellName4)
+        self.myTableView.register(StoreHomeTableViewCell5.self, forCellReuseIdentifier: self.cellName5)
+        self.myTableView.register(StoreHomeTableViewCell6.self, forCellReuseIdentifier: self.cellName6)
         let header = MJRefreshGifHeader.init(refreshingBlock: {
 //            self.count = 0;
 //            self.getData();
         });
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Refreshing);
-        header.setImages(self.refreshImages as [AnyObject], forState: MJRefreshState.Idle);
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
-        header.lastUpdatedTimeLabel.hidden = true;
-        header.stateLabel.hidden = true;
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.refreshing);
+        header?.setImages(self.refreshImages as [AnyObject], for: MJRefreshState.idle);
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.pulling);
+        header?.lastUpdatedTimeLabel.isHidden = true;
+        header?.stateLabel.isHidden = true;
 //        self.myTableView.mj_header = header;
         
         let footer = MJRefreshAutoNormalFooter.init {
@@ -92,74 +92,74 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
 //        self.myTableView.mj_footer = footer;
         self.view.addSubview(self.myTableView);
         
-        self.topBtn = UIButton.init(type: .Custom)
-        self.topBtn?.frame = CGRectMake(WIDTH-60, HEIGHT-60, 40, 40)
-        self.topBtn?.setBackgroundImage(UIImage.init(named: "goTop.png"), forState: UIControlState.Normal)
-        self.topBtn?.addTarget(self, action: "goTop", forControlEvents: UIControlEvents.TouchUpInside)
-        self.topBtn?.hidden = true
+        self.topBtn = UIButton.init(type: .custom)
+        self.topBtn?.frame = CGRect(x: WIDTH-60, y: HEIGHT-60, width: 40, height: 40)
+        self.topBtn?.setBackgroundImage(UIImage.init(named: "goTop.png"), for: UIControlState())
+        self.topBtn?.addTarget(self, action: #selector(FirstStoreHomeViewController.goTop), for: UIControlEvents.touchUpInside)
+        self.topBtn?.isHidden = true
         self.view.addSubview(self.topBtn!)
-        self.loadAvataView = RCDraggableButton.init(inKeyWindowWithFrame: CGRectMake(0, 333.5, 60, 60))
-        self.loadAvataView!.setBackgroundImage(UIImage.init(named: "stopAir.png"), forState: UIControlState.Normal)
+        self.loadAvataView = RCDraggableButton.init(inKeyWindowWithFrame: CGRect(x: 0, y: 333.5, width: 60, height: 60))
+        self.loadAvataView!.setBackgroundImage(UIImage.init(named: "stopAir.png"), for: UIControlState())
         self.loadAvataView?.longPressBlock = { (avatar) in
             print("longPressBlock")
         }
 //        self.loadAvataView!.adjustsImageWhenHighlighted = false // 高亮图变色
      
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1402/221/421883372/88115/8cc2231a/55815835N35a44559.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t976/208/1221678737/91179/5d7143d5/5588e849Na2c20c1a.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t805/241/1199341035/289354/8648fe55/5581211eN7a2ebb8a.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1606/199/444346922/48930/355f9ef/55841cd0N92d9fa7c.jpg")!)
-        self.adUrlArr.addObject(NSURL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1609/58/409100493/49144/7055bec5/557e76bfNc065aeaf.jpg")!)
-        self.cycleScrollView = SDCycleScrollView.init(frame: CGRectMake(0, 64, WIDTH, 180), imageURLsGroup: self.adUrlArr as [AnyObject])
+        self.adUrlArr.add(URL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1402/221/421883372/88115/8cc2231a/55815835N35a44559.jpg")!)
+        self.adUrlArr.add(URL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t976/208/1221678737/91179/5d7143d5/5588e849Na2c20c1a.jpg")!)
+        self.adUrlArr.add(URL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t805/241/1199341035/289354/8648fe55/5581211eN7a2ebb8a.jpg")!)
+        self.adUrlArr.add(URL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1606/199/444346922/48930/355f9ef/55841cd0N92d9fa7c.jpg")!)
+        self.adUrlArr.add(URL.init(string: "http://img30.360buyimg.com/mobilecms/s480x180_jfs/t1609/58/409100493/49144/7055bec5/557e76bfNc065aeaf.jpg")!)
+        self.cycleScrollView = SDCycleScrollView.init(frame: CGRect(x: 0, y: 64, width: WIDTH, height: 180), imageURLsGroup: self.adUrlArr as [AnyObject])
         self.cycleScrollView!.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
         self.cycleScrollView!.delegate = self;
         self.cycleScrollView!.autoScrollTimeInterval = 3.5;
-        self.cycleScrollView!.dotColor = UIColor.whiteColor();
-        self.cycleScrollView!.pageControlDotSize = CGSizeMake(4, 4);
+        self.cycleScrollView!.dotColor = UIColor.white;
+        self.cycleScrollView!.pageControlDotSize = CGSize(width: 4, height: 4);
         self.cycleScrollView!.titleLabelBackgroundColor = RGBA(121, g: 121, b: 121, a: 0.2);
-        self.cycleScrollView!.titleLabelTextColor = UIColor.yellowColor();
+        self.cycleScrollView!.titleLabelTextColor = UIColor.yellow;
     }
     
-    func cycleScrollView(cycleScrollView: SDCycleScrollView!, didSelectItemAtIndex index: Int) {
+    func cycleScrollView(_ cycleScrollView: SDCycleScrollView!, didSelectItemAt index: Int) {
         NSLog("---点击了第%ld张图片", index);
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.tintColor = UIColor.whiteColor();
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:"bigShadow.png"), forBarMetrics: UIBarMetrics.Compact);
+        self.navigationController!.navigationBar.tintColor = UIColor.white;
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:"bigShadow.png"), for: UIBarMetrics.compact);
         self.navigationController!.navigationBar.layer.masksToBounds = true;
         
-        self.loadAvataView!.hidden = false;
+        self.loadAvataView!.isHidden = false;
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: ""), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:""), forBarMetrics: UIBarMetrics.Compact)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.init(named: ""), for: UIBarMetrics.default)
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage.init(named:""), for: UIBarMetrics.compact)
         self.navigationController!.navigationBar.layer.masksToBounds = false;
         
-        self.loadAvataView!.hidden = true;
+        self.loadAvataView!.isHidden = true;
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
             return 180
         }
         return 0.1
     }
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 0 {
             return self.cycleScrollView
         }
         return UIView.init()
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
             return 220
         }
@@ -169,62 +169,62 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         return 150*3+110;
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 6
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            var cell:StoreHomeTableViewCell1 = tableView.dequeueReusableCellWithIdentifier(self.cellName1, forIndexPath: indexPath) as! StoreHomeTableViewCell1
+            var cell:StoreHomeTableViewCell1 = tableView.dequeueReusableCell(withIdentifier: self.cellName1, for: indexPath) as! StoreHomeTableViewCell1
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell1.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName1)
+                cell = StoreHomeTableViewCell1.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName1)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         case 1:
-            var cell:StoreHomeTableViewCell2 = tableView.dequeueReusableCellWithIdentifier(self.cellName2, forIndexPath: indexPath) as! StoreHomeTableViewCell2
+            var cell:StoreHomeTableViewCell2 = tableView.dequeueReusableCell(withIdentifier: self.cellName2, for: indexPath) as! StoreHomeTableViewCell2
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell2.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName2)
+                cell = StoreHomeTableViewCell2.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName2)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         case 2:
-            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCellWithIdentifier(self.cellName3, forIndexPath: indexPath) as! StoreHomeTableViewCell3
+            var cell:StoreHomeTableViewCell3 = tableView.dequeueReusableCell(withIdentifier: self.cellName3, for: indexPath) as! StoreHomeTableViewCell3
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName3)
+                cell = StoreHomeTableViewCell3.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName3)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         case 3:
-            var cell:StoreHomeTableViewCell4 = tableView.dequeueReusableCellWithIdentifier(self.cellName4, forIndexPath: indexPath) as! StoreHomeTableViewCell4
+            var cell:StoreHomeTableViewCell4 = tableView.dequeueReusableCell(withIdentifier: self.cellName4, for: indexPath) as! StoreHomeTableViewCell4
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell4.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName4)
+                cell = StoreHomeTableViewCell4.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName4)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         case 4:
-            var cell:StoreHomeTableViewCell5 = tableView.dequeueReusableCellWithIdentifier(self.cellName5, forIndexPath: indexPath) as! StoreHomeTableViewCell5
+            var cell:StoreHomeTableViewCell5 = tableView.dequeueReusableCell(withIdentifier: self.cellName5, for: indexPath) as! StoreHomeTableViewCell5
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell5.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName5)
+                cell = StoreHomeTableViewCell5.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName5)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         case 5:
-            var cell:StoreHomeTableViewCell6 = tableView.dequeueReusableCellWithIdentifier(self.cellName6, forIndexPath: indexPath) as! StoreHomeTableViewCell6
+            var cell:StoreHomeTableViewCell6 = tableView.dequeueReusableCell(withIdentifier: self.cellName6, for: indexPath) as! StoreHomeTableViewCell6
             if (cell.isEqual(nil)) {
-                cell = StoreHomeTableViewCell6.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName6)
+                cell = StoreHomeTableViewCell6.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName6)
             }
-            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
             break
         default:
@@ -233,8 +233,8 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         return UITableViewCell.init()
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
@@ -246,27 +246,27 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
         //
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event);
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event);
         self.searchBar.resignFirstResponder()
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.lastContentOffset = scrollView.contentOffset.y
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.y < lastContentOffset ){
             //向上
-            self.topBtn!.hidden = true;
+            self.topBtn!.isHidden = true;
         }else if(scrollView.contentOffset.y > lastContentOffset){
             //向下
-            self.topBtn!.hidden = false;
+            self.topBtn!.isHidden = false;
         }
     }
     
     func goTop() -> Void {
-        self.myTableView.setContentOffset(CGPointMake(0, 35), animated: true)
+        self.myTableView.setContentOffset(CGPoint(x: 0, y: 35), animated: true)
     }
     
     override func didReceiveMemoryWarning() {

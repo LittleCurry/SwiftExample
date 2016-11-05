@@ -19,46 +19,47 @@ class FirstApeOpenViewController: BaseViewController {
     func getView() {
         self.navigationItem.title = "Ape展开"
         
-        let apeLabel = UILabel.init(frame: CGRectMake(0, 0, 40, 40))
+        let apeLabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         apeLabel.text = "Tap"
-        apeLabel.textColor = UIColor.whiteColor()
-        apeLabel.textAlignment = NSTextAlignment.Center;
+        apeLabel.textColor = UIColor.white
+        apeLabel.textAlignment = NSTextAlignment.center;
         apeLabel.layer.cornerRadius = apeLabel.frame.size.height / 2;
-        apeLabel.backgroundColor = UIColor.lightGrayColor();
+        apeLabel.backgroundColor = UIColor.lightGray;
         apeLabel.clipsToBounds = true;
-        let downMenuButton = DWBubbleMenuButton.init(frame: CGRectMake(100, 100, apeLabel.frame.size.width, apeLabel.frame.size.height), expansionDirection:ExpansionDirection.DirectionDown)
-        downMenuButton.homeButtonView = apeLabel;
-        downMenuButton.addButtons(self.createDemoButtonArray() as [AnyObject])
-        self.view.addSubview(downMenuButton)
+        let downMenuButton = DWBubbleMenuButton.init(frame: CGRect(x: 100, y: 100, width: apeLabel.frame.size.width, height: apeLabel.frame.size.height), expansionDirection:ExpansionDirection.DirectionDown)
+        downMenuButton?.homeButtonView = apeLabel;
+        downMenuButton?.addButtons(self.createDemoButtonArray() as [AnyObject])
+        self.view.addSubview(downMenuButton!)
     }
     
     func createDemoButtonArray() -> NSArray {
         let buttonsMutable : NSMutableArray = []
         var i = 0
         for title in ["A", "B", "C", "D", "E", "F"] {
-            let button = UIButton.init(type: .System)
-            button.setTitleColor(UIColor.whiteColor(), forState: .Normal)
-            button.setTitle(title, forState: .Normal)
-            button.frame = CGRectMake(0, 0, 30, 30)
+            let button = UIButton.init(type: .system)
+            button.setTitleColor(UIColor.white, for: UIControlState())
+            button.setTitle(title, for: UIControlState())
+            button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             button.layer.cornerRadius = PART_H(button)/2
-            button.backgroundColor = UIColor.lightGrayColor()
+            button.backgroundColor = UIColor.lightGray
             button.clipsToBounds = true
-            button.tag = i++
-            button.addTarget(self, action: "test:", forControlEvents: UIControlEvents.TouchUpInside)
-            buttonsMutable.addObject(button)
+            i+=1
+            button.tag = i
+            button.addTarget(self, action: #selector(FirstApeOpenViewController.test(_:)), for: UIControlEvents.touchUpInside)
+            buttonsMutable.add(button)
         }
         return buttonsMutable.copy() as! NSArray
     }
     
-    func test(button:UIButton) -> Void {
+    func test(_ button:UIButton) -> Void {
         NSLog("Button tapped, tag: %ld", button.tag)
     }
     
-    func createButtonWithName(imageName:NSString) -> UIButton {
-        let button = UIButton.init(type: UIButtonType.System)
-        button.setImage(UIImage.init(named: imageName as String), forState: UIControlState.Normal)
+    func createButtonWithName(_ imageName:NSString) -> UIButton {
+        let button = UIButton.init(type: UIButtonType.system)
+        button.setImage(UIImage.init(named: imageName as String), for: UIControlState())
         button.sizeToFit()
-        button.addTarget(self, action: "test:", forControlEvents: .TouchUpInside)
+        button.addTarget(self, action: #selector(FirstApeOpenViewController.test(_:)), for: .touchUpInside)
         return button
     }
 

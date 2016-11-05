@@ -10,7 +10,7 @@ import UIKit
 
 class FirstHurlCardViewController: BaseViewController, SSStackedViewDelegate {
     
-    var stackView = SSStackedPageView.init(frame: CGRectMake(20, 100, WIDTH-40, HEIGHT-100))
+    var stackView = SSStackedPageView.init(frame: CGRect(x: 20, y: 100, width: WIDTH-40, height: HEIGHT-100))
     var views:NSMutableArray = [];
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,33 +24,33 @@ class FirstHurlCardViewController: BaseViewController, SSStackedViewDelegate {
         self.stackView.pagesHaveShadows = true;
         self.view.addSubview(self.stackView)
         for i in 0...4 {
-            let thisView = UIImageView.init(frame: CGRectMake(0, 0, 200, 100))
-            thisView.userInteractionEnabled = true
+            let thisView = UIImageView.init(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+            thisView.isUserInteractionEnabled = true
             thisView.image = UIImage.init(named: String.init(format: "bankcard%ld.jpg", i+1))
-            self.views.addObject(thisView)
+            self.views.add(thisView)
         }
     }
     
     // SSStackedViewDelegate
     // 设置当前页的序号
-    func stackView(stackView: SSStackedPageView!, pageForIndex index: Int) -> UIView! {
+    func stackView(_ stackView: SSStackedPageView!, pageFor index: Int) -> UIView! {
         var thisView = stackView.dequeueReusablePage()
         if (thisView == nil) {
-            thisView = self.views.objectAtIndex(index) as! UIView
-            thisView.backgroundColor = UIColor.getRandomColor()
-            thisView.layer.cornerRadius = 5;
-            thisView.layer.masksToBounds = true
+            thisView = self.views.object(at: index) as! UIView
+            thisView?.backgroundColor = UIColor.getRandom()
+            thisView?.layer.cornerRadius = 5;
+            thisView?.layer.masksToBounds = true
         }
         return thisView
     }
     
     // 总页数
-    func numberOfPagesForStackView(stackView: SSStackedPageView!) -> Int {
+    func numberOfPages(forStackView stackView: SSStackedPageView!) -> Int {
         return self.views.count
     }
     
     // 点击页面
-    func stackView(stackView: SSStackedPageView!, selectedPageAtIndex index: Int) {
+    func stackView(_ stackView: SSStackedPageView!, selectedPageAt index: Int) {
         NSLog("selected page: %i",Int(index))
     }
     

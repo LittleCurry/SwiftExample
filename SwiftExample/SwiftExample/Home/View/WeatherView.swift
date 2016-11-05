@@ -18,27 +18,27 @@ class WeatherView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.weekLabel = UILabel.init(frame: CGRectMake(0, 0, frame.size.width, frame.size.height/8));
-        self.weatherImage = UIImageView.init(frame: CGRectMake(frame.size.width/2-30, frame.size.height/8, 60, 81))
-        self.temperatureLabel = UILabel.init(frame: CGRectMake(0, Y(self.weatherImage!)+PART_H(self.weatherImage!), frame.size.width, 30));
-        self.cloudLabel = UILabel.init(frame: CGRectMake(0, Y(self.temperatureLabel!)+PART_H(self.temperatureLabel!), frame.size.width, 14));
-        self.windLabel = UILabel.init(frame: CGRectMake(0, Y(self.cloudLabel!)+PART_H(self.cloudLabel!), frame.size.width, 14));
+        self.weekLabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height/8));
+        self.weatherImage = UIImageView.init(frame: CGRect(x: frame.size.width/2-30, y: frame.size.height/8, width: 60, height: 81))
+        self.temperatureLabel = UILabel.init(frame: CGRect(x: 0, y: Y(self.weatherImage!)+PART_H(self.weatherImage!), width: frame.size.width, height: 30));
+        self.cloudLabel = UILabel.init(frame: CGRect(x: 0, y: Y(self.temperatureLabel!)+PART_H(self.temperatureLabel!), width: frame.size.width, height: 14));
+        self.windLabel = UILabel.init(frame: CGRect(x: 0, y: Y(self.cloudLabel!)+PART_H(self.cloudLabel!), width: frame.size.width, height: 14));
         
-        self.weekLabel?.textAlignment = NSTextAlignment.Center
-        self.weekLabel?.textColor = UIColor.whiteColor()
-        self.weekLabel?.font = UIFont.systemFontOfSize(14)
+        self.weekLabel?.textAlignment = NSTextAlignment.center
+        self.weekLabel?.textColor = UIColor.white
+        self.weekLabel?.font = UIFont.systemFont(ofSize: 14)
         
-        self.temperatureLabel?.textAlignment = NSTextAlignment.Center
-        self.temperatureLabel?.textColor = UIColor.whiteColor()
-        self.temperatureLabel?.font = UIFont.systemFontOfSize(22)
+        self.temperatureLabel?.textAlignment = NSTextAlignment.center
+        self.temperatureLabel?.textColor = UIColor.white
+        self.temperatureLabel?.font = UIFont.systemFont(ofSize: 22)
         
-        self.cloudLabel?.textAlignment = NSTextAlignment.Center
-        self.cloudLabel?.textColor = UIColor.whiteColor()
-        self.cloudLabel?.font = UIFont.systemFontOfSize(12)
+        self.cloudLabel?.textAlignment = NSTextAlignment.center
+        self.cloudLabel?.textColor = UIColor.white
+        self.cloudLabel?.font = UIFont.systemFont(ofSize: 12)
         
-        self.windLabel?.textAlignment = NSTextAlignment.Center
-        self.windLabel?.textColor = UIColor.whiteColor()
-        self.windLabel?.font = UIFont.systemFontOfSize(12)
+        self.windLabel?.textAlignment = NSTextAlignment.center
+        self.windLabel?.textColor = UIColor.white
+        self.windLabel?.font = UIFont.systemFont(ofSize: 12)
         
         self.addSubview(self.weekLabel!);
         self.addSubview(self.weatherImage!);

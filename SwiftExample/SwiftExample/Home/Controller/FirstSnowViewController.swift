@@ -18,8 +18,8 @@ class FirstSnowViewController: BaseViewController {
     
     func getView() {
         self.navigationItem.title = "飘浮的雪花"
-        self.view.backgroundColor = UIColor.lightGrayColor()
-        YFAnimationManager.shareInstancetype().showAnimationInView(self.view, withAnimationStyle: YFAnimationStyleOfSnow)
+        self.view.backgroundColor = UIColor.lightGray
+        YFAnimationManager.shareInstancetype().showAnimation(in: self.view, with: YFAnimationStyleOfSnow)
     }
     
     override func didReceiveMemoryWarning() {

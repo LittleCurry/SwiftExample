@@ -19,9 +19,13 @@ class PlayCollectionViewCell: UICollectionViewCell {
                 _play = newPlay;
             }
             self.backgroundColor = RGBA(CGFloat(arc4random()%255), g: CGFloat(arc4random()%255), b: CGFloat(arc4random()%255), a: 0.6);
-            self.photoImage?.sd_setImageWithURL(newPlay!.image_url, placeholderImage: nil, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
-                                            //
-                                        })
+            self.photoImage?.sd_setImage(withURL: newPlay!.image_url, placeholderImage: nil, options: SDWebImageOptions.continueInBackground, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
+                //
+            })
+            
+//            self.photoImage?.sd_setImage(withURL: newPlay!.image_url, placeholderImage: nil, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
+//                
+//            })
             self.titleLabel?.text = newPlay?.title;
         }
         get{
@@ -33,7 +37,7 @@ class PlayCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         self.photoImage = UIImageView.init();
         self.titleLabel = UILabel.init();
-        self.titleLabel?.textAlignment = NSTextAlignment.Center;
+        self.titleLabel?.textAlignment = NSTextAlignment.center;
         self.contentView.addSubview(self.photoImage!);
         self.contentView.addSubview(self.titleLabel!);
         
@@ -42,9 +46,9 @@ class PlayCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func applyLayoutAttributes(layoutAttributes: UICollectionViewLayoutAttributes) {
-        self.photoImage?.frame = CGRectMake(0, 0, layoutAttributes.size.width, layoutAttributes.size.height-20);
-        self.titleLabel?.frame = CGRectMake(0, layoutAttributes.size.height-20, layoutAttributes.size.width, 20);
+    override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
+        self.photoImage?.frame = CGRect(x: 0, y: 0, width: layoutAttributes.size.width, height: layoutAttributes.size.height-20);
+        self.titleLabel?.frame = CGRect(x: 0, y: layoutAttributes.size.height-20, width: layoutAttributes.size.width, height: 20);
     }
     
     

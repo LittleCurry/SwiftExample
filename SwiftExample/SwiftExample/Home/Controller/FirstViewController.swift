@@ -10,10 +10,10 @@ import UIKit
 import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
-    // 这是写属性的地方 
+    // 这是写属性的地方
     var nameArr = ["navigationBar渐变", "聊天界面", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "推荐影片", "渐隐文字", "打印文字", "拼图", "2048", "浏览卡片", "抽卡效果", "抖动菜单", "渐变色", "折卡效果", "卡牌拖动", "摇一摇", "ape展开", "余额跳动", "水平滚动布局", "发散菜单", "漂浮的雪花", "水波"];
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
-    var clearLabel = UILabel.init(frame: CGRectMake(WIDTH-115, 450, 100, 50))
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.plain);
+    var clearLabel = UILabel.init(frame: CGRect(x: WIDTH-115, y: 450, width: 100, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,36 +29,36 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
         self.view.addSubview(self.myTableView);
-        self.clearLabel.textAlignment = NSTextAlignment.Right
-        self.clearLabel.textColor = UIColor.redColor()
-        self.clearLabel.font = UIFont.systemFontOfSize(14)
-        self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+        self.clearLabel.textAlignment = NSTextAlignment.right
+        self.clearLabel.textColor = UIColor.red
+        self.clearLabel.font = UIFont.systemFont(ofSize: 14)
+        self.clearLabel.text = String(format: "%.2fM", SDImageCache.shared().checkTmpSize())
         self.myTableView.addSubview(self.clearLabel)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+    override func viewWillAppear(_ animated: Bool) {
+        self.clearLabel.text = String(format: "%.2fM", SDImageCache.shared().checkTmpSize())
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArr.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = "qweeqwqghghggnklhlhwdaeqwe";
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellName);
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellName);
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
+            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: cellName)
         }
         cell!.textLabel?.text = self.nameArr[indexPath.row];
         return cell!;
     }
 
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
             let firstInfoVC = FirstInfoViewController.init();
@@ -105,14 +105,14 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             break;
         case 9:
             let hud = MBProgressHUD.init(view: self.view)
-            UIApplication.sharedApplication().keyWindow!.addSubview(hud)
-            hud.labelFont = UIFont.systemFontOfSize(15);
-            hud.labelText = "清理中...";
-            hud.show(true)
-            SDImageCache.sharedImageCache().clearDiskOnCompletion({
-                self.clearLabel.text = String(format: "%.2fM", SDImageCache.sharedImageCache().checkTmpSize())
+            UIApplication.shared.keyWindow!.addSubview(hud!)
+            hud?.labelFont = UIFont.systemFont(ofSize: 15);
+            hud?.labelText = "清理中...";
+            hud?.show(true)
+            SDImageCache.shared().clearDisk(onCompletion: {
+                self.clearLabel.text = String(format: "%.2fM", SDImageCache.shared().checkTmpSize())
                 sleep(1)
-                hud.removeFromSuperview()
+                hud?.removeFromSuperview()
             })
             break;
         case 10:
@@ -187,7 +187,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let halfCircleStoryBoard = UIStoryboard.init(name: "YFHalfCircleLayoutViewController", bundle: nil)
             var halfCircleVC  = halfCircleStoryBoard.instantiateInitialViewController()
             if halfCircleVC == nil {
-                halfCircleVC = halfCircleStoryBoard.instantiateViewControllerWithIdentifier("YFHalfCircleLayoutViewController")
+                halfCircleVC = halfCircleStoryBoard.instantiateViewController(withIdentifier: "YFHalfCircleLayoutViewController")
             }
             halfCircleVC!.navigationItem.title = "圆形菜单"
             halfCircleVC!.hidesBottomBarWhenPushed = true;
@@ -229,7 +229,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let rgCardStoryBoard = UIStoryboard.init(name: "RGCardLayoutViewController", bundle: nil)
             var rgCardVC  = rgCardStoryBoard.instantiateInitialViewController()
             if rgCardVC == nil {
-                rgCardVC = rgCardStoryBoard.instantiateViewControllerWithIdentifier("RGCardLayoutViewController")
+                rgCardVC = rgCardStoryBoard.instantiateViewController(withIdentifier: "RGCardLayoutViewController")
             }
             rgCardVC!.title = "浏览卡片"
             rgCardVC!.hidesBottomBarWhenPushed = true;
@@ -306,27 +306,30 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     func scanAction() -> Void {
         if (self.validateCamera() && self.canUseCamera()) {
             let qrVC = QRViewController.init();
-            let block = { (resultUrl)  in
-                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).showWithBlock(nil);
+            qrVC.qrUrlBlock = { (resultUrl)  in
+                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).show(nil);
             }
-            qrVC.qrUrlBlock = block
+//            let block = { (resultUrl)  in
+//                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).show(nil);
+//            }
+//            qrVC.qrUrlBlock = block
             qrVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(qrVC, animated: true)
         }
     }
     
     func validateCamera() -> Bool {
-        return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.Rear)
+        return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.rear)
     }
     
     func canUseCamera() -> Bool {
-        let authStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo);
-        if (authStatus == AVAuthorizationStatus.Restricted || authStatus == AVAuthorizationStatus.Denied) {
+        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo);
+        if (authStatus == AVAuthorizationStatus.restricted || authStatus == AVAuthorizationStatus.denied) {
             
             let block = { (index:Int)  in
                 switch index {
                 case 0:
-                    UIApplication.sharedApplication().openURL(NSURL.init(string: UIApplicationOpenSettingsURLString)!)
+                    UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
                     break;
                 case 1:
                     NSLog("取消")
@@ -336,7 +339,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
                 }
             }
             
-            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.Normal, block), MMItemMake("取消", MMItemType.Highlight, block)]).showWithBlock(nil)
+            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.normal, block), MMItemMake("取消", MMItemType.highlight, block)]).show(nil)
             return false;
         }
         return true;

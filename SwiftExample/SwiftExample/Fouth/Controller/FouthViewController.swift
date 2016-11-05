@@ -12,7 +12,7 @@ import MediaPlayer
 class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
     var nameArr = ["📈折线图", "📊柱状图", "○圆形图", "⭕️圆饼图"];
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.plain);
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,26 +29,26 @@ class FouthViewController: BaseViewController, UITableViewDelegate, UITableViewD
         view.addSubview(myTableView);
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArr.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = "qweqweqwe";
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellName);
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellName);
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
+            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: cellName)
         }
         cell?.textLabel?.text = nameArr[indexPath.row];
         return cell!;
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
             let fouthLineVC = FouthLineViewController.init();

@@ -11,7 +11,7 @@ import UIKit
 class FirstGraduallyColorViewController: BaseViewController {
     
     var gradientLayer = CAGradientLayer.init()
-    var timer = NSTimer.init()
+    var timer = Timer.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,31 +22,31 @@ class FirstGraduallyColorViewController: BaseViewController {
     func getView() -> Void {
         
         self.navigationItem.title = "渐变色"
-        let myImageView = UIImageView.init(frame: CGRectMake(0, 64, WIDTH, WIDTH))
+        let myImageView = UIImageView.init(frame: CGRect(x: 0, y: 64, width: WIDTH, height: WIDTH))
         myImageView.image = UIImage.init(named: "jigsaw.jpg")
         self.view.addSubview(myImageView)
         self.gradientLayer.frame = myImageView.bounds;
         myImageView.layer.addSublayer(self.gradientLayer)
         //设置渐变颜色方向
-        self.gradientLayer.startPoint = CGPointMake(0, 0);
-        self.gradientLayer.endPoint = CGPointMake(0, 1);
+        self.gradientLayer.startPoint = CGPoint(x: 0, y: 0);
+        self.gradientLayer.endPoint = CGPoint(x: 0, y: 1);
         //设定颜色组
-        self.gradientLayer.colors = [UIColor.clearColor().CGColor, UIColor.purpleColor().CGColor]
+        self.gradientLayer.colors = [UIColor.clear.cgColor, UIColor.purple.cgColor]
         //设定颜色分割点
         self.gradientLayer.locations = [0.5, 1.0];
-        self.timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "changColor", userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(FirstGraduallyColorViewController.changColor), userInfo: nil, repeats: true)
     }
     
-    override func viewDidDisappear(animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.timer.invalidate()
     }
     
     func changColor() {
         //定时改变颜色
-        self.gradientLayer.colors = [UIColor.clearColor().CGColor, RGBA(CGFloat(arc4random() % 255), g: CGFloat(arc4random() % 255), b: CGFloat(arc4random() % 255), a: 1).CGColor]
+        self.gradientLayer.colors = [UIColor.clear.cgColor, RGBA(CGFloat(arc4random() % 255), g: CGFloat(arc4random() % 255), b: CGFloat(arc4random() % 255), a: 1).cgColor]
         //定时改变分割点
-        self.gradientLayer.locations = [CGFloat(arc4random() % 10)/10.0, 1.0];
+        self.gradientLayer.locations = [NSNumber.init(value: (Float(CGFloat(arc4random() % 10)/10.0))), 1.0];
     }
     
     override func didReceiveMemoryWarning() {

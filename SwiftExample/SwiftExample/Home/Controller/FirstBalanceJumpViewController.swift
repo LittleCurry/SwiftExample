@@ -18,30 +18,30 @@ class FirstBalanceJumpViewController: BaseViewController {
     
     func getView() {
         self.navigationItem.title = "余额"
-        self.view.backgroundColor = UIColor.orangeColor()
+        self.view.backgroundColor = UIColor.orange
 //        let waterView = LXHTwoWaterWaveView.init(frame: self.view.bounds)
 //        self.view.addSubview(waterView)
-        let tomorrowLabel = UILabel.init(frame: CGRectMake(0, 140, WIDTH, 20))
-        tomorrowLabel.textColor = UIColor.whiteColor()
-        tomorrowLabel.textAlignment = .Center
-        tomorrowLabel.font = UIFont.systemFontOfSize(15)
+        let tomorrowLabel = UILabel.init(frame: CGRect(x: 0, y: 140, width: WIDTH, height: 20))
+        tomorrowLabel.textColor = UIColor.white
+        tomorrowLabel.textAlignment = .center
+        tomorrowLabel.font = UIFont.systemFont(ofSize: 15)
         tomorrowLabel.text = "昨日收益(元)"
         self.view.addSubview(tomorrowLabel)
-        let balanceLabel = UILabel.init(frame: CGRectMake(0, 160, WIDTH, 60))
-        balanceLabel.textColor = UIColor.whiteColor()
-        balanceLabel.textAlignment = .Center
-        balanceLabel.font = UIFont.systemFontOfSize(40)
+        let balanceLabel = UILabel.init(frame: CGRect(x: 0, y: 160, width: WIDTH, height: 60))
+        balanceLabel.textColor = UIColor.white
+        balanceLabel.textAlignment = .center
+        balanceLabel.font = UIFont.systemFont(ofSize: 40)
         balanceLabel.animationFromnum(0, toNum: 8668, duration: 2)
         self.view.addSubview(balanceLabel)
         
-        let waveView = JSWave.init(frame: CGRectMake(0, 260, WIDTH, 20))
+        let waveView = JSWave.init(frame: CGRect(x: 0, y: 260, width: WIDTH, height: 20))
         self.view.addSubview(waveView)
         waveView.waveBlock = { (currentY) in
             // print(currentY)
         }
-        waveView.startWaveAnimation()
+        waveView.startAnimation()
         
-        let subView = UIView.init(frame: CGRectMake(0, 280, WIDTH, HEIGHT-280))
+        let subView = UIView.init(frame: CGRect(x: 0, y: 280, width: WIDTH, height: HEIGHT-280))
         subView.backgroundColor = RGBA(29, g: 173, b: 238, a: 1)
         self.view.addSubview(subView)
     }

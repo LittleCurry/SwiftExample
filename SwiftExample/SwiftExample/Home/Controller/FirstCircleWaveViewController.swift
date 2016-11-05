@@ -20,18 +20,18 @@ class FirstCircleWaveViewController: BaseViewController {
     
     func getView() {
         self.navigationItem.title = "水波"
-        let context = EAGLContext.init(API: EAGLRenderingAPI.OpenGLES2)
-        self.rippleView = RippleView.init(frame: self.view.bounds, context: context)
+        let context = EAGLContext.init(api: EAGLRenderingAPI.openGLES2)
+        self.rippleView = RippleView.init(frame: self.view.bounds, context: context!)
         self.view.addSubview(self.rippleView!)
-        let pan = UIPanGestureRecognizer.init(target: self, action: "handleGesture:")
+        let pan = UIPanGestureRecognizer.init(target: self, action: #selector(FirstCircleWaveViewController.handleGesture(_:)))
         self.rippleView?.addGestureRecognizer(pan)
-        let tap = UITapGestureRecognizer.init(target: self, action: "handleGesture:")
+        let tap = UITapGestureRecognizer.init(target: self, action: #selector(FirstCircleWaveViewController.handleGesture(_:)))
         self.rippleView?.addGestureRecognizer(tap)
     }
     
-    func handleGesture(gesture:UITapGestureRecognizer) -> Void {
-        let location = gesture.locationInView(self.rippleView)
-        self.rippleView?.ripple.initiateRippleAtLocation(location)
+    func handleGesture(_ gesture:UITapGestureRecognizer) -> Void {
+        let location = gesture.location(in: self.rippleView)
+        self.rippleView?.ripple.initiateRipple(atLocation: location)
         
     }
     

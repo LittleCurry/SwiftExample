@@ -8,22 +8,22 @@
 
 import UIKit
 
-let itemWH = UIScreen.mainScreen().bounds.width / 7.0
+let itemWH = UIScreen.main.bounds.width / 7.0
 let rows = 3
 
 class LMJEmoticonCell: UICollectionViewCell {
     
-    private lazy var btn: UIButton = UIButton()
+    fileprivate lazy var btn: UIButton = UIButton()
     
     
     var emoticon: LMJEmoticon? {
         didSet{
-            btn.setTitle(emoticon?.emojiCode, forState: .Normal)
-            btn.setImage(UIImage(contentsOfFile: emoticon?.pngPath ?? ""), forState: .Normal)
+            btn.setTitle(emoticon?.emojiCode, for: UIControlState())
+            btn.setImage(UIImage(contentsOfFile: emoticon?.pngPath ?? ""), for: UIControlState())
             
             if emoticon?.isDelete == true
             {
-                btn.setImage(UIImage(named: "compose_emotion_delete"), forState: .Normal)
+                btn.setImage(UIImage(named: "compose_emotion_delete"), for: UIControlState())
             }
         }
     }
@@ -45,23 +45,23 @@ class LMJEmoticonCell: UICollectionViewCell {
 
 extension LMJEmoticonCell
 {
-    private func setupUI()
+    fileprivate func setupUI()
     {
         contentView.addSubview(btn)
         
-        contentView.backgroundColor = UIColor.clearColor()
-        btn.backgroundColor = UIColor.clearColor()
-        btn.titleLabel?.font = UIFont.systemFontOfSize(32)
-        btn.userInteractionEnabled = false
-        btn.contentMode = .Center
+        contentView.backgroundColor = UIColor.clear
+        btn.backgroundColor = UIColor.clear
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 32)
+        btn.isUserInteractionEnabled = false
+        btn.contentMode = .center
         btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.imageView?.contentMode = .Center
+        btn.imageView?.contentMode = .center
         
         
         let views = ["btn" : btn]
         
-        var cons = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[btn]-0-|", options: [], metrics: nil, views: views)
-        cons += NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[btn]-0-|", options: [], metrics: nil, views: views)
+        var cons = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[btn]-0-|", options: [], metrics: nil, views: views)
+        cons += NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[btn]-0-|", options: [], metrics: nil, views: views)
         
         contentView.addConstraints(cons)
         
@@ -73,13 +73,13 @@ extension LMJEmoticonCell
 
 class LMJEnoticonLayout: UICollectionViewFlowLayout {
     
-    override func prepareLayout() {
-        super.prepareLayout()
+    override func prepare() {
+        super.prepare()
         
         itemSize = CGSize(width: itemWH, height: itemWH)
         minimumInteritemSpacing = 0
         minimumLineSpacing = 0
-        scrollDirection = .Horizontal
+        scrollDirection = .horizontal
         sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         guard let collectionViewi = collectionView else
@@ -90,10 +90,10 @@ class LMJEnoticonLayout: UICollectionViewFlowLayout {
         let margin = (collectionViewi.frame.size.height - 3 * itemWH)
         
         collectionViewi.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: margin-1, right: 0)
-        collectionViewi.backgroundColor = UIColor.clearColor()
+        collectionViewi.backgroundColor = UIColor.clear
         collectionViewi.showsHorizontalScrollIndicator = false
         collectionViewi.showsVerticalScrollIndicator = false
-        collectionViewi.pagingEnabled = true
+        collectionViewi.isPagingEnabled = true
     }
 }
 

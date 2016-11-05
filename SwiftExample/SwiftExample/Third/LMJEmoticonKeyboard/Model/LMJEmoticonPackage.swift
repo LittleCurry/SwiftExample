@@ -17,7 +17,7 @@ class LMJEmoticonPackage: NSObject {
     init(id: String) {
        
         super.init()
-        guard let infoPath = NSBundle.mainBundle().pathForResource("Contents/Resources/\(id)/info", ofType: "plist", inDirectory: "Emoticons.bundle") else
+        guard let infoPath = Bundle.main.path(forResource: "Contents/Resources/\(id)/info", ofType: "plist", inDirectory: "Emoticons.bundle") else
         {
             addEmptyEmoticon(true, count: 0)
             return
@@ -35,7 +35,7 @@ class LMJEmoticonPackage: NSObject {
         {
             if let png = dict["png"] as? String
             {
-                dict["png"] = id + "/" + png
+                dict["png"] = id + "/" + png as AnyObject?
             }
             
             let emoticon = LMJEmoticon(dict: dict)
@@ -56,7 +56,7 @@ class LMJEmoticonPackage: NSObject {
         
     }
     
-    private func addEmptyEmoticon(isRecent: Bool, count: Int)
+    fileprivate func addEmptyEmoticon(_ isRecent: Bool, count: Int)
     {
         var yushu = count % 21
         

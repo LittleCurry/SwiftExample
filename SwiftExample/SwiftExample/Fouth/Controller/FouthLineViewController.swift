@@ -10,7 +10,7 @@ import UIKit
 
 class FouthLineViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     // 这是写属性的地方
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Plain);
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.plain);
     let cellName = "qweqwesasqwe";
     
     override func viewDidLoad() {
@@ -21,23 +21,23 @@ class FouthLineViewController: BaseViewController, UITableViewDelegate, UITableV
         self.myTableView.tableFooterView = UIView.init();
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
-        self.myTableView.registerClass(SCChartCell.self, forCellReuseIdentifier: cellName)
+        self.myTableView.register(SCChartCell.self, forCellReuseIdentifier: cellName)
         view.addSubview(self.myTableView);
         
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:SCChartCell = tableView.dequeueReusableCellWithIdentifier(cellName, forIndexPath: indexPath) as! SCChartCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:SCChartCell = tableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as! SCChartCell
         if cell.isEqual(nil) {
-            cell = SCChartCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
+            cell = SCChartCell(style: UITableViewCellStyle.default, reuseIdentifier: cellName)
         }
         cell.configUI(indexPath)
         return cell;

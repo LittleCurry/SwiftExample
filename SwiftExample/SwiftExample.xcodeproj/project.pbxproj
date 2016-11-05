@@ -1345,6 +1345,7 @@
 		C17FC52D1DB8DB41004028CA /* YFChessBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFChessBoardView.m; sourceTree = "<group>"; };
 		C17FC5411DB8DCE2004028CA /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		C17FC5421DB8DCE2004028CA /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		C182945C1DCD7A2600574560 /* SwiftExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftExample.entitlements; sourceTree = "<group>"; };
 		C18AE8851DAB3C0900275A90 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		C18AE8871DAB460000275A90 /* WeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		C1970D091DA895EE00260A11 /* DownEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownEditView.h; sourceTree = "<group>"; };
@@ -1955,6 +1956,7 @@
 		C16417B71D9BC86D00BD3841 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				C182945C1DCD7A2600574560 /* SwiftExample.entitlements */,
 				C16417EF1D9BC9E200BD3841 /* Frameworks */,
 				C16417EE1D9BC9D700BD3841 /* Third */,
 				C16417ED1D9BC9C900BD3841 /* Tools */,
@@ -3379,13 +3381,21 @@
 					C16417B41D9BC86D00BD3841 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = U4NQGTBH68;
+						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					C16417CB1D9BC86D00BD3841 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = C16417B41D9BC86D00BD3841;
 					};
 					C16417D61D9BC86D00BD3841 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0810;
 						TestTargetID = C16417B41D9BC86D00BD3841;
 					};
 				};
@@ -4227,6 +4237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4251,6 +4262,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftExample.yunpeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExample/SwiftExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -4258,6 +4270,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -4282,6 +4295,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = SwiftExample.yunpeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftExample/SwiftExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -4293,6 +4307,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExample.app/SwiftExample";
 			};
 			name = Debug;
@@ -4305,6 +4320,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftExample.app/SwiftExample";
 			};
 			name = Release;
@@ -4316,6 +4332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SwiftExample;
 			};
 			name = Debug;
@@ -4327,6 +4344,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yunPeng.SwiftExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SwiftExample;
 			};
 			name = Release;

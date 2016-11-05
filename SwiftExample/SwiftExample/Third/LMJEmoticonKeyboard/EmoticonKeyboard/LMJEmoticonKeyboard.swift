@@ -12,17 +12,17 @@ let LMJEmoticonCellID = "LMJEmoticonCellID"
 
 class LMJEmoticonKeyboard: UIView {
     
-    lazy var toolBar: LMJEmoticonToolBar = LMJEmoticonToolBar(frame: CGRectZero)
-    private lazy var collectionView: UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: LMJEnoticonLayout())
+    lazy var toolBar: LMJEmoticonToolBar = LMJEmoticonToolBar(frame: CGRect.zero)
+    fileprivate lazy var collectionView: UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: LMJEnoticonLayout())
     
-    private lazy var packageManager: LMJPackageManager = LMJPackageManager.sharedManager
+    fileprivate lazy var packageManager: LMJPackageManager = LMJPackageManager.sharedManager
     
    weak var targetTextView: UITextView?
     
     ///外界需要告知键盘对应的textView, 才能插入表情================================
     init(targetTextView: UITextView)
     {
-        super.init(frame: CGRectZero)
+        super.init(frame: CGRect.zero)
         self.targetTextView = targetTextView
         targetTextView.inputView = self
         setupUI()
@@ -52,7 +52,7 @@ class LMJEmoticonKeyboard: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: 38.0 + 3 * itemWH + 15)
+        self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 38.0 + 3 * itemWH + 15)
     }
 }
 
@@ -60,9 +60,9 @@ class LMJEmoticonKeyboard: UIView {
 
 extension LMJEmoticonKeyboard
 {
-    private func setupUI()
+    fileprivate func setupUI()
     {
-        self.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: 38.0 + 3 * itemWH + 15)
+        self.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 38.0 + 3 * itemWH + 15)
         
         backgroundColor = UIColor(white: 0.851, alpha: 1)
         
@@ -72,21 +72,21 @@ extension LMJEmoticonKeyboard
         toolBar.translatesAutoresizingMaskIntoConstraints = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        let views = ["toolBar" : toolBar, "collectionView" : collectionView]
+        let views = ["toolBar" : toolBar, "collectionView" : collectionView] as [String : Any]
         
-        var cons = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[toolBar]-0-|", options: [], metrics: nil, views: views)
-        cons += NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[collectionView]-0-[toolBar]-0-|", options: [.AlignAllLeft, .AlignAllRight], metrics: nil, views: views)
+        var cons = NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[toolBar]-0-|", options: [], metrics: nil, views: views)
+        cons += NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[collectionView]-0-[toolBar]-0-|", options: [.alignAllLeft, .alignAllRight], metrics: nil, views: views)
         
-        cons.append(NSLayoutConstraint(item: toolBar, attribute: NSLayoutAttribute.Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1, constant: 38))
+        cons.append(NSLayoutConstraint(item: toolBar, attribute: NSLayoutAttribute.height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1, constant: 38))
         
         addConstraints(cons)
                 
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerClass(LMJEmoticonCell.self, forCellWithReuseIdentifier: LMJEmoticonCellID)
+        collectionView.register(LMJEmoticonCell.self, forCellWithReuseIdentifier: LMJEmoticonCellID)
         
         toolBar.selectTypeCallBack = {[weak self] (type) -> () in
-            self?.collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: type.rawValue), atScrollPosition: .Left, animated: false)
+            self?.collectionView.scrollToItem(at: IndexPath(item: 0, section: type.rawValue), at: .left, animated: false)
         }
         
     }
@@ -94,46 +94,46 @@ extension LMJEmoticonKeyboard
 
 extension LMJEmoticonKeyboard: UICollectionViewDataSource, UICollectionViewDelegate
 {
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         return packageManager.packages.count
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return packageManager.packages[section].emoticons.count
     }
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(LMJEmoticonCellID, forIndexPath: indexPath) as! LMJEmoticonCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LMJEmoticonCellID, for: indexPath) as! LMJEmoticonCell
         
         cell.emoticon = packageManager.packages[indexPath.section].emoticons[indexPath.item]
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let emoticon = (collectionView.cellForItemAtIndexPath(indexPath) as! LMJEmoticonCell).emoticon!
+        let emoticon = (collectionView.cellForItem(at: indexPath) as! LMJEmoticonCell).emoticon!
         
         if !emoticon.isDelete && !emoticon.isEmpty
         {
-            if let index = packageManager.packages[0].emoticons.indexOf(emoticon)
+            if let index = packageManager.packages[0].emoticons.index(of: emoticon)
             {
-                packageManager.packages[0].emoticons.removeAtIndex(index)
+                packageManager.packages[0].emoticons.remove(at: index)
             }else
             {
-                packageManager.packages[0].emoticons.removeAtIndex(19)
+                packageManager.packages[0].emoticons.remove(at: 19)
             }
-            packageManager.packages[0].emoticons.insert(emoticon, atIndex: 0)
+            packageManager.packages[0].emoticons.insert(emoticon, at: 0)
         }
         
         targetTextView?.insertEmotion(emoticon)
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
-        let screenW = UIScreen.mainScreen().bounds.width
+        let screenW = UIScreen.main.bounds.width
         
         ///每一组的宽度
         let section0W = screenW

@@ -10,7 +10,7 @@ import UIKit
 
 class FirstFoldCardViewController: BaseViewController, JCFlipPageViewDataSource {
     
-    var flipPage = JCFlipPageView.init(frame: UIScreen.mainScreen().bounds)
+    var flipPage = JCFlipPageView.init(frame: UIScreen.main.bounds)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ class FirstFoldCardViewController: BaseViewController, JCFlipPageViewDataSource 
     }
     
     // JCFlipPageViewDataSource
-    func numberOfPagesInFlipPageView(flipPageView: JCFlipPageView!) -> UInt {
+    func numberOfPages(in flipPageView: JCFlipPageView!) -> UInt {
         return 20
     }
     
-    func flipPageView(flipPageView: JCFlipPageView!, pageAtIndex index: UInt) -> JCFlipPage! {
+    func flipPageView(_ flipPageView: JCFlipPageView!, pageAt index: UInt) -> JCFlipPage! {
         let kPageID = "numberPageID"
-        var page = flipPageView.dequeueReusablePageWithReuseIdentifier(kPageID)
+        var page = flipPageView.dequeueReusablePage(withReuseIdentifier: kPageID)
         
         if ((page == nil)) {
             page = JCFlipPage.init(frame: flipPageView.bounds, reuseIdentifier: kPageID)
@@ -42,22 +42,22 @@ class FirstFoldCardViewController: BaseViewController, JCFlipPageViewDataSource 
         }
         
         if (index%3 == 0) {
-            page.backgroundColor = UIColor.blueColor()
+            page?.backgroundColor = UIColor.blue
         }
         else if (index%3 == 1) {
-            page.backgroundColor = UIColor.greenColor()
+            page?.backgroundColor = UIColor.green
         }
         else if (index%3 == 2) {
-            page.backgroundColor = UIColor.redColor()
+            page?.backgroundColor = UIColor.red
         }else{
         
         }
-        page.tempContentLabel.text = String.init(format: "%d", index)
+        page?.tempContentLabel.text = String.init(format: "%d", index)
         return page;
     }
     
-    func showPage(pageNum:NSNumber) {
-        self.flipPage.flipToPageAtIndex(UInt(pageNum), animation: true)
+    func showPage(_ pageNum:NSNumber) {
+        self.flipPage.flipToPage(at: UInt(pageNum), animation: true)
     }
 
     override func didReceiveMemoryWarning() {

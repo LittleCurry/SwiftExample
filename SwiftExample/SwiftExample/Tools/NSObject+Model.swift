@@ -12,13 +12,13 @@ import Foundation
  数据类型
  */
 enum ValueType {
-    case Number
-    case String
-    case Bool
-    case Array
-    case Dictionary
-    case Null
-    case Unknow
+    case number
+    case string
+    case bool
+    case array
+    case dictionary
+    case null
+    case unknow
 }
 
 
@@ -40,7 +40,7 @@ extension NSObject {
     }
     
     // MARK: - 字典转模型
-    class func objectWithDictionary(dict:[String : AnyObject]) -> NSObject {
+    class func objectWithDictionary(_ dict:[String : AnyObject]) -> NSObject {
         
         // 创建一个对象
         let model = self.init()
@@ -55,7 +55,7 @@ extension NSObject {
     
     
     // MARK: - 把一个字典数组转成一个模型数组
-    class func objectArrayWithDictionaryArray(array:NSArray) -> [AnyObject]{
+    class func objectArrayWithDictionaryArray(_ array:NSArray) -> [AnyObject]{
         var tempArray = [AnyObject]()
         
         let variables = getAllVariables()
@@ -74,7 +74,7 @@ extension NSObject {
     }
     
     // MARK: - 核心方法
-    private func setValues(variables:[Variable]?, dict:[String : AnyObject]) {
+    fileprivate func setValues(_ variables:[Variable]?, dict:[String : AnyObject]) {
         
         // properties有值
         if let variableArray = variables {
@@ -92,7 +92,7 @@ extension NSObject {
                     if isBasicType(type) {
                         
                         setValue(value,forKey: variable.name)
-                    } else if type == .Dictionary { // 类型是个字典（自定义类）
+                    } else if type == .dictionary { // 类型是个字典（自定义类）
                         
                         // 获得自定义类的类名
                         let modelClassDict = self.classForCoder.customClassForVariableName()
@@ -105,7 +105,7 @@ extension NSObject {
                             setValue(subModel, forKey: variable.name)
                         }
                         
-                    } else if type == .Array { // 类型是个数组
+                    } else if type == .array { // 类型是个数组
                         
                         if let array = value as? [AnyObject] {
                             
@@ -122,7 +122,8 @@ extension NSObject {
                                 if let classDict = modelClassDict {
                                     
                                     let modelClass:AnyClass? = classDict[variable.key]
-                                    let modelArray  = modelClass?.objectArrayWithDictionaryArray(array)
+//                                    let modelArray  = modelClass?.objectArrayWithDictionaryArray(array)
+                                    let modelArray  = modelClass?.objectArrayWithDictionaryArray(array as NSArray)
                                     setValue(modelArray, forKey: variable.name)
                                 }
                                 
@@ -142,10 +143,10 @@ extension NSObject {
     }
     
     // 获得所有属性
-    private class func getAllVariables() -> [Variable]? {
+    fileprivate class func getAllVariables() -> [Variable]? {
         
         // 获取类本身的名称
-        let className = NSString(CString: class_getName(self), encoding: NSUTF8StringEncoding) as? String
+        let className = NSString(cString: class_getName(self), encoding: String.Encoding.utf8.rawValue) as? String
         
         if let name = className {
             
@@ -182,9 +183,9 @@ extension NSObject {
         // 获得成员变量名  放到数组中
         for i in 0..<Int(count) {
             
-            let ivar = ivarList[i]
+            let ivar = ivarList?[i]
             
-            let nameStr = NSString(UTF8String: ivar_getName(ivar)) as! String
+            let nameStr = NSString(utf8String: ivar_getName(ivar)) as! String
             
             let variable = Variable(name: nameStr)
             
@@ -204,32 +205,32 @@ extension NSObject {
     
     
     // 获取value的类型
-    private func getType(value:AnyObject?) -> ValueType{
+    fileprivate func getType(_ value:AnyObject?) -> ValueType{
         
         if value == nil {
-            return .Null
+            return .null
         }
         
         switch value{
             
             case let number as NSNumber:
                 if number.model_isBool {
-                    return .Bool
+                    return .bool
                 } else {
-                    return .Number
+                    return .number
                 }
             
             case _ as String:
-                return .String
+                return .string
             
             case _ as [AnyObject]:
-                return .Array
+                return .array
             
             case _ as [String : AnyObject]:
-                return .Dictionary
+                return .dictionary
             
             default:
-                return .Unknow
+                return .unknow
         }
     }
     
@@ -241,8 +242,8 @@ extension NSObject {
      
      - returns: true/false
      */
-    private func isBasicType(type:ValueType) -> Bool{
-        if type == .Bool || type == .String || type == .Number {
+    fileprivate func isBasicType(_ type:ValueType) -> Bool{
+        if type == .bool || type == .string || type == .number {
             return true
         }
         return false
@@ -266,17 +267,17 @@ class Variable {
 
 
 
-private let trueNumber = NSNumber(bool: true)
-private let falseNumber = NSNumber(bool: false)
-private let trueObjCType = String.fromCString(trueNumber.objCType)
-private let falseObjCType = String.fromCString(falseNumber.objCType)
+private let trueNumber = NSNumber(value: true as Bool)
+private let falseNumber = NSNumber(value: false as Bool)
+private let trueObjCType = String(cString: trueNumber.objCType)
+private let falseObjCType = String(cString: falseNumber.objCType)
 // MARK: - 判断是否为bool(swift中，Bool类型的根本是 NSNumber)
 extension NSNumber {
     var model_isBool:Bool {
         get {
-            let objCType = String.fromCString(self.objCType)
-            if (self.compare(trueNumber) == NSComparisonResult.OrderedSame && objCType == trueObjCType)
-                || (self.compare(falseNumber) == NSComparisonResult.OrderedSame && objCType == falseObjCType){
+            let objCType = String(cString: self.objCType)
+            if (self.compare(trueNumber) == ComparisonResult.orderedSame && objCType == trueObjCType)
+                || (self.compare(falseNumber) == ComparisonResult.orderedSame && objCType == falseObjCType){
                 return true
             } else {
                 return false

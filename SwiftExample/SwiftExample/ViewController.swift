@@ -16,15 +16,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return nameArr.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellName = "qweqweqwe";
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellName);
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellName);
         if cell == nil {
-            cell = UITableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: cellName)
+            cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: cellName)
         }
         cell?.textLabel?.text = nameArr[indexPath.row];
         return cell!;

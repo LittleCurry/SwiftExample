@@ -14,13 +14,13 @@ class LMJEmoticon: NSObject {
         didSet{
             if let code = code
             {
-                let scanner = NSScanner(string: code)
+                let scanner = Scanner(string: code)
                 
                 var value: UInt32 = 0
                 
-                scanner.scanHexInt(&value)
+                scanner.scanHexInt32(&value)
                 
-                let c = Character(UnicodeScalar(value))
+                let c = Character(UnicodeScalar(value)!)
                 
                 emojiCode = String(c)
             }
@@ -34,7 +34,7 @@ class LMJEmoticon: NSObject {
         didSet{
             if let png = png
             {
-                pngPath = NSBundle.mainBundle().bundlePath + "/Emoticons.bundle/Contents/Resources/" + png
+                pngPath = Bundle.main.bundlePath + "/Emoticons.bundle/Contents/Resources/" + png
             }
         }
     }
@@ -51,7 +51,7 @@ class LMJEmoticon: NSObject {
     init(dict: [String : AnyObject]) {
         
         super.init()
-        setValuesForKeysWithDictionary(dict)
+        setValuesForKeys(dict)
     }
     
     init(isDelete: Bool) {
@@ -64,6 +64,6 @@ class LMJEmoticon: NSObject {
         self.isEmpty = isEmpty
     }
     
-    override func setValue(value: AnyObject?, forUndefinedKey key: String) {}
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {}
     
 }

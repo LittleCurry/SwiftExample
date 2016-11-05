@@ -18,9 +18,9 @@ class FirstRadiateMenuViewController: BaseViewController, YFRadialMenuDelegate {
     
     func getView() {
         self.navigationItem.title = "发散菜单"
-        let radialView = YFRadialMenu.init(frame: CGRectMake(WIDTH/2-25, HEIGHT-120, 50, 50))
+        let radialView = YFRadialMenu.init(frame: CGRect(x: WIDTH/2-25, y: HEIGHT-120, width: 50, height: 50))
         radialView.delegate = self;
-        radialView.centerView.backgroundColor = UIColor.grayColor();
+        radialView.centerView.backgroundColor = UIColor.gray;
         radialView.addPopoutView(nil, withIndentifier: "ONE")
         radialView.addPopoutView(nil, withIndentifier: "TWO")
         radialView.addPopoutView(nil, withIndentifier: "THREE")
@@ -29,7 +29,7 @@ class FirstRadiateMenuViewController: BaseViewController, YFRadialMenuDelegate {
         radialView.enableDevelopmentMode(self)
     }
     
-    func radialMenu(radialMenu: YFRadialMenu!, didSelectPopoutWithIndentifier identifier: String!) {
+    func radialMenu(_ radialMenu: YFRadialMenu!, didSelectPopoutWithIndentifier identifier: String!) {
         NSLog("%@",identifier);
     }
     

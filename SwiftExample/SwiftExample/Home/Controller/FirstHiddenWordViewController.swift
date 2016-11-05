@@ -40,8 +40,8 @@ class FirstHiddenWordViewController: BaseViewController {
 //        self.wallpaper2?.contentMode = UIViewContentMode.ScaleAspectFill
         self.wallpaper2?.image = UIImage.init(named: "autumn2.jpg")
         self.view.addSubview(self.wallpaper2!)
-        self.shineLabel = RQShineLabel.init(frame: CGRectMake(16, 16, 320 - 32, CGRectGetHeight(self.view.bounds) - 16))
-        self.shineLabel?.backgroundColor = UIColor.clearColor()
+        self.shineLabel = RQShineLabel.init(frame: CGRect(x: 16, y: 16, width: 320 - 32, height: self.view.bounds.height - 16))
+        self.shineLabel?.backgroundColor = UIColor.clear
         self.shineLabel?.numberOfLines = 0
         self.shineLabel?.text = self.textArray![self.textIndex!] as? String
         self.shineLabel?.font = UIFont.init(name: "HelveticaNeue-Light", size: 24)
@@ -50,17 +50,17 @@ class FirstHiddenWordViewController: BaseViewController {
         self.view.addSubview(self.shineLabel!)
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.shineLabel?.shine()
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        if (self.shineLabel?.visible == true) {
-            self.shineLabel?.fadeOutWithCompletion({
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if (self.shineLabel?.isVisible == true) {
+            self.shineLabel?.fadeOut(completion: {
                 self.changeText();
-                UIView.animateWithDuration(2.5, animations: {
+                UIView.animate(withDuration: 2.5, animations: {
                     if (self.wallpaper1!.alpha > 0.1) {
                         self.wallpaper1!.alpha = 0;
                         self.wallpaper2!.alpha = 1;

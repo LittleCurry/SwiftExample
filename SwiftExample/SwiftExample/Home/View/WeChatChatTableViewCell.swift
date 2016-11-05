@@ -34,10 +34,10 @@ class WeChatChatTableViewCell: UITableViewCell {
         self.headImageView = UIImageView.init();
         
         self.myTextLabel?.backgroundColor = RGBA(0, g: 207, b: 13, a: 1)
-        self.myTextLabel!.textColor = UIColor.whiteColor()
+        self.myTextLabel!.textColor = UIColor.white
         self.myTextLabel?.clipsToBounds = true
         self.myTextLabel?.layer.cornerRadius = 5
-        self.myTextLabel!.textAlignment = NSTextAlignment.Center
+        self.myTextLabel!.textAlignment = NSTextAlignment.center
         self.myTextLabel!.font = WORDFONT
         self.myTextLabel?.numberOfLines = 0
         
@@ -52,15 +52,15 @@ class WeChatChatTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.pinView!.frame = CGRectMake(WIDTH-60, 20, 10, 10);
-        var rect = CGRectMake(0, 0, 0, 0)
+        self.pinView!.frame = CGRect(x: WIDTH-60, y: 20, width: 10, height: 10);
+        var rect = CGRect(x: 0, y: 0, width: 0, height: 0)
         if (self.myTextLabel?.attributedText) != nil {
-            rect = (self.myTextLabel?.attributedText!.boundingRectWithSize(CGSizeMake(WIDTH-80, 10000), options: NSStringDrawingOptions.UsesLineFragmentOrigin, context: nil))!
+            rect = (self.myTextLabel?.attributedText!.boundingRect(with: CGSize(width: WIDTH-80, height: 10000), options: NSStringDrawingOptions.usesLineFragmentOrigin, context: nil))!
         }
         var cellH:CGFloat = 0
         cellH = rect.size.height > 40.0 ? rect.size.height : 40.0
-        self.myTextLabel!.frame = CGRectMake(20, 5, WIDTH-80, cellH);
-        self.headImageView!.frame = CGRectMake(WIDTH - 50, 5, 40, 40);
+        self.myTextLabel!.frame = CGRect(x: 20, y: 5, width: WIDTH-80, height: cellH);
+        self.headImageView!.frame = CGRect(x: WIDTH - 50, y: 5, width: 40, height: 40);
     }
     
     override func awakeFromNib() {
@@ -68,7 +68,7 @@ class WeChatChatTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
     }

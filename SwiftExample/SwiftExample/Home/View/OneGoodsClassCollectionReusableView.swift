@@ -13,10 +13,10 @@ class OneGoodsClassCollectionReusableView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        self.backgroundColor = UIColor.groupTableViewBackground
         headLabel = UILabel()
-        headLabel.frame=CGRectMake(5, 0, WIDTH-10, 25)
-        headLabel.font = UIFont.systemFontOfSize(13)
+        headLabel.frame=CGRect(x: 5, y: 0, width: WIDTH-10, height: 25)
+        headLabel.font = UIFont.systemFont(ofSize: 13)
         self .addSubview(headLabel!)
     }
     

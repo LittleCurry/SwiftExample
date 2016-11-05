@@ -18,11 +18,11 @@ class FirstShareViewController: BaseViewController, UMSocialUIDelegate {
     
     func getView() -> Void {
         self.navigationItem.title = "share"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "share.png"), style: UIBarButtonItemStyle.Done, target: self, action: "shareAction")
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "share.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstShareViewController.shareAction))
     }
     
     func shareAction() -> Void {
-        var shareImage = UIImage.init(named: "1024.png")
+        let shareImage = UIImage.init(named: "1024.png")
         UMSocialSnsService.presentSnsIconSheetView(self, appKey: "5705cd51e0f55a586d000567", shareText: "分享内容你好", shareImage: shareImage, shareToSnsNames: [UMShareToSina, UMShareToWechatSession,UMShareToQQ, UMShareToTencent, UMShareToQzone, UMShareToEmail, UMShareToSms, UMShareToWechatTimeline, UMShareToAlipaySession], delegate: self)
 //        UMSocialSnsService.presentSnsController(self, appKey: "5705cd51e0f55a586d000567", shareText: "分享内容123", shareImage: shareImage, shareToSnsNames: [UMShareToSina, UMShareToWechatSession,UMShareToQQ, UMShareToTencent, UMShareToQzone, UMShareToEmail, UMShareToSms, UMShareToWechatTimeline, UMShareToAlipaySession], delegate: self)
     }

@@ -14,7 +14,7 @@ class FirstPhotoChoseViewController: BaseViewController, TZImagePickerController
     var selectedPhotoArr:NSMutableArray = [];
     var pickerController = UIImagePickerController.init();
     var collectionView : UICollectionView!
-    var addPictureButton = UIButton.init(type: UIButtonType.System)
+    var addPictureButton = UIButton.init(type: UIButtonType.system)
     let nowTextField = UITextField.init()
     
     override func viewDidLoad() {
@@ -26,61 +26,61 @@ class FirstPhotoChoseViewController: BaseViewController, TZImagePickerController
     func getView() -> Void {
         
         self.navigationItem.title = "相册选择"
-        self.nowTextField.frame = CGRectMake(20, 70, WIDTH-40, 40)
+        self.nowTextField.frame = CGRect(x: 20, y: 70, width: WIDTH-40, height: 40)
         nowTextField.placeholder = "这一刻的想法..."
         self.view.addSubview(nowTextField)
         
         let flowLayout = UICollectionViewFlowLayout.init()
         flowLayout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
-        flowLayout.itemSize = CGSizeMake((WIDTH-70)/4, (WIDTH-70)/4);
+        flowLayout.itemSize = CGSize(width: (WIDTH-70)/4, height: (WIDTH-70)/4);
         flowLayout.minimumLineSpacing = 10;
         flowLayout.minimumInteritemSpacing = 10;
-        self.collectionView = UICollectionView.init(frame: CGRectMake(0, 200, WIDTH, WIDTH), collectionViewLayout: flowLayout)
-        self.collectionView.backgroundColor = UIColor.clearColor()
-        self.collectionView.scrollEnabled = false;
+        self.collectionView = UICollectionView.init(frame: CGRect(x: 0, y: 200, width: WIDTH, height: WIDTH), collectionViewLayout: flowLayout)
+        self.collectionView.backgroundColor = UIColor.clear
+        self.collectionView.isScrollEnabled = false;
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
-        self.collectionView.registerClass(MSSCollectionViewCell.self, forCellWithReuseIdentifier: MSSReuseIdentifier)
+        self.collectionView.register(MSSCollectionViewCell.self, forCellWithReuseIdentifier: MSSReuseIdentifier)
         self.view.addSubview(self.collectionView)
         
-        self.addPictureButton.frame = CGRectMake(20, 200, (WIDTH-70)/4, (WIDTH-70)/4);
-        self.addPictureButton.setBackgroundImage(UIImage.init(named: "squareAdd.png"), forState: UIControlState.Normal)
-        self.addPictureButton.addTarget(self, action: "addPicture", forControlEvents: UIControlEvents.TouchUpInside)
+        self.addPictureButton.frame = CGRect(x: 20, y: 200, width: (WIDTH-70)/4, height: (WIDTH-70)/4);
+        self.addPictureButton.setBackgroundImage(UIImage.init(named: "squareAdd.png"), for: UIControlState())
+        self.addPictureButton.addTarget(self, action: #selector(FirstPhotoChoseViewController.addPicture), for: UIControlEvents.touchUpInside)
         self.view.addSubview(self.addPictureButton)
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.selectedPhotoArr.count;
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(MSSReuseIdentifier, forIndexPath: indexPath) as! MSSCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MSSReuseIdentifier, for: indexPath) as! MSSCollectionViewCell
         
         cell.imageView.image = self.selectedPhotoArr[indexPath.row] as? UIImage;
         cell.imageView.tag = indexPath.row + 1000;
-        cell.imageView.contentMode = UIViewContentMode.ScaleAspectFill;
+        cell.imageView.contentMode = UIViewContentMode.scaleAspectFill;
         cell.imageView.clipsToBounds = true;
-        cell.imageView.userInteractionEnabled = true;
-        let longPress = UILongPressGestureRecognizer.init(target: self, action: "deletePhoto:")
+        cell.imageView.isUserInteractionEnabled = true;
+        let longPress = UILongPressGestureRecognizer.init(target: self, action: #selector(FirstPhotoChoseViewController.deletePhoto(_:)))
         cell.imageView.addGestureRecognizer(longPress)
         return cell
     }
     
-    func deletePhoto(longPress:UILongPressGestureRecognizer) -> Void {
-        if longPress.state == UIGestureRecognizerState.Began {
-            self.selectedPhotoArr.removeObject(self.selectedPhotoArr[longPress.view!.tag - 1000])
+    func deletePhoto(_ longPress:UILongPressGestureRecognizer) -> Void {
+        if longPress.state == UIGestureRecognizerState.began {
+            self.selectedPhotoArr.remove(self.selectedPhotoArr[longPress.view!.tag - 1000])
             self.changeCollectionAddButtonAndReloadData()
         }
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //
         let browser = MJPhotoBrowser.init()
         let photos:NSMutableArray = []
         for i in 0...self.selectedPhotoArr.count-1 {
             let currentPhoto = MJPhoto.init()
             currentPhoto.image = self.selectedPhotoArr[i] as! UIImage
-            photos.addObject(currentPhoto)
+            photos.add(currentPhoto)
         }
         browser.photos = photos as [AnyObject]
         browser.currentPhotoIndex = UInt(indexPath.row)
@@ -102,24 +102,24 @@ class FirstPhotoChoseViewController: BaseViewController, TZImagePickerController
 //    [sheetView show];
     
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         self.nowTextField.resignFirstResponder()
     }
     
     // 选完照片
-    func imagePickerController(picker: TZImagePickerController!, didFinishPickingPhotos photos: [UIImage]!, sourceAssets assets: [AnyObject]!, infos: [[NSObject : AnyObject]]!) {
+    func imagePickerController(_ picker: TZImagePickerController!, didFinishPickingPhotos photos: [UIImage]!, sourceAssets assets: [AnyObject]!, infos: [[AnyHashable: Any]]!) {
         //
-        self.selectedPhotoArr.addObjectsFromArray(photos)
+        self.selectedPhotoArr.addObjects(from: photos)
         self.changeCollectionAddButtonAndReloadData()
         
     }
     
     // 拍完照片
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        self.pickerController.dismissViewControllerAnimated(true) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        self.pickerController.dismiss(animated: true) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage;
-            self.selectedPhotoArr.addObject(image)
+            self.selectedPhotoArr.add(image)
             self.changeCollectionAddButtonAndReloadData()
         }
         
@@ -128,17 +128,17 @@ class FirstPhotoChoseViewController: BaseViewController, TZImagePickerController
     // 添加图片
     func addPicture() -> Void {
         let imagePickerVC = TZImagePickerController.init(maxImagesCount: 9-self.selectedPhotoArr.count, delegate: self)
-        imagePickerVC.allowPickingVideo = false
-        self.presentViewController(imagePickerVC, animated: true, completion: nil)
+        imagePickerVC?.allowPickingVideo = false
+        self.present(imagePickerVC!, animated: true, completion: nil)
     }
     
     // 调整[+]位置
     func changeCollectionAddButtonAndReloadData() -> Void {
         
         if self.selectedPhotoArr.count<=8 {
-            self.addPictureButton.frame = CGRectMake(CGFloat(self.selectedPhotoArr.count%4)*(10+(WIDTH-70)/4)+20, CGFloat(self.selectedPhotoArr.count/4)*(10+(WIDTH-70)/4)+200, PART_W(self.addPictureButton), PART_H(self.addPictureButton))
+            self.addPictureButton.frame = CGRect(x: CGFloat(self.selectedPhotoArr.count%4)*(10+(WIDTH-70)/4)+20, y: CGFloat(self.selectedPhotoArr.count/4)*(10+(WIDTH-70)/4)+200, width: PART_W(self.addPictureButton), height: PART_H(self.addPictureButton))
         }else{
-            self.addPictureButton.frame = CGRectMake(WIDTH, HEIGHT, PART_W(self.addPictureButton), PART_H(self.addPictureButton))
+            self.addPictureButton.frame = CGRect(x: WIDTH, y: HEIGHT, width: PART_W(self.addPictureButton), height: PART_H(self.addPictureButton))
         }
         self.collectionView.reloadData()
     }

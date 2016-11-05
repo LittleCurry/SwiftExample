@@ -15,13 +15,13 @@ extension UITextView
         
         let atrbsM = NSMutableAttributedString(attributedString: self.attributedText)
         
-        atrbsM.enumerateAttributesInRange(NSRange(location: 0, length: atrbsM.length), options: []) { (dict, range, _) -> Void in
+        atrbsM.enumerateAttributes(in: NSRange(location: 0, length: atrbsM.length), options: []) { (dict, range, _) -> Void in
             
             if let attachment = dict["NSAttachment"] as? LMJEmoticonTextAttachment
             {
                 if let chs = attachment.emoticon?.chs
                 {
-                    atrbsM.replaceCharactersInRange(range, withString: chs)
+                    atrbsM.replaceCharacters(in: range, with: chs)
                 }
             }
         }
@@ -31,7 +31,7 @@ extension UITextView
     
     ///把服务器给的字符串:[偷笑]、@M了个J: 老鼠这么尖叫、兔子这么尖叫[吃惊], 转为富文本, 
     ///并且设置到textview
-    func setEmoticonAttributedStringWithStringText(stringText: String)
+    func setEmoticonAttributedStringWithStringText(_ stringText: String)
     {
         let selfFont = self.font!
         
@@ -43,7 +43,7 @@ extension UITextView
         
     }
     
-    func insertEmotion(emoticon: LMJEmoticon)
+    func insertEmotion(_ emoticon: LMJEmoticon)
     {
         if emoticon.isEmpty
         {
@@ -68,7 +68,7 @@ extension UITextView
         {
             let image = UIImage(contentsOfFile: pngPath)!
             
-            let selfFont = self.font == nil ? UIFont.systemFontOfSize(14) : self.font!
+            let selfFont = self.font == nil ? UIFont.systemFont(ofSize: 14) : self.font!
             
             let range = self.selectedRange
             
@@ -81,7 +81,7 @@ extension UITextView
             
             let emoticonAtrbs = NSAttributedString(attachment: attachment)
             
-            atrbsM.insertAttributedString(emoticonAtrbs, atIndex: range.location)
+            atrbsM.insert(emoticonAtrbs, at: range.location)
             //            atrbsM.replaceCharactersInRange(range, withAttributedString: emoticonAtrbs)
             
             self.attributedText = atrbsM

@@ -19,14 +19,14 @@ class BankCardTableViewCell: UITableViewCell {
             if (_bankCard != newBankCard) {
                 _bankCard = newBankCard;
             }
-            self.cardImageView?.sd_setImageWithURL("https://apimg.alipay.com/combo.png?d=cashier&t="+(newBankCard?.org)!, completed: { (loadImage, error, cacheType, imageURL) in
+            self.cardImageView?.sd_setImage(withURL: "https://apimg.alipay.com/combo.png?d=cashier&t="+(newBankCard?.org)!, completed: { (loadImage, error, cacheType, imageURL) in
                 
-                let subImage = loadImage.subImageInRect(CGRectMake(5, 5, 20, 20))
-                self.bigView?.backgroundColor = subImage.mostColor()
-                self.cardImageView?.image = loadImage.changeImageWithTintColor(subImage.mostColor(), blendMode: CGBlendMode.Multiply)
+                let subImage = loadImage?.subImage(in: CGRect(x: 5, y: 5, width: 20, height: 20))
+                self.bigView?.backgroundColor = subImage?.mostColor()
+                self.cardImageView?.image = loadImage?.change(withTintColor: subImage?.mostColor(), blendMode: CGBlendMode.multiply)
             })
-            let index = newBankCard!.number.startIndex.advancedBy(newBankCard!.number.characters.count - 4)
-            self.numberLabel!.text = "****  ****  ****  " + (newBankCard?.number.substringFromIndex(index))!
+            let index = newBankCard!.number.characters.index(newBankCard!.number.startIndex, offsetBy: newBankCard!.number.characters.count - 4)
+            self.numberLabel!.text = "****  ****  ****  " + (newBankCard?.number.substring(from: index))!
             
         }
         get{
@@ -42,9 +42,9 @@ class BankCardTableViewCell: UITableViewCell {
         
         self.bigView!.clipsToBounds = true;
         self.bigView!.layer.cornerRadius = 5;
-        self.numberLabel!.textColor = UIColor.whiteColor()
-        self.numberLabel!.textAlignment = NSTextAlignment.Right
-        self.numberLabel!.font = UIFont.systemFontOfSize(20)
+        self.numberLabel!.textColor = UIColor.white
+        self.numberLabel!.textAlignment = NSTextAlignment.right
+        self.numberLabel!.font = UIFont.systemFont(ofSize: 20)
         
         self.contentView.addSubview(self.bigView!)
         self.contentView.addSubview(self.cardImageView!)
@@ -57,9 +57,9 @@ class BankCardTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.bigView!.frame = CGRectMake(10, 5, WIDTH-20, PART_H(self.contentView)-10);
-        self.cardImageView!.frame = CGRectMake(30, 30, 126, 36);
-        self.numberLabel!.frame = CGRectMake(WIDTH - 260, PART_H(self.contentView)-50, 240, 30);
+        self.bigView!.frame = CGRect(x: 10, y: 5, width: WIDTH-20, height: PART_H(self.contentView)-10);
+        self.cardImageView!.frame = CGRect(x: 30, y: 30, width: 126, height: 36);
+        self.numberLabel!.frame = CGRect(x: WIDTH - 260, y: PART_H(self.contentView)-50, width: 240, height: 30);
     }
     
     override func awakeFromNib() {
@@ -67,7 +67,7 @@ class BankCardTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for the selected state

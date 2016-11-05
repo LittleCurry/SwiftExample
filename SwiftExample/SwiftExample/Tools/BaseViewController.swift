@@ -13,12 +13,12 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor.white;
 //        self.navigationController!.navigationBar.barTintColor = mainColor;
         self.automaticallyAdjustsScrollViewInsets = false;
-        self.navigationController!.navigationBar.tintColor = UIColor.blackColor();
+        self.navigationController!.navigationBar.tintColor = UIColor.black;
 //        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()];
-        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage.init(named: "back.png")!.changeImageWithColor(UIColor.blackColor()).resizableImageWithCapInsets(UIEdgeInsetsMake(0, 20, 0, 0)), forState: UIControlState.Normal, barMetrics: UIBarMetrics.Default)
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(UIImage.init(named: "back.png")!.change(with: UIColor.black).resizableImage(withCapInsets: UIEdgeInsetsMake(0, 20, 0, 0)), for: UIControlState(), barMetrics: UIBarMetrics.default)
         
         /**
          *  ???
@@ -34,9 +34,9 @@ class BaseViewController: UIViewController {
 //        self.navigationController?.popViewControllerAnimated(true)
 //    }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false;
     }
 
     override func didReceiveMemoryWarning() {

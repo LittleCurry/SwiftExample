@@ -14,7 +14,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
     var normalImages:NSMutableArray = [];// gif图片
     var refreshImages:NSMutableArray = [];// gif图片
     var videoArr : NSMutableArray = [];
-    var myTableView = UITableView.init(frame: CGRectMake(0, 0, WIDTH, HEIGHT), style: UITableViewStyle.Grouped);
+    var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.grouped);
     let cellName = "qweqweasdasasad123ssasdsassasqwe";
     var count = 0;
     var player : MPMoviePlayerController?
@@ -36,28 +36,28 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         for i in 1...6 {
             // normalhImages
             let image = UIImage.init(named: String.init(format:"%ld.tiff", i));
-            self.normalImages.addObject(image!);
+            self.normalImages.add(image!);
         }
         for i in 7...47 {
             // refreshImages
             let image = UIImage.init(named: String(i)+".tiff");
-            self.refreshImages.addObject(image!);
+            self.refreshImages.add(image!);
         }
         self.myTableView.contentInset = UIEdgeInsetsMake(64-35, 0, 49-20-20, 0);
         self.myTableView.tableFooterView = UIView.init();
-        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
-        self.myTableView.registerClass(MovieTableViewCell.self, forCellReuseIdentifier: self.cellName)
+        self.myTableView.register(MovieTableViewCell.self, forCellReuseIdentifier: self.cellName)
         let header = MJRefreshGifHeader.init(refreshingBlock: {
             self.count = 0;
             self.getData();
         });
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Refreshing);
-        header.setImages(self.refreshImages as [AnyObject], forState: MJRefreshState.Idle);
-        header.setImages(self.normalImages as [AnyObject], forState: MJRefreshState.Pulling);
-        header.lastUpdatedTimeLabel.hidden = true;
-        header.stateLabel.hidden = true;
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.refreshing);
+        header?.setImages(self.refreshImages as [AnyObject], for: MJRefreshState.idle);
+        header?.setImages(self.normalImages as [AnyObject], for: MJRefreshState.pulling);
+        header?.lastUpdatedTimeLabel.isHidden = true;
+        header?.stateLabel.isHidden = true;
         self.myTableView.mj_header = header;
         
         let footer = MJRefreshAutoNormalFooter.init {
@@ -70,38 +70,38 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         self.myTableView.addSubview(self.loadImage)
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videoArr.count;
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView.init(frame: CGRectMake(0, 0, WIDTH
-            , WIDTH/4))
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: WIDTH
+            , height: WIDTH/4))
         var imageTypeArr = ["design.png", "pet.png", "circleGirl.png", "furniture.png"]
         
         for i in 0...3 {
-            let aButtonView = UIButton.init(type: UIButtonType.System)
-            aButtonView.frame = CGRectMake(CGFloat(i)*WIDTH/4.0, 0, (WIDTH-3)/4, WIDTH/4)
-            aButtonView.backgroundColor = UIColor.whiteColor()
-            aButtonView.addTarget(self, action: "typeAction:", forControlEvents: UIControlEvents.TouchUpInside)
+            let aButtonView = UIButton.init(type: UIButtonType.system)
+            aButtonView.frame = CGRect(x: CGFloat(i)*WIDTH/4.0, y: 0, width: (WIDTH-3)/4, height: WIDTH/4)
+            aButtonView.backgroundColor = UIColor.white
+            aButtonView.addTarget(self, action: #selector(ThirdViewController.typeAction(_:)), for: UIControlEvents.touchUpInside)
             aButtonView.tag = i+456;
             headerView.addSubview(aButtonView)
-            let aImageView = UIImageView.init(frame: CGRectMake(WIDTH/16, 10, WIDTH/8, WIDTH/8))
+            let aImageView = UIImageView.init(frame: CGRect(x: WIDTH/16, y: 10, width: WIDTH/8, height: WIDTH/8))
             aImageView.image = UIImage.init(named: imageTypeArr[i])
             aButtonView.addSubview(aImageView)
-            let aLabel = UILabel.init(frame: CGRectMake(0, WIDTH/4-25, WIDTH/4, 20))
-            aLabel.textAlignment = NSTextAlignment.Center
+            let aLabel = UILabel.init(frame: CGRect(x: 0, y: WIDTH/4-25, width: WIDTH/4, height: 20))
+            aLabel.textAlignment = NSTextAlignment.center
             aLabel.text = self.textTypeArr[i]
             aButtonView.addSubview(aLabel)
         }
         return headerView;
     }
     
-    func typeAction(button:UIButton) -> Void {
+    func typeAction(_ button:UIButton) -> Void {
         //
         let typeVC = ThirdOneTypeViewController.init()
         typeVC.hidesBottomBarWhenPushed = true
@@ -111,21 +111,21 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return WIDTH/4+10
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:MovieTableViewCell = tableView.dequeueReusableCellWithIdentifier(self.cellName, forIndexPath: indexPath) as! MovieTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell:MovieTableViewCell = tableView.dequeueReusableCell(withIdentifier: self.cellName, for: indexPath) as! MovieTableViewCell
         if (cell.isEqual(nil)) {
-            cell = MovieTableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellName)
+            cell = MovieTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: self.cellName)
         }
         cell.video = self.videoArr[indexPath.item] as?Video;
-        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let video = self.videoArr[indexPath.row] as! Video;
         if (self.player != nil) {
@@ -133,17 +133,17 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         }
         self.currtRow = indexPath.row;
         self.player = MPMoviePlayerController.init()
-        self.player!.contentURL = NSURL.init(string: video.mp4_url)
-        self.player!.view.frame = CGRectMake(0,CGFloat(indexPath.row*300)+WIDTH/4+10+40+35, WIDTH, 210);
+        self.player!.contentURL = URL.init(string: video.mp4_url)
+        self.player!.view.frame = CGRect(x: 0,y: CGFloat(indexPath.row*300)+WIDTH/4+10+40+35, width: WIDTH, height: 210);
 //        self.player!.controlStyle = MPMovieControlStyle.None;
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "movieDidFinish", name: MPMoviePlayerPlaybackDidFinishNotification, object: self.player)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "movieStateDidChange", name: MPMoviePlayerPlaybackStateDidChangeNotification, object: self.player)
+        NotificationCenter.default.addObserver(self, selector: #selector(ThirdViewController.movieDidFinish), name: NSNotification.Name.MPMoviePlayerPlaybackDidFinish, object: self.player)
+        NotificationCenter.default.addObserver(self, selector: #selector(ThirdViewController.movieStateDidChange), name: NSNotification.Name.MPMoviePlayerPlaybackStateDidChange, object: self.player)
         //        [self setupLoadingView];
         self.myTableView.addSubview(self.player!.view)
         self.player!.play()
-        self.loadImage.frame = CGRectMake(WIDTH/2-30, CGFloat(indexPath.row*300)+WIDTH/4+10+40+35+105-30, 60, 60)
-        self.myTableView.bringSubviewToFront(self.loadImage)
+        self.loadImage.frame = CGRect(x: WIDTH/2-30, y: CGFloat(indexPath.row*300)+WIDTH/4+10+40+35+105-30, width: 60, height: 60)
+        self.myTableView.bringSubview(toFront: self.loadImage)
         self.startLoading()
     }
     
@@ -152,7 +152,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     func movieStateDidChange() -> Void {
-        if (self.player!.playbackState == MPMoviePlaybackState.Playing) {
+        if (self.player!.playbackState == MPMoviePlaybackState.playing) {
 //            self.circleLoadingV.stopAnimating()
             print("开始了")
             self.endLoading()
@@ -163,14 +163,14 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotationAnimation.toValue = M_PI * 2.0
         rotationAnimation.duration = 1
-        rotationAnimation.cumulative = true
+        rotationAnimation.isCumulative = true
         rotationAnimation.repeatCount = 99999
-        self.loadImage.layer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+        self.loadImage.layer.add(rotationAnimation, forKey: "rotationAnimation")
     }
     func endLoading() -> Void {
         //
         self.loadImage.layer.removeAllAnimations()
-        self.myTableView.sendSubviewToBack(self.loadImage)
+        self.myTableView.sendSubview(toBack: self.loadImage)
     }
     
     func getData() -> Void {
@@ -179,7 +179,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         NetHandler.getDataWithUrl(urlstr, parameters: nil, tokenKey: "", tokenValue: "", ifCaches: false, cachesData: { (cacheData) in
             //
             }, success: { (successData) in
-                let dict = try! NSJSONSerialization.JSONObjectWithData(successData, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let dict = try! JSONSerialization.jsonObject(with: successData!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 let dataArr = dict["videoList"] as! NSMutableArray;
                 print(dataArr)
                 if(self.count == 0){
@@ -187,7 +187,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
                 }
                 for oneDic in dataArr {
                     let video = Video.objectWithDictionary(oneDic as! [String : AnyObject]) as? Video
-                    self.videoArr.addObject(video!);
+                    self.videoArr.add(video!);
                 }
                 self.myTableView.reloadData();
                 
@@ -203,7 +203,7 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self);
+        NotificationCenter.default.removeObserver(self);
         if ((self.player) != nil) {
             NSLog("销毁了");
             self.player!.view.removeFromSuperview()

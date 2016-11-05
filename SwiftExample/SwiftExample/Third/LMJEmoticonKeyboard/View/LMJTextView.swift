@@ -12,15 +12,15 @@ import UIKit
 ///拥有占位文字的textview, 推荐使用
 class LMJTextView: UITextView {
 
-    private var oldFont: UIFont = UIFont.systemFontOfSize(16)
+    fileprivate var oldFont: UIFont = UIFont.systemFont(ofSize: 16)
     
-    private lazy var placeHolderLabel: UILabel = UILabel()
+    fileprivate lazy var placeHolderLabel: UILabel = UILabel()
     var placeHoldString: String = "发布有趣的事..." {
         didSet{
             textViewChangeFrame()
         }
     }
-    var placeHoldColor: UIColor = UIColor.grayColor(){
+    var placeHoldColor: UIColor = UIColor.gray{
         didSet{
             textViewChangeFrame()
         }
@@ -74,53 +74,53 @@ class LMJTextView: UITextView {
         setupUI()
     }
     
-    override func insertText(text: String) {
+    override func insertText(_ text: String) {
         super.insertText(text)
          textViewChangeFrame()
     }
     
-    override func replaceRange(range: UITextRange, withText text: String) {
-        super.replaceRange(range, withText: text)
+    override func replace(_ range: UITextRange, withText text: String) {
+        super.replace(range, withText: text)
         self.insertText("")
         textViewChangeFrame()
     }
     
     deinit
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 }
 
 
 extension LMJTextView
 {
-    private func setupUI()
+    fileprivate func setupUI()
     {
         self.addSubview(placeHolderLabel)
         placeHolderLabel.frame.origin.x = 14
         placeHolderLabel.frame.origin.y = 8
         placeHolderLabel.text = placeHoldString
         placeHolderLabel.textColor = placeHoldColor
-        self.font = UIFont.systemFontOfSize(16)
+        self.font = UIFont.systemFont(ofSize: 16)
         placeHolderLabel.font = self.font
         placeHolderLabel.numberOfLines = 0
         placeHolderLabel.sizeToFit()
         
         alwaysBounceVertical = true
         self.textContainerInset = UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "textViewTextDidChange", name: UITextViewTextDidChangeNotification, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(LMJTextView.textViewTextDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: self)
     }
 }
 
 
 extension LMJTextView
 {
-    @objc private func textViewTextDidChange()
+    @objc fileprivate func textViewTextDidChange()
     {
-        self.placeHolderLabel.hidden = self.hasText()
+        self.placeHolderLabel.isHidden = self.hasText
     }
     
-    private func textViewChangeFrame()
+    fileprivate func textViewChangeFrame()
     {
         self.placeHolderLabel.text = self.placeHoldString
         self.placeHolderLabel.textColor = self.placeHoldColor
