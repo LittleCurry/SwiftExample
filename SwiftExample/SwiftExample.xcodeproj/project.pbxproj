@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C102E8FE1DD06EDA0052AD19 /* StoreCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */; };
 		C10F3AA81DC05C7800C27AE4 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AA71DC05C7800C27AE4 /* Chat.swift */; };
 		C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */; };
 		C10F3AAE1DC088DF00C27AE4 /* ThreepinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAD1DC088DF00C27AE4 /* ThreepinView.m */; };
@@ -685,6 +686,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCarTableViewCell.swift; sourceTree = "<group>"; };
 		C10F3AA71DC05C7800C27AE4 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C10F3AA91DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h"; sourceTree = "<group>"; };
 		C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m"; sourceTree = "<group>"; };
@@ -2730,6 +2732,7 @@
 				C1BC63751DBF662C006EBCFC /* WeChatChatTableViewCell.swift */,
 				C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */,
 				C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */,
+				C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3931,6 +3934,7 @@
 				C1BC63541DBEF7D9006EBCFC /* LMJEmoticonKeyboard.swift in Sources */,
 				C16417B91D9BC86D00BD3841 /* AppDelegate.swift in Sources */,
 				C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */,
+				C102E8FE1DD06EDA0052AD19 /* StoreCarTableViewCell.swift in Sources */,
 				C158F2AA1DACC982000CAE40 /* TAAnimatedDotView.m in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
 				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
@@ -4239,6 +4243,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = U4NQGTBH68;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4272,6 +4277,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SwiftExample/SwiftExample.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = U4NQGTBH68;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

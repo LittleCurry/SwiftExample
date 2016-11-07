@@ -70,6 +70,13 @@ class ThirdViewController: BaseViewController, UITableViewDelegate, UITableViewD
         self.myTableView.addSubview(self.loadImage)
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if (self.player != nil) {
+            self.player?.pause()
+        }
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300;
     }
