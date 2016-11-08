@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C102E8FE1DD06EDA0052AD19 /* StoreCarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */; };
+		C102E9011DD09CE40052AD19 /* circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C102E8FF1DD09CE40052AD19 /* circle@2x.png */; };
+		C102E9021DD09CE40052AD19 /* circle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C102E9001DD09CE40052AD19 /* circle@3x.png */; };
 		C10F3AA81DC05C7800C27AE4 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AA71DC05C7800C27AE4 /* Chat.swift */; };
 		C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */; };
 		C10F3AAE1DC088DF00C27AE4 /* ThreepinView.m in Sources */ = {isa = PBXBuildFile; fileRef = C10F3AAD1DC088DF00C27AE4 /* ThreepinView.m */; };
@@ -687,6 +689,8 @@
 
 /* Begin PBXFileReference section */
 		C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCarTableViewCell.swift; sourceTree = "<group>"; };
+		C102E8FF1DD09CE40052AD19 /* circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@2x.png"; sourceTree = "<group>"; };
+		C102E9001DD09CE40052AD19 /* circle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle@3x.png"; sourceTree = "<group>"; };
 		C10F3AA71DC05C7800C27AE4 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		C10F3AA91DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.h"; sourceTree = "<group>"; };
 		C10F3AAA1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m"; sourceTree = "<group>"; };
@@ -1958,7 +1962,6 @@
 		C16417B71D9BC86D00BD3841 /* SwiftExample */ = {
 			isa = PBXGroup;
 			children = (
-				C182945C1DCD7A2600574560 /* SwiftExample.entitlements */,
 				C16417EF1D9BC9E200BD3841 /* Frameworks */,
 				C16417EE1D9BC9D700BD3841 /* Third */,
 				C16417ED1D9BC9C900BD3841 /* Tools */,
@@ -1973,6 +1976,7 @@
 				C16417C21D9BC86D00BD3841 /* Assets.xcassets */,
 				C16417C41D9BC86D00BD3841 /* LaunchScreen.storyboard */,
 				C16417C71D9BC86D00BD3841 /* Info.plist */,
+				C182945C1DCD7A2600574560 /* SwiftExample.entitlements */,
 				C16417BF1D9BC86D00BD3841 /* SwiftExample.xcdatamodeld */,
 			);
 			path = SwiftExample;
@@ -2117,6 +2121,8 @@
 				C1BC63721DBF4347006EBCFC /* emoji@3x.png */,
 				C1BC63691DBF4120006EBCFC /* langxiaohua@2x.png */,
 				C1BC636A1DBF4120006EBCFC /* langxiaohua@3x.png */,
+				C102E8FF1DD09CE40052AD19 /* circle@2x.png */,
+				C102E9001DD09CE40052AD19 /* circle@3x.png */,
 				C17A13A11DBE07F50016E69B /* bankcard */,
 				C17FC3FA1DB870CC004028CA /* goods */,
 				C16C87671DAB667B00314367 /* weather */,
@@ -3550,6 +3556,7 @@
 				C17FC49A1DB870CC004028CA /* goods26.jpg in Resources */,
 				C17A13AB1DBE07F50016E69B /* bankcard5.jpg in Resources */,
 				C1970D231DA8BC5800260A11 /* furniture.png in Resources */,
+				C102E9021DD09CE40052AD19 /* circle@3x.png in Resources */,
 				C1E218241DAA0320002748F6 /* add@3x.png in Resources */,
 				C16C87751DAB673000314367 /* rainheavy@2x.png in Resources */,
 				C1BC1D3F1DADDC3B00AD5862 /* squareAdd@2x.png in Resources */,
@@ -3641,6 +3648,7 @@
 				C1C53D761DB4A7A3003DC3F0 /* com_bt_gray_normal@3x.png in Resources */,
 				C17FC4A51DB870CC004028CA /* goods36.jpg in Resources */,
 				C164183D1D9BCA3000BD3841 /* UMSCommentDetailController.xib in Resources */,
+				C102E9011DD09CE40052AD19 /* circle@2x.png in Resources */,
 				C17FC4AC1DB870CC004028CA /* goods42.jpg in Resources */,
 				C16418421D9BCA3000BD3841 /* UMSLoginViewController.xib in Resources */,
 				C158F2E71DACE40B000CAE40 /* preview_original_def@2x.png in Resources */,

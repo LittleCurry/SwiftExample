@@ -19,6 +19,7 @@ class StoreCarTableViewCell: UITableViewCell {
     var colorLabel:UILabel?;
     var choseServiceLabel:UILabel?;
     var moneyLabel:UILabel?;
+    var circleView:UIView?;
     var reduceButton:UIButton?;
     var countLabel:UILabel?;
     var addButton:UIButton?;
@@ -61,38 +62,54 @@ class StoreCarTableViewCell: UITableViewCell {
         self.colorLabel = UILabel.init();
         self.choseServiceLabel = UILabel.init();
         self.moneyLabel = UILabel.init();
-        self.reduceButton = UIButton.init(type: UIButtonType.system)
+        self.circleView = UIView.init();
+        self.reduceButton = UIButton.init(type: UIButtonType.custom)
         self.countLabel = UILabel.init();
-        self.addButton = UIButton.init(type: UIButtonType.system)
+        self.addButton = UIButton.init(type: UIButtonType.custom)
         
         
-        self.chargeTypeLabel?.text = "满减"
         self.chargeTypeLabel?.textColor = UIColor.red
         self.chargeTypeLabel?.layer.masksToBounds = true;
         self.chargeTypeLabel?.layer.cornerRadius = 3;
-        self.chargeTypeLabel?.layer.borderWidth = 0.5;//设置边界的宽度
+        self.chargeTypeLabel?.layer.borderWidth = 1;//设置边界的宽度
         self.chargeTypeLabel?.font = UIFont.systemFont(ofSize: 10)
         self.chargeTypeLabel?.layer.borderColor = UIColor.red.cgColor
+        self.chargeTypeLabel?.textAlignment = .center
+        self.chargeTypeLabel?.text = "满减"
         self.chargeLabel?.text = "已购满99元, 可领取赠品"
         self.chargeLabel?.textColor = PLACEHOLODERCOLOR
         self.chargeLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.getFreeLabel?.text = "领赠品＞"
+        self.getFreeLabel?.text = "领赠品 >"
         self.getFreeLabel?.textColor = UIColor.red
         self.getFreeLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.addButton?.setBackgroundImage(UIImage.init(named: "add.png"), for: UIControlState.normal)
+        self.choseButton?.setBackgroundImage(UIImage.init(named: "circle.png"), for: UIControlState.normal)
         self.bigImage?.image = UIImage.init(named: "meinv.jpg")
-        self.nameLabel?.text = "iPhone7+ 78G 玫瑰金 土豪黑"
-        self.colorLabel?.text = "颜色:玫瑰金"
+        self.nameLabel?.font = WORDFONT
+        self.nameLabel?.numberOfLines = 0
+        self.nameLabel?.text = "iPhone7+ 78G 玫瑰金 土豪黑 超级豪华定制版 可贵了"
         self.colorLabel?.textColor = PLACEHOLODERCOLOR
         self.colorLabel?.font = UIFont.systemFont(ofSize: 12)
+        self.colorLabel?.text = "颜色:玫瑰金"
         self.choseServiceLabel?.textColor = PLACEHOLODERCOLOR
+        self.choseServiceLabel?.font = UIFont.systemFont(ofSize: 12)
         self.choseServiceLabel?.text = "选服务"
+        self.moneyLabel?.textColor = UIColor.red
         self.moneyLabel?.text = "¥3780.00"
+        
+        self.circleView?.layer.masksToBounds = true
+        self.circleView?.layer.masksToBounds = true;
+        self.circleView?.layer.cornerRadius = 3;
+        self.circleView?.layer.borderWidth = 0.3;//设置边界的宽度
+        self.circleView?.layer.borderColor = PLACEHOLODERCOLOR.cgColor
+        self.reduceButton?.setTitleColor(UIColor.black, for: .normal)
         self.reduceButton?.setTitle("－", for: .normal)
+        self.countLabel?.layer.borderWidth = 0.3;//设置边界的宽度
+        self.countLabel?.layer.borderColor = PLACEHOLODERCOLOR.cgColor
+        self.countLabel?.textAlignment = .center
         self.countLabel?.font = UIFont.systemFont(ofSize: 12)
         self.countLabel?.text = "1"
+        self.addButton?.setTitleColor(UIColor.black, for: .normal)
         self.addButton?.setTitle("＋", for: .normal)
-        
         
         self.contentView.addSubview(self.chargeTypeLabel!)
         self.contentView.addSubview(self.chargeLabel!)
@@ -103,6 +120,7 @@ class StoreCarTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.colorLabel!)
         self.contentView.addSubview(self.choseServiceLabel!)
         self.contentView.addSubview(self.moneyLabel!)
+        self.contentView.addSubview(self.circleView!)
         self.contentView.addSubview(self.reduceButton!)
         self.contentView.addSubview(self.countLabel!)
         self.contentView.addSubview(self.addButton!)
@@ -114,18 +132,19 @@ class StoreCarTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews();
-        self.chargeTypeLabel?.frame = CGRect(x: 5, y: 5, width: 22, height: 10)
-        self.chargeLabel?.frame = CGRect(x: 30, y: 5, width: WIDTH-80, height: 20)
-        self.getFreeLabel?.frame = CGRect(x: WIDTH-60, y: 5, width: 50, height: 20)
-        self.choseButton?.frame = CGRect(x: 20, y: 55, width: 20, height: 20)
-        self.bigImage?.frame = CGRect(x: 50, y: 25, width: 80, height: 100)
-        self.nameLabel?.frame = CGRect(x: 140, y: 5, width: WIDTH-150, height: 60)
-        self.colorLabel?.frame = CGRect(x: 140, y: 65, width: 60, height: 20)
-        self.choseServiceLabel?.frame = CGRect(x: WIDTH-50, y: 65, width: 40, height: 20)
-        self.moneyLabel?.frame = CGRect(x: 140, y: 65, width: 100, height: 30)
-        self.reduceButton?.frame = CGRect(x: WIDTH-130, y: 65, width: 30, height: 30)
-        self.countLabel?.frame = CGRect(x: WIDTH-100, y: 65, width: 40, height: 30)
-        self.addButton?.frame = CGRect(x: WIDTH-40, y: 65, width: 30, height: 30)
+        self.chargeTypeLabel?.frame = CGRect(x: 10, y: 23, width: 25, height: 14)
+        self.chargeLabel?.frame = CGRect(x: 45, y: 20, width: WIDTH-110, height: 20)
+        self.getFreeLabel?.frame = CGRect(x: WIDTH-60, y: 20, width: 50, height: 20)
+        self.choseButton?.frame = CGRect(x: 20, y: 90, width: 20, height: 20)
+        self.bigImage?.frame = CGRect(x: 50, y: 50, width: 80, height: 100)
+        self.nameLabel?.frame = CGRect(x: 140, y: 50, width: WIDTH-150, height: 60)
+        self.colorLabel?.frame = CGRect(x: 140, y: 110, width: 80, height: 20)
+        self.choseServiceLabel?.frame = CGRect(x: WIDTH-50, y: 110, width: 40, height: 20)
+        self.moneyLabel?.frame = CGRect(x: 140, y: 140, width: 100, height: 25)
+        self.circleView?.frame = CGRect(x: WIDTH-105, y: 140, width: 90, height: 25)
+        self.reduceButton?.frame = CGRect(x: WIDTH-105, y: 140, width: 25, height: 25)
+        self.countLabel?.frame = CGRect(x: WIDTH-80, y: 140, width: 40, height: 25)
+        self.addButton?.frame = CGRect(x: WIDTH-40, y: 140, width: 25, height: 25)
     }
     
     override func awakeFromNib() {

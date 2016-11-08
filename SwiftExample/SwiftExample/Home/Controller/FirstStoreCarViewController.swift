@@ -25,9 +25,8 @@ class FirstStoreCarViewController: BaseViewController, UITableViewDelegate, UITa
     func getView() -> Void {
         self.navigationItem.title = "购物车"
         
-        self.myTableView.contentInset = UIEdgeInsetsMake(64-35, 0, 49-20-20, 0);
+        self.myTableView.contentInset = UIEdgeInsetsMake(64-35+10, 0, 49+3-20-20, 0);
         self.myTableView.tableFooterView = UIView.init();
-        self.myTableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self
         self.myTableView.register(StoreCarTableViewCell.self, forCellReuseIdentifier: self.cellName)
