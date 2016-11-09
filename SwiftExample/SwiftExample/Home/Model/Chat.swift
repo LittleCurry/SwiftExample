@@ -17,5 +17,4 @@ class Chat: NSObject {
      * @brief 头像
      */
     var headImage: String = "";
-    
 }

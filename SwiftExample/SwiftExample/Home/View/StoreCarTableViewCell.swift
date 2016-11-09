@@ -13,7 +13,7 @@ class StoreCarTableViewCell: UITableViewCell {
     var chargeTypeLabel:UILabel?;
     var chargeLabel:UILabel?;
     var getFreeLabel:UILabel?;
-    var choseButton:UIButton?;
+    var circleButton:UIButton?;
     var bigImage:UIImageView?;
     var nameLabel:UILabel?;
     var colorLabel:UILabel?;
@@ -23,32 +23,29 @@ class StoreCarTableViewCell: UITableViewCell {
     var reduceButton:UIButton?;
     var countLabel:UILabel?;
     var addButton:UIButton?;
+//    var isChose = false;
     
-//    var _video : Video?
-//    var video : Video?{
-//        set(newVideo){
-//            if (_video != newVideo) {
-//                _video = newVideo;
-//            }
-//            self.chargeLabel?.text = newVideo?.title;
-//            self.movieImage?.sd_setImage(withURL: newVideo!.cover, placeholderImage: nil, options: SDWebImageOptions.continueInBackground, completed: { (loadedImage, nil, SDImageCacheTypeDisk, imageUrl) in
-//                //
-//            })
-//            
-//            self.timeLenLabel?.text = String(newVideo!.length/60) + ":" + String(format: "%02d", newVideo!.length%60);
-//            self.countLabel?.text = String(newVideo!.playCount);
-//            let index = newVideo!.ptime.characters.index(newVideo!.ptime.startIndex, offsetBy: 2)
-//            let index2 = newVideo!.ptime.characters.index(newVideo!.ptime.startIndex, offsetBy: 8)
-//            self.dateLabel?.text = newVideo!.ptime.substring(from: index)
-//            self.dateLabel?.text = self.dateLabel?.text!.substring(to: index2)
-//            // 替换字符串
-//            self.dateLabel?.text = self.dateLabel?.text!.replacingOccurrences(of: "-", with: "/", options: NSString.CompareOptions.literal, range: nil)
-//            
-//        }
-//        get{
-//            return self._video;
-//        }
-//    }
+    var _storeCar : StoreCar?
+    var storeCar : StoreCar?{
+        set(newStoreCar){
+            if (_storeCar != newStoreCar) {
+                _storeCar = newStoreCar;
+            }
+            self.chargeTypeLabel?.text = newStoreCar?.chargeType
+            self.chargeLabel?.text = newStoreCar?.charge
+            self.getFreeLabel?.text = newStoreCar?.getFree
+            let aImage = (newStoreCar?.isChose)! ? UIImage.init(named: "yes.png") : UIImage.init(named: "circle.png")
+            self.circleButton?.setBackgroundImage(aImage, for: .normal)
+            self.bigImage?.image = UIImage.init(named: (newStoreCar?.bigImage)!)
+            self.nameLabel?.text = newStoreCar?.name
+            self.colorLabel?.text = newStoreCar?.colorText
+            self.moneyLabel?.text = String.init(format: "¥%.2f", (newStoreCar?.money)!)
+            self.countLabel?.text = String.init(format: "%ld", (newStoreCar!.count))
+        }
+        get{
+            return self._storeCar;
+        }
+    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -56,7 +53,7 @@ class StoreCarTableViewCell: UITableViewCell {
         self.chargeTypeLabel = UILabel.init();
         self.chargeLabel = UILabel.init();
         self.getFreeLabel = UILabel.init();
-        self.choseButton = UIButton.init(type: UIButtonType.system)
+        self.circleButton = UIButton.init(type: UIButtonType.system)
         self.bigImage = UIImageView.init();
         self.nameLabel = UILabel.init();
         self.colorLabel = UILabel.init();
@@ -75,32 +72,27 @@ class StoreCarTableViewCell: UITableViewCell {
         self.chargeTypeLabel?.font = UIFont.systemFont(ofSize: 10)
         self.chargeTypeLabel?.layer.borderColor = UIColor.red.cgColor
         self.chargeTypeLabel?.textAlignment = .center
-        self.chargeTypeLabel?.text = "满减"
-        self.chargeLabel?.text = "已购满99元, 可领取赠品"
         self.chargeLabel?.textColor = PLACEHOLODERCOLOR
         self.chargeLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.getFreeLabel?.text = "领赠品 >"
         self.getFreeLabel?.textColor = UIColor.red
         self.getFreeLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.choseButton?.setBackgroundImage(UIImage.init(named: "circle.png"), for: UIControlState.normal)
-        self.bigImage?.image = UIImage.init(named: "meinv.jpg")
+        self.circleButton?.setBackgroundImage(UIImage.init(named: "circle.png"), for: UIControlState.normal)
         self.nameLabel?.font = WORDFONT
         self.nameLabel?.numberOfLines = 0
-        self.nameLabel?.text = "iPhone7+ 78G 玫瑰金 土豪黑 超级豪华定制版 可贵了"
         self.colorLabel?.textColor = PLACEHOLODERCOLOR
         self.colorLabel?.font = UIFont.systemFont(ofSize: 12)
-        self.colorLabel?.text = "颜色:玫瑰金"
         self.choseServiceLabel?.textColor = PLACEHOLODERCOLOR
         self.choseServiceLabel?.font = UIFont.systemFont(ofSize: 12)
         self.choseServiceLabel?.text = "选服务"
         self.moneyLabel?.textColor = UIColor.red
-        self.moneyLabel?.text = "¥3780.00"
         
         self.circleView?.layer.masksToBounds = true
         self.circleView?.layer.masksToBounds = true;
         self.circleView?.layer.cornerRadius = 3;
         self.circleView?.layer.borderWidth = 0.3;//设置边界的宽度
         self.circleView?.layer.borderColor = PLACEHOLODERCOLOR.cgColor
+        self.reduceButton?.isUserInteractionEnabled = false
+        self.reduceButton?.alpha = 0.5
         self.reduceButton?.setTitleColor(UIColor.black, for: .normal)
         self.reduceButton?.setTitle("－", for: .normal)
         self.countLabel?.layer.borderWidth = 0.3;//设置边界的宽度
@@ -114,7 +106,7 @@ class StoreCarTableViewCell: UITableViewCell {
         self.contentView.addSubview(self.chargeTypeLabel!)
         self.contentView.addSubview(self.chargeLabel!)
         self.contentView.addSubview(self.getFreeLabel!)
-        self.contentView.addSubview(self.choseButton!)
+        self.contentView.addSubview(self.circleButton!)
         self.contentView.addSubview(self.bigImage!)
         self.contentView.addSubview(self.nameLabel!)
         self.contentView.addSubview(self.colorLabel!)
@@ -135,8 +127,8 @@ class StoreCarTableViewCell: UITableViewCell {
         self.chargeTypeLabel?.frame = CGRect(x: 10, y: 23, width: 25, height: 14)
         self.chargeLabel?.frame = CGRect(x: 45, y: 20, width: WIDTH-110, height: 20)
         self.getFreeLabel?.frame = CGRect(x: WIDTH-60, y: 20, width: 50, height: 20)
-        self.choseButton?.frame = CGRect(x: 20, y: 90, width: 20, height: 20)
-        self.bigImage?.frame = CGRect(x: 50, y: 50, width: 80, height: 100)
+        self.circleButton?.frame = CGRect(x: 10, y: 90, width: 20, height: 20)
+        self.bigImage?.frame = CGRect(x: 45, y: 50, width: 85, height: 100)
         self.nameLabel?.frame = CGRect(x: 140, y: 50, width: WIDTH-150, height: 60)
         self.colorLabel?.frame = CGRect(x: 140, y: 110, width: 80, height: 20)
         self.choseServiceLabel?.frame = CGRect(x: WIDTH-50, y: 110, width: 40, height: 20)
