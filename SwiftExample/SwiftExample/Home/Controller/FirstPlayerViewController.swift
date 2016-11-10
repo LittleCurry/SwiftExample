@@ -28,6 +28,11 @@ class FirstPlayerViewController: BaseViewController {
         self.view.addSubview((self.mvPlay?.view)!)
         self.mvPlay?.play()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.mvPlay?.pause()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

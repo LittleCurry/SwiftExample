@@ -28,6 +28,7 @@ class FirstStoreCarViewController: BaseViewController, UITableViewDelegate, UITa
     
     func getView() -> Void {
         self.navigationItem.title = "购物车"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstStoreCarViewController.messageAction))
         
         self.myTableView.contentInset = UIEdgeInsetsMake(64-35+10, 0, 49+3-20-20, 0);
         self.myTableView.tableFooterView = UIView.init();
@@ -63,6 +64,10 @@ class FirstStoreCarViewController: BaseViewController, UITableViewDelegate, UITa
         self.view.addSubview(self.goPayButton)
     }
     
+    func messageAction() -> Void {
+        //
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200;
     }
@@ -78,7 +83,7 @@ class FirstStoreCarViewController: BaseViewController, UITableViewDelegate, UITa
         }
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         cell.circleButton?.tag = indexPath.row + 99;
-        // swiftselector,ocselector, button的方法选择器
+        // swiftselector,ocselector, button的方法选择器 或者#selector(FirstStoreCarViewController.choseAction)
         cell.circleButton?.addTarget(self, action: #selector(choseAction(_:)), for: UIControlEvents.touchUpInside)
         
 //        var aImage = UIImage.init()
@@ -180,13 +185,13 @@ class FirstStoreCarViewController: BaseViewController, UITableViewDelegate, UITa
         tempArr.add(["chargeType":"换购", "charge":"购满199.00元, 即可换购商品", "getFree":"去凑单>", "isChose":false, "bigImage":"goods8.jpg", "name":"格洋 U盘32G高速防水车载金属u盘16G个性迷你64G电脑U盘128G优盘", "colorText":"颜色:橘黄", "money":"30.00", "count":1])
         tempArr.add(["chargeType":"满减", "charge":"购满299.00元, 即可换购商", "getFree":"去凑单>", "isChose":false, "bigImage":"goods60.jpg", "name":"JOOC/玖诗2016春夏新款性感尖头网纱细高跟鞋真皮凉鞋女单鞋Q803", "colorText":"颜色:黑", "money":"288.00", "count":1])
         tempArr.add(["chargeType":"满减", "charge":"已购满39999元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods13.jpg", "name":"Apple/苹果 9.7 英寸 iPad Pro WLAN 128GB Apple/苹果 12 英寸 MacBook 512GB", "colorText":"颜色:银色", "money":"55806.00", "count":1])
-        tempArr.add(["chargeType":"返现", "charge":"已购满199元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods46.jpg", "name":"婚纱照结婚鞋子尖头高跟鞋细跟灰姑娘水晶鞋婚鞋新娘鞋水钻单鞋女", "colorText":"颜色:银白", "money":"368.00", "count":1])
+        tempArr.add(["chargeType":"换购", "charge":"已购满199元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods46.jpg", "name":"婚纱照结婚鞋子尖头高跟鞋细跟灰姑娘水晶鞋婚鞋新娘鞋水钻单鞋女", "colorText":"颜色:银白", "money":"368.00", "count":1])
         tempArr.add(["chargeType":"返现", "charge":"购满299.00元, 即可换购商", "getFree":"去凑单>", "isChose":false, "bigImage":"goods55.jpg", "name":"保罗品牌男鞋新款2016秋季男士休闲运动鞋旅游鞋跑步耐磨冬季板鞋", "colorText":"颜色:黑白", "money":"155.00", "count":1])
         tempArr.add(["chargeType":"返现", "charge":"已购满699元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods33.jpg", "name":"Nike 耐克官方 NIKE AIR MAX EFFORT TR 男子训练鞋 705353", "colorText":"颜色:黑白", "money":"798.00", "count":1])
-        tempArr.add(["chargeType":"返现", "charge":"已购满999元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods17.jpg", "name":"虹PAD E90 8.9英寸 WIFI四核 WIN8 视网膜高清屏32GB平板电脑", "colorText":"颜色:银白", "money":"999.00", "count":1])
+        tempArr.add(["chargeType":"换购", "charge":"已购满999元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods17.jpg", "name":"虹PAD E90 8.9英寸 WIFI四核 WIN8 视网膜高清屏32GB平板电脑", "colorText":"颜色:银白", "money":"999.00", "count":1])
         tempArr.add(["chargeType":"返现", "charge":"购满199.00元, 即可换购商品", "getFree":"去凑单>", "isChose":false, "bigImage":"goods45.jpg", "name":"2016欧美磨砂绒面黑色高跟鞋职业OL红底鞋超高跟鞋细跟尖头单鞋女", "colorText":"颜色:黑", "money":"79.00", "count":1])
         tempArr.add(["chargeType":"返现", "charge":"已购满299元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods68.jpg", "name":"ADIDAS阿迪达斯 男装2016秋款男子透气防风夹克外套B34626 B34627", "colorText":"颜色:纯白", "money":"359.00", "count":1])
-        tempArr.add(["chargeType":"返现", "charge":"已购满1999元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods5.jpg", "name":"【蚂蚁摄影】花呗分期Canon/佳能 EOS700D 18-135套机单反照相机", "colorText":"颜色:黑", "money":"4799.00", "count":1])
+        tempArr.add(["chargeType":"换购", "charge":"已购满1999元, 可领取赠品", "getFree":"领赠品>", "isChose":false, "bigImage":"goods5.jpg", "name":"【蚂蚁摄影】花呗分期Canon/佳能 EOS700D 18-135套机单反照相机", "colorText":"颜色:黑", "money":"4799.00", "count":1])
 
         for oneDic in tempArr {
             let storeCar = StoreCar.objectWithDictionary(oneDic as! [String : AnyObject]) as? StoreCar
