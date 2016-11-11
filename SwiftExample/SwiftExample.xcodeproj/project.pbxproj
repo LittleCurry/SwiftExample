@@ -43,6 +43,49 @@
 		C12BECA21DAA5D2F009F2EAA /* FirstWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */; };
 		C1401A2A1DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1401A291DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift */; };
 		C1412AEA1DC873220058186D /* OneGoodsClassCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */; };
+		C14854F41DD4178D00A7FD89 /* vip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854F21DD4178D00A7FD89 /* vip@2x.png */; };
+		C14854F51DD4178D00A7FD89 /* vip@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854F31DD4178D00A7FD89 /* vip@3x.png */; };
+		C14854F71DD41BD400A7FD89 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C14854F61DD41BD400A7FD89 /* wallpaper.jpg */; };
+		C14854FA1DD4380B00A7FD89 /* castle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854F81DD4380B00A7FD89 /* castle@2x.png */; };
+		C14854FB1DD4380B00A7FD89 /* castle@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854F91DD4380B00A7FD89 /* castle@3x.png */; };
+		C14854FE1DD4381B00A7FD89 /* shopping@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854FC1DD4381B00A7FD89 /* shopping@2x.png */; };
+		C14854FF1DD4381B00A7FD89 /* shopping@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14854FD1DD4381B00A7FD89 /* shopping@3x.png */; };
+		C14855021DD4382F00A7FD89 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855001DD4382F00A7FD89 /* list@2x.png */; };
+		C14855031DD4382F00A7FD89 /* list@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855011DD4382F00A7FD89 /* list@3x.png */; };
+		C14855061DD4384A00A7FD89 /* double11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855041DD4384A00A7FD89 /* double11@2x.png */; };
+		C14855071DD4384A00A7FD89 /* double11@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855051DD4384A00A7FD89 /* double11@3x.png */; };
+		C148550A1DD4386700A7FD89 /* service@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855081DD4386700A7FD89 /* service@2x.png */; };
+		C148550B1DD4386700A7FD89 /* service@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855091DD4386700A7FD89 /* service@3x.png */; };
+		C148550E1DD4387200A7FD89 /* idea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C148550C1DD4387200A7FD89 /* idea@2x.png */; };
+		C148550F1DD4387200A7FD89 /* idea@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C148550D1DD4387200A7FD89 /* idea@3x.png */; };
+		C14855121DD4387A00A7FD89 /* like@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855101DD4387A00A7FD89 /* like@2x.png */; };
+		C14855131DD4387A00A7FD89 /* like@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855111DD4387A00A7FD89 /* like@3x.png */; };
+		C14855161DD44F7000A7FD89 /* stroll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855141DD44F7000A7FD89 /* stroll@2x.png */; };
+		C14855171DD44F7000A7FD89 /* stroll@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855151DD44F7000A7FD89 /* stroll@3x.png */; };
+		C148551A1DD44F8600A7FD89 /* shake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855181DD44F8600A7FD89 /* shake@2x.png */; };
+		C148551B1DD44F8600A7FD89 /* shake@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855191DD44F8600A7FD89 /* shake@3x.png */; };
+		C148551E1DD44FC000A7FD89 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C148551C1DD44FC000A7FD89 /* camera@2x.png */; };
+		C148551F1DD44FC000A7FD89 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C148551D1DD44FC000A7FD89 /* camera@3x.png */; };
+		C14855241DD44FDE00A7FD89 /* women@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855201DD44FDE00A7FD89 /* women@2x.png */; };
+		C14855251DD44FDE00A7FD89 /* women@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855211DD44FDE00A7FD89 /* women@3x.png */; };
+		C14855261DD44FDE00A7FD89 /* chest@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855221DD44FDE00A7FD89 /* chest@2x.png */; };
+		C14855271DD44FDE00A7FD89 /* chest@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C14855231DD44FDE00A7FD89 /* chest@3x.png */; };
+		C148554C1DD4760900A7FD89 /* BarrageCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = C148552B1DD4760900A7FD89 /* BarrageCanvas.m */; };
+		C148554D1DD4760900A7FD89 /* BarrageClock.m in Sources */ = {isa = PBXBuildFile; fileRef = C148552D1DD4760900A7FD89 /* BarrageClock.m */; };
+		C148554E1DD4760900A7FD89 /* BarrageDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = C148552F1DD4760900A7FD89 /* BarrageDescriptor.m */; };
+		C148554F1DD4760900A7FD89 /* BarrageDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855311DD4760900A7FD89 /* BarrageDispatcher.m */; };
+		C14855501DD4760900A7FD89 /* BarrageRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855331DD4760900A7FD89 /* BarrageRenderer.m */; };
+		C14855511DD4760900A7FD89 /* BarrageSpriteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855351DD4760900A7FD89 /* BarrageSpriteFactory.m */; };
+		C14855521DD4760900A7FD89 /* BarrageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855391DD4760900A7FD89 /* BarrageLoader.m */; };
+		C14855531DD4760900A7FD89 /* BarrageFloatImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C148553C1DD4760900A7FD89 /* BarrageFloatImageSprite.m */; };
+		C14855541DD4760900A7FD89 /* BarrageFloatSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C148553E1DD4760900A7FD89 /* BarrageFloatSprite.m */; };
+		C14855551DD4760900A7FD89 /* BarrageFloatTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855401DD4760900A7FD89 /* BarrageFloatTextSprite.m */; };
+		C14855561DD4760900A7FD89 /* BarrageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855421DD4760900A7FD89 /* BarrageSprite.m */; };
+		C14855571DD4760900A7FD89 /* BarrageSpriteUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855451DD4760900A7FD89 /* BarrageSpriteUtility.m */; };
+		C14855581DD4760900A7FD89 /* BarrageWalkImageSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855471DD4760900A7FD89 /* BarrageWalkImageSprite.m */; };
+		C14855591DD4760900A7FD89 /* BarrageWalkSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C14855491DD4760900A7FD89 /* BarrageWalkSprite.m */; };
+		C148555A1DD4760900A7FD89 /* BarrageWalkTextSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = C148554B1DD4760900A7FD89 /* BarrageWalkTextSprite.m */; };
+		C148555E1DD479D700A7FD89 /* NSSafeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C148555D1DD479D700A7FD89 /* NSSafeObject.m */; };
 		C14CE7C81DB8DFF900462ECB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C14CE7C71DB8DFF900462ECB /* UIView+Extension.m */; };
 		C14F65E91D9D155800B94427 /* FirstKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */; };
 		C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3101DA53876004A41A3 /* FirstGaussViewController.swift */; };
@@ -751,6 +794,67 @@
 		C12BECA11DAA5D2F009F2EAA /* FirstWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstWeatherViewController.swift; sourceTree = "<group>"; };
 		C1401A291DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreHomeTableViewCell1.swift; sourceTree = "<group>"; };
 		C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneGoodsClassCollectionViewCell.swift; sourceTree = "<group>"; };
+		C14854F21DD4178D00A7FD89 /* vip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip@2x.png"; sourceTree = "<group>"; };
+		C14854F31DD4178D00A7FD89 /* vip@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vip@3x.png"; sourceTree = "<group>"; };
+		C14854F61DD41BD400A7FD89 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper.jpg; sourceTree = "<group>"; };
+		C14854F81DD4380B00A7FD89 /* castle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "castle@2x.png"; sourceTree = "<group>"; };
+		C14854F91DD4380B00A7FD89 /* castle@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "castle@3x.png"; sourceTree = "<group>"; };
+		C14854FC1DD4381B00A7FD89 /* shopping@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping@2x.png"; sourceTree = "<group>"; };
+		C14854FD1DD4381B00A7FD89 /* shopping@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shopping@3x.png"; sourceTree = "<group>"; };
+		C14855001DD4382F00A7FD89 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		C14855011DD4382F00A7FD89 /* list@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@3x.png"; sourceTree = "<group>"; };
+		C14855041DD4384A00A7FD89 /* double11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "double11@2x.png"; sourceTree = "<group>"; };
+		C14855051DD4384A00A7FD89 /* double11@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "double11@3x.png"; sourceTree = "<group>"; };
+		C14855081DD4386700A7FD89 /* service@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service@2x.png"; sourceTree = "<group>"; };
+		C14855091DD4386700A7FD89 /* service@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service@3x.png"; sourceTree = "<group>"; };
+		C148550C1DD4387200A7FD89 /* idea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@2x.png"; sourceTree = "<group>"; };
+		C148550D1DD4387200A7FD89 /* idea@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idea@3x.png"; sourceTree = "<group>"; };
+		C14855101DD4387A00A7FD89 /* like@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@2x.png"; sourceTree = "<group>"; };
+		C14855111DD4387A00A7FD89 /* like@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "like@3x.png"; sourceTree = "<group>"; };
+		C14855141DD44F7000A7FD89 /* stroll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stroll@2x.png"; sourceTree = "<group>"; };
+		C14855151DD44F7000A7FD89 /* stroll@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stroll@3x.png"; sourceTree = "<group>"; };
+		C14855181DD44F8600A7FD89 /* shake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake@2x.png"; sourceTree = "<group>"; };
+		C14855191DD44F8600A7FD89 /* shake@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shake@3x.png"; sourceTree = "<group>"; };
+		C148551C1DD44FC000A7FD89 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		C148551D1DD44FC000A7FD89 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
+		C14855201DD44FDE00A7FD89 /* women@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women@2x.png"; sourceTree = "<group>"; };
+		C14855211DD44FDE00A7FD89 /* women@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "women@3x.png"; sourceTree = "<group>"; };
+		C14855221DD44FDE00A7FD89 /* chest@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chest@2x.png"; sourceTree = "<group>"; };
+		C14855231DD44FDE00A7FD89 /* chest@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chest@3x.png"; sourceTree = "<group>"; };
+		C148552A1DD4760900A7FD89 /* BarrageCanvas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageCanvas.h; sourceTree = "<group>"; };
+		C148552B1DD4760900A7FD89 /* BarrageCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageCanvas.m; sourceTree = "<group>"; };
+		C148552C1DD4760900A7FD89 /* BarrageClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageClock.h; sourceTree = "<group>"; };
+		C148552D1DD4760900A7FD89 /* BarrageClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageClock.m; sourceTree = "<group>"; };
+		C148552E1DD4760900A7FD89 /* BarrageDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageDescriptor.h; sourceTree = "<group>"; };
+		C148552F1DD4760900A7FD89 /* BarrageDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageDescriptor.m; sourceTree = "<group>"; };
+		C14855301DD4760900A7FD89 /* BarrageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageDispatcher.h; sourceTree = "<group>"; };
+		C14855311DD4760900A7FD89 /* BarrageDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageDispatcher.m; sourceTree = "<group>"; };
+		C14855321DD4760900A7FD89 /* BarrageRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageRenderer.h; sourceTree = "<group>"; };
+		C14855331DD4760900A7FD89 /* BarrageRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageRenderer.m; sourceTree = "<group>"; };
+		C14855341DD4760900A7FD89 /* BarrageSpriteFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteFactory.h; sourceTree = "<group>"; };
+		C14855351DD4760900A7FD89 /* BarrageSpriteFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSpriteFactory.m; sourceTree = "<group>"; };
+		C14855361DD4760900A7FD89 /* BarrageHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageHeader.h; sourceTree = "<group>"; };
+		C14855381DD4760900A7FD89 /* BarrageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageLoader.h; sourceTree = "<group>"; };
+		C14855391DD4760900A7FD89 /* BarrageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageLoader.m; sourceTree = "<group>"; };
+		C148553B1DD4760900A7FD89 /* BarrageFloatImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatImageSprite.h; sourceTree = "<group>"; };
+		C148553C1DD4760900A7FD89 /* BarrageFloatImageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatImageSprite.m; sourceTree = "<group>"; };
+		C148553D1DD4760900A7FD89 /* BarrageFloatSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatSprite.h; sourceTree = "<group>"; };
+		C148553E1DD4760900A7FD89 /* BarrageFloatSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatSprite.m; sourceTree = "<group>"; };
+		C148553F1DD4760900A7FD89 /* BarrageFloatTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageFloatTextSprite.h; sourceTree = "<group>"; };
+		C14855401DD4760900A7FD89 /* BarrageFloatTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageFloatTextSprite.m; sourceTree = "<group>"; };
+		C14855411DD4760900A7FD89 /* BarrageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSprite.h; sourceTree = "<group>"; };
+		C14855421DD4760900A7FD89 /* BarrageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSprite.m; sourceTree = "<group>"; };
+		C14855431DD4760900A7FD89 /* BarrageSpriteProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteProtocol.h; sourceTree = "<group>"; };
+		C14855441DD4760900A7FD89 /* BarrageSpriteUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageSpriteUtility.h; sourceTree = "<group>"; };
+		C14855451DD4760900A7FD89 /* BarrageSpriteUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageSpriteUtility.m; sourceTree = "<group>"; };
+		C14855461DD4760900A7FD89 /* BarrageWalkImageSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkImageSprite.h; sourceTree = "<group>"; };
+		C14855471DD4760900A7FD89 /* BarrageWalkImageSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkImageSprite.m; sourceTree = "<group>"; };
+		C14855481DD4760900A7FD89 /* BarrageWalkSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkSprite.h; sourceTree = "<group>"; };
+		C14855491DD4760900A7FD89 /* BarrageWalkSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkSprite.m; sourceTree = "<group>"; };
+		C148554A1DD4760900A7FD89 /* BarrageWalkTextSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarrageWalkTextSprite.h; sourceTree = "<group>"; };
+		C148554B1DD4760900A7FD89 /* BarrageWalkTextSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarrageWalkTextSprite.m; sourceTree = "<group>"; };
+		C148555C1DD479D700A7FD89 /* NSSafeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSafeObject.h; sourceTree = "<group>"; };
+		C148555D1DD479D700A7FD89 /* NSSafeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSafeObject.m; sourceTree = "<group>"; };
 		C14CE7C61DB8DFF900462ECB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		C14CE7C71DB8DFF900462ECB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		C14F65E81D9D155800B94427 /* FirstKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstKeyboardViewController.swift; sourceTree = "<group>"; };
@@ -1760,6 +1864,79 @@
 			path = SnowCell;
 			sourceTree = "<group>";
 		};
+		C14855281DD4760900A7FD89 /* BarrageRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				C148555B1DD479D700A7FD89 /* SafeObject */,
+				C14855291DD4760900A7FD89 /* BarrageEngine */,
+				C14855361DD4760900A7FD89 /* BarrageHeader.h */,
+				C14855371DD4760900A7FD89 /* BarrageLoader */,
+				C148553A1DD4760900A7FD89 /* BarrageSprite */,
+			);
+			path = BarrageRenderer;
+			sourceTree = "<group>";
+		};
+		C14855291DD4760900A7FD89 /* BarrageEngine */ = {
+			isa = PBXGroup;
+			children = (
+				C148552A1DD4760900A7FD89 /* BarrageCanvas.h */,
+				C148552B1DD4760900A7FD89 /* BarrageCanvas.m */,
+				C148552C1DD4760900A7FD89 /* BarrageClock.h */,
+				C148552D1DD4760900A7FD89 /* BarrageClock.m */,
+				C148552E1DD4760900A7FD89 /* BarrageDescriptor.h */,
+				C148552F1DD4760900A7FD89 /* BarrageDescriptor.m */,
+				C14855301DD4760900A7FD89 /* BarrageDispatcher.h */,
+				C14855311DD4760900A7FD89 /* BarrageDispatcher.m */,
+				C14855321DD4760900A7FD89 /* BarrageRenderer.h */,
+				C14855331DD4760900A7FD89 /* BarrageRenderer.m */,
+				C14855341DD4760900A7FD89 /* BarrageSpriteFactory.h */,
+				C14855351DD4760900A7FD89 /* BarrageSpriteFactory.m */,
+			);
+			path = BarrageEngine;
+			sourceTree = "<group>";
+		};
+		C14855371DD4760900A7FD89 /* BarrageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				C14855381DD4760900A7FD89 /* BarrageLoader.h */,
+				C14855391DD4760900A7FD89 /* BarrageLoader.m */,
+			);
+			path = BarrageLoader;
+			sourceTree = "<group>";
+		};
+		C148553A1DD4760900A7FD89 /* BarrageSprite */ = {
+			isa = PBXGroup;
+			children = (
+				C148553B1DD4760900A7FD89 /* BarrageFloatImageSprite.h */,
+				C148553C1DD4760900A7FD89 /* BarrageFloatImageSprite.m */,
+				C148553D1DD4760900A7FD89 /* BarrageFloatSprite.h */,
+				C148553E1DD4760900A7FD89 /* BarrageFloatSprite.m */,
+				C148553F1DD4760900A7FD89 /* BarrageFloatTextSprite.h */,
+				C14855401DD4760900A7FD89 /* BarrageFloatTextSprite.m */,
+				C14855411DD4760900A7FD89 /* BarrageSprite.h */,
+				C14855421DD4760900A7FD89 /* BarrageSprite.m */,
+				C14855431DD4760900A7FD89 /* BarrageSpriteProtocol.h */,
+				C14855441DD4760900A7FD89 /* BarrageSpriteUtility.h */,
+				C14855451DD4760900A7FD89 /* BarrageSpriteUtility.m */,
+				C14855461DD4760900A7FD89 /* BarrageWalkImageSprite.h */,
+				C14855471DD4760900A7FD89 /* BarrageWalkImageSprite.m */,
+				C14855481DD4760900A7FD89 /* BarrageWalkSprite.h */,
+				C14855491DD4760900A7FD89 /* BarrageWalkSprite.m */,
+				C148554A1DD4760900A7FD89 /* BarrageWalkTextSprite.h */,
+				C148554B1DD4760900A7FD89 /* BarrageWalkTextSprite.m */,
+			);
+			path = BarrageSprite;
+			sourceTree = "<group>";
+		};
+		C148555B1DD479D700A7FD89 /* SafeObject */ = {
+			isa = PBXGroup;
+			children = (
+				C148555C1DD479D700A7FD89 /* NSSafeObject.h */,
+				C148555D1DD479D700A7FD89 /* NSSafeObject.m */,
+			);
+			path = SafeObject;
+			sourceTree = "<group>";
+		};
 		C151E3141DA553D6004A41A3 /* SCChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -2173,6 +2350,33 @@
 				C19450981DD33635004B5BD3 /* order@3x.png */,
 				C194509C1DD33648004B5BD3 /* purse@2x.png */,
 				C194509D1DD33648004B5BD3 /* purse@3x.png */,
+				C14854F21DD4178D00A7FD89 /* vip@2x.png */,
+				C14854F31DD4178D00A7FD89 /* vip@3x.png */,
+				C14854F81DD4380B00A7FD89 /* castle@2x.png */,
+				C14854F91DD4380B00A7FD89 /* castle@3x.png */,
+				C14854FC1DD4381B00A7FD89 /* shopping@2x.png */,
+				C14854FD1DD4381B00A7FD89 /* shopping@3x.png */,
+				C14855001DD4382F00A7FD89 /* list@2x.png */,
+				C14855011DD4382F00A7FD89 /* list@3x.png */,
+				C14855041DD4384A00A7FD89 /* double11@2x.png */,
+				C14855051DD4384A00A7FD89 /* double11@3x.png */,
+				C14855081DD4386700A7FD89 /* service@2x.png */,
+				C14855091DD4386700A7FD89 /* service@3x.png */,
+				C148550C1DD4387200A7FD89 /* idea@2x.png */,
+				C148550D1DD4387200A7FD89 /* idea@3x.png */,
+				C14855101DD4387A00A7FD89 /* like@2x.png */,
+				C14855111DD4387A00A7FD89 /* like@3x.png */,
+				C14854F61DD41BD400A7FD89 /* wallpaper.jpg */,
+				C14855141DD44F7000A7FD89 /* stroll@2x.png */,
+				C14855151DD44F7000A7FD89 /* stroll@3x.png */,
+				C14855181DD44F8600A7FD89 /* shake@2x.png */,
+				C14855191DD44F8600A7FD89 /* shake@3x.png */,
+				C148551C1DD44FC000A7FD89 /* camera@2x.png */,
+				C148551D1DD44FC000A7FD89 /* camera@3x.png */,
+				C14855201DD44FDE00A7FD89 /* women@2x.png */,
+				C14855211DD44FDE00A7FD89 /* women@3x.png */,
+				C14855221DD44FDE00A7FD89 /* chest@2x.png */,
+				C14855231DD44FDE00A7FD89 /* chest@3x.png */,
 				C17A13A11DBE07F50016E69B /* bankcard */,
 				C17FC3FA1DB870CC004028CA /* goods */,
 				C16C87671DAB667B00314367 /* weather */,
@@ -2230,6 +2434,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C14855281DD4760900A7FD89 /* BarrageRenderer */,
 				C11618C51DCAE039005A7C0B /* JSWave */,
 				C1A600E61DC31361004A2B36 /* 04 - RadialMenu */,
 				C1CAB1241DC2104600D4B409 /* HalfCircleViewLayout */,
@@ -3503,6 +3708,8 @@
 				C1C6D9BA1DB619CE00B4EAFF /* scan@3x.png in Resources */,
 				C17FC4E71DB870CC004028CA /* goods96.jpg in Resources */,
 				C17A13C51DBE1B9F0016E69B /* wechat.png in Resources */,
+				C14855171DD44F7000A7FD89 /* stroll@3x.png in Resources */,
+				C148550A1DD4386700A7FD89 /* service@2x.png in Resources */,
 				C164183E1D9BCA3000BD3841 /* UMSCommentInputController.xib in Resources */,
 				C17FC48A1DB870CC004028CA /* goods12.jpg in Resources */,
 				C16419A01D9BCB4600BD3841 /* 34.tiff in Resources */,
@@ -3521,6 +3728,9 @@
 				C1C8FA281DC1C01F00C0589D /* background.jpg in Resources */,
 				C12BEC581DAA4177009F2EAA /* loading@3x.png in Resources */,
 				C17FC4C11DB870CC004028CA /* goods61.jpg in Resources */,
+				C148550E1DD4387200A7FD89 /* idea@2x.png in Resources */,
+				C148551F1DD44FC000A7FD89 /* camera@3x.png in Resources */,
+				C14855161DD44F7000A7FD89 /* stroll@2x.png in Resources */,
 				C1BC63731DBF4347006EBCFC /* emoji@2x.png in Resources */,
 				C16419AA1D9BCB4600BD3841 /* 43.tiff in Resources */,
 				C194509F1DD33648004B5BD3 /* purse@3x.png in Resources */,
@@ -3560,6 +3770,7 @@
 				C12801781D9E65A900E79A07 /* smile@2x.png in Resources */,
 				C16419A41D9BCB4600BD3841 /* 38.tiff in Resources */,
 				C17A13B61DBE13570016E69B /* markButton@3x.png in Resources */,
+				C148550F1DD4387200A7FD89 /* idea@3x.png in Resources */,
 				C1BFB4FA1DC0C284001B4E05 /* i3.jpg in Resources */,
 				C19EA58B1DB73EE300984138 /* dou@2x.png in Resources */,
 				C17FC4DB1DB870CC004028CA /* goods85.jpg in Resources */,
@@ -3576,7 +3787,9 @@
 				C1970D2B1DA8BC9500260A11 /* design.png in Resources */,
 				C1CAB1211DC2018A00D4B409 /* HWCollectionViewCell.xib in Resources */,
 				C17FC4BF1DB870CC004028CA /* goods6.jpg in Resources */,
+				C14855071DD4384A00A7FD89 /* double11@3x.png in Resources */,
 				C17A13A81DBE07F50016E69B /* bankcard2.jpg in Resources */,
+				C14854FA1DD4380B00A7FD89 /* castle@2x.png in Resources */,
 				C1A7CCDE1DBA00AC001C5A6B /* autumn2.jpg in Resources */,
 				C1CAB1431DC2104600D4B409 /* paul_george.png in Resources */,
 				C1C8FA291DC1C01F00C0589D /* home_top_bg@2x.png in Resources */,
@@ -3599,8 +3812,10 @@
 				C1CAB13A1DC2104600D4B409 /* carmelo_anthony.png in Resources */,
 				C1970D251DA8BC6E00260A11 /* food.png in Resources */,
 				C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */,
+				C14855271DD44FDE00A7FD89 /* chest@3x.png in Resources */,
 				C164199A1D9BCB4600BD3841 /* 29.tiff in Resources */,
 				C17FC4CC1DB870CC004028CA /* goods71.jpg in Resources */,
+				C148551B1DD44F8600A7FD89 /* shake@3x.png in Resources */,
 				C16C878B1DAB679C00314367 /* sun@2x.png in Resources */,
 				C158F2DD1DACE40B000CAE40 /* MMVideoPreviewPlayHL@2x.png in Resources */,
 				C16419521D9BCB2F00BD3841 /* fengjing.jpg in Resources */,
@@ -3644,6 +3859,7 @@
 				C1970D211DA8BC4D00260A11 /* marry.png in Resources */,
 				C1970D2F1DA8BE1E00260A11 /* circleGirl.png in Resources */,
 				C158F2DC1DACE40B000CAE40 /* MMVideoPreviewPlay@2x.png in Resources */,
+				C14854F71DD41BD400A7FD89 /* wallpaper.jpg in Resources */,
 				C16419871D9BCB4600BD3841 /* 11.tiff in Resources */,
 				C17A13C41DBE1B9F0016E69B /* tuite.png in Resources */,
 				C158F2E31DACE40B000CAE40 /* photo_original_sel@2x.png in Resources */,
@@ -3684,6 +3900,7 @@
 				C17FC4D81DB870CC004028CA /* goods82.jpg in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C17A13B51DBE13570016E69B /* markButton@2x.png in Resources */,
+				C14855251DD44FDE00A7FD89 /* women@3x.png in Resources */,
 				C164199E1D9BCB4600BD3841 /* 32.tiff in Resources */,
 				C114CDC71DA90F9D00050911 /* smallPlay@3x.png in Resources */,
 				C12BEC571DAA4177009F2EAA /* loading@2x.png in Resources */,
@@ -3709,10 +3926,13 @@
 				C17FC4A51DB870CC004028CA /* goods36.jpg in Resources */,
 				C164183D1D9BCA3000BD3841 /* UMSCommentDetailController.xib in Resources */,
 				C102E9011DD09CE40052AD19 /* circle@2x.png in Resources */,
+				C148551A1DD44F8600A7FD89 /* shake@2x.png in Resources */,
 				C17FC4AC1DB870CC004028CA /* goods42.jpg in Resources */,
 				C16418421D9BCA3000BD3841 /* UMSLoginViewController.xib in Resources */,
+				C148551E1DD44FC000A7FD89 /* camera@2x.png in Resources */,
 				C158F2E71DACE40B000CAE40 /* preview_original_def@2x.png in Resources */,
 				C164199F1D9BCB4600BD3841 /* 33.tiff in Resources */,
+				C14855241DD44FDE00A7FD89 /* women@2x.png in Resources */,
 				C17FC4B51DB870CC004028CA /* goods50.jpg in Resources */,
 				C19450971DD33622004B5BD3 /* deal@3x.png in Resources */,
 				C164183F1D9BCA3000BD3841 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -3732,6 +3952,7 @@
 				C17FC49D1DB870CC004028CA /* goods29.jpg in Resources */,
 				C1CAB1391DC2104600D4B409 /* awcollectionviewdiallayout_2.jpg in Resources */,
 				C17FC4E31DB870CC004028CA /* goods92.jpg in Resources */,
+				C14854F41DD4178D00A7FD89 /* vip@2x.png in Resources */,
 				C16419A91D9BCB4600BD3841 /* 42.tiff in Resources */,
 				C114CDC81DA90F9D00050911 /* play@2x.png in Resources */,
 				C17FC4D71DB870CC004028CA /* goods81.jpg in Resources */,
@@ -3740,6 +3961,8 @@
 				C1C8FA0A1DC1BC7200C0589D /* photo_sample_07.png in Resources */,
 				C17FC4D41DB870CC004028CA /* goods79.jpg in Resources */,
 				C16419A71D9BCB4600BD3841 /* 40.tiff in Resources */,
+				C14855121DD4387A00A7FD89 /* like@2x.png in Resources */,
+				C14854FF1DD4381B00A7FD89 /* shopping@3x.png in Resources */,
 				C17FC4EA1DB870CC004028CA /* goods99.jpg in Resources */,
 				C16C87711DAB671D00314367 /* rain@2x.png in Resources */,
 				C1E218251DAA0320002748F6 /* add@2x.png in Resources */,
@@ -3759,6 +3982,7 @@
 				C1BFB4FE1DC0C284001B4E05 /* trophy-50.png in Resources */,
 				C17FC47C1DB870CC004028CA /* goods107.jpg in Resources */,
 				C1BC63621DBF0A15006EBCFC /* keyBoard@2x.png in Resources */,
+				C14855261DD44FDE00A7FD89 /* chest@2x.png in Resources */,
 				C19EA5711DB7366300984138 /* love@2x.png in Resources */,
 				C16418501D9BCA3000BD3841 /* ios-social-sdk-shake.html in Resources */,
 				C17FC4E91DB870CC004028CA /* goods98.jpg in Resources */,
@@ -3780,8 +4004,11 @@
 				C1BC636F1DBF4120006EBCFC /* defaultSmile@2x.png in Resources */,
 				C17FC47B1DB870CC004028CA /* goods106.jpg in Resources */,
 				C16C87991DAB7A4F00314367 /* city.plist in Resources */,
+				C14854F51DD4178D00A7FD89 /* vip@3x.png in Resources */,
+				C148550B1DD4386700A7FD89 /* service@3x.png in Resources */,
 				C1BFB4F51DC0C284001B4E05 /* coffee_to_go-50.png in Resources */,
 				C1C8F9EC1DC1A85700C0589D /* bg_yaoyao_under.png in Resources */,
+				C14855021DD4382F00A7FD89 /* list@2x.png in Resources */,
 				C17FC4B01DB870CC004028CA /* goods46.jpg in Resources */,
 				C19EA5861DB73EC900984138 /* savings@3x.png in Resources */,
 				C17FC4BE1DB870CC004028CA /* goods59.jpg in Resources */,
@@ -3808,6 +4035,7 @@
 				C17FC4BD1DB870CC004028CA /* goods58.jpg in Resources */,
 				C16418411D9BCA3000BD3841 /* UMShareEditViewControlleriPad.xib in Resources */,
 				C16C87871DAB678200314367 /* sun_and_rain_mini@2x.png in Resources */,
+				C14854FE1DD4381B00A7FD89 /* shopping@2x.png in Resources */,
 				C17FC4811DB870CC004028CA /* goods111.jpg in Resources */,
 				C16419981D9BCB4600BD3841 /* 27.tiff in Resources */,
 				C16418541D9BCA3000BD3841 /* README.txt in Resources */,
@@ -3816,6 +4044,7 @@
 				C17FC47A1DB870CC004028CA /* goods105.jpg in Resources */,
 				C17FC4C01DB870CC004028CA /* goods60.jpg in Resources */,
 				C17FC49C1DB870CC004028CA /* goods28.jpg in Resources */,
+				C14855061DD4384A00A7FD89 /* double11@2x.png in Resources */,
 				C16419861D9BCB4600BD3841 /* 10.tiff in Resources */,
 				C17FC4BB1DB870CC004028CA /* goods56.jpg in Resources */,
 				C17FC4E81DB870CC004028CA /* goods97.jpg in Resources */,
@@ -3833,6 +4062,7 @@
 				C17FC4BC1DB870CC004028CA /* goods57.jpg in Resources */,
 				C17A13B41DBE13570016E69B /* editButton@3x.png in Resources */,
 				C19450961DD33622004B5BD3 /* deal@2x.png in Resources */,
+				C14854FB1DD4380B00A7FD89 /* castle@3x.png in Resources */,
 				C158F2E61DACE40B000CAE40 /* preview_number_icon@2x.png in Resources */,
 				C16417BE1D9BC86D00BD3841 /* Main.storyboard in Resources */,
 				C16418431D9BCA3000BD3841 /* UMSnsAccountViewController.xib in Resources */,
@@ -3861,12 +4091,14 @@
 				C16419891D9BCB4600BD3841 /* 13.tiff in Resources */,
 				C17FC4C61DB870CC004028CA /* goods66.jpg in Resources */,
 				C158F2EB1DACE40B000CAE40 /* VideoSendIcon@2x.png in Resources */,
+				C14855131DD4387A00A7FD89 /* like@3x.png in Resources */,
 				C114CDC91DA90F9D00050911 /* play@3x.png in Resources */,
 				C17FC4D31DB870CC004028CA /* goods78.jpg in Resources */,
 				C17FC4E11DB870CC004028CA /* goods90.jpg in Resources */,
 				C17FC4781DB870CC004028CA /* goods103.jpg in Resources */,
 				C17FC4E41DB870CC004028CA /* goods93.jpg in Resources */,
 				C17FC4E51DB870CC004028CA /* goods94.jpg in Resources */,
+				C14855031DD4382F00A7FD89 /* list@3x.png in Resources */,
 				C1BFB4F61DC0C284001B4E05 /* documentary-50.png in Resources */,
 				C16418451D9BCA3000BD3841 /* UMSocialSDKResourcesNew.bundle in Resources */,
 				C1C8FA041DC1BC7200C0589D /* photo_sample_01.png in Resources */,
@@ -3927,10 +4159,13 @@
 				C14CE7C81DB8DFF900462ECB /* UIView+Extension.m in Sources */,
 				C17A13951DBDF3FB0016E69B /* FirstGraduallyColorViewController.swift in Sources */,
 				C151E3361DA553D6004A41A3 /* SCPieChart.m in Sources */,
+				C14855561DD4760900A7FD89 /* BarrageSprite.m in Sources */,
 				C16418821D9BCAA800BD3841 /* MMPopupWindow.m in Sources */,
+				C14855571DD4760900A7FD89 /* BarrageSpriteUtility.m in Sources */,
 				C19EA56E1DB7215300984138 /* StoreHomeTableViewCell6.swift in Sources */,
 				C1C8FA031DC1BC7200C0589D /* CardView.m in Sources */,
 				C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */,
+				C14855591DD4760900A7FD89 /* BarrageWalkSprite.m in Sources */,
 				C158F2EF1DACE40B000CAE40 /* TZImagePickerController.m in Sources */,
 				C17FC53E1DB8DB41004028CA /* YFCard.m in Sources */,
 				C151E3111DA53876004A41A3 /* FirstGaussViewController.swift in Sources */,
@@ -3952,10 +4187,12 @@
 				C16419C01D9BCC0B00BD3841 /* FirstInfoViewController.swift in Sources */,
 				C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */,
 				C16418D21D9BCAC500BD3841 /* MASConstraintMaker.m in Sources */,
+				C14855521DD4760900A7FD89 /* BarrageLoader.m in Sources */,
 				C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */,
 				C16419241D9BCADE00BD3841 /* UIScrollView+MJExtension.m in Sources */,
 				C17D55111DA6124B00C27FD2 /* FouthCircleViewController.swift in Sources */,
 				C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */,
+				C148554F1DD4760900A7FD89 /* BarrageDispatcher.m in Sources */,
 				C1CAB11F1DC2018A00D4B409 /* HWCircleLayout.m in Sources */,
 				C164187D1D9BCAA800BD3841 /* MMAlertView.m in Sources */,
 				C1CAB1231DC2018A00D4B409 /* YFHorizontalScrollViewController.m in Sources */,
@@ -4000,9 +4237,11 @@
 				C1C8FA2B1DC1C01F00C0589D /* RippleView.m in Sources */,
 				C1970D311DA8CE1F00260A11 /* FirstScanViewController.swift in Sources */,
 				C16418811D9BCAA800BD3841 /* MMPopupView.m in Sources */,
+				C14855511DD4760900A7FD89 /* BarrageSpriteFactory.m in Sources */,
 				C1BC63571DBEF7D9006EBCFC /* LMJEmoticonPackage.swift in Sources */,
 				C16418B41D9BCAB400BD3841 /* UIImageView+WebCache.m in Sources */,
 				C16417C11D9BC86D00BD3841 /* SwiftExample.xcdatamodeld in Sources */,
+				C14855551DD4760900A7FD89 /* BarrageFloatTextSprite.m in Sources */,
 				C151E3331DA553D6004A41A3 /* SCColor.m in Sources */,
 				C158F2AD1DACC982000CAE40 /* SDCollectionViewCell.m in Sources */,
 				C16418641D9BCA8800BD3841 /* AFNetworkReachabilityManager.m in Sources */,
@@ -4011,6 +4250,7 @@
 				C10F3AAB1DC086C700C27AE4 /* UIViewController+AddCancelKeyboardMethodWhenTouchSpace.m in Sources */,
 				C102E8FE1DD06EDA0052AD19 /* StoreCarTableViewCell.swift in Sources */,
 				C158F2AA1DACC982000CAE40 /* TAAnimatedDotView.m in Sources */,
+				C148554C1DD4760900A7FD89 /* BarrageCanvas.m in Sources */,
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
 				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
 				C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */,
@@ -4021,6 +4261,7 @@
 				C158F3061DACE45A000CAE40 /* MJPhotoLoadingView.m in Sources */,
 				C16418651D9BCA8800BD3841 /* AFSecurityPolicy.m in Sources */,
 				C16418661D9BCA8800BD3841 /* AFURLRequestSerialization.m in Sources */,
+				C14855531DD4760900A7FD89 /* BarrageFloatImageSprite.m in Sources */,
 				C16418D11D9BCAC500BD3841 /* MASConstraint.m in Sources */,
 				C158F3031DACE45A000CAE40 /* MJPhoto.m in Sources */,
 				C16418831D9BCAA800BD3841 /* MMSheetView.m in Sources */,
@@ -4057,10 +4298,12 @@
 				C17FC53C1DB8DB41004028CA /* YFLittleProjectVC03.m in Sources */,
 				C16418631D9BCA8800BD3841 /* AFHTTPSessionManager.m in Sources */,
 				C158F3071DACE45A000CAE40 /* MJPhotoProgressView.m in Sources */,
+				C148554E1DD4760900A7FD89 /* BarrageDescriptor.m in Sources */,
 				C1C8FA2A1DC1C01F00C0589D /* RippleModel.m in Sources */,
 				C1C53DBD1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift in Sources */,
 				C11618C81DCAE039005A7C0B /* JSWave.m in Sources */,
 				C158F2901DACB96B000CAE40 /* BankCardTableViewCell.swift in Sources */,
+				C14855501DD4760900A7FD89 /* BarrageRenderer.m in Sources */,
 				C1970D471DA8E8E200260A11 /* FirstLaterBlockViewController.swift in Sources */,
 				C158F2B11DACE250000CAE40 /* FirstHotRenewViewController.swift in Sources */,
 				C158F30F1DACE4B8000CAE40 /* YLGIFImage.m in Sources */,
@@ -4073,6 +4316,7 @@
 				C17A13AE1DBE0F950016E69B /* XRPopMenuView.m in Sources */,
 				C16419251D9BCADE00BD3841 /* UIScrollView+MJRefresh.m in Sources */,
 				C17D550F1DA607FB00C27FD2 /* FouthPieViewController.swift in Sources */,
+				C148554D1DD4760900A7FD89 /* BarrageClock.m in Sources */,
 				C19EA5661DB7212200984138 /* StoreHomeTableViewCell2.swift in Sources */,
 				C164191B1D9BCADE00BD3841 /* MJRefreshBackGifFooter.m in Sources */,
 				C16418A61D9BCAB400BD3841 /* MKAnnotationView+WebCache.m in Sources */,
@@ -4102,6 +4346,7 @@
 				C16418A91D9BCAB400BD3841 /* SDWebImageCompat.m in Sources */,
 				C158F2DB1DACE40B000CAE40 /* README.md in Sources */,
 				C158F2941DACC8E9000CAE40 /* FirstCycleScrollViewController.swift in Sources */,
+				C14855581DD4760900A7FD89 /* BarrageWalkImageSprite.m in Sources */,
 				C1C8FA1B1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift in Sources */,
 				C16418E31D9BCAD000BD3841 /* SpinerLayer.m in Sources */,
 				C16419181D9BCADE00BD3841 /* MJRefreshAutoGifFooter.m in Sources */,
@@ -4122,6 +4367,7 @@
 				C16418B01D9BCAB400BD3841 /* UIImage+GIF.m in Sources */,
 				C158F2ED1DACE40B000CAE40 /* TZAssetModel.m in Sources */,
 				C16419131D9BCADE00BD3841 /* MJRefreshAutoFooter.m in Sources */,
+				C148555A1DD4760900A7FD89 /* BarrageWalkTextSprite.m in Sources */,
 				C1BFB5011DC0C284001B4E05 /* RGCardViewLayout.m in Sources */,
 				C158F3081DACE45A000CAE40 /* MJPhotoToolbar.m in Sources */,
 				C158F28A1DAC9588000CAE40 /* FirstDateChoseViewController.swift in Sources */,
@@ -4143,6 +4389,7 @@
 				C1CBF70B1DB9EDCF009E3A61 /* CloudView.m in Sources */,
 				C1E218211DA9E3F9002748F6 /* Video.swift in Sources */,
 				C158F2F01DACE40B000CAE40 /* TZPhotoPickerController.m in Sources */,
+				C148555E1DD479D700A7FD89 /* NSSafeObject.m in Sources */,
 				C1B3C5B01DD1E6A50012570D /* StoreCar.swift in Sources */,
 				C1C53DBB1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift in Sources */,
 				C1CAB10C1DC1E05C00D4B409 /* LXHTwoWaterWaveView.m in Sources */,
@@ -4165,6 +4412,7 @@
 				C158F2AB1DACC982000CAE40 /* TADotView.m in Sources */,
 				C1970D3F1DA8CEFC00260A11 /* QRItem.m in Sources */,
 				C151E3311DA553D6004A41A3 /* SCChartLabel.m in Sources */,
+				C14855541DD4760900A7FD89 /* BarrageFloatSprite.m in Sources */,
 				C17D55131DA6208100C27FD2 /* FirstShareViewController.swift in Sources */,
 				C1412AEA1DC873220058186D /* OneGoodsClassCollectionViewCell.swift in Sources */,
 			);

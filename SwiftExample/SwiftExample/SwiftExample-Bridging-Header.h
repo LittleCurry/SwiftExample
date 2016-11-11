@@ -67,6 +67,8 @@
 #import "YFHalfCircleLayoutViewController.h"
 #import "YFRadialMenu.h"
 #import "JSWave.h"
+#import "BarrageRenderer.h"
+#import "NSSafeObject.h"
 
 
 

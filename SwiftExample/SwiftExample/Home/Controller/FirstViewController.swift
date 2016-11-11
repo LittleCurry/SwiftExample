@@ -59,6 +59,7 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         switch indexPath.row {
         case 0:
             let firstInfoVC = FirstInfoViewController.init();

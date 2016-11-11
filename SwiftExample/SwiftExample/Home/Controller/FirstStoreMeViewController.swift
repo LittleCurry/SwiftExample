@@ -23,6 +23,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "setup.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstStoreMeViewController.scanAction(button:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: UIImage.init(named: "message.png"), style: UIBarButtonItemStyle.done, target: self, action: #selector(FirstStoreMeViewController.messageAction))
         
+        self.scrollView.backgroundColor = UIColor.groupTableViewBackground
         self.view.addSubview(self.scrollView)
         let bigImage = UIImageView.init(frame: CGRect(x:0, y:0, width:WIDTH, height:200))
         bigImage.image = UIImage.init(named: "jigsaw.jpg")?.applyDarkEffect()
@@ -39,7 +40,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         nameLabel.sizeToFit()
         self.scrollView.addSubview(nameLabel)
         let superImage = UIImageView.init(frame: CGRect(x:X(nameLabel)+PART_W(nameLabel), y:Y(nameLabel), width:20, height:20))
-        superImage.image = UIImage.init(named: "superStar.png")
+        superImage.image = UIImage.init(named: "vip.png")
         self.scrollView.addSubview(superImage)
         let blackView = UIView.init(frame: CGRect(x:0, y:156, width:WIDTH, height:44))
         blackView.backgroundColor = UIColor.white
@@ -101,7 +102,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         // button图上字下
         button1.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;//使图片和文字水平居中显示
         button1.titleEdgeInsets = UIEdgeInsetsMake((button1.imageView?.frame.size.height)!, -(button1.imageView?.frame.size.width)!, 0, 0)
-        button1.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button1.titleLabel?.bounds.size.width)!)
+        button1.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button1.titleLabel?.bounds.size.width)!)
         whiteView1.addSubview(button1)
         
         let button2 = UIButton.init(type: .custom)
@@ -112,7 +113,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         button2.setImage(UIImage.init(named: "lineLogistics.png"), for: .normal)
         button2.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         button2.titleEdgeInsets = UIEdgeInsetsMake((button2.imageView?.frame.size.height)!, -(button2.imageView?.frame.size.width)!, 0, 0)
-        button2.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button2.titleLabel?.bounds.size.width)!)
+        button2.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button2.titleLabel?.bounds.size.width)!)
         whiteView1.addSubview(button2)
         
         let button3 = UIButton.init(type: .custom)
@@ -123,7 +124,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         button3.setImage(UIImage.init(named: "chat.png"), for: .normal)
         button3.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         button3.titleEdgeInsets = UIEdgeInsetsMake((button3.imageView?.frame.size.height)!, -(button3.imageView?.frame.size.width)!, 0, 0)
-        button3.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button3.titleLabel?.bounds.size.width)!)
+        button3.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button3.titleLabel?.bounds.size.width)!)
         whiteView1.addSubview(button3)
         
         let button4 = UIButton.init(type: .custom)
@@ -134,7 +135,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         button4.setImage(UIImage.init(named: "deal.png"), for: .normal)
         button4.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         button4.titleEdgeInsets = UIEdgeInsetsMake((button4.imageView?.frame.size.height)!, -(button4.imageView?.frame.size.width)!, 0, 0)
-        button4.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button4.titleLabel?.bounds.size.width)!)
+        button4.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button4.titleLabel?.bounds.size.width)!)
         whiteView1.addSubview(button4)
         
         let button5 = UIButton.init(type: .custom)
@@ -145,7 +146,7 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         button5.setImage(UIImage.init(named: "order.png"), for: .normal)
         button5.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         button5.titleEdgeInsets = UIEdgeInsetsMake((button5.imageView?.frame.size.height)!, -(button5.imageView?.frame.size.width)!, 0, 0)
-        button5.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button5.titleLabel?.bounds.size.width)!)
+        button5.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button5.titleLabel?.bounds.size.width)!)
         whiteView1.addSubview(button5)
         
         let horizontalLineView1 = UIView.init(frame: CGRect(x:0, y:260, width:WIDTH, height:10))
@@ -208,14 +209,131 @@ class FirstStoreMeViewController: BaseViewController, UIGestureRecognizerDelegat
         button6.setImage(UIImage.init(named: "purse.png"), for: .normal)
         button6.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
         button6.titleEdgeInsets = UIEdgeInsetsMake((button6.imageView?.frame.size.height)!, -(button6.imageView?.frame.size.width)!, 0, 0)
-        button6.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -(button6.titleLabel?.bounds.size.width)!)
+        button6.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button6.titleLabel?.bounds.size.width)!)
         whiteView2.addSubview(button6)
         
         let horizontalLineView2 = UIView.init(frame: CGRect(x:0, y:330, width:WIDTH, height:10))
         horizontalLineView2.backgroundColor = UIColor.groupTableViewBackground
         self.scrollView.addSubview(horizontalLineView2)
         
+        let whiteView3 = UIImageView.init(frame: CGRect(x:0, y:340, width:WIDTH, height:60))
+        whiteView3.image = UIImage.init(named: "wallpaper.jpg")
+        self.scrollView.addSubview(whiteView3)
         
+        let button7 = UIButton.init(type: .custom)
+        button7.frame = CGRect(x:0, y:0, width:WIDTH/4, height:60)
+        button7.setTitleColor(UIColor.black, for: .normal)
+        button7.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button7.setTitle("11.11主会场", for: .normal)
+        button7.setImage(UIImage.init(named: "castle.png"), for: .normal)
+        button7.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        button7.titleEdgeInsets = UIEdgeInsetsMake((button7.imageView?.frame.size.height)!, -(button7.imageView?.frame.size.width)!, 0, 0)
+        button7.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button7.titleLabel?.bounds.size.width)!)
+        whiteView3.addSubview(button7)
+        
+        let button8 = UIButton.init(type: .custom)
+        button8.frame = CGRect(x:WIDTH/4, y:0, width:WIDTH/4, height:60)
+        button8.setTitleColor(UIColor.black, for: .normal)
+        button8.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button8.setTitle("大牌嘉年华", for: .normal)
+        button8.setImage(UIImage.init(named: "shopping.png"), for: .normal)
+        button8.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        button8.titleEdgeInsets = UIEdgeInsetsMake((button8.imageView?.frame.size.height)!, -(button8.imageView?.frame.size.width)!, 0, 0)
+        button8.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button8.titleLabel?.bounds.size.width)!)
+        whiteView3.addSubview(button8)
+        
+        let button9 = UIButton.init(type: .custom)
+        button9.frame = CGRect(x:WIDTH/2, y:0, width:WIDTH/4, height:60)
+        button9.setTitleColor(UIColor.black, for: .normal)
+        button9.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button9.setTitle("必买清单", for: .normal)
+        button9.setImage(UIImage.init(named: "list.png"), for: .normal)
+        button9.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        button9.titleEdgeInsets = UIEdgeInsetsMake((button9.imageView?.frame.size.height)!, -(button9.imageView?.frame.size.width)!, 0, 0)
+        button9.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button9.titleLabel?.bounds.size.width)!)
+        whiteView3.addSubview(button9)
+        
+        let button10 = UIButton.init(type: .custom)
+        button10.frame = CGRect(x:WIDTH*3/4, y:0, width:WIDTH/4, height:60)
+        button10.setTitleColor(UIColor.black, for: .normal)
+        button10.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        button10.setTitle("我的11.11", for: .normal)
+        button10.setImage(UIImage.init(named: "double11.png"), for: .normal)
+        button10.contentHorizontalAlignment = UIControlContentHorizontalAlignment.center;
+        button10.titleEdgeInsets = UIEdgeInsetsMake((button10.imageView?.frame.size.height)!, -(button10.imageView?.frame.size.width)!, 0, 0)
+        button10.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 0, -(button10.titleLabel?.bounds.size.width)!)
+        whiteView3.addSubview(button10)
+        
+        let horizontalLineView3 = UIView.init(frame: CGRect(x:0, y:400, width:WIDTH, height:10))
+        horizontalLineView3.backgroundColor = UIColor.groupTableViewBackground
+        self.scrollView.addSubview(horizontalLineView3)
+        
+        let whiteView4 = UIView.init(frame: CGRect(x:0, y:410, width:WIDTH, height:40))
+        whiteView4.backgroundColor = UIColor.white
+        self.scrollView.addSubview(whiteView4)
+        
+        let tableImage1 = UIImageView.init(frame: CGRect(x:10, y:10, width:20, height:20))
+        tableImage1.image = UIImage.init(named: "service.png")
+        whiteView4.addSubview(tableImage1)
+        let tableLabel1 = UILabel.init(frame: CGRect(x:30, y:0, width:80, height:40))
+        tableLabel1.font = WORDFONT
+        tableLabel1.text = "我的服务"
+        whiteView4.addSubview(tableLabel1)
+        
+        let tableLabel2 = UILabel.init(frame: CGRect(x:WIDTH-150, y:0, width:140, height:40))
+        tableLabel2.font = WORDFONT
+        tableLabel2.textColor = PLACEHOLODERCOLOR
+        tableLabel2.textAlignment = .right
+        tableLabel2.text = "预约、营业厅等 >"
+        whiteView4.addSubview(tableLabel2)
+        
+        let horizontalLineView4 = UIView.init(frame: CGRect(x:0, y:450, width:WIDTH, height:10))
+        horizontalLineView4.backgroundColor = UIColor.groupTableViewBackground
+        self.scrollView.addSubview(horizontalLineView4)
+        
+        let whiteView5 = UIView.init(frame: CGRect(x:0, y:460, width:WIDTH, height:40))
+        whiteView5.backgroundColor = UIColor.white
+        self.scrollView.addSubview(whiteView5)
+        
+        let tableImage2 = UIImageView.init(frame: CGRect(x:10, y:10, width:20, height:20))
+        tableImage2.image = UIImage.init(named: "idea.png")
+        whiteView5.addSubview(tableImage2)
+        let tableLabel3 = UILabel.init(frame: CGRect(x:30, y:0, width:80, height:40))
+        tableLabel3.font = WORDFONT
+        tableLabel3.text = "意见反馈"
+        whiteView5.addSubview(tableLabel3)
+        
+        let tableLabel4 = UILabel.init(frame: CGRect(x:WIDTH-100, y:0, width:90, height:40))
+        tableLabel4.font = WORDFONT
+        tableLabel4.textColor = PLACEHOLODERCOLOR
+        tableLabel4.textAlignment = .right
+        tableLabel4.text = " >"
+        whiteView5.addSubview(tableLabel4)
+        
+        let horizontalLineView5 = UIView.init(frame: CGRect(x:0, y:500, width:WIDTH, height:10))
+        horizontalLineView5.backgroundColor = UIColor.groupTableViewBackground
+        self.scrollView.addSubview(horizontalLineView5)
+        
+        let whiteView6 = UIView.init(frame: CGRect(x:0, y:510, width:WIDTH, height:40))
+        whiteView6.backgroundColor = UIColor.white
+        self.scrollView.addSubview(whiteView6)
+        
+        let tableImage3 = UIImageView.init(frame: CGRect(x:10, y:10, width:20, height:20))
+        tableImage3.image = UIImage.init(named: "like.png")
+        whiteView6.addSubview(tableImage3)
+        let tableLabel5 = UILabel.init(frame: CGRect(x:30, y:0, width:80, height:40))
+        tableLabel5.font = WORDFONT
+        tableLabel5.text = "猜你喜欢"
+        whiteView6.addSubview(tableLabel5)
+        
+        let tableLabel6 = UILabel.init(frame: CGRect(x:WIDTH-100, y:0, width:90, height:40))
+        tableLabel6.font = WORDFONT
+        tableLabel6.textColor = PLACEHOLODERCOLOR
+        tableLabel6.textAlignment = .right
+        tableLabel6.text = " >"
+        whiteView6.addSubview(tableLabel6)
+        
+        self.scrollView.contentSize = CGSize(width:0, height:PART_H(self.scrollView)>=PART_H(whiteView6)+Y(whiteView6) ? PART_H(self.scrollView)+1 : PART_H(whiteView6)+Y(whiteView6))
     }
     
     func scanAction(button:UIButton) -> Void {
