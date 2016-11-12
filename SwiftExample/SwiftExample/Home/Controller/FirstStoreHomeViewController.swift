@@ -239,7 +239,14 @@ class FirstStoreHomeViewController: BaseViewController, UIGestureRecognizerDeleg
     }
     
     func scanAction() -> Void {
-        //
+        if (validateCamera() && canUseCamera()) {
+            let qrVC = QRViewController.init();
+            qrVC.qrUrlBlock = { (resultUrl)  in
+                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).show(nil);
+            }
+            qrVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(qrVC, animated: true)
+        }
     }
     
     func messageAction() -> Void {

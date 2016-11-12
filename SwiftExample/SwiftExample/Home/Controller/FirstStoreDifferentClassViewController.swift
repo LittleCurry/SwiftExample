@@ -67,7 +67,14 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     }
     
     func scanAction() -> Void {
-        //
+        if (validateCamera() && canUseCamera()) {
+            let qrVC = QRViewController.init();
+            qrVC.qrUrlBlock = { (resultUrl)  in
+                MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).show(nil);
+            }
+            qrVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(qrVC, animated: true)
+        }
     }
     
     func messageAction() -> Void {
@@ -177,8 +184,8 @@ class FirstStoreDifferentClassViewController: BaseViewController, UIGestureRecog
     
     func refreshData() {
         for i in 0...5 {
-            let randomNum = Int(arc4random()) % self.oneGoodsClassArr.count
-            let randomNum2 = Int(arc4random()) % self.oneGoodsClassArr.count
+            let randomNum = Int(arc4random() % UInt32(self.oneGoodsClassArr.count))
+            let randomNum2 = Int(arc4random() % UInt32(self.oneGoodsClassArr.count))
             let obj = self.oneGoodsClassArr[randomNum] as! NSDictionary
             self.oneGoodsClassArr[randomNum] = self.oneGoodsClassArr[randomNum2]
             self.oneGoodsClassArr[randomNum2] = obj

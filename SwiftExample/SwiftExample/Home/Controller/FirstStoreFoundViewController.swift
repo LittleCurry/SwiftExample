@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 
 class FirstStoreFoundViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -106,7 +105,7 @@ class FirstStoreFoundViewController: BaseViewController, UITableViewDelegate, UI
     }
     
     func scanAction() {
-        if (self.validateCamera() && self.canUseCamera()) {
+        if (validateCamera() && canUseCamera()) {
             let qrVC = QRViewController.init();
             qrVC.qrUrlBlock = { (resultUrl)  in
                 MMAlertView.init(confirmTitle: "扫描结果:", detail: resultUrl).show(nil);
@@ -114,33 +113,6 @@ class FirstStoreFoundViewController: BaseViewController, UITableViewDelegate, UI
             qrVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(qrVC, animated: true)
         }
-    }
-    
-    func validateCamera() -> Bool {
-        return UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) && UIImagePickerController.isCameraDeviceAvailable(UIImagePickerControllerCameraDevice.rear)
-    }
-    
-    func canUseCamera() -> Bool {
-        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo);
-        if (authStatus == AVAuthorizationStatus.restricted || authStatus == AVAuthorizationStatus.denied) {
-            
-            let block = { (index:Int)  in
-                switch index {
-                case 0:
-                    UIApplication.shared.openURL(URL.init(string: UIApplicationOpenSettingsURLString)!)
-                    break;
-                case 1:
-                    NSLog("取消")
-                    break;
-                default:
-                    break;
-                }
-            }
-            
-            MMAlertView.init(title: "", detail: "\n请在设备的设置-隐私-相机中允许访问相机", items: [MMItemMake("设置", MMItemType.normal, block), MMItemMake("取消", MMItemType.highlight, block)]).show(nil)
-            return false;
-        }
-        return true;
     }
     
     func getData() {
