@@ -36,16 +36,21 @@ class FirstBarrageViewController: BaseViewController {
         self.view.addSubview((self.mvPlay?.view)!)
         self.mvPlay?.play()
         
-        
-        
-        self.view.addSubview(renderer.view)
-        //        self.renderer.canvasMargin = UIEdgeInsetsMake(10, 10, 10, 10);
+        self.view.addSubview(self.renderer.view)
+        // self.renderer.canvasMargin = UIEdgeInsetsMake(10, 10, 10, 10);
         // 若想为弹幕增加点击功能, 请添加此句话, 并在Descriptor中注入行为
         self.renderer.view.isUserInteractionEnabled = false
-        //        self.view.sendSubview(toBack: self.renderer.view)
         self.infoLabel.textColor = PLACEHOLODERCOLOR
         self.infoLabel.font = UIFont.systemFont(ofSize: 12)
         self.view.addSubview(self.infoLabel)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // 横屏, 竖屏, 横竖屏
+        //在视图出现的时候，将allowRotate改为1
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.allowRotate = 1
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +59,49 @@ class FirstBarrageViewController: BaseViewController {
         self.timer = Timer.scheduledTimer(timeInterval: 0.5, target: safeObj, selector: #selector(NSSafeObject.excute), userInfo: nil, repeats: true)
         self.renderer.start()
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //在视图消失的时候，将allowRotate改为0
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.allowRotate = 0
+//        let orientationUnknown = NSNumber.init(value: 0)
+//        UIDevice.current.setValue(orientationUnknown, forKey: "orientation")
+        let orientationTarget = NSNumber.init(value: 1)
+        UIDevice.current.setValue(orientationTarget, forKey: "orientation")
+    }
+    
+    // 此时就可以使app仅有设置页面支持横竖屏了！
+    // 此时如果app要求用户在横屏 竖屏的模式下改变UI（横屏与竖屏对应不同的UI）， 可以在以下方法中执行
+    override func willRotate(to toInterfaceOrientation: UIInterfaceOrientation, duration: TimeInterval) {
+        //
+        if (toInterfaceOrientation == UIInterfaceOrientation.landscapeLeft || toInterfaceOrientation == UIInterfaceOrientation.landscapeRight) {
+            // 屏幕从竖屏变为横屏时执行
+            print("bounds:")
+            print(UIScreen.main.bounds)
+            print("frame:")
+            print(self.view.frame)
+            
+        }else{
+            
+            // 屏幕从横屏变为竖屏时执行
+            print("bounds:")
+            print(UIScreen.main.bounds)
+            print("frame:")
+            print(self.view.frame)
+            
+        }
+    }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
+        
+        print("bounds:")
+        print(UIScreen.main.bounds)
+        print("frame:")
+        print(self.view.frame)
+        self.mvPlay?.view.frame = UIScreen.main.bounds
+        self.infoLabel.frame = CGRect(x:0, y:UIScreen.main.bounds.height-30, width:200, height: 30)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -68,19 +116,16 @@ class FirstBarrageViewController: BaseViewController {
         
         if spriteNumber <= 500 {
             
-            
             // BarrageWalkDirectionR2L                   BarrageWalkSideLeft
             self.renderer.receive(self.walkTextSpriteDescriptorWithDirection(direction: 1, side: 2))
             self.renderer.receive(self.walkTextSpriteDescriptorWithDirection(direction: 2, side: 0))
             self.renderer.receive(self.walkTextSpriteDescriptorWithDirection(direction: 2, side: 2))
             self.renderer.receive(self.walkTextSpriteDescriptorWithDirection(direction: 4, side: 1))
             
-            
             // BarrageFloatDirectionB2T                  BarrageFloatSideCenter
             self.renderer.receive(self.floatTextSpriteDescriptorWithDirection(direction: 2, side:0))
             self.renderer.receive(self.floatTextSpriteDescriptorWithDirection(direction: 1, side:2))
             self.renderer.receive(self.floatTextSpriteDescriptorWithDirection(direction: 1, side:1))
-            
             
             // BarrageWalkDirectionL2R
             self.renderer.receive(self.walkImageSpriteDescriptorWithDirection(direction: 1))
@@ -88,7 +133,6 @@ class FirstBarrageViewController: BaseViewController {
             // BarrageFloatDirectionT2B
             self.renderer.receive(self.floatImageSpriteDescriptorWithDirection(direction: 1))
         }
-        
     }
     
     /// 过场文字弹幕

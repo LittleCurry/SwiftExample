@@ -11,6 +11,9 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var allowRotate = 0
+    
+
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -95,6 +98,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    //此方法会在设备横竖屏变化的时候调用
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        // NSLog("方向  =============   %ld", self.allowRotate);
+        if (self.allowRotate == 1) {
+            return UIInterfaceOrientationMask.all
+        }else{
+            return UIInterfaceOrientationMask.portrait
+        }
+    }
+    
+    // 返回是否支持设备自动旋转
+    func shouldAutorotate() -> Bool {
+        if (self.allowRotate == 1) {
+            return true
+        }
+        return false
     }
     
     // MARK: - Core Data stack
