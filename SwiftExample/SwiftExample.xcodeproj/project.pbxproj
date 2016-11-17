@@ -30,6 +30,20 @@
 		C1198B3E1DC1D44F00838A8A /* smallSnow.png in Resources */ = {isa = PBXBuildFile; fileRef = C1198B321DC1D44F00838A8A /* smallSnow.png */; };
 		C1198B3F1DC1D44F00838A8A /* YFEmitterSnowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1198B341DC1D44F00838A8A /* YFEmitterSnowCell.m */; };
 		C119E3031DAF9D71008AF0F5 /* FirstBarrageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */; };
+		C11B33A61DDC09E5002F5C45 /* CircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33A01DDC09E5002F5C45 /* CircularSlider+Draw.swift */; };
+		C11B33A71DDC09E5002F5C45 /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33A11DDC09E5002F5C45 /* CircularSlider.swift */; };
+		C11B33A81DDC09E5002F5C45 /* CircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33A21DDC09E5002F5C45 /* CircularSliderHelper.swift */; };
+		C11B33A91DDC09E5002F5C45 /* MidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33A31DDC09E5002F5C45 /* MidPointCircularSlider.swift */; };
+		C11B33AA1DDC09E5002F5C45 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33A41DDC09E5002F5C45 /* RangeCircularSlider.swift */; };
+		C11B33AC1DDC0A6C002F5C45 /* FirstClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33AB1DDC0A6C002F5C45 /* FirstClockViewController.swift */; };
+		C11B33C01DDC2531002F5C45 /* wake.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33BB1DDC2531002F5C45 /* wake.png */; };
+		C11B33C11DDC2531002F5C45 /* bedtime.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33BC1DDC2531002F5C45 /* bedtime.png */; };
+		C11B33C41DDC2531002F5C45 /* time_indicators.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33BF1DDC2531002F5C45 /* time_indicators.png */; };
+		C11B33C91DDC3EF1002F5C45 /* ic_wake@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33C51DDC3EF1002F5C45 /* ic_wake@2x.png */; };
+		C11B33CA1DDC3EF1002F5C45 /* ic_wake@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33C61DDC3EF1002F5C45 /* ic_wake@3x.png */; };
+		C11B33CB1DDC3EF1002F5C45 /* ic_bedtime@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33C71DDC3EF1002F5C45 /* ic_bedtime@2x.png */; };
+		C11B33CC1DDC3EF1002F5C45 /* ic_bedtime@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C11B33C81DDC3EF1002F5C45 /* ic_bedtime@3x.png */; };
+		C11B33CE1DDC4169002F5C45 /* FirstTimeRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11B33CD1DDC4169002F5C45 /* FirstTimeRecordViewController.swift */; };
 		C12801761D9E65A900E79A07 /* voice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801701D9E65A900E79A07 /* voice@3x.png */; };
 		C12801771D9E65A900E79A07 /* voice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801711D9E65A900E79A07 /* voice@2x.png */; };
 		C12801781D9E65A900E79A07 /* smile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C12801721D9E65A900E79A07 /* smile@2x.png */; };
@@ -724,6 +738,9 @@
 		C1CBF70B1DB9EDCF009E3A61 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF7061DB9EDCF009E3A61 /* CloudView.m */; };
 		C1CBF70C1DB9EDCF009E3A61 /* NSObject+KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF7081DB9EDCF009E3A61 /* NSObject+KVC.m */; };
 		C1CBF70F1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF70E1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift */; };
+		C1D1B5271DDC5AFE00C196C4 /* StrangeZero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1B5261DDC5AFE00C196C4 /* StrangeZero.mp3 */; };
+		C1D1B5291DDC6D2000C196C4 /* FirstMonthCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */; };
+		C1D1B52B1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */; };
 		C1E218211DA9E3F9002748F6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E218201DA9E3F9002748F6 /* Video.swift */; };
 		C1E218241DAA0320002748F6 /* add@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218221DAA0320002748F6 /* add@3x.png */; };
 		C1E218251DAA0320002748F6 /* add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1E218231DAA0320002748F6 /* add@2x.png */; };
@@ -780,6 +797,20 @@
 		C1198B331DC1D44F00838A8A /* YFEmitterSnowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFEmitterSnowCell.h; sourceTree = "<group>"; };
 		C1198B341DC1D44F00838A8A /* YFEmitterSnowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFEmitterSnowCell.m; sourceTree = "<group>"; };
 		C119E3021DAF9D71008AF0F5 /* FirstBarrageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstBarrageViewController.swift; sourceTree = "<group>"; };
+		C11B33A01DDC09E5002F5C45 /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CircularSlider+Draw.swift"; sourceTree = "<group>"; };
+		C11B33A11DDC09E5002F5C45 /* CircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSlider.swift; sourceTree = "<group>"; };
+		C11B33A21DDC09E5002F5C45 /* CircularSliderHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderHelper.swift; sourceTree = "<group>"; };
+		C11B33A31DDC09E5002F5C45 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidPointCircularSlider.swift; sourceTree = "<group>"; };
+		C11B33A41DDC09E5002F5C45 /* RangeCircularSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeCircularSlider.swift; sourceTree = "<group>"; };
+		C11B33AB1DDC0A6C002F5C45 /* FirstClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstClockViewController.swift; sourceTree = "<group>"; };
+		C11B33BB1DDC2531002F5C45 /* wake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wake.png; sourceTree = "<group>"; };
+		C11B33BC1DDC2531002F5C45 /* bedtime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bedtime.png; sourceTree = "<group>"; };
+		C11B33BF1DDC2531002F5C45 /* time_indicators.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time_indicators.png; sourceTree = "<group>"; };
+		C11B33C51DDC3EF1002F5C45 /* ic_wake@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wake@2x.png"; sourceTree = "<group>"; };
+		C11B33C61DDC3EF1002F5C45 /* ic_wake@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_wake@3x.png"; sourceTree = "<group>"; };
+		C11B33C71DDC3EF1002F5C45 /* ic_bedtime@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_bedtime@2x.png"; sourceTree = "<group>"; };
+		C11B33C81DDC3EF1002F5C45 /* ic_bedtime@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_bedtime@3x.png"; sourceTree = "<group>"; };
+		C11B33CD1DDC4169002F5C45 /* FirstTimeRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTimeRecordViewController.swift; sourceTree = "<group>"; };
 		C12801701D9E65A900E79A07 /* voice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@3x.png"; sourceTree = "<group>"; };
 		C12801711D9E65A900E79A07 /* voice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "voice@2x.png"; sourceTree = "<group>"; };
 		C12801721D9E65A900E79A07 /* smile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smile@2x.png"; sourceTree = "<group>"; };
@@ -1716,6 +1747,9 @@
 		C1CBF7071DB9EDCF009E3A61 /* NSObject+KVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVC.h"; sourceTree = "<group>"; };
 		C1CBF7081DB9EDCF009E3A61 /* NSObject+KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVC.m"; sourceTree = "<group>"; };
 		C1CBF70E1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRecommendMovieViewController.swift; sourceTree = "<group>"; };
+		C1D1B5261DDC5AFE00C196C4 /* StrangeZero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StrangeZero.mp3; sourceTree = "<group>"; };
+		C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstMonthCircleViewController.swift; sourceTree = "<group>"; };
+		C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstHourAndMinuteViewController.swift; sourceTree = "<group>"; };
 		C1E218201DA9E3F9002748F6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C1E218221DAA0320002748F6 /* add@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@3x.png"; sourceTree = "<group>"; };
 		C1E218231DAA0320002748F6 /* add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add@2x.png"; sourceTree = "<group>"; };
@@ -1862,6 +1896,19 @@
 				C1198B341DC1D44F00838A8A /* YFEmitterSnowCell.m */,
 			);
 			path = SnowCell;
+			sourceTree = "<group>";
+		};
+		C11B339E1DDC09E5002F5C45 /* HGCircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C11B33A01DDC09E5002F5C45 /* CircularSlider+Draw.swift */,
+				C11B33A11DDC09E5002F5C45 /* CircularSlider.swift */,
+				C11B33A21DDC09E5002F5C45 /* CircularSliderHelper.swift */,
+				C11B33A31DDC09E5002F5C45 /* MidPointCircularSlider.swift */,
+				C11B33A41DDC09E5002F5C45 /* RangeCircularSlider.swift */,
+				C1D1B5261DDC5AFE00C196C4 /* StrangeZero.mp3 */,
+			);
+			path = HGCircularSlider;
 			sourceTree = "<group>";
 		};
 		C14855281DD4760900A7FD89 /* BarrageRenderer */ = {
@@ -2377,6 +2424,13 @@
 				C14855211DD44FDE00A7FD89 /* women@3x.png */,
 				C14855221DD44FDE00A7FD89 /* chest@2x.png */,
 				C14855231DD44FDE00A7FD89 /* chest@3x.png */,
+				C11B33BB1DDC2531002F5C45 /* wake.png */,
+				C11B33BC1DDC2531002F5C45 /* bedtime.png */,
+				C11B33BF1DDC2531002F5C45 /* time_indicators.png */,
+				C11B33C51DDC3EF1002F5C45 /* ic_wake@2x.png */,
+				C11B33C61DDC3EF1002F5C45 /* ic_wake@3x.png */,
+				C11B33C71DDC3EF1002F5C45 /* ic_bedtime@2x.png */,
+				C11B33C81DDC3EF1002F5C45 /* ic_bedtime@3x.png */,
 				C17A13A11DBE07F50016E69B /* bankcard */,
 				C17FC3FA1DB870CC004028CA /* goods */,
 				C16C87671DAB667B00314367 /* weather */,
@@ -2434,6 +2488,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C11B339E1DDC09E5002F5C45 /* HGCircularSlider */,
 				C14855281DD4760900A7FD89 /* BarrageRenderer */,
 				C11618C51DCAE039005A7C0B /* JSWave */,
 				C1A600E61DC31361004A2B36 /* 04 - RadialMenu */,
@@ -2961,6 +3016,10 @@
 				C1C8FA141DC1BEC900C0589D /* FirstRadiateMenuViewController.swift */,
 				C1C8FA161DC1BEF500C0589D /* FirstSnowViewController.swift */,
 				C1C8FA1A1DC1BF3A00C0589D /* FirstCircleWaveViewController.swift */,
+				C11B33AB1DDC0A6C002F5C45 /* FirstClockViewController.swift */,
+				C11B33CD1DDC4169002F5C45 /* FirstTimeRecordViewController.swift */,
+				C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */,
+				C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3780,6 +3839,7 @@
 				C17FC4771DB870CC004028CA /* goods102.jpg in Resources */,
 				C1970D271DA8BC7900260A11 /* superStar.png in Resources */,
 				C16419911D9BCB4600BD3841 /* 20.tiff in Resources */,
+				C11B33C91DDC3EF1002F5C45 /* ic_wake@2x.png in Resources */,
 				C17FC4A01DB870CC004028CA /* goods31.jpg in Resources */,
 				C16417C61D9BC86D00BD3841 /* LaunchScreen.storyboard in Resources */,
 				C1BFB4F91DC0C284001B4E05 /* i2.jpg in Resources */,
@@ -3813,6 +3873,7 @@
 				C1970D251DA8BC6E00260A11 /* food.png in Resources */,
 				C1BC1D401DADDC3B00AD5862 /* squareAdd@3x.png in Resources */,
 				C14855271DD44FDE00A7FD89 /* chest@3x.png in Resources */,
+				C1D1B5271DDC5AFE00C196C4 /* StrangeZero.mp3 in Resources */,
 				C164199A1D9BCB4600BD3841 /* 29.tiff in Resources */,
 				C17FC4CC1DB870CC004028CA /* goods71.jpg in Resources */,
 				C148551B1DD44F8600A7FD89 /* shake@3x.png in Resources */,
@@ -3866,6 +3927,7 @@
 				C19EA5831DB73EC900984138 /* start@2x.png in Resources */,
 				C1A7CCE11DBA015C001C5A6B /* storeHeader3.jpg in Resources */,
 				C16C87831DAB677100314367 /* snowlittle@2x.png in Resources */,
+				C11B33C11DDC2531002F5C45 /* bedtime.png in Resources */,
 				C17FC4AF1DB870CC004028CA /* goods45.jpg in Resources */,
 				C12801761D9E65A900E79A07 /* voice@3x.png in Resources */,
 				C17FC4DC1DB870CC004028CA /* goods86.jpg in Resources */,
@@ -3877,6 +3939,7 @@
 				C194509A1DD33635004B5BD3 /* order@3x.png in Resources */,
 				C16419531D9BCB2F00BD3841 /* back@2x.png in Resources */,
 				C1CBF7011DB9C06D009E3A61 /* stopAir@2x.png in Resources */,
+				C11B33C41DDC2531002F5C45 /* time_indicators.png in Resources */,
 				C1970D0F1DA8A15B00260A11 /* AMap.bundle in Resources */,
 				C164198F1D9BCB4600BD3841 /* 19.tiff in Resources */,
 				C17FC4C51DB870CC004028CA /* goods65.jpg in Resources */,
@@ -3898,6 +3961,7 @@
 				C19EA5841DB73EC900984138 /* start@3x.png in Resources */,
 				C16419961D9BCB4600BD3841 /* 25.tiff in Resources */,
 				C17FC4D81DB870CC004028CA /* goods82.jpg in Resources */,
+				C11B33C01DDC2531002F5C45 /* wake.png in Resources */,
 				C16419991D9BCB4600BD3841 /* 28.tiff in Resources */,
 				C17A13B51DBE13570016E69B /* markButton@2x.png in Resources */,
 				C14855251DD44FDE00A7FD89 /* women@3x.png in Resources */,
@@ -4005,6 +4069,7 @@
 				C17FC47B1DB870CC004028CA /* goods106.jpg in Resources */,
 				C16C87991DAB7A4F00314367 /* city.plist in Resources */,
 				C14854F51DD4178D00A7FD89 /* vip@3x.png in Resources */,
+				C11B33CA1DDC3EF1002F5C45 /* ic_wake@3x.png in Resources */,
 				C148550B1DD4386700A7FD89 /* service@3x.png in Resources */,
 				C1BFB4F51DC0C284001B4E05 /* coffee_to_go-50.png in Resources */,
 				C1C8F9EC1DC1A85700C0589D /* bg_yaoyao_under.png in Resources */,
@@ -4049,6 +4114,7 @@
 				C17FC4BB1DB870CC004028CA /* goods56.jpg in Resources */,
 				C17FC4E81DB870CC004028CA /* goods97.jpg in Resources */,
 				C16419AB1D9BCB4600BD3841 /* 44.tiff in Resources */,
+				C11B33CB1DDC3EF1002F5C45 /* ic_bedtime@2x.png in Resources */,
 				C17FC4A91DB870CC004028CA /* goods4.jpg in Resources */,
 				C17FC4CE1DB870CC004028CA /* goods73.jpg in Resources */,
 				C17FC4C41DB870CC004028CA /* goods64.jpg in Resources */,
@@ -4096,6 +4162,7 @@
 				C17FC4D31DB870CC004028CA /* goods78.jpg in Resources */,
 				C17FC4E11DB870CC004028CA /* goods90.jpg in Resources */,
 				C17FC4781DB870CC004028CA /* goods103.jpg in Resources */,
+				C11B33CC1DDC3EF1002F5C45 /* ic_bedtime@3x.png in Resources */,
 				C17FC4E41DB870CC004028CA /* goods93.jpg in Resources */,
 				C17FC4E51DB870CC004028CA /* goods94.jpg in Resources */,
 				C14855031DD4382F00A7FD89 /* list@3x.png in Resources */,
@@ -4136,6 +4203,7 @@
 				C17FC3F91DB85D16004028CA /* FirstSecretcodeViewController.swift in Sources */,
 				C17FC4FE1DB8B189004028CA /* FirstObserveCardViewController.swift in Sources */,
 				C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */,
+				C11B33A71DDC09E5002F5C45 /* CircularSlider.swift in Sources */,
 				C1BC635D1DBEF7D9006EBCFC /* LMJTextView.swift in Sources */,
 				C1BFB5121DC0CB59001B4E05 /* FirstFoldCardViewController.swift in Sources */,
 				C12BEC5A1DAA4931009F2EAA /* ThirdOneTypeViewController.swift in Sources */,
@@ -4179,6 +4247,7 @@
 				C17A138E1DBDF29A0016E69B /* SSStackedPageView.m in Sources */,
 				C158F2A81DACC982000CAE40 /* NSData+SDDataCache.m in Sources */,
 				C16419141D9BCADE00BD3841 /* MJRefreshBackFooter.m in Sources */,
+				C11B33A91DDC09E5002F5C45 /* MidPointCircularSlider.swift in Sources */,
 				C16418B51D9BCAB400BD3841 /* UIView+WebCacheOperation.m in Sources */,
 				C1970D431DA8CEFC00260A11 /* QRViewController.m in Sources */,
 				C1BC63561DBEF7D9006EBCFC /* LMJEmoticon.swift in Sources */,
@@ -4254,6 +4323,8 @@
 				C16418D81D9BCAC500BD3841 /* View+MASAdditions.m in Sources */,
 				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
 				C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */,
+				C11B33A81DDC09E5002F5C45 /* CircularSliderHelper.swift in Sources */,
+				C1D1B52B1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift in Sources */,
 				C164187E1D9BCAA800BD3841 /* MMPinView.m in Sources */,
 				C1CAB1051DC1DB3C00D4B409 /* WSBezier.m in Sources */,
 				C1970D6F1DA8ECEA00260A11 /* MovieTableViewCell.swift in Sources */,
@@ -4290,6 +4361,7 @@
 				C1C8FA0B1DC1BC7200C0589D /* YFDraggableCardViewController.m in Sources */,
 				C164193F1D9BCB1400BD3841 /* StateBarMsgView.m in Sources */,
 				C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */,
+				C11B33AA1DDC09E5002F5C45 /* RangeCircularSlider.swift in Sources */,
 				C16418AA1D9BCAB400BD3841 /* SDWebImageDecoder.m in Sources */,
 				C16418AC1D9BCAB400BD3841 /* SDWebImageDownloaderOperation.m in Sources */,
 				C151E3301DA553D6004A41A3 /* SCChart.m in Sources */,
@@ -4301,6 +4373,7 @@
 				C148554E1DD4760900A7FD89 /* BarrageDescriptor.m in Sources */,
 				C1C8FA2A1DC1C01F00C0589D /* RippleModel.m in Sources */,
 				C1C53DBD1DB4ECEA003DC3F0 /* FirstStoreFoundViewController.swift in Sources */,
+				C11B33AC1DDC0A6C002F5C45 /* FirstClockViewController.swift in Sources */,
 				C11618C81DCAE039005A7C0B /* JSWave.m in Sources */,
 				C158F2901DACB96B000CAE40 /* BankCardTableViewCell.swift in Sources */,
 				C14855501DD4760900A7FD89 /* BarrageRenderer.m in Sources */,
@@ -4331,6 +4404,7 @@
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
 				C158F2F31DACE40B000CAE40 /* TZVideoPlayerController.m in Sources */,
 				C1BC635C1DBEF7D9006EBCFC /* LMJEmoticonToolBar.swift in Sources */,
+				C11B33CE1DDC4169002F5C45 /* FirstTimeRecordViewController.swift in Sources */,
 				C10F3AAE1DC088DF00C27AE4 /* ThreepinView.m in Sources */,
 				C1BFB5101DC0CAD3001B4E05 /* SBGradientOverlayLayer.m in Sources */,
 				C17A138F1DBDF29A0016E69B /* UIColor+CatColors.m in Sources */,
@@ -4355,6 +4429,7 @@
 				C164191A1D9BCADE00BD3841 /* MJRefreshAutoStateFooter.m in Sources */,
 				C16418AF1D9BCAB400BD3841 /* UIButton+WebCache.m in Sources */,
 				C158F3091DACE45A000CAE40 /* MJPhotoView.m in Sources */,
+				C11B33A61DDC09E5002F5C45 /* CircularSlider+Draw.swift in Sources */,
 				C16419461D9BCB1400BD3841 /* AlloverMacro.swift in Sources */,
 				C16418B31D9BCAB400BD3841 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C17FC4F41DB8B03B004028CA /* FirstCircleMenuViewController.swift in Sources */,
@@ -4398,6 +4473,7 @@
 				C1C53D6A1DB49F7A003DC3F0 /* UIColor+Extend.m in Sources */,
 				C119E3031DAF9D71008AF0F5 /* FirstBarrageViewController.swift in Sources */,
 				C158F2921DACBB91000CAE40 /* BankCard.swift in Sources */,
+				C1D1B5291DDC6D2000C196C4 /* FirstMonthCircleViewController.swift in Sources */,
 				C19EA5681DB7213400984138 /* StoreHomeTableViewCell3.swift in Sources */,
 				C16418E21D9BCAD000BD3841 /* HyTransitions.m in Sources */,
 				C158F2EE1DACE40B000CAE40 /* TZImageManager.m in Sources */,

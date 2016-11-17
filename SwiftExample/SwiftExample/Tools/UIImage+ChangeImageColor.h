@@ -24,6 +24,11 @@
 - (UIImage *)changeImageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode;
 
 /**
+ *  去除图片的白色背景, 除去图片的白色背景(接近白色)，或者其它颜色的替换
+ */
+- (UIImage*)eraserImageWhiteColor;
+
+/**
  *  gauss模糊
  */
 - (UIImage *)applyLightEffect;
@@ -37,6 +42,11 @@
  *  截取图片的某一部分
  */
 - (UIImage *)subImageInRect:(CGRect)rect;
+
+/**
+ *  截取图片的一个圆形区域
+ */
+- (UIImage*)circleImageWithParam:(CGFloat)inset;
 
 /**
  *  将image缩放到指定尺寸
