@@ -207,8 +207,8 @@ open class CircularSlider: UIControl {
      See superclass documentation
      */
     override open func draw(_ rect: CGRect) {
-        guard let context = UIGraphicsGetCurrentContext() else { return }
         
+        guard let context = UIGraphicsGetCurrentContext() else { return }
         drawCircularSlider(inContext: context)
         
         let valuesInterval = Interval(min: minimumValue, max: maximumValue)
@@ -246,7 +246,6 @@ open class CircularSlider: UIControl {
         
         // the position of the pan gesture
         let touchPosition = touch.location(in: self)
-        
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
         let angle = CircularSliderHelper.angle(betweenFirstPoint: startPoint, secondPoint: touchPosition, inCircleWithCenter: bounds.center)
         
