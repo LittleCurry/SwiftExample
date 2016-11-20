@@ -117,6 +117,15 @@
 		C151E3381DA553D6004A41A3 /* SCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E32B1DA553D6004A41A3 /* SCTool.m */; };
 		C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E32D1DA553D6004A41A3 /* UICountingLabel.m */; };
 		C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C151E3421DA55931004A41A3 /* FouthViewController.swift */; };
+		C152B6301DDEA9C300351F13 /* GestureVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B61C1DDEA9C300351F13 /* GestureVerifyViewController.m */; };
+		C152B6311DDEA9C300351F13 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B61E1DDEA9C300351F13 /* GestureViewController.m */; };
+		C152B6321DDEA9C300351F13 /* PCGestureMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B6201DDEA9C300351F13 /* PCGestureMenuViewController.m */; };
+		C152B6331DDEA9C300351F13 /* PCCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B6231DDEA9C300351F13 /* PCCircle.m */; };
+		C152B6341DDEA9C300351F13 /* PCCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B6251DDEA9C300351F13 /* PCCircleView.m */; };
+		C152B6351DDEA9C300351F13 /* PCCircleViewConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B6271DDEA9C300351F13 /* PCCircleViewConst.m */; };
+		C152B6361DDEA9C300351F13 /* CALayer+Anim.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B62A1DDEA9C300351F13 /* CALayer+Anim.m */; };
+		C152B6371DDEA9C300351F13 /* PCCircleInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B62D1DDEA9C300351F13 /* PCCircleInfoView.m */; };
+		C152B6381DDEA9C300351F13 /* PCLockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C152B62F1DDEA9C300351F13 /* PCLockLabel.m */; };
 		C158F28A1DAC9588000CAE40 /* FirstDateChoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F2891DAC9588000CAE40 /* FirstDateChoseViewController.swift */; };
 		C158F28C1DAC95C2000CAE40 /* FirstBankCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F28B1DAC95C2000CAE40 /* FirstBankCardViewController.swift */; };
 		C158F28E1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C158F28D1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift */; };
@@ -917,6 +926,24 @@
 		C151E32C1DA553D6004A41A3 /* UICountingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		C151E32D1DA553D6004A41A3 /* UICountingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
 		C151E3421DA55931004A41A3 /* FouthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FouthViewController.swift; sourceTree = "<group>"; };
+		C152B61B1DDEA9C300351F13 /* GestureVerifyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureVerifyViewController.h; sourceTree = "<group>"; };
+		C152B61C1DDEA9C300351F13 /* GestureVerifyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureVerifyViewController.m; sourceTree = "<group>"; };
+		C152B61D1DDEA9C300351F13 /* GestureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		C152B61E1DDEA9C300351F13 /* GestureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
+		C152B61F1DDEA9C300351F13 /* PCGestureMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCGestureMenuViewController.h; sourceTree = "<group>"; };
+		C152B6201DDEA9C300351F13 /* PCGestureMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCGestureMenuViewController.m; sourceTree = "<group>"; };
+		C152B6221DDEA9C300351F13 /* PCCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircle.h; sourceTree = "<group>"; };
+		C152B6231DDEA9C300351F13 /* PCCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircle.m; sourceTree = "<group>"; };
+		C152B6241DDEA9C300351F13 /* PCCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircleView.h; sourceTree = "<group>"; };
+		C152B6251DDEA9C300351F13 /* PCCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircleView.m; sourceTree = "<group>"; };
+		C152B6261DDEA9C300351F13 /* PCCircleViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircleViewConst.h; sourceTree = "<group>"; };
+		C152B6271DDEA9C300351F13 /* PCCircleViewConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircleViewConst.m; sourceTree = "<group>"; };
+		C152B6291DDEA9C300351F13 /* CALayer+Anim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Anim.h"; sourceTree = "<group>"; };
+		C152B62A1DDEA9C300351F13 /* CALayer+Anim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Anim.m"; sourceTree = "<group>"; };
+		C152B62C1DDEA9C300351F13 /* PCCircleInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCCircleInfoView.h; sourceTree = "<group>"; };
+		C152B62D1DDEA9C300351F13 /* PCCircleInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCCircleInfoView.m; sourceTree = "<group>"; };
+		C152B62E1DDEA9C300351F13 /* PCLockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLockLabel.h; sourceTree = "<group>"; };
+		C152B62F1DDEA9C300351F13 /* PCLockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLockLabel.m; sourceTree = "<group>"; };
 		C158F2891DAC9588000CAE40 /* FirstDateChoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDateChoseViewController.swift; sourceTree = "<group>"; };
 		C158F28B1DAC95C2000CAE40 /* FirstBankCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstBankCardViewController.swift; sourceTree = "<group>"; };
 		C158F28D1DAC95E3000CAE40 /* FirstPhotoChoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstPhotoChoseViewController.swift; sourceTree = "<group>"; };
@@ -2060,6 +2087,63 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C152B6191DDEA9C300351F13 /* PCGestureUnlock */ = {
+			isa = PBXGroup;
+			children = (
+				C152B61A1DDEA9C300351F13 /* Controller */,
+				C152B6211DDEA9C300351F13 /* FrameWork */,
+				C152B6281DDEA9C300351F13 /* Gategory */,
+				C152B62B1DDEA9C300351F13 /* View */,
+			);
+			path = PCGestureUnlock;
+			sourceTree = "<group>";
+		};
+		C152B61A1DDEA9C300351F13 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C152B61B1DDEA9C300351F13 /* GestureVerifyViewController.h */,
+				C152B61C1DDEA9C300351F13 /* GestureVerifyViewController.m */,
+				C152B61D1DDEA9C300351F13 /* GestureViewController.h */,
+				C152B61E1DDEA9C300351F13 /* GestureViewController.m */,
+				C152B61F1DDEA9C300351F13 /* PCGestureMenuViewController.h */,
+				C152B6201DDEA9C300351F13 /* PCGestureMenuViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C152B6211DDEA9C300351F13 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				C152B6221DDEA9C300351F13 /* PCCircle.h */,
+				C152B6231DDEA9C300351F13 /* PCCircle.m */,
+				C152B6241DDEA9C300351F13 /* PCCircleView.h */,
+				C152B6251DDEA9C300351F13 /* PCCircleView.m */,
+				C152B6261DDEA9C300351F13 /* PCCircleViewConst.h */,
+				C152B6271DDEA9C300351F13 /* PCCircleViewConst.m */,
+			);
+			path = FrameWork;
+			sourceTree = "<group>";
+		};
+		C152B6281DDEA9C300351F13 /* Gategory */ = {
+			isa = PBXGroup;
+			children = (
+				C152B6291DDEA9C300351F13 /* CALayer+Anim.h */,
+				C152B62A1DDEA9C300351F13 /* CALayer+Anim.m */,
+			);
+			path = Gategory;
+			sourceTree = "<group>";
+		};
+		C152B62B1DDEA9C300351F13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C152B62C1DDEA9C300351F13 /* PCCircleInfoView.h */,
+				C152B62D1DDEA9C300351F13 /* PCCircleInfoView.m */,
+				C152B62E1DDEA9C300351F13 /* PCLockLabel.h */,
+				C152B62F1DDEA9C300351F13 /* PCLockLabel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C158F2951DACC982000CAE40 /* SDCycleScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2488,6 +2572,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C152B6191DDEA9C300351F13 /* PCGestureUnlock */,
 				C11B339E1DDC09E5002F5C45 /* HGCircularSlider */,
 				C14855281DD4760900A7FD89 /* BarrageRenderer */,
 				C11618C51DCAE039005A7C0B /* JSWave */,
@@ -4201,6 +4286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C17FC3F91DB85D16004028CA /* FirstSecretcodeViewController.swift in Sources */,
+				C152B6341DDEA9C300351F13 /* PCCircleView.m in Sources */,
 				C17FC4FE1DB8B189004028CA /* FirstObserveCardViewController.swift in Sources */,
 				C1C53DBF1DB4ED15003DC3F0 /* FirstStoreCarViewController.swift in Sources */,
 				C11B33A71DDC09E5002F5C45 /* CircularSlider.swift in Sources */,
@@ -4225,6 +4311,7 @@
 				C1970D411DA8CEFC00260A11 /* QRUtil.m in Sources */,
 				C1401A2A1DB63C5A00A76A3E /* StoreHomeTableViewCell1.swift in Sources */,
 				C14CE7C81DB8DFF900462ECB /* UIView+Extension.m in Sources */,
+				C152B6361DDEA9C300351F13 /* CALayer+Anim.m in Sources */,
 				C17A13951DBDF3FB0016E69B /* FirstGraduallyColorViewController.swift in Sources */,
 				C151E3361DA553D6004A41A3 /* SCPieChart.m in Sources */,
 				C14855561DD4760900A7FD89 /* BarrageSprite.m in Sources */,
@@ -4260,6 +4347,7 @@
 				C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */,
 				C16419241D9BCADE00BD3841 /* UIScrollView+MJExtension.m in Sources */,
 				C17D55111DA6124B00C27FD2 /* FouthCircleViewController.swift in Sources */,
+				C152B6311DDEA9C300351F13 /* GestureViewController.m in Sources */,
 				C151E3431DA55931004A41A3 /* FouthViewController.swift in Sources */,
 				C148554F1DD4760900A7FD89 /* BarrageDispatcher.m in Sources */,
 				C1CAB11F1DC2018A00D4B409 /* HWCircleLayout.m in Sources */,
@@ -4299,6 +4387,7 @@
 				C1BFB50F1DC0CAD3001B4E05 /* JCFlipViewAnimationHelper.m in Sources */,
 				C17FC5431DB8DCE2004028CA /* UIColor+Extension.m in Sources */,
 				C1CAB1451DC2104600D4B409 /* YFHalfCircleLayoutViewController.m in Sources */,
+				C152B6301DDEA9C300351F13 /* GestureVerifyViewController.m in Sources */,
 				C17D55091DA6073E00C27FD2 /* SCPieCell.m in Sources */,
 				C16418D01D9BCAC500BD3841 /* MASCompositeConstraint.m in Sources */,
 				C158F2AF1DACC982000CAE40 /* UIView+SDExtension.m in Sources */,
@@ -4324,6 +4413,7 @@
 				C1C53D471DB4717B003DC3F0 /* FirstCalendarViewController.swift in Sources */,
 				C151E32F1DA553D6004A41A3 /* SCBarChart.m in Sources */,
 				C11B33A81DDC09E5002F5C45 /* CircularSliderHelper.swift in Sources */,
+				C152B6321DDEA9C300351F13 /* PCGestureMenuViewController.m in Sources */,
 				C1D1B52B1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift in Sources */,
 				C164187E1D9BCAA800BD3841 /* MMPinView.m in Sources */,
 				C1CAB1051DC1DB3C00D4B409 /* WSBezier.m in Sources */,
@@ -4354,6 +4444,7 @@
 				C1970D401DA8CEFC00260A11 /* QRMenu.m in Sources */,
 				C1970D461DA8E8E200260A11 /* FirstOriginBlockViewcontroller.swift in Sources */,
 				C16419231D9BCADE00BD3841 /* NSBundle+MJRefresh.m in Sources */,
+				C152B6351DDEA9C300351F13 /* PCCircleViewConst.m in Sources */,
 				C16418E11D9BCAD000BD3841 /* HyLoglnButton.m in Sources */,
 				C158F3051DACE45A000CAE40 /* MJPhotoBrowser.m in Sources */,
 				C1BC63581DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift in Sources */,
@@ -4384,10 +4475,12 @@
 				C1198B3B1DC1D44F00838A8A /* YFPublicParticleCell.m in Sources */,
 				C1C8FA0C1DC1BC7200C0589D /* YSLCardView.m in Sources */,
 				C1BFB50D1DC0CAD3001B4E05 /* JCFlipPage.m in Sources */,
+				C152B6331DDEA9C300351F13 /* PCCircle.m in Sources */,
 				C164187F1D9BCAA800BD3841 /* MMPopupCategory.m in Sources */,
 				C17FC53B1DB8DB41004028CA /* YFLabel.m in Sources */,
 				C17A13AE1DBE0F950016E69B /* XRPopMenuView.m in Sources */,
 				C16419251D9BCADE00BD3841 /* UIScrollView+MJRefresh.m in Sources */,
+				C152B6371DDEA9C300351F13 /* PCCircleInfoView.m in Sources */,
 				C17D550F1DA607FB00C27FD2 /* FouthPieViewController.swift in Sources */,
 				C148554D1DD4760900A7FD89 /* BarrageClock.m in Sources */,
 				C19EA5661DB7212200984138 /* StoreHomeTableViewCell2.swift in Sources */,
@@ -4464,6 +4557,7 @@
 				C1CBF70B1DB9EDCF009E3A61 /* CloudView.m in Sources */,
 				C1E218211DA9E3F9002748F6 /* Video.swift in Sources */,
 				C158F2F01DACE40B000CAE40 /* TZPhotoPickerController.m in Sources */,
+				C152B6381DDEA9C300351F13 /* PCLockLabel.m in Sources */,
 				C148555E1DD479D700A7FD89 /* NSSafeObject.m in Sources */,
 				C1B3C5B01DD1E6A50012570D /* StoreCar.swift in Sources */,
 				C1C53DBB1DB4ECD1003DC3F0 /* FirstStoreDifferentClassViewController.swift in Sources */,

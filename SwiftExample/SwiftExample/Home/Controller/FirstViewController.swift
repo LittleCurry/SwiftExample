@@ -11,7 +11,7 @@ import AVFoundation
 
 class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource{
     // 这是写属性的地方
-    var nameArr = ["navigationBar渐变", "聊天界面", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "推荐影片", "渐隐文字", "打印文字", "拼图", "2048", "浏览卡片", "抽卡效果", "抖动菜单", "渐变色", "折卡效果", "卡牌拖动", "摇一摇", "ape展开", "余额跳动", "水平滚动布局", "发散菜单", "漂浮的雪花", "水波", "闹钟设置", "音乐播放", "某月的日期", "分开设置时分"];
+    var nameArr = ["navigationBar渐变", "聊天界面", "gauss模糊", "Share", "Map", "二维码", "视频播放", "block", "天气", "清除缓存", "日期选择", "我的银行卡", "本地相册选取", "轮播图", "热更新", "弹幕", "日历", "商城首页", "商城分类", "商城发现", "商城购物车", "商城我的", "请输入密码", "圆形菜单", "球形标签", "推荐影片", "渐隐文字", "打印文字", "拼图", "2048", "浏览卡片", "抽卡效果", "抖动菜单", "渐变色", "折卡效果", "卡牌拖动", "摇一摇", "ape展开", "余额跳动", "水平滚动布局", "发散菜单", "漂浮的雪花", "水波", "闹钟设置", "音乐播放", "某月的日期", "分开设置时分", "手势解锁"];
     var myTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT), style: UITableViewStyle.plain);
     var clearLabel = UILabel.init(frame: CGRect(x: WIDTH-115, y: 450, width: 100, height: 50))
     
@@ -317,6 +317,11 @@ class FirstViewController: BaseViewController, UITableViewDelegate, UITableViewD
             let hourVC = FirstHourAndMinuteViewController.init();
             hourVC.hidesBottomBarWhenPushed = true;
             self.navigationController?.pushViewController(hourVC, animated: true);
+            break;
+        case 47:
+            let gestureVC = PCGestureMenuViewController.init();
+            gestureVC.hidesBottomBarWhenPushed = true;
+            self.navigationController?.pushViewController(gestureVC, animated: true);
             break;
             
         default:

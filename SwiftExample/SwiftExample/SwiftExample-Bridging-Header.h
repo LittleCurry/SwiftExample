@@ -69,6 +69,7 @@
 #import "JSWave.h"
 #import "BarrageRenderer.h"
 #import "NSSafeObject.h"
+#import "PCGestureMenuViewController.h"
 
 
 
