@@ -41,6 +41,9 @@
 *  发散菜单.
 *  漂浮的雪花.
 *  水波.
+*  闹钟设置.
+*  音乐播放.
+*  手势解锁.
 
 ## 部分截图
 *  Home.
@@ -91,7 +94,16 @@
 
 ![image](./screenShot/screenShot12.png)
 
-*  商城.
+*  商城首页
+
+![image](./screenShot/screenShot13.png)
+*  商城首页
+
+![image](./screenShot/screenShot13.png)
+*  商城首页
+
+![image](./screenShot/screenShot13.png)
+*  商城首页
 
 ![image](./screenShot/screenShot13.png)
 
@@ -114,6 +126,26 @@
 *  水波.
 
 ![image](./screenShot/screenShot18.png)
+
+*  水波.
+
+![image](./screenShot/screenShot19.png)
+
+*  水波.
+
+![image](./screenShot/screenShot20.png)
+
+*  水波.
+
+![image](./screenShot/screenShot21.png)
+
+*  水波.
+
+![image](./screenShot/screenShot22.png)
+
+*  水波.
+
+![image](./screenShot/screenShot23.png)
 
 
 
