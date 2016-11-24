@@ -94,48 +94,39 @@
 
 ![image](./screenShot/screenShot12.png)
 
-*  商城首页
-
-![image](./screenShot/screenShot13.png)
-*  商城首页
-
-![image](./screenShot/screenShot13.png)
-*  商城首页
-
-![image](./screenShot/screenShot13.png)
-*  商城首页
+*  商城首页.
 
 ![image](./screenShot/screenShot13.png)
 
-*  请输入密码.
+*  商城分类.
 
 ![image](./screenShot/screenShot14.png)
 
-*  渐变色.
+*  商城发现.
 
 ![image](./screenShot/screenShot15.png)
 
-*  余额跳动.
+*  商城购物车.
 
 ![image](./screenShot/screenShot16.png)
 
-*  漂浮的雪花.
+*  商城我的.
 
 ![image](./screenShot/screenShot17.png)
 
-*  水波.
+*  请输入密码.
 
 ![image](./screenShot/screenShot18.png)
 
-*  水波.
+*  渐变色.
 
 ![image](./screenShot/screenShot19.png)
 
-*  水波.
+*  余额跳动.
 
 ![image](./screenShot/screenShot20.png)
 
-*  水波.
+*  漂浮的雪花.
 
 ![image](./screenShot/screenShot21.png)
 
@@ -143,9 +134,10 @@
 
 ![image](./screenShot/screenShot22.png)
 
-*  水波.
+*  手势解锁.
 
 ![image](./screenShot/screenShot23.png)
+
 
 
 
