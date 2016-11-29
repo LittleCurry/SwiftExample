@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的,如何在下载完成之后刷新工程,加一个circleSlider
+        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的,如何在下载完成之后刷新工程,加一个circleSlider, 增加一个通用性高的登录注册页
         JSPatch.start(withAppKey: "a75345057bbd6e47")
         JSPatch.sync()
 //        sleep(5)
