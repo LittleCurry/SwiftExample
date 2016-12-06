@@ -27,7 +27,7 @@ class FirstGaussViewController: BaseViewController {
         let slider = UISlider.init(frame: CGRect(x: 20, y: HEIGHT-60, width: WIDTH-40, height: 10))
         slider.addTarget(self, action: "sliderAction:", for: UIControlEvents.valueChanged)
         self.view.addSubview(slider)
-        var blur = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
+        let blur = UIBlurEffect.init(style: UIBlurEffectStyle.dark)
         self.effectview = UIVisualEffectView.init(effect: blur)
         self.effectview.frame = CGRect(x: 50, y: 80, width: WIDTH-100, height: WIDTH-100);
         self.effectview.alpha = 0.8;
