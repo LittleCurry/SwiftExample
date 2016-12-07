@@ -348,6 +348,10 @@
 		C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C16419C61D9BCC5400BD3841 /* HMWaterflowLayout.m */; };
 		C16419C91D9BCC5400BD3841 /* PlayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419C71D9BCC5400BD3841 /* PlayCollectionViewCell.swift */; };
 		C16419CB1D9BCC8200BD3841 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16419CA1D9BCC8200BD3841 /* SecondViewController.swift */; };
+		C16582771DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16582761DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift */; };
+		C16582791DF68F75003AEBD4 /* MovingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16582781DF68F75003AEBD4 /* MovingItem.swift */; };
+		C165827D1DF69336003AEBD4 /* MovingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165827C1DF69336003AEBD4 /* MovingCell.swift */; };
+		C16582801DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */; };
 		C16C87691DAB66F600314367 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87681DAB66F600314367 /* cloud@2x.png */; };
 		C16C876B1DAB670200314367 /* nosun_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876A1DAB670200314367 /* nosun_mini.png */; };
 		C16C876D1DAB670B00314367 /* rain_little0011@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876C1DAB670B00314367 /* rain_little0011@2x.png */; };
@@ -1314,6 +1318,11 @@
 		C16419CA1D9BCC8200BD3841 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C16419D01D9BCFB800BD3841 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ../PrefixHeader.pch; sourceTree = "<group>"; };
 		C16419D41D9BD1F500BD3841 /* SwiftExample-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SwiftExample-Bridging-Header.h"; path = "../SwiftExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		C16582761DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDraggingSortViewController.swift; sourceTree = "<group>"; };
+		C16582781DF68F75003AEBD4 /* MovingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingItem.swift; sourceTree = "<group>"; };
+		C165827C1DF69336003AEBD4 /* MovingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingCell.swift; sourceTree = "<group>"; };
+		C165827E1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggingCollectionViewLayout.h; sourceTree = "<group>"; };
+		C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggingCollectionViewLayout.m; sourceTree = "<group>"; };
 		C16C87681DAB66F600314367 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
 		C16C876A1DAB670200314367 /* nosun_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosun_mini.png; sourceTree = "<group>"; };
 		C16C876C1DAB670B00314367 /* rain_little0011@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain_little0011@2x.png"; sourceTree = "<group>"; };
@@ -3105,6 +3114,7 @@
 				C11B33CD1DDC4169002F5C45 /* FirstTimeRecordViewController.swift */,
 				C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */,
 				C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */,
+				C16582761DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3118,6 +3128,7 @@
 				C158F2911DACBB91000CAE40 /* BankCard.swift */,
 				C10F3AA71DC05C7800C27AE4 /* Chat.swift */,
 				C1B3C5AF1DD1E6A50012570D /* StoreCar.swift */,
+				C16582781DF68F75003AEBD4 /* MovingItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -3139,6 +3150,9 @@
 				C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */,
 				C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */,
 				C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */,
+				C165827E1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.h */,
+				C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */,
+				C165827C1DF69336003AEBD4 /* MovingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -4423,6 +4437,7 @@
 				C16418651D9BCA8800BD3841 /* AFSecurityPolicy.m in Sources */,
 				C16418661D9BCA8800BD3841 /* AFURLRequestSerialization.m in Sources */,
 				C14855531DD4760900A7FD89 /* BarrageFloatImageSprite.m in Sources */,
+				C165827D1DF69336003AEBD4 /* MovingCell.swift in Sources */,
 				C16418D11D9BCAC500BD3841 /* MASConstraint.m in Sources */,
 				C158F3031DACE45A000CAE40 /* MJPhoto.m in Sources */,
 				C16418831D9BCAA800BD3841 /* MMSheetView.m in Sources */,
@@ -4449,6 +4464,7 @@
 				C158F3051DACE45A000CAE40 /* MJPhotoBrowser.m in Sources */,
 				C1BC63581DBEF7D9006EBCFC /* LMJEmoticonTextAttachment.swift in Sources */,
 				C1C8FA151DC1BEC900C0589D /* FirstRadiateMenuViewController.swift in Sources */,
+				C16582791DF68F75003AEBD4 /* MovingItem.swift in Sources */,
 				C1C8FA0B1DC1BC7200C0589D /* YFDraggableCardViewController.m in Sources */,
 				C164193F1D9BCB1400BD3841 /* StateBarMsgView.m in Sources */,
 				C17D55081DA6073E00C27FD2 /* SCCircleCell.m in Sources */,
@@ -4492,6 +4508,7 @@
 				C1BFB5021DC0C284001B4E05 /* RGCollectionViewCell.m in Sources */,
 				C16419421D9BCB1400BD3841 /* JSESSIONID.m in Sources */,
 				C1CAB1201DC2018A00D4B409 /* HWCollectionViewCell.m in Sources */,
+				C16582801DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m in Sources */,
 				C16418D31D9BCAC500BD3841 /* MASLayoutConstraint.m in Sources */,
 				C158F3101DACE4B8000CAE40 /* YLImageView.m in Sources */,
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
@@ -4502,6 +4519,7 @@
 				C1BFB5101DC0CAD3001B4E05 /* SBGradientOverlayLayer.m in Sources */,
 				C17A138F1DBDF29A0016E69B /* UIColor+CatColors.m in Sources */,
 				C17D55071DA6073E00C27FD2 /* SCBarCell.m in Sources */,
+				C16582771DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift in Sources */,
 				C1198B3F1DC1D44F00838A8A /* YFEmitterSnowCell.m in Sources */,
 				C158F2AE1DACC982000CAE40 /* SDCycleScrollView.m in Sources */,
 				C164193D1D9BCB1400BD3841 /* UIImage+ChangeImageColor.m in Sources */,
