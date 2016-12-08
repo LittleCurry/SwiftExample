@@ -70,7 +70,8 @@
 #import "BarrageRenderer.h"
 #import "NSSafeObject.h"
 #import "PCGestureMenuViewController.h"
-#import "DraggingCollectionViewLayout.h"
+#import "DraggingCollectionViewLayout.h"// 自己打算用swift重写DraggingSort, 但这个类(layout)保持原来的oc不重写
+#import "DraggingViewController.h"
 
 
 

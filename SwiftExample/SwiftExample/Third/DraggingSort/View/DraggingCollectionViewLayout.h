@@ -15,9 +15,9 @@ typedef CGFloat (^WidthBlock)(NSIndexPath *indexPath);
 
 @property (nonatomic,assign)CGFloat rolMargin;
 
-@property (nonatomic,assign)CGFloat  rightSpace;
+@property (nonatomic,assign) CGFloat  rightSpace;
 
-@property (nonatomic,assign)CGFloat  bottomSpace;
+@property (nonatomic,assign) CGFloat  bottomSpace;
 //单元格的宽度
 @property (nonatomic,assign)CGFloat colWidth;
 

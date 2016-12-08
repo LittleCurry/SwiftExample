@@ -6,13 +6,14 @@
 //
 
 #import "DraggingCollectionViewLayout.h"
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 static const CGFloat itemHeight = 40;
 @implementation DraggingCollectionViewLayout
 
 -(instancetype)initWithItemsWidthBlock:(WidthBlock)block{
     self = [super init];
     if (self) {
-        self.widthBlock = block;
+        self.WidthBlock = block;
         _colMargin = 8;
         _colWidth = 10;
     }
@@ -31,7 +32,7 @@ static const CGFloat itemHeight = 40;
 //内容尺寸
 -(CGSize)collectionViewContentSize{
    
-    return CGSizeMake([UIScreen mainScreen].bounds.size.width, self.bottomSpace + itemHeight );
+    return CGSizeMake(ScreenWidth, self.bottomSpace + itemHeight );
 }
 
 
@@ -47,7 +48,7 @@ static const CGFloat itemHeight = 40;
          width = self.widthBlock(indexPath);
     }
     self.rightSpace += self.colWidth;
-    if (self.rightSpace + width > [UIScreen mainScreen].bounds.size.width) {
+    if (self.rightSpace + width > ScreenWidth) {
         self.rightSpace = self.colWidth;
         self.bottomSpace += itemHeight + self.colMargin;
     }

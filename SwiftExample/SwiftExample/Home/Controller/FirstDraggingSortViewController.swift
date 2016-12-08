@@ -68,7 +68,7 @@ class FirstDraggingSortViewController: BaseViewController, UICollectionViewDataS
     func longPress(longPress:UILongPressGestureRecognizer) {
         
         //记录上一次手势的位置
-        var startPoint:CGPoint?
+        var startPoint = CGPoint(x:0, y:0)
         //触发长按手势的cell
         let cell = longPress.view as! MovingCell
         //开始长按
@@ -85,8 +85,8 @@ class FirstDraggingSortViewController: BaseViewController, UICollectionViewDataS
             //移动
         }else if (longPress.state == UIGestureRecognizerState.changed){
             
-            let tranX = longPress.location(ofTouch: 0, in: self.myCollectionView).x - (startPoint?.x)!
-            let tranY = longPress.location(ofTouch: 0, in: self.myCollectionView).y - (startPoint?.y)!
+            let tranX = longPress.location(ofTouch: 0, in: self.myCollectionView).x - startPoint.x
+            let tranY = longPress.location(ofTouch: 0, in: self.myCollectionView).y - startPoint.y
             //设置截图视图位置
             self.snapshotView.center = __CGPointApplyAffineTransform(self.snapshotView.center, CGAffineTransform(translationX: tranX, y: tranY))
             
@@ -106,7 +106,7 @@ class FirstDraggingSortViewController: BaseViewController, UICollectionViewDataS
                             self.dragArr.exchangeObject(at: i, withObjectAt: i+1)
                         }
                     }else{
-                        for i in self.nextIndexPath.item-1...self.indexPath.item {
+                        for i in self.indexPath.item...self.nextIndexPath.item+1 {
                             self.dragArr.exchangeObject(at: i, withObjectAt: i-1)
                         }
                     }

@@ -351,7 +351,6 @@
 		C16582771DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16582761DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift */; };
 		C16582791DF68F75003AEBD4 /* MovingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16582781DF68F75003AEBD4 /* MovingItem.swift */; };
 		C165827D1DF69336003AEBD4 /* MovingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C165827C1DF69336003AEBD4 /* MovingCell.swift */; };
-		C16582801DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */; };
 		C16C87691DAB66F600314367 /* cloud@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C87681DAB66F600314367 /* cloud@2x.png */; };
 		C16C876B1DAB670200314367 /* nosun_mini.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876A1DAB670200314367 /* nosun_mini.png */; };
 		C16C876D1DAB670B00314367 /* rain_little0011@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16C876C1DAB670B00314367 /* rain_little0011@2x.png */; };
@@ -751,6 +750,11 @@
 		C1CBF70B1DB9EDCF009E3A61 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF7061DB9EDCF009E3A61 /* CloudView.m */; };
 		C1CBF70C1DB9EDCF009E3A61 /* NSObject+KVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF7081DB9EDCF009E3A61 /* NSObject+KVC.m */; };
 		C1CBF70F1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CBF70E1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift */; };
+		C1CED3511DF7D6D90032F996 /* DraggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CED3471DF7D6D90032F996 /* DraggingViewController.m */; };
+		C1CED3521DF7D6D90032F996 /* MovingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CED34A1DF7D6D90032F996 /* MovingItem.m */; };
+		C1CED3531DF7D6D90032F996 /* DraggingCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CED34D1DF7D6D90032F996 /* DraggingCollectionViewLayout.m */; };
+		C1CED3541DF7D6D90032F996 /* MovingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1CED34F1DF7D6D90032F996 /* MovingCell.m */; };
+		C1CED3551DF7D6D90032F996 /* MovingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1CED3501DF7D6D90032F996 /* MovingCell.xib */; };
 		C1D1B5271DDC5AFE00C196C4 /* StrangeZero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C1D1B5261DDC5AFE00C196C4 /* StrangeZero.mp3 */; };
 		C1D1B5291DDC6D2000C196C4 /* FirstMonthCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */; };
 		C1D1B52B1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */; };
@@ -1321,8 +1325,6 @@
 		C16582761DF68F1C003AEBD4 /* FirstDraggingSortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDraggingSortViewController.swift; sourceTree = "<group>"; };
 		C16582781DF68F75003AEBD4 /* MovingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingItem.swift; sourceTree = "<group>"; };
 		C165827C1DF69336003AEBD4 /* MovingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovingCell.swift; sourceTree = "<group>"; };
-		C165827E1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggingCollectionViewLayout.h; sourceTree = "<group>"; };
-		C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggingCollectionViewLayout.m; sourceTree = "<group>"; };
 		C16C87681DAB66F600314367 /* cloud@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cloud@2x.png"; sourceTree = "<group>"; };
 		C16C876A1DAB670200314367 /* nosun_mini.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nosun_mini.png; sourceTree = "<group>"; };
 		C16C876C1DAB670B00314367 /* rain_little0011@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rain_little0011@2x.png"; sourceTree = "<group>"; };
@@ -1783,6 +1785,15 @@
 		C1CBF7071DB9EDCF009E3A61 /* NSObject+KVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVC.h"; sourceTree = "<group>"; };
 		C1CBF7081DB9EDCF009E3A61 /* NSObject+KVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVC.m"; sourceTree = "<group>"; };
 		C1CBF70E1DB9EE74009E3A61 /* FirstRecommendMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRecommendMovieViewController.swift; sourceTree = "<group>"; };
+		C1CED3461DF7D6D90032F996 /* DraggingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggingViewController.h; sourceTree = "<group>"; };
+		C1CED3471DF7D6D90032F996 /* DraggingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggingViewController.m; sourceTree = "<group>"; };
+		C1CED3491DF7D6D90032F996 /* MovingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingItem.h; sourceTree = "<group>"; };
+		C1CED34A1DF7D6D90032F996 /* MovingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingItem.m; sourceTree = "<group>"; };
+		C1CED34C1DF7D6D90032F996 /* DraggingCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggingCollectionViewLayout.h; sourceTree = "<group>"; };
+		C1CED34D1DF7D6D90032F996 /* DraggingCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggingCollectionViewLayout.m; sourceTree = "<group>"; };
+		C1CED34E1DF7D6D90032F996 /* MovingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingCell.h; sourceTree = "<group>"; };
+		C1CED34F1DF7D6D90032F996 /* MovingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingCell.m; sourceTree = "<group>"; };
+		C1CED3501DF7D6D90032F996 /* MovingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovingCell.xib; sourceTree = "<group>"; };
 		C1D1B5261DDC5AFE00C196C4 /* StrangeZero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StrangeZero.mp3; sourceTree = "<group>"; };
 		C1D1B5281DDC6D1F00C196C4 /* FirstMonthCircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstMonthCircleViewController.swift; sourceTree = "<group>"; };
 		C1D1B52A1DDC705C00C196C4 /* FirstHourAndMinuteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstHourAndMinuteViewController.swift; sourceTree = "<group>"; };
@@ -2581,6 +2592,7 @@
 		C16417EE1D9BC9D700BD3841 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				C1CED3441DF7D6D90032F996 /* DraggingSort */,
 				C152B6191DDEA9C300351F13 /* PCGestureUnlock */,
 				C11B339E1DDC09E5002F5C45 /* HGCircularSlider */,
 				C14855281DD4760900A7FD89 /* BarrageRenderer */,
@@ -3150,8 +3162,6 @@
 				C1412AE91DC873220058186D /* OneGoodsClassCollectionViewCell.swift */,
 				C11618C91DCB325B005A7C0B /* OneGoodsClassCollectionReusableView.swift */,
 				C102E8FD1DD06EDA0052AD19 /* StoreCarTableViewCell.swift */,
-				C165827E1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.h */,
-				C165827F1DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m */,
 				C165827C1DF69336003AEBD4 /* MovingCell.swift */,
 			);
 			path = View;
@@ -3735,6 +3745,46 @@
 			path = DynamicLabel;
 			sourceTree = "<group>";
 		};
+		C1CED3441DF7D6D90032F996 /* DraggingSort */ = {
+			isa = PBXGroup;
+			children = (
+				C1CED3451DF7D6D90032F996 /* Controller */,
+				C1CED3481DF7D6D90032F996 /* Model */,
+				C1CED34B1DF7D6D90032F996 /* View */,
+			);
+			path = DraggingSort;
+			sourceTree = "<group>";
+		};
+		C1CED3451DF7D6D90032F996 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C1CED3461DF7D6D90032F996 /* DraggingViewController.h */,
+				C1CED3471DF7D6D90032F996 /* DraggingViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C1CED3481DF7D6D90032F996 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1CED3491DF7D6D90032F996 /* MovingItem.h */,
+				C1CED34A1DF7D6D90032F996 /* MovingItem.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1CED34B1DF7D6D90032F996 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1CED34C1DF7D6D90032F996 /* DraggingCollectionViewLayout.h */,
+				C1CED34D1DF7D6D90032F996 /* DraggingCollectionViewLayout.m */,
+				C1CED34E1DF7D6D90032F996 /* MovingCell.h */,
+				C1CED34F1DF7D6D90032F996 /* MovingCell.m */,
+				C1CED3501DF7D6D90032F996 /* MovingCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3881,6 +3931,7 @@
 				C1C53D7A1DB4A7B1003DC3F0 /* com_ic_select@3x.png in Resources */,
 				C1C6D9B91DB619CE00B4EAFF /* scan@2x.png in Resources */,
 				C1970D2D1DA8BCA300260A11 /* photograph.png in Resources */,
+				C1CED3551DF7D6D90032F996 /* MovingCell.xib in Resources */,
 				C194508A1DD33586004B5BD3 /* card@2x.png in Resources */,
 				C17FC4881DB870CC004028CA /* goods118.jpg in Resources */,
 				C1C8FA281DC1C01F00C0589D /* background.jpg in Resources */,
@@ -4357,6 +4408,7 @@
 				C16419C01D9BCC0B00BD3841 /* FirstInfoViewController.swift in Sources */,
 				C17D55061DA6073E00C27FD2 /* SCChartCell.m in Sources */,
 				C16418D21D9BCAC500BD3841 /* MASConstraintMaker.m in Sources */,
+				C1CED3521DF7D6D90032F996 /* MovingItem.m in Sources */,
 				C14855521DD4760900A7FD89 /* BarrageLoader.m in Sources */,
 				C16419C81D9BCC5400BD3841 /* HMWaterflowLayout.m in Sources */,
 				C16419241D9BCADE00BD3841 /* UIScrollView+MJExtension.m in Sources */,
@@ -4393,6 +4445,7 @@
 				C1198B371DC1D44F00838A8A /* YFAnimationManager.m in Sources */,
 				C1BC63591DBEF7D9006EBCFC /* LMJEmoticonTool.swift in Sources */,
 				C158F2F41DACE40B000CAE40 /* UIView+Layout.m in Sources */,
+				C1CED3541DF7D6D90032F996 /* MovingCell.m in Sources */,
 				C16418801D9BCAA800BD3841 /* MMPopupitem.m in Sources */,
 				C151E3391DA553D6004A41A3 /* UICountingLabel.m in Sources */,
 				C18AE8861DAB3C0900275A90 /* Weather.swift in Sources */,
@@ -4473,6 +4526,7 @@
 				C16418AC1D9BCAB400BD3841 /* SDWebImageDownloaderOperation.m in Sources */,
 				C151E3301DA553D6004A41A3 /* SCChart.m in Sources */,
 				C158F2EC1DACE40B000CAE40 /* TZAssetCell.m in Sources */,
+				C1CED3531DF7D6D90032F996 /* DraggingCollectionViewLayout.m in Sources */,
 				C19EA56A1DB7214000984138 /* StoreHomeTableViewCell4.swift in Sources */,
 				C17FC53C1DB8DB41004028CA /* YFLittleProjectVC03.m in Sources */,
 				C16418631D9BCA8800BD3841 /* AFHTTPSessionManager.m in Sources */,
@@ -4508,7 +4562,6 @@
 				C1BFB5021DC0C284001B4E05 /* RGCollectionViewCell.m in Sources */,
 				C16419421D9BCB1400BD3841 /* JSESSIONID.m in Sources */,
 				C1CAB1201DC2018A00D4B409 /* HWCollectionViewCell.m in Sources */,
-				C16582801DF6AAAD003AEBD4 /* DraggingCollectionViewLayout.m in Sources */,
 				C16418D31D9BCAC500BD3841 /* MASLayoutConstraint.m in Sources */,
 				C158F3101DACE4B8000CAE40 /* YLImageView.m in Sources */,
 				C151E3321DA553D6004A41A3 /* SCCircleChart.m in Sources */,
@@ -4594,6 +4647,7 @@
 				C16419161D9BCADE00BD3841 /* MJRefreshFooter.m in Sources */,
 				C1CBF6FD1DB9BBA7009E3A61 /* RCDraggableButton.m in Sources */,
 				C16419BF1D9BCC0B00BD3841 /* FirstViewController.swift in Sources */,
+				C1CED3511DF7D6D90032F996 /* DraggingViewController.m in Sources */,
 				C151E3351DA553D6004A41A3 /* SCLineChart.m in Sources */,
 				C151E3371DA553D6004A41A3 /* SCPieChartDataItem.m in Sources */,
 				C1A7CCD91DB9F8C5001C5A6B /* RQShineLabel.m in Sources */,
