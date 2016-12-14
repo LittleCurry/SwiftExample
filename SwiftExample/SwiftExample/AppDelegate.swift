@@ -10,15 +10,14 @@ import UIKit
 import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
     var window: UIWindow?
     var allowRotate = 0
-    
-
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的,如何在下载完成之后刷新工程,加一个circleSlider, 增加一个通用性高的登录注册页, CAShapeLayer, CAGradientLayer, CALayer, 增加一个既能渐变色又能缩放的动画, reactNative创建一个App, JS, Shell python Ruby Perl xiaochengxu,g
+        //热更新加载, swift 用法和oc有一定区别, 主要是在runtime上的,如何在下载完成之后刷新工程,加一个circleSlider, 增加一个通用性高的登录注册页, CAShapeLayer, CAGradientLayer, CALayer, reactNative创建一个App, JS, Shell python Ruby Perl xiaochengxu,G
         JSPatch.start(withAppKey: "a75345057bbd6e47")
         JSPatch.sync()
 //        sleep(5)
